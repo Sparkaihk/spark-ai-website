@@ -21,6 +21,7 @@ Positioning: **AI-Era Data Asset Infrastructure Operator**
 - Premium responsive navbar
 - Enterprise footer
 - World-class hero section
+- Homepage V0.1
 - Animated particle network and global data-flow background
 
 ## Structure
@@ -85,4 +86,4 @@ npm run build
 
 ## Current Status
 
-This repository contains the design-system foundation and reusable layout components. Full pages are intentionally not built yet.
+This repository contains the design-system foundation, reusable layout components, and Homepage V0.1. Secondary pages are intentionally still placeholders.

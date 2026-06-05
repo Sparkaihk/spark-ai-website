@@ -4,7 +4,9 @@ Spark AI is structured as a component-first Next.js application.
 
 ## App Layer
 
-`app/(site)` contains route placeholders for the future website sections:
+`app/(site)/page.tsx` contains Homepage V0.1.
+
+`app/(site)` also contains route placeholders for the future website sections:
 
 - Homepage
 - About
@@ -17,7 +19,7 @@ Spark AI is structured as a component-first Next.js application.
 - News
 - Contact
 
-Pages are intentionally not implemented yet.
+Secondary pages are intentionally not implemented yet.
 
 ## Component Layers
 
