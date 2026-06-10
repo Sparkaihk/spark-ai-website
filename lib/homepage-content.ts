@@ -14,10 +14,10 @@ import {
 } from "lucide-react";
 
 export const homepageMetrics = [
-  { value: "4", label: "BlueSafe infrastructure products" },
-  { value: "3", label: "Core layers: storage, knowledge, value" },
-  { value: "24/7", label: "Enterprise-grade data asset operations" },
-  { value: "AI", label: "Native architecture for the data economy" },
+  { value: "100PB+", label: "Planned Cold Data Capacity" },
+  { value: "50 Years+", label: "Optical Data Preservation" },
+  { value: "70%", label: "Storage Cost Reduction" },
+  { value: "Enterprise Grade", label: "RAG Infrastructure" },
 ];
 
 export const productSuite = [
@@ -92,3 +92,13 @@ export const operatingModel = [
     icon: Banknote,
   },
 ];
+
+export const strategicFlow = [
+  "Enterprise Data",
+  "Edge Node Network",
+  "AI Data Center",
+  "BlueSafe Archive",
+  "BlueSafe RAG Cloud",
+  "Spark Data Bank",
+  "AI Agent Ecosystem",
+] as const;

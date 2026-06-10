@@ -5,7 +5,12 @@ import { AnimatedBlock } from "@/components/design-system/animated";
 import { Container } from "@/components/design-system/container";
 import { Section, SectionHeader } from "@/components/design-system/section";
 import { SurfaceCard } from "@/components/design-system/surface-card";
-import { FeatureGrid, MetricStrip, SparkHero } from "@/components/sections";
+import {
+  FeatureGrid,
+  InvestorArchitecture,
+  MetricStrip,
+  SparkHero,
+} from "@/components/sections";
 import { Button } from "@/components/ui/button";
 import {
   homepageMetrics,
@@ -21,6 +26,8 @@ export default function HomePage() {
       <SparkHero />
 
       <MetricStrip metrics={homepageMetrics} />
+
+      <InvestorArchitecture />
 
       <FeatureGrid
         eyebrow="Product Suite"

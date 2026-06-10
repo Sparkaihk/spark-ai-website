@@ -9,7 +9,8 @@ import { Button } from "@/components/ui/button";
 import { siteRoutes } from "@/components/site/navigation.config";
 import { cn } from "@/lib/utils";
 
-const brandName = "Spark AI Technology Limited";
+const brandName = "Spark AI";
+const brandSubtitle = "AI-Era Data Asset Infrastructure";
 
 export function SiteHeader() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -51,15 +52,20 @@ export function SiteHeader() {
           <Link
             href="/"
             aria-label={`${brandName} homepage`}
-            className="group flex min-w-0 items-center gap-3"
+            className="group flex min-w-0 shrink-0 items-center gap-3"
             onClick={() => setIsOpen(false)}
           >
             <span className="relative flex size-9 shrink-0 items-center justify-center rounded-md border border-white/10 bg-primary text-sm font-semibold text-primary-foreground shadow-spark-sm">
               S
               <span className="absolute inset-0 rounded-md ring-1 ring-inset ring-white/20" />
             </span>
-            <span className="hidden max-w-[15rem] truncate text-sm font-medium tracking-normal text-foreground sm:block">
-              {brandName}
+            <span className="hidden min-w-0 sm:block">
+              <span className="block text-sm font-semibold leading-4 tracking-normal text-foreground">
+                {brandName}
+              </span>
+              <span className="block max-w-[12rem] truncate text-[0.67rem] font-medium uppercase leading-4 tracking-[0.12em] text-muted-foreground">
+                {brandSubtitle}
+              </span>
             </span>
           </Link>
 
