@@ -18,10 +18,10 @@ import { ParticleNetwork } from "@/components/visuals/particle-network";
 import { easeOutExpo } from "@/lib/animations";
 
 const economyFlow = [
-  { label: "Storage", icon: Database, x: "7%", y: "58%" },
+  { label: "Cold Data", icon: Database, x: "7%", y: "58%" },
   { label: "Knowledge", icon: Network, x: "25%", y: "32%" },
-  { label: "AI", icon: Sparkles, x: "48%", y: "50%" },
-  { label: "Asset", icon: Layers3, x: "68%", y: "26%" },
+  { label: "Compute", icon: Sparkles, x: "48%", y: "50%" },
+  { label: "Data Asset", icon: Layers3, x: "68%", y: "26%" },
   { label: "Value", icon: BarChart3, x: "82%", y: "60%" },
 ];
 
@@ -39,49 +39,64 @@ export function SparkHero() {
         <div className="grid w-full items-center gap-16 lg:grid-cols-[minmax(0,0.96fr)_minmax(24rem,0.9fr)] xl:gap-20">
           <div className="max-w-4xl">
             <motion.div
-              initial={{ opacity: 0, y: 18 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: easeOutExpo }}
               className="inline-flex items-center gap-2 rounded-md border border-white/10 bg-white/[0.04] px-3 py-2 text-xs font-medium uppercase tracking-[0.16em] text-accent backdrop-blur-xl sm:text-sm"
             >
-              Building the Infrastructure Layer of the Data Asset Economy
+              Spark AI Technology Limited
             </motion.div>
 
             <motion.h1
-              initial={{ opacity: 0, y: 28 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.08, duration: 0.82, ease: easeOutExpo }}
               className="mt-9 max-w-5xl text-[2.2rem] font-semibold leading-[1.02] tracking-normal text-foreground sm:text-[3.6rem] lg:text-[4.7rem]"
             >
-              AI-Era Data Asset Infrastructure
+              AI Data Infrastructure for the AI Era
             </motion.h1>
 
             <motion.p
-              initial={{ opacity: 0, y: 24 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.16, duration: 0.78, ease: easeOutExpo }}
               className="mt-8 max-w-2xl text-xl font-medium leading-[1.35] text-muted-foreground sm:text-3xl"
             >
-              Connecting Storage,
-              <br />
-              Knowledge and Value
+              Data Asset Infrastructure Operator
+              <span className="mt-3 block text-base leading-7 text-accent sm:text-xl">
+                AI时代数据资产基础设施运营商
+              </span>
+            </motion.p>
+
+            <motion.p
+              initial={false}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.74, ease: easeOutExpo }}
+              className="mt-6 max-w-2xl text-base leading-8 text-muted-foreground sm:text-lg"
+            >
+              Spark AI builds the infrastructure layer that preserves cold data,
+              activates enterprise knowledge, deploys edge compute, and turns
+              governed data into investable digital assets.
+              <span className="mt-4 block text-sm leading-7 text-muted-foreground/85 sm:text-base">
+                Spark AI构建覆盖冷数据保存、企业知识激活、边缘算力部署与数据资产化运营的基础设施平台。
+              </span>
             </motion.p>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.24, duration: 0.7, ease: easeOutExpo }}
               className="mt-11 flex flex-col gap-3 sm:flex-row"
             >
               <Button asChild variant="spark" size="lg">
                 <Link href="/contact">
-                  Book a Demo
+                  Investor Inquiry
                   <ArrowUpRight aria-hidden="true" />
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <Link href="/whitepaper">
-                  Download Whitepaper
+                <Link href="/products">
+                  Explore Platform
                   <ArrowDownToLine aria-hidden="true" />
                 </Link>
               </Button>
@@ -89,7 +104,7 @@ export function SparkHero() {
           </div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.96, x: 28 }}
+            initial={false}
             animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ delay: 0.18, duration: 0.9, ease: easeOutExpo }}
             className="relative hidden min-h-[30rem] w-full max-w-[38rem] justify-self-end lg:block"
@@ -114,7 +129,7 @@ export function SparkHero() {
                 stroke="url(#heroEconomyLine)"
                 strokeLinecap="round"
                 strokeWidth="2.5"
-                initial={{ pathLength: 0, opacity: 0 }}
+                initial={false}
                 animate={{ pathLength: 1, opacity: 1 }}
                 transition={{ delay: 0.55, duration: 1.3, ease: easeOutExpo }}
               />
@@ -130,7 +145,7 @@ export function SparkHero() {
             {economyFlow.map((item, index) => (
               <motion.div
                 key={item.label}
-                initial={{ opacity: 0, y: 18, scale: 0.94 }}
+                initial={false}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ delay: 0.36 + index * 0.12, duration: 0.55, ease: easeOutExpo }}
                 className="absolute flex -translate-x-1/2 -translate-y-1/2 items-center gap-3 rounded-md border border-white/10 bg-background/78 px-4 py-3 text-sm font-semibold text-foreground shadow-[0_18px_60px_hsl(var(--primary)/0.16)] backdrop-blur-xl"

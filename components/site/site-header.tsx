@@ -6,11 +6,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { LanguageSwitcher } from "@/components/site/language-switcher";
 import { siteRoutes } from "@/components/site/navigation.config";
 import { cn } from "@/lib/utils";
 
-const brandName = "Spark AI";
-const brandSubtitle = "AI-Era Data Asset Infrastructure";
+const brandName = "Spark AI Technology Limited";
+const brandSubtitle = "AI时代数据资产基础设施运营商";
 
 export function SiteHeader() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,7 +36,7 @@ export function SiteHeader() {
 
   return (
     <motion.header
-      initial={{ y: -18, opacity: 0 }}
+      initial={false}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
       className="fixed inset-x-0 top-0 z-50"
@@ -51,7 +52,7 @@ export function SiteHeader() {
         >
           <Link
             href="/"
-            aria-label={`${brandName} homepage`}
+            aria-label={`${brandName}首页`}
             className="group flex min-w-0 shrink-0 items-center gap-3"
             onClick={() => setIsOpen(false)}
           >
@@ -69,7 +70,7 @@ export function SiteHeader() {
             </span>
           </Link>
 
-          <nav aria-label="Primary navigation" className="hidden items-center gap-1 lg:flex">
+          <nav aria-label="主导航" className="hidden items-center gap-1 lg:flex">
             {siteRoutes.map((route) => (
               <Link
                 key={route.href}
@@ -82,9 +83,10 @@ export function SiteHeader() {
           </nav>
 
           <div className="hidden items-center gap-2 lg:flex">
+            <LanguageSwitcher />
             <Button asChild variant="spark" size="sm">
               <Link href="/contact">
-                Book a Demo
+                预约演示
                 <ArrowUpRight aria-hidden="true" />
               </Link>
             </Button>
@@ -92,7 +94,7 @@ export function SiteHeader() {
 
           <button
             type="button"
-            aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-label={isOpen ? "关闭导航菜单" : "打开导航菜单"}
             aria-expanded={isOpen}
             onClick={() => setIsOpen((value) => !value)}
             className="inline-flex size-10 items-center justify-center rounded-md border border-white/10 bg-white/5 text-foreground transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring lg:hidden"
@@ -116,7 +118,7 @@ export function SiteHeader() {
             className="fixed inset-x-0 bottom-0 top-[5.5rem] z-40 bg-background/96 backdrop-blur-xl lg:hidden"
           >
             <motion.nav
-              aria-label="Mobile navigation"
+              aria-label="移动端导航"
               initial={{ y: -12, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -12, opacity: 0 }}
@@ -134,9 +136,12 @@ export function SiteHeader() {
                   {route.label}
                 </Link>
               ))}
+              <div className="mt-4">
+                <LanguageSwitcher compact />
+              </div>
               <Button asChild variant="spark" className="mt-4 w-full">
                 <Link href="/contact" onClick={() => setIsOpen(false)}>
-                  Book a Demo
+                  预约演示
                   <ArrowUpRight aria-hidden="true" />
                 </Link>
               </Button>

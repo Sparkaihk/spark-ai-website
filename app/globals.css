@@ -53,6 +53,12 @@
 }
 
 @layer utilities {
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
   .spark-grid {
     background-image:
       linear-gradient(hsl(var(--border) / 0.38) 1px, transparent 1px),

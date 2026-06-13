@@ -5,17 +5,17 @@ import { Linkedin, Youtube } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const products = [
-  { label: "BlueSafe Archive", href: "/products/bluesafe-archive" },
-  { label: "BlueSafe Vault", href: "/products/bluesafe-vault" },
-  { label: "BlueSafe RAG Cloud", href: "/products/bluesafe-rag-cloud" },
-  { label: "BlueSafe Data Bank", href: "/products/bluesafe-data-bank" },
+  { label: "BlueSafe Cold Data Storage", href: "/products/bluesafe" },
+  { label: "Spark RAG Cloud", href: "/products/rag-cloud" },
+  { label: "Edge AI Node", href: "/products/edge-node" },
+  { label: "Data Asset Bank", href: "/products/data-bank" },
 ];
 
 const company = [
-  { label: "About", href: "/about" },
-  { label: "Investors", href: "/investors" },
-  { label: "News", href: "/news" },
-  { label: "Contact", href: "/contact" },
+  { label: "关于我们", href: "/about" },
+  { label: "投资者关系", href: "/investors" },
+  { label: "新闻中心", href: "/news" },
+  { label: "联系我们", href: "/contact" },
 ];
 
 const social = [
@@ -79,11 +79,11 @@ export function SiteFooter() {
               </span>
             </Link>
             <p className="mt-5 text-sm leading-7 text-muted-foreground">
-              AI-Era Data Asset Infrastructure Operator
+              AI时代数据资产基础设施运营商
             </p>
           </div>
 
-          <FooterColumn title="Products">
+          <FooterColumn title="产品">
             {products.map((item) => (
               <FooterLink key={item.href} href={item.href}>
                 {item.label}
@@ -91,7 +91,7 @@ export function SiteFooter() {
             ))}
           </FooterColumn>
 
-          <FooterColumn title="Company">
+          <FooterColumn title="公司">
             {company.map((item) => (
               <FooterLink key={item.href} href={item.href}>
                 {item.label}
@@ -99,7 +99,7 @@ export function SiteFooter() {
             ))}
           </FooterColumn>
 
-          <FooterColumn title="Social">
+          <FooterColumn title="社交媒体">
             {social.map((item) => (
               <FooterLink key={item.label} href={item.href} external>
                 <span className="inline-flex items-center gap-2">
@@ -113,10 +113,10 @@ export function SiteFooter() {
 
         <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs text-muted-foreground">
-            Copyright (c) {copyrightYear} Spark AI Technology Limited. All rights reserved.
+            版权所有 (c) {copyrightYear} Spark AI Technology Limited. 保留所有权利。
           </p>
           <p className="text-xs text-muted-foreground">
-            Built for secure enterprise data infrastructure.
+            为安全可信的企业数据基础设施而构建。
           </p>
         </div>
       </div>
