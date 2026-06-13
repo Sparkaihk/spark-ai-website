@@ -23,6 +23,8 @@ const social = [
   { label: "YouTube", href: "https://www.youtube.com", icon: Youtube },
 ];
 
+const copyrightYear = 2026;
+
 function FooterLink({
   href,
   children,
@@ -62,8 +64,6 @@ function FooterColumn({
 }
 
 export function SiteFooter() {
-  const year = new Date().getFullYear();
-
   return (
     <footer className="border-t border-white/10 bg-spark-black">
       <div className="mx-auto w-full max-w-7xl px-5 py-14 sm:px-8 lg:px-10 lg:py-16">
@@ -113,7 +113,7 @@ export function SiteFooter() {
 
         <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs text-muted-foreground">
-            Copyright (c) {year} Spark AI Technology Limited. All rights reserved.
+            Copyright (c) {copyrightYear} Spark AI Technology Limited. All rights reserved.
           </p>
           <p className="text-xs text-muted-foreground">
             Built for secure enterprise data infrastructure.
