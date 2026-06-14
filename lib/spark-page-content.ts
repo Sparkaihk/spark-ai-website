@@ -404,7 +404,7 @@ export const sparkPages = {
       title: "Start a focused conversation with Spark AI.",
       description:
         "Connect with Spark AI for enterprise demos, product roadmap discussions, industry deployments, partnerships, and investor relations.",
-      primaryCta: { label: "Email Spark AI", href: "mailto:hello@spark-ai.example" },
+      primaryCta: { label: "Email Spark AI", href: "mailto:info@sparkai.hk" },
       secondaryCta: { label: "Explore Solutions", href: "/solutions" },
       visualTitle: "Conversation Paths",
       visualItems: ["Enterprise Demo", "Product Roadmap", "Industry Fit", "Partnership", "Investor Relations"],
@@ -452,7 +452,7 @@ export const sparkPages = {
       title: "Share your data infrastructure priority and the team will route the discussion.",
       description:
         "Include the use case, industry, deployment region, timeline, and the type of conversation you want to start.",
-      primaryCta: { label: "Email Spark AI", href: "mailto:hello@spark-ai.example" },
+      primaryCta: { label: "Email Spark AI", href: "mailto:info@sparkai.hk" },
       secondaryCta: { label: "View Products", href: "/products" },
     },
   },

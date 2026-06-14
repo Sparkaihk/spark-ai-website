@@ -295,7 +295,7 @@ export default function HomePage() {
                   <div className="flex gap-3">
                     <Mail className="mt-1 size-5 shrink-0 text-accent" aria-hidden="true" />
                     <div>
-                      <p className="font-semibold text-foreground">hello@spark-ai.example</p>
+                      <p className="font-semibold text-foreground">info@sparkai.hk</p>
                       <p>邮箱</p>
                     </div>
                   </div>
@@ -309,7 +309,7 @@ export default function HomePage() {
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
-                  <Link href="mailto:hello@spark-ai.example">
+                  <Link href="mailto:info@sparkai.hk">
                     Email Spark AI
                     <ArrowRight aria-hidden="true" />
                   </Link>
