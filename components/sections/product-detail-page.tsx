@@ -50,7 +50,7 @@ export function ProductDetailPage({ content }: { content: ProductDetailContent }
               <p className="text-sm font-medium uppercase tracking-[0.14em] text-accent">
                 {content.eyebrow}
               </p>
-              <h1 className="mt-5 text-4xl font-semibold leading-tight tracking-normal text-foreground sm:text-6xl lg:text-7xl">
+              <h1 className="mt-5 text-4xl font-semibold leading-tight tracking-normal text-foreground sm:text-5xl lg:text-5xl">
                 {content.title}
               </h1>
               <p className="mt-6 max-w-3xl text-2xl font-medium leading-9 text-accent drop-shadow-[0_0_20px_hsl(var(--accent)/0.45)] sm:text-3xl">

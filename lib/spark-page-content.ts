@@ -397,61 +397,68 @@ export const sparkPages = {
     metadata: {
       title: "Contact",
       description:
-        "Contact Spark AI for enterprise data infrastructure, product demos, industry partnerships, and investor conversations.",
+        "Contact Spark AI Technology Limited in Hong Kong SAR for business partnership, investor relations, and technology cooperation.",
     },
     hero: {
       eyebrow: "Contact",
-      title: "Start a focused conversation with Spark AI.",
+      title: "Connect with Spark AI Technology Limited.",
       description:
-        "Connect with Spark AI for enterprise demos, product roadmap discussions, industry deployments, partnerships, and investor relations.",
+        "Spark AI Technology Limited is based in Hong Kong SAR. Contact info@sparkai.hk for business partnership, investor relations, and technology cooperation.",
       primaryCta: { label: "Email Spark AI", href: "mailto:info@sparkai.hk" },
       secondaryCta: { label: "Explore Solutions", href: "/solutions" },
-      visualTitle: "Conversation Paths",
-      visualItems: ["Enterprise Demo", "Product Roadmap", "Industry Fit", "Partnership", "Investor Relations"],
+      visualTitle: "Contact Details",
+      visualItems: [
+        "Spark AI Technology Limited",
+        "Hong Kong SAR",
+        "info@sparkai.hk",
+        "Business Partnership",
+        "Investor Relations",
+        "Technology Cooperation",
+      ],
     },
     features: {
-      eyebrow: "How We Engage",
-      title: "Route the right discussion from the first message.",
+      eyebrow: "Inquiry Areas",
+      title: "Route your message to the right Spark AI team.",
       description:
-        "Spark AI contact paths are organized around the teams and decisions involved in enterprise infrastructure adoption.",
+        "Spark AI contact paths are organized around partnerships, capital relationships, and technology cooperation for enterprise AI data infrastructure.",
       items: [
         {
-          title: "Enterprise Demos",
+          title: "Business Partnership",
           description:
-            "Review product fit for cold data infrastructure, RAG activation, edge AI, and asset workflows.",
-          icon: "MonitorPlay",
-        },
-        {
-          title: "Solution Workshops",
-          description:
-            "Map a data estate, governance requirements, deployment constraints, and AI activation goals.",
-          icon: "Workflow",
-        },
-        {
-          title: "Partnerships",
-          description:
-            "Discuss ecosystem integrations across storage, AI applications, cloud, data services, and sector channels.",
+            "Discuss enterprise deployment, regional channels, industry solutions, and ecosystem partnerships.",
           icon: "Handshake",
         },
         {
           title: "Investor Relations",
           description:
-            "Engage on market thesis, roadmap, platform strategy, and the long-term data asset economy opportunity.",
+            "Engage on market thesis, Hong Kong 100PB roadmap, platform strategy, and funding conversations.",
           icon: "LineChart",
+        },
+        {
+          title: "Technology Cooperation",
+          description:
+            "Explore cooperation across optical storage, private RAG, AI infrastructure, data governance, and cloud integration.",
+          icon: "Workflow",
+        },
+        {
+          title: "General Contact",
+          description:
+            "Email info@sparkai.hk and include your organization, region, inquiry area, and preferred next step.",
+          icon: "Mail",
         },
       ],
     },
     statistics: [
-      { value: "24h", label: "Target Business Response Window" },
-      { value: "4", label: "Primary Engagement Paths" },
-      { value: "6", label: "Priority Industry Segments" },
-      { value: "1", label: "Unified Infrastructure Platform" },
+      { value: "HK SAR", label: "Company Location" },
+      { value: "info@sparkai.hk", label: "Contact Email" },
+      { value: "3", label: "Primary Inquiry Areas" },
+      { value: "1", label: "AI Data Infrastructure Platform" },
     ],
     cta: {
       eyebrow: "Next Step",
-      title: "Share your data infrastructure priority and the team will route the discussion.",
+      title: "Email Spark AI to start a focused conversation.",
       description:
-        "Include the use case, industry, deployment region, timeline, and the type of conversation you want to start.",
+        "For business partnership, investor relations, or technology cooperation, contact Spark AI Technology Limited at info@sparkai.hk.",
       primaryCta: { label: "Email Spark AI", href: "mailto:info@sparkai.hk" },
       secondaryCta: { label: "View Products", href: "/products" },
     },

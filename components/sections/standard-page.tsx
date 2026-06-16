@@ -70,7 +70,7 @@ function StandardHero({ page }: { page: SparkPageContent }) {
             <p className="text-sm font-medium uppercase tracking-[0.14em] text-accent">
               {page.hero.eyebrow}
             </p>
-            <h1 className="mt-5 text-4xl font-semibold leading-tight tracking-normal text-foreground sm:text-6xl lg:text-7xl">
+            <h1 className="mt-5 text-4xl font-semibold leading-tight tracking-normal text-foreground sm:text-5xl lg:text-5xl">
               {page.hero.title}
             </h1>
             <p className="mt-6 max-w-3xl text-lg leading-8 text-muted-foreground sm:text-xl">

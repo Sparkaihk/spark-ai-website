@@ -5,17 +5,17 @@ import { Linkedin, Youtube } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const products = [
+  { label: "RTX Spark AI Storage Appliance", href: "/products" },
   { label: "BlueSafe Cold Data Storage", href: "/products/bluesafe" },
   { label: "Spark RAG Cloud", href: "/products/rag-cloud" },
-  { label: "Edge AI Node", href: "/products/edge-node" },
   { label: "Data Asset Bank", href: "/products/data-bank" },
 ];
 
 const company = [
-  { label: "关于我们", href: "/about" },
-  { label: "投资者关系", href: "/investors" },
-  { label: "新闻中心", href: "/news" },
-  { label: "联系我们", href: "/contact" },
+  { label: "About", href: "/about" },
+  { label: "Investors", href: "/investors" },
+  { label: "Products", href: "/products" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const social = [
@@ -67,7 +67,7 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-white/10 bg-spark-black">
       <div className="mx-auto w-full max-w-7xl px-5 py-14 sm:px-8 lg:px-10 lg:py-16">
-        <div className="grid gap-12 lg:grid-cols-[1.25fr_0.75fr_0.7fr_0.55fr]">
+        <div className="grid gap-12 lg:grid-cols-[1.28fr_0.72fr_0.68fr_0.52fr]">
           <div className="max-w-md">
             <Link href="/" className="inline-flex items-center gap-3">
               <span className="relative flex size-10 items-center justify-center rounded-md border border-white/10 bg-primary text-sm font-semibold text-primary-foreground shadow-spark-sm">
@@ -79,11 +79,21 @@ export function SiteFooter() {
               </span>
             </Link>
             <p className="mt-5 text-sm leading-7 text-muted-foreground">
-              AI时代数据资产基础设施运营商
+              AI data infrastructure company based in Hong Kong SAR.
             </p>
+            <div className="mt-5 space-y-2 text-sm leading-6 text-muted-foreground">
+              <p>Hong Kong SAR</p>
+              <Link
+                href="mailto:info@sparkai.hk"
+                className="inline-flex text-accent transition-colors hover:text-foreground"
+              >
+                info@sparkai.hk
+              </Link>
+              <p>Business Partnership · Investor Relations · Technology Cooperation</p>
+            </div>
           </div>
 
-          <FooterColumn title="产品">
+          <FooterColumn title="Products">
             {products.map((item) => (
               <FooterLink key={item.href} href={item.href}>
                 {item.label}
@@ -91,7 +101,7 @@ export function SiteFooter() {
             ))}
           </FooterColumn>
 
-          <FooterColumn title="公司">
+          <FooterColumn title="Company">
             {company.map((item) => (
               <FooterLink key={item.href} href={item.href}>
                 {item.label}
@@ -99,7 +109,7 @@ export function SiteFooter() {
             ))}
           </FooterColumn>
 
-          <FooterColumn title="社交媒体">
+          <FooterColumn title="Connect">
             {social.map((item) => (
               <FooterLink key={item.label} href={item.href} external>
                 <span className="inline-flex items-center gap-2">
@@ -113,10 +123,10 @@ export function SiteFooter() {
 
         <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs text-muted-foreground">
-            版权所有 (c) {copyrightYear} Spark AI Technology Limited. 保留所有权利。
+            Copyright (c) {copyrightYear} Spark AI Technology Limited. All rights reserved.
           </p>
           <p className="text-xs text-muted-foreground">
-            为安全可信的企业数据基础设施而构建。
+            Business Partnership · Investor Relations · Technology Cooperation
           </p>
         </div>
       </div>
