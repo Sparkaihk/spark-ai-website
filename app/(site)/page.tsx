@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -5,20 +6,17 @@ import {
   Building2,
   CalendarRange,
   CheckCircle2,
-  CloudCog,
   Database,
-  DatabaseZap,
   Download,
   Factory,
-  Landmark,
   Layers3,
   LineChart,
   Mail,
   Network,
-  Presentation,
   ShieldCheck,
-  Sparkles,
+  Zap,
 } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
 import { AnimatedBlock, AnimatedStagger } from "@/components/design-system/animated";
 import { Container } from "@/components/design-system/container";
@@ -27,317 +25,463 @@ import { SurfaceCard } from "@/components/design-system/surface-card";
 import { Button } from "@/components/ui/button";
 import { ParticleNetwork } from "@/components/visuals/particle-network";
 
-const heroKpis = [
-  { value: "100PB+", label: "Planned AI cold data capacity", icon: DatabaseZap },
-  { value: "50+ yrs", label: "Optical archive durability target", icon: ShieldCheck },
-  { value: "4", label: "Commercial infrastructure modules", icon: Layers3 },
-  { value: "HK", label: "Asia-Pacific launch gateway", icon: Landmark },
+type CardItem = {
+  title: string;
+  text: string;
+  icon: LucideIcon;
+};
+
+const visualAssets = {
+  cover: "/images/spark-ai-cover.webp",
+  architecture: "/images/spark-ai-ecosystem-architecture.webp",
+  business: "/images/spark-ai-business-model.webp",
+  roadmap: "/images/spark-ai-hk-roadmap.webp",
+  highlights: "/images/spark-ai-investment-highlights.webp",
+};
+
+const kpis = [
+  {
+    value: "100PB+",
+    label: "Hong Kong AI cold data capacity target for institutional archives.",
+  },
+  {
+    value: "50 Years+",
+    label: "Long-life data preservation design for regulated and strategic data.",
+  },
+  {
+    value: "80%",
+    label: "Projected energy saving versus conventional always-on data storage.",
+  },
+  {
+    value: "5-Layer",
+    label: "Integrated ecosystem from cold data custody to data asset banking.",
+  },
 ];
 
-const ecosystemLayers = [
+const dataCenterItems: CardItem[] = [
   {
-    title: "Enterprise Data",
-    text: "Institutional archives, records, media, research data, telemetry, and operating knowledge become the starting inventory.",
+    title: "Cold Data Custody",
+    text: "Purpose-built facilities for enterprise archives, media libraries, research datasets, and sovereign data reserves.",
     icon: Database,
   },
   {
-    title: "BlueSafe Storage",
-    text: "Durable optical storage preserves cold data with long-life economics and lower operating energy.",
+    title: "AI-Ready Governance",
+    text: "Metadata, rights controls, indexing, and secure retrieval make dormant datasets usable for AI workflows.",
     icon: ShieldCheck,
   },
   {
-    title: "AI Cold Data Center",
-    text: "Capacity, custody workflows, metadata governance, and secure access make preserved data useful for AI.",
-    icon: DatabaseZap,
+    title: "Low-Energy Infrastructure",
+    text: "BlueSafe optical storage reduces energy exposure while extending the useful life of high-value data assets.",
+    icon: Zap,
+  },
+];
+
+const businessModel: CardItem[] = [
+  {
+    title: "Infrastructure Revenue",
+    text: "Recurring storage, custody, governance, and managed data center service fees.",
+    icon: Building2,
   },
   {
-    title: "Enterprise RAG Cloud",
-    text: "Governed archives become private retrieval, copilots, agents, search, and decision workflows.",
-    icon: CloudCog,
+    title: "Knowledge Activation",
+    text: "Enterprise RAG cloud, private retrieval, copilots, and data-to-knowledge implementation services.",
+    icon: Network,
   },
   {
-    title: "Data Asset Bank",
-    text: "Data accounts, valuation, permissioned access, and trusted circulation turn data into asset infrastructure.",
+    title: "Data Asset Services",
+    text: "Valuation, permissions, trusted circulation, and data asset account services for institutional clients.",
     icon: Banknote,
   },
 ];
 
-const productModules = [
+const whySpark: CardItem[] = [
   {
-    title: "BlueSafe Optical Storage",
-    text: "Immutable cold archive infrastructure for compliance records, media libraries, research datasets, and sovereign data reserves.",
+    title: "Owns the Cold Data Layer",
+    text: "Spark AI focuses on the overlooked storage and governance layer beneath enterprise AI adoption.",
+    icon: Layers3,
+  },
+  {
+    title: "Built for Institutions",
+    text: "The platform targets compliance-heavy sectors where data retention, access control, and auditability matter.",
     icon: ShieldCheck,
   },
   {
-    title: "AI Cold Data Center",
-    text: "Purpose-built facilities for long-life, low-energy preservation of enterprise and institutional datasets.",
-    icon: DatabaseZap,
+    title: "Hong Kong as Launch Market",
+    text: "A regional financial and data hub provides a strong base for data infrastructure and asset services.",
+    icon: LineChart,
+  },
+];
+
+const investorHighlights = [
+  "Clear category: AI data asset infrastructure, not a single SaaS tool.",
+  "Multiple revenue layers across custody, activation, and asset services.",
+  "100PB Hong Kong roadmap creates a concrete flagship infrastructure story.",
+  "Energy-saving cold storage thesis aligns with enterprise cost and sustainability pressure.",
+];
+
+const investorBriefingSections = [
+  {
+    title: "Why Now?",
+    titleZh: "為什麼是現在？",
+    points: [
+      {
+        title: "Enterprise data is compounding in the AI era.",
+        text: "AI 时代企业数据量快速增长，数据基础设施正在从后台成本变成战略资产。",
+      },
+      {
+        title: "More data is becoming low-frequency cold data.",
+        text: "大量档案、媒体、日志、科研和合规数据正在进入低频访问状态。",
+      },
+      {
+        title: "AI needs long-term historical data as RAG fuel.",
+        text: "训练、检索增强生成和企业知识智能体都需要长期历史数据作为知识燃料。",
+      },
+      {
+        title: "Legacy storage faces cost, energy, lifespan, and security pressure.",
+        text: "传统云存储、HDD 和磁带在成本、能耗、寿命与安全性上承受持续压力。",
+      },
+    ],
   },
   {
-    title: "Enterprise RAG Cloud",
-    text: "Private retrieval, indexing, embeddings, and knowledge activation for regulated AI workflows.",
-    icon: CloudCog,
+    title: "Why Spark AI?",
+    titleZh: "為什麼是 Spark AI？",
+    points: [
+      {
+        title: "AI Cold Data Center",
+        text: "建设面向机构冷数据的低能耗、长寿命、AI-ready 托管基础设施。",
+      },
+      {
+        title: "BlueSafe RAG Cloud",
+        text: "把 BlueSafe 保存的数据接入私有检索、知识库、Copilot 与企业 RAG 工作流。",
+      },
+      {
+        title: "Enterprise Edge Nodes",
+        text: "通过企业边缘节点支持本地推理、安全接入和区域化 AI 服务。",
+      },
+      {
+        title: "Data Asset Bank",
+        text: "将冷数据存储升级为确权、估值、授权访问和可信流通的数据资产平台。",
+      },
+    ],
   },
   {
-    title: "Data Asset Bank",
-    text: "Data asset accounts, valuation workflows, permissioned access, custody, and trusted circulation services.",
+    title: "Investment Highlights",
+    titleZh: "投資亮點",
+    points: [
+      {
+        title: "Hong Kong 100PB AI Cold Data Center",
+        text: "以香港 100PB 旗舰设施建立清晰、可落地的基础设施资产叙事。",
+      },
+      {
+        title: "Recurring SaaS Revenue",
+        text: "RAG Cloud、托管服务和企业知识激活形成持续订阅与使用收入。",
+      },
+      {
+        title: "Data Asset Banking",
+        text: "数据账户、估值、授权和可信流通打开数据金融化服务空间。",
+      },
+      {
+        title: "AI Infrastructure Licensing",
+        text: "面向企业、园区、行业伙伴输出 AI 数据基础设施许可与运营能力。",
+      },
+      {
+        title: "Multi-decade Data Lifecycle",
+        text: "围绕长期保存、治理、激活和资产化，覆盖跨周期数据生命周期价值。",
+      },
+    ],
+  },
+];
+
+const marketOpportunity: CardItem[] = [
+  {
+    title: "Global Data Growth",
+    text: "Enterprise data volumes continue to compound across archives, media, telemetry, research, compliance records, and AI-generated knowledge.",
+    icon: LineChart,
+  },
+  {
+    title: "Cold Data Explosion",
+    text: "Most institutional data shifts into low-frequency access, creating a massive need for long-life, lower-energy, AI-ready cold data infrastructure.",
+    icon: Database,
+  },
+  {
+    title: "AI Infrastructure Market",
+    text: "AI adoption needs durable memory, governed retrieval, private RAG, and data center infrastructure beyond short-term compute cycles.",
+    icon: Network,
+  },
+  {
+    title: "Data Asset Banking Market",
+    text: "Governed datasets can evolve from storage liabilities into valued, permissioned, and bankable institutional data assets.",
     icon: Banknote,
   },
 ];
 
-const industries = [
-  { title: "Financial Services", text: "Archive custody, compliance memory, risk knowledge bases, and data asset accounts.", icon: Landmark },
-  { title: "Healthcare & Life Sciences", text: "Long-life research data, clinical archives, private retrieval, and audit-ready governance.", icon: CheckCircle2 },
-  { title: "Public Sector", text: "Sovereign data reserves, record preservation, secure AI knowledge layers, and trusted access control.", icon: Building2 },
-  { title: "Media & Cultural Assets", text: "Large-scale media archives, rights metadata, AI search, and preservation infrastructure.", icon: Sparkles },
-  { title: "Manufacturing & Industrial AI", text: "Telemetry archives, equipment knowledge, engineering records, and assisted operations.", icon: Factory },
-  { title: "Research & Education", text: "Institutional repositories, research datasets, knowledge discovery, and reusable AI libraries.", icon: Network },
-];
-
-const marketSignals = [
+const whyWeWin = [
   {
-    label: "Global AI Data Infrastructure Market",
-    labelZh: "全球 AI 数据基础设施市场",
-    value: "100B+",
-    text: "Market Opportunity",
-    textZh: "市场机会",
-    width: "100%",
+    title: "Spark AI vs Cloud Storage",
+    text: "Cloud storage optimizes availability and scale. Spark AI optimizes long-life cold data custody, AI readiness, energy economics, and asset conversion.",
   },
   {
-    label: "Enterprise Cold Data",
-    labelZh: "企业冷数据",
-    value: "80%+",
-    text: "Most institutional data remains cold, fragmented, under-governed, or underused by production AI systems.",
-    textZh: "多数机构数据仍处于冷存储、分散治理或未被生产级 AI 充分使用的状态。",
-    width: "78%",
+    title: "Spark AI vs Traditional Archive",
+    text: "Traditional archives preserve records. Spark AI preserves, governs, activates, and monetizes data through RAG Cloud and Data Asset Bank services.",
   },
   {
-    label: "AI Demand",
-    labelZh: "AI 需求",
-    value: "2030",
-    text: "AI-native organizations will need durable memory, governance, and trusted data infrastructure.",
-    textZh: "AI 原生组织将需要长期记忆、治理能力与可信数据基础设施。",
-    width: "66%",
+    title: "Spark AI vs AI Knowledge Platforms",
+    text: "Knowledge platforms start at software. Spark AI owns the deeper infrastructure layer: cold storage, metadata, retrieval, edge nodes, and asset banking.",
   },
 ];
 
-const businessModel = [
+const leadershipBoard = [
   {
-    title: "Optical Storage",
-    titleZh: "光存储",
-    text: "Recurring archive capacity, data custody, and long-life preservation revenue for enterprise cold data.",
-    textZh: "面向企业冷数据的归档容量、数据托管与长期保存收入。",
-    icon: ShieldCheck,
+    title: "Infrastructure Leadership",
+    text: "Data center, storage architecture, enterprise infrastructure, and long-life operations experience.",
   },
   {
-    title: "AI Cold Data Center",
-    titleZh: "AI 冷数据中心",
-    text: "Infrastructure subscriptions for large-scale cold data capacity, metadata governance, and secure access.",
-    textZh: "围绕大规模冷数据容量、元数据治理与安全访问的基础设施订阅收入。",
-    icon: DatabaseZap,
+    title: "AI & Knowledge Systems",
+    text: "Enterprise RAG, retrieval, metadata governance, edge AI, and private knowledge workflow expertise.",
   },
   {
-    title: "Enterprise RAG Cloud",
-    titleZh: "企业 RAG 云",
-    text: "Usage and subscription revenue from private retrieval, embeddings, knowledge workflows, and AI agents.",
-    textZh: "来自私有检索、向量化、知识工作流与 AI 智能体的订阅和用量收入。",
-    icon: CloudCog,
+    title: "Finance & Data Assets",
+    text: "Data valuation, institutional partnerships, asset operations, compliance, and Hong Kong capital market perspective.",
   },
   {
-    title: "Data Asset Bank",
-    titleZh: "数据资产银行",
-    text: "Account management, valuation, authorization, trusted circulation, and future transaction services.",
-    textZh: "数据账户、价值评估、授权访问、可信流通与未来交易服务。",
-    icon: Banknote,
+    title: "Strategic Advisory Board",
+    text: "Advisors across AI infrastructure, regulated industries, public-sector data, and cross-border commercial partnerships.",
   },
 ];
 
-const roadmap = [
-  { year: "2026", title: "Company Launch", titleZh: "公司启动", text: "Establish Spark AI, complete investor narrative, and launch initial enterprise partnership pipeline." },
-  { year: "2027", title: "100PB AI Cold Data Center", titleZh: "100PB AI 冷数据中心", text: "Build the Hong Kong flagship capacity base for enterprise cold data storage and custody." },
-  { year: "2028", title: "BlueSafe RAG Cloud", titleZh: "BlueSafe RAG 云", text: "Connect preserved data to private retrieval, knowledge activation, copilots, and AI workflow services." },
-  { year: "2030", title: "Data Asset Bank", titleZh: "数据资产银行", text: "Operate data accounts, valuation services, authorized access, and trusted circulation infrastructure." },
-];
+function InvestorVisual({
+  src,
+  alt,
+  priority = false,
+}: {
+  src: string;
+  alt: string;
+  priority?: boolean;
+}) {
+  return (
+    <div className="relative overflow-hidden rounded-lg border border-white/10 bg-white/[0.03] shadow-[0_28px_100px_hsl(var(--primary)/0.18)]">
+      <Image
+        src={src}
+        alt={alt}
+        width={1376}
+        height={768}
+        priority={priority}
+        className="h-auto w-full object-cover"
+      />
+      <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/10" />
+    </div>
+  );
+}
 
-const fundraising = [
-  "Build the first Hong Kong AI cold data center and BlueSafe optical storage capacity.",
-  "Accelerate Enterprise RAG Cloud productization for regulated and data-intensive sectors.",
-  "Recruit infrastructure, enterprise AI, data governance, and institutional partnership teams.",
-  "Develop the Data Asset Bank operating model with compliance, valuation, and trusted access partners.",
-];
+function IconCard({ item }: { item: CardItem }) {
+  return (
+    <SurfaceCard
+      className="h-full bg-spark-surface-1/78 p-5"
+      icon={<item.icon className="size-5" aria-hidden="true" />}
+    >
+      <h3 className="text-lg font-semibold leading-snug text-foreground">{item.title}</h3>
+      <p className="mt-4 text-sm leading-6 text-muted-foreground">{item.text}</p>
+    </SurfaceCard>
+  );
+}
 
 export default function HomePage() {
   return (
     <main className="bg-background">
-      <section className="relative isolate min-h-screen overflow-hidden bg-background">
+      <section className="relative isolate min-h-[92vh] overflow-hidden bg-background">
         <ParticleNetwork />
-        <div className="absolute inset-0 bg-[linear-gradient(125deg,hsl(var(--background))_0%,hsl(var(--surface-1))_42%,hsl(var(--primary)/0.24)_72%,hsl(var(--background))_100%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_78%_18%,hsl(var(--accent)/0.16),transparent_34%),radial-gradient(ellipse_at_18%_76%,hsl(var(--primary)/0.18),transparent_42%)]" />
-        <div className="absolute inset-0 spark-grid opacity-30" />
-        <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-background to-transparent" />
+        <div className="absolute inset-0 bg-[linear-gradient(125deg,hsl(var(--background))_0%,hsl(var(--surface-1))_48%,hsl(var(--primary)/0.18)_78%,hsl(var(--background))_100%)]" />
+        <div className="absolute inset-0 spark-grid opacity-25" />
+        <div className="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-background to-transparent" />
 
-        <Container className="relative z-10 flex min-h-screen items-center pb-20 pt-32 sm:pb-24 lg:pb-28 lg:pt-40">
-          <div className="grid w-full gap-14 lg:grid-cols-[minmax(0,0.92fr)_minmax(24rem,0.88fr)] lg:items-center xl:gap-20">
-            <AnimatedBlock className="max-w-4xl">
-              <p className="inline-flex rounded-md border border-white/10 bg-white/[0.045] px-3 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-accent backdrop-blur">
-                Spark AI Technology Limited
+        <Container className="relative z-10 flex min-h-[92vh] items-center pb-16 pt-28 sm:pb-20 lg:pt-36">
+          <div className="grid w-full gap-10 lg:grid-cols-[0.92fr_0.9fr] lg:items-center xl:gap-16">
+            <AnimatedBlock>
+              <p className="inline-flex rounded-md border border-accent/25 bg-accent/10 px-3 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-accent backdrop-blur">
+                Investor Version 4.0
               </p>
-              <h1 className="mt-8 max-w-4xl text-[1.96rem] font-semibold leading-[1.07] tracking-normal text-foreground sm:text-[2.68rem] lg:text-[3.24rem] xl:text-[3.56rem]">
-                Building the Future of
-                <span className="block text-foreground/92">AI Data Infrastructure</span>
+              <h1 className="mt-7 max-w-4xl text-[1.9rem] font-semibold leading-[1.09] tracking-normal text-foreground sm:text-[2.85rem] lg:text-[3.75rem]">
+                From Cold Data Storage to Data Asset Banking
               </h1>
-              <p className="mt-7 text-xl font-medium leading-8 text-accent sm:text-2xl">
-                Preserve cold data. Activate enterprise knowledge. Create data assets.
+              <p className="mt-6 max-w-3xl text-lg font-medium leading-8 text-accent sm:text-2xl">
+                Building Asia&apos;s first AI Data Asset Infrastructure Platform
               </p>
-              <p className="mt-7 max-w-3xl text-base leading-8 text-muted-foreground/85 sm:text-lg">
-                Spark AI is building infrastructure for long-life data preservation, private AI knowledge activation, and trusted data asset operations.
+              <p className="mt-4 max-w-3xl text-base leading-8 text-muted-foreground sm:text-lg">
+                Unlocking the value of the world&apos;s fastest growing data assets through
+                AI-ready cold data infrastructure, private knowledge activation, and trusted
+                data asset banking.
               </p>
-              <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-                <Button asChild variant="spark" size="lg">
-                  <Link href="mailto:info@sparkai.hk">
-                    Email Investor Relations
-                    <ArrowRight aria-hidden="true" />
+              <div className="mt-7 grid gap-3 sm:grid-cols-3">
+                {["100PB Hong Kong AI Cold Data Center", "BlueSafe RAG Cloud", "Data Asset Bank"].map(
+                  (item) => (
+                    <div
+                      key={item}
+                      className="rounded-lg border border-accent/20 bg-accent/10 px-4 py-3 text-sm font-semibold leading-5 text-foreground shadow-spark-sm"
+                    >
+                      {item}
+                    </div>
+                  ),
+                )}
+              </div>
+              <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+                <Button asChild variant="spark" size="lg" className="w-full sm:w-auto">
+                  <Link href="/contact">
+                    Book Investor Meeting
+                    <CalendarRange aria-hidden="true" />
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg">
-                  <Link href="#fundraising">
-                    View Fundraising Plan
-                    <Presentation aria-hidden="true" />
+                <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
+                  <Link href="/investors/deck">
+                    View Investor Deck
+                    <Download aria-hidden="true" />
                   </Link>
                 </Button>
               </div>
             </AnimatedBlock>
 
             <AnimatedBlock delay={0.12}>
-              <div className="relative overflow-hidden rounded-lg border border-white/10 bg-spark-surface-1/72 p-5 shadow-[0_32px_120px_hsl(var(--primary)/0.28)] backdrop-blur-xl sm:p-7 lg:p-8">
-                <div className="absolute inset-0 bg-[linear-gradient(135deg,hsl(var(--primary)/0.12),transparent_38%,hsl(var(--accent)/0.08))]" />
-                <div className="absolute inset-0 spark-grid opacity-20" />
-                <div className="relative z-10">
-                  <div className="flex items-center justify-between gap-6">
-                    <div>
-                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
-                        Investor Version 2.0
-                      </p>
-                      <h2 className="mt-3 text-2xl font-semibold text-foreground">
-                        Infrastructure Metrics
-                      </h2>
-                    </div>
-                    <LineChart className="size-10 text-accent" aria-hidden="true" />
-                  </div>
-
-                  <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                    {heroKpis.map((item, index) => (
-                      <div
-                        key={item.label}
-                        className="group relative overflow-hidden rounded-lg border border-white/10 bg-background/72 p-5 shadow-[0_18px_70px_hsl(var(--primary)/0.16)] transition duration-300 hover:border-accent/40"
-                      >
-                        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/80 to-transparent opacity-70" />
-                        <div className="relative z-10 flex items-start justify-between gap-4">
-                          <div>
-                            <p className="text-2xl font-semibold tracking-normal text-foreground">
-                              {item.value}
-                            </p>
-                            <p className="mt-3 text-sm font-medium leading-5 text-muted-foreground">
-                              {item.label}
-                            </p>
-                          </div>
-                          <span className="flex size-10 shrink-0 items-center justify-center rounded-md border border-accent/30 bg-accent/10 text-accent shadow-[0_0_28px_hsl(var(--accent)/0.18)]">
-                            <item.icon className="size-5" aria-hidden="true" />
-                          </span>
-                        </div>
-                        <div className="relative z-10 mt-5 h-1.5 overflow-hidden rounded-full bg-white/10">
-                          <div
-                            className="h-full rounded-full bg-[linear-gradient(90deg,hsl(var(--primary)),hsl(var(--accent)))] shadow-[0_0_18px_hsl(var(--accent)/0.45)]"
-                            style={{ width: `${68 + index * 8}%` }}
-                          />
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
+              <InvestorVisual src={visualAssets.cover} alt="Spark AI investor version 4.0 cover" priority />
             </AnimatedBlock>
           </div>
         </Container>
       </section>
 
-      <Section tone="panel" className="overflow-hidden">
-        <div className="grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
-          <SectionHeader
-            eyebrow="Spark AI Ecosystem"
-            title="One infrastructure ecosystem from cold data memory to investable data assets."
-            description="Spark AI connects physical storage, governance, enterprise AI activation, and data asset finance into a single operating platform for institutional data."
-          />
-          <AnimatedBlock delay={0.1}>
-            <div className="relative overflow-hidden rounded-lg border border-white/10 bg-background/72 p-5 shadow-spark-md sm:p-7">
-              <div className="absolute inset-0 spark-grid opacity-20" />
-              <div className="relative z-10 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
-                {ecosystemLayers.map((item, index) => (
-                  <div
-                    key={item.title}
-                    className="rounded-lg border border-white/10 bg-spark-surface-1/74 p-5 shadow-[0_18px_70px_hsl(var(--primary)/0.14)]"
-                  >
-                    <div className="flex items-start justify-between gap-4">
-                      <div>
-                        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
-                          Layer 0{index + 1}
-                        </p>
-                        <h2 className="mt-3 text-xl font-semibold text-foreground">{item.title}</h2>
-                      </div>
-                      <span className="flex size-10 shrink-0 items-center justify-center rounded-md border border-accent/30 bg-accent/10 text-accent">
-                        <item.icon className="size-5" aria-hidden="true" />
-                      </span>
-                    </div>
-                    <p className="mt-5 text-sm leading-6 text-muted-foreground">{item.text}</p>
-                  </div>
-                ))}
+      <Section tone="inset" className="py-14 sm:py-18 lg:py-20">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {kpis.map((metric, index) => (
+            <AnimatedBlock key={metric.value} delay={index * 0.05}>
+              <div className="h-full rounded-lg border border-white/10 bg-background/72 p-5 shadow-[0_18px_70px_hsl(var(--primary)/0.12)]">
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent/80">
+                  0{index + 1}
+                </p>
+                <p className="mt-4 text-3xl font-semibold tracking-normal text-accent sm:text-4xl">
+                  {metric.value}
+                </p>
+                <p className="mt-3 text-sm leading-6 text-muted-foreground">{metric.label}</p>
               </div>
-            </div>
-          </AnimatedBlock>
+            </AnimatedBlock>
+          ))}
         </div>
       </Section>
 
       <Section>
         <SectionHeader
-          eyebrow="Four Product Modules"
-          title="A modular product stack built for enterprise AI infrastructure buyers."
-          description="Each module can stand alone commercially, while the full stack compounds into a data infrastructure and data asset operating system."
+          eyebrow="Market Opportunity / 市场机会"
+          title="A new infrastructure market is forming around AI-ready data assets."
+          description="Spark AI targets the intersection of global data growth, cold data preservation, AI infrastructure demand, and data asset banking."
         />
         <AnimatedStagger className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-          {productModules.map((item, index) => (
-            <SurfaceCard
-              key={item.title}
-              className="h-full bg-spark-surface-1/78 p-6"
-              icon={<item.icon className="size-6" aria-hidden="true" />}
-            >
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
-                Module 0{index + 1}
-              </p>
-              <h2 className="mt-4 text-xl font-semibold leading-snug text-foreground">
-                {item.title}
-              </h2>
-              <p className="mt-5 text-sm leading-6 text-muted-foreground">{item.text}</p>
-            </SurfaceCard>
+          {marketOpportunity.map((item) => (
+            <IconCard key={item.title} item={item} />
           ))}
         </AnimatedStagger>
       </Section>
 
-      <Section tone="grid">
+      <Section tone="panel">
         <SectionHeader
-          eyebrow="Industry Applications"
-          title="Institutional data markets need durable memory, private AI knowledge, and trusted asset workflows."
-          description="Spark AI is positioned for regulated, data-intensive, and archive-heavy sectors where trust, longevity, and retrieval quality matter."
+          eyebrow="Investor Briefing / 投资人说明"
+          title="The timing, platform, and investment case behind Spark AI."
+          description="Spark AI positions cold data as the next infrastructure layer for enterprise AI, knowledge activation, and data asset banking."
         />
-        <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {industries.map((item, index) => (
-            <AnimatedBlock key={item.title} delay={index * 0.05}>
-              <div className="h-full rounded-lg border border-white/10 bg-background/74 p-6 shadow-[0_18px_70px_hsl(var(--primary)/0.12)]">
-                <div className="flex items-center gap-3">
-                  <span className="flex size-10 items-center justify-center rounded-md border border-accent/30 bg-accent/10 text-accent">
-                    <item.icon className="size-5" aria-hidden="true" />
+        <div className="mt-12 grid gap-5 lg:grid-cols-3">
+          {investorBriefingSections.map((section, sectionIndex) => (
+            <AnimatedBlock key={section.title} delay={sectionIndex * 0.06}>
+              <div className="relative h-full overflow-hidden rounded-lg border border-white/10 bg-background/72 p-5 shadow-[0_22px_80px_hsl(var(--primary)/0.16)] sm:p-6">
+                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/75 to-transparent" />
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent/80">
+                      0{sectionIndex + 1}
+                    </p>
+                    <h2 className="mt-4 text-2xl font-semibold leading-tight text-foreground">
+                      {section.title}
+                    </h2>
+                    <p className="mt-1 text-base font-medium text-accent/90">{section.titleZh}</p>
+                  </div>
+                  <span className="flex size-11 shrink-0 items-center justify-center rounded-md border border-accent/30 bg-accent/10 text-accent">
+                    {sectionIndex === 0 ? (
+                      <Zap className="size-5" aria-hidden="true" />
+                    ) : sectionIndex === 1 ? (
+                      <Layers3 className="size-5" aria-hidden="true" />
+                    ) : (
+                      <LineChart className="size-5" aria-hidden="true" />
+                    )}
                   </span>
-                  <h2 className="text-lg font-semibold leading-6 text-foreground">{item.title}</h2>
                 </div>
+                <div className="mt-6 grid gap-3">
+                  {section.points.map((point) => (
+                    <div key={point.title} className="rounded-lg border border-white/10 bg-spark-surface-1/70 p-4">
+                      <div className="flex gap-3">
+                        <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-accent" aria-hidden="true" />
+                        <div>
+                          <p className="text-sm font-semibold leading-5 text-foreground">{point.title}</p>
+                          <p className="mt-2 text-sm leading-6 text-muted-foreground">{point.text}</p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </AnimatedBlock>
+          ))}
+        </div>
+      </Section>
+
+      <Section>
+        <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+          <div>
+            <SectionHeader
+              eyebrow="Flagship Infrastructure"
+              title="Hong Kong 100PB AI Cold Data Center"
+              description="A flagship roadmap for long-life, low-energy, AI-ready cold data infrastructure serving enterprises, public institutions, research bodies, and financial data owners."
+            />
+            <AnimatedStagger className="mt-8 grid gap-4">
+              {dataCenterItems.map((item) => (
+                <IconCard key={item.title} item={item} />
+              ))}
+            </AnimatedStagger>
+          </div>
+          <AnimatedBlock delay={0.1}>
+            <InvestorVisual src={visualAssets.roadmap} alt="Hong Kong 100PB AI cold data center roadmap" />
+          </AnimatedBlock>
+        </div>
+      </Section>
+
+      <Section tone="grid">
+        <div className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+          <AnimatedBlock>
+            <InvestorVisual src={visualAssets.business} alt="Spark AI business model" />
+          </AnimatedBlock>
+          <div>
+            <SectionHeader
+              eyebrow="Business Model"
+              title="Recurring infrastructure revenue with data asset upside"
+              description="Spark AI combines durable storage economics, AI knowledge activation, and institutional data asset services into one operating model."
+            />
+            <div className="mt-8 grid gap-4">
+              {businessModel.map((item) => (
+                <IconCard key={item.title} item={item} />
+              ))}
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      <Section>
+        <SectionHeader
+          eyebrow="Why We Win / 胜出逻辑"
+          title="Spark AI is not another storage vendor or AI software layer."
+          description="The platform combines physical cold data infrastructure, private knowledge activation, enterprise edge deployment, and data asset banking into one defensible stack."
+        />
+        <div className="mt-12 grid gap-5 lg:grid-cols-3">
+          {whyWeWin.map((item, index) => (
+            <AnimatedBlock key={item.title} delay={index * 0.05}>
+              <div className="relative h-full overflow-hidden rounded-lg border border-white/10 bg-spark-surface-1/76 p-6 shadow-[0_22px_80px_hsl(var(--primary)/0.14)]">
+                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/75 to-transparent" />
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent/80">
+                  Comparison 0{index + 1}
+                </p>
+                <h2 className="mt-5 text-xl font-semibold leading-snug text-foreground">{item.title}</h2>
                 <p className="mt-5 text-sm leading-6 text-muted-foreground">{item.text}</p>
               </div>
             </AnimatedBlock>
@@ -346,185 +490,167 @@ export default function HomePage() {
       </Section>
 
       <Section tone="panel">
-        <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+        <div className="grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
           <SectionHeader
-            eyebrow="Market Signals"
-            title="Global AI Data Infrastructure Market"
-            description="全球 AI 数据基础设施市场 is expanding as enterprises preserve cold data, activate private knowledge, and build trusted data asset operations."
+            eyebrow="Why Spark AI"
+            title="Positioned at the infrastructure layer of enterprise AI"
+            description="Most AI investment focuses on models and applications. Spark AI targets the durable layer beneath them: governed data, cold storage, retrieval, and asset monetization."
           />
           <AnimatedBlock delay={0.1}>
-            <div className="grid gap-4">
-              {marketSignals.map((item) => (
-                <div key={item.label} className="rounded-lg border border-white/10 bg-background/72 p-5 shadow-spark-sm">
-                  <div className="flex flex-wrap items-end justify-between gap-4">
-                    <div>
-                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
-                        {item.label}
-                      </p>
-                      <p className="mt-1 text-sm font-medium text-muted-foreground/85">
-                        {item.labelZh}
-                      </p>
-                      <p className="mt-2 text-3xl font-semibold tracking-normal text-foreground">
-                        {item.value}
-                      </p>
-                    </div>
-                    <div className="max-w-xl">
-                      <p className="text-sm font-semibold uppercase tracking-[0.14em] text-accent">
-                        {item.text}
-                      </p>
-                      <p className="mt-2 text-sm leading-6 text-muted-foreground">{item.textZh}</p>
-                    </div>
-                  </div>
-                  <div className="mt-5 h-2 overflow-hidden rounded-full bg-white/10">
-                    <div
-                      className="h-full rounded-full bg-[linear-gradient(90deg,hsl(var(--primary)),hsl(var(--accent)))]"
-                      style={{ width: item.width }}
-                    />
-                  </div>
+            <InvestorVisual src={visualAssets.architecture} alt="Spark AI five-layer ecosystem architecture" />
+          </AnimatedBlock>
+        </div>
+        <AnimatedStagger className="mt-12 grid gap-4 md:grid-cols-3">
+          {whySpark.map((item) => (
+            <IconCard key={item.title} item={item} />
+          ))}
+        </AnimatedStagger>
+      </Section>
+
+      <Section>
+        <div className="grid gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:items-center">
+          <AnimatedBlock>
+            <InvestorVisual src={visualAssets.highlights} alt="Spark AI investor highlights" />
+          </AnimatedBlock>
+          <div>
+            <SectionHeader
+              eyebrow="Investor Highlights"
+              title="A focused infrastructure thesis for the AI data economy"
+              description="Spark AI gives investors a clear, asset-backed story around cold data, AI activation, energy efficiency, and Hong Kong as a regional data infrastructure base."
+            />
+            <div className="mt-8 grid gap-4">
+              {investorHighlights.map((item) => (
+                <div key={item} className="flex gap-3 rounded-lg border border-white/10 bg-spark-surface-1/76 p-5">
+                  <CheckCircle2 className="mt-1 size-5 shrink-0 text-accent" aria-hidden="true" />
+                  <p className="text-sm leading-6 text-muted-foreground">{item}</p>
                 </div>
               ))}
             </div>
-          </AnimatedBlock>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <Button asChild variant="spark" size="lg" className="w-full sm:w-auto">
+                <Link href="/contact">
+                  Book Investor Meeting
+                  <ArrowRight aria-hidden="true" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
+                <Link href="/investors/deck">
+                  View Investor Deck
+                  <Download aria-hidden="true" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      <Section tone="inset" className="py-16 sm:py-20">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            ["Financial Services", "Compliance archives, risk knowledge, governed retrieval."],
+            ["Public Sector", "Sovereign data reserves and long-term records preservation."],
+            ["Research & Education", "Research datasets, institutional memory, reusable AI libraries."],
+            ["Industrial AI", "Telemetry, process history, engineering knowledge, and operations data."],
+          ].map(([title, text]) => (
+            <div key={title} className="rounded-lg border border-white/10 bg-background/72 p-5">
+              <Factory className="size-5 text-accent" aria-hidden="true" />
+              <h3 className="mt-4 text-lg font-semibold text-foreground">{title}</h3>
+              <p className="mt-3 text-sm leading-6 text-muted-foreground">{text}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      <Section tone="panel">
+        <SectionHeader
+          eyebrow="Leadership & Advisory Board / 领导团队与顾问委员会"
+          title="Built by operators across infrastructure, AI systems, and data asset finance."
+          description="Spark AI brings together the capabilities required to build institutional data infrastructure: engineering, governance, commercialization, and capital-market execution."
+        />
+        <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          {leadershipBoard.map((item, index) => (
+            <AnimatedBlock key={item.title} delay={index * 0.05}>
+              <div className="h-full rounded-lg border border-white/10 bg-background/72 p-6 shadow-[0_18px_70px_hsl(var(--primary)/0.12)]">
+                <div className="flex items-center justify-between gap-4">
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent/80">
+                    Board 0{index + 1}
+                  </p>
+                  <span className="flex size-10 items-center justify-center rounded-md border border-accent/30 bg-accent/10 text-accent">
+                    <Building2 className="size-5" aria-hidden="true" />
+                  </span>
+                </div>
+                <h2 className="mt-5 text-xl font-semibold leading-snug text-foreground">{item.title}</h2>
+                <p className="mt-4 text-sm leading-6 text-muted-foreground">{item.text}</p>
+              </div>
+            </AnimatedBlock>
+          ))}
         </div>
       </Section>
 
       <Section>
-        <SectionHeader
-          eyebrow="Business Model"
-          title="Revenue streams across the AI data infrastructure stack."
-          description="商业模式 covers optical storage, AI cold data center capacity, enterprise RAG cloud usage, and data asset banking services."
-        />
-        <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-          {businessModel.map((item, index) => (
-            <AnimatedBlock key={item.title} delay={index * 0.05}>
-              <div className="h-full rounded-lg border border-white/10 bg-spark-surface-1/74 p-6 shadow-[0_18px_70px_hsl(var(--primary)/0.12)]">
-                <span className="flex size-11 items-center justify-center rounded-md border border-accent/30 bg-accent/10 text-accent">
-                  <item.icon className="size-5" aria-hidden="true" />
-                </span>
-                <h2 className="mt-5 text-xl font-semibold leading-snug text-foreground">{item.title}</h2>
-                <p className="mt-1 text-sm font-medium text-accent/85">{item.titleZh}</p>
-                <p className="mt-4 text-sm leading-6 text-muted-foreground">{item.text}</p>
-                <p className="mt-3 text-sm leading-6 text-muted-foreground/80">{item.textZh}</p>
-              </div>
-            </AnimatedBlock>
-          ))}
-        </div>
-      </Section>
-
-      <Section tone="grid">
-        <SectionHeader
-          eyebrow="Hong Kong 100PB Roadmap"
-          title="A focused timeline from company launch to data asset banking."
-          description="香港 100PB 路线图 keeps the investor story anchored on infrastructure delivery, BlueSafe RAG Cloud, and data asset operations."
-        />
-        <div className="mt-12 grid gap-4 lg:grid-cols-4">
-          {roadmap.map((item, index) => (
-            <AnimatedBlock key={item.year} delay={index * 0.05}>
-              <div className="relative h-full rounded-lg border border-white/10 bg-background/74 p-6 shadow-[0_18px_70px_hsl(var(--primary)/0.12)]">
-                <div className="flex items-center justify-between gap-4">
-                  <p className="text-3xl font-semibold tracking-normal text-accent">{item.year}</p>
-                  <span className="flex size-10 shrink-0 items-center justify-center rounded-md border border-accent/30 bg-accent/10 text-accent">
-                    <CalendarRange className="size-5" aria-hidden="true" />
-                  </span>
-                </div>
-                <h2 className="mt-5 text-lg font-semibold leading-snug text-foreground">{item.title}</h2>
-                <p className="mt-1 text-sm font-medium text-accent/85">{item.titleZh}</p>
-                <p className="mt-4 text-sm leading-6 text-muted-foreground">{item.text}</p>
-              </div>
-            </AnimatedBlock>
-          ))}
-        </div>
-      </Section>
-
-      <Section id="fundraising" tone="panel">
-        <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-          <SectionHeader
-            eyebrow="Fundraising Plan"
-            title="Capital supports the first infrastructure asset and commercial productization."
-            description="Funding is directed toward physical capacity, enterprise product readiness, specialist hiring, and regulated data asset operations."
-          />
-          <AnimatedBlock delay={0.1}>
-            <div className="rounded-lg border border-white/10 bg-background/72 p-6 shadow-spark-md sm:p-8">
-              <div className="grid gap-4">
-                {fundraising.map((item) => (
-                  <div key={item} className="flex gap-3 rounded-lg border border-white/10 bg-spark-surface-1/72 p-5">
-                    <CheckCircle2 className="mt-1 size-5 shrink-0 text-accent" aria-hidden="true" />
-                    <p className="text-sm leading-6 text-muted-foreground">{item}</p>
-                  </div>
-                ))}
+        <div className="relative overflow-hidden rounded-lg border border-white/10 bg-spark-surface-1 p-6 shadow-spark-md sm:p-8 lg:p-10">
+          <div className="absolute inset-0 spark-grid opacity-20" />
+          <div className="relative z-10 grid gap-10 lg:grid-cols-[1fr_0.9fr] lg:items-center">
+            <div>
+              <p className="text-sm font-medium uppercase tracking-[0.14em] text-accent">
+                Investor Contact / 投资人联系
+              </p>
+              <h2 className="mt-4 max-w-3xl text-3xl font-semibold leading-tight tracking-normal text-foreground sm:text-5xl">
+                Join the buildout of Asia&apos;s AI data asset infrastructure.
+              </h2>
+              <p className="mt-5 max-w-3xl text-base leading-7 text-muted-foreground">
+                Contact Spark AI for investor meetings, strategic partnerships, and the Investor Version 4.0 pitch deck.
+              </p>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <Button asChild variant="spark" size="lg" className="w-full sm:w-auto">
+                  <Link href="/contact">
+                    Book Investor Meeting
+                    <CalendarRange aria-hidden="true" />
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
+                  <Link href="/investors">
+                    Download Pitch Deck
+                    <Download aria-hidden="true" />
+                  </Link>
+                </Button>
               </div>
             </div>
-          </AnimatedBlock>
+            <div className="grid gap-4">
+              <div className="rounded-lg border border-accent/20 bg-accent/10 p-5">
+                <div className="flex gap-3">
+                  <Mail className="mt-1 size-5 shrink-0 text-accent" aria-hidden="true" />
+                  <div>
+                    <p className="font-semibold text-foreground">info@sparkai.hk</p>
+                    <p className="mt-1 text-sm leading-6 text-muted-foreground">
+                      Investor relations and strategic partnership inquiries.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              {[
+                "Book Investor Meeting",
+                "Download Pitch Deck",
+                "Discuss Hong Kong 100PB AI Cold Data Center partnerships",
+              ].map((item) => (
+                <div key={item} className="flex gap-3 rounded-lg border border-white/10 bg-background/68 p-5">
+                  <CheckCircle2 className="mt-1 size-5 shrink-0 text-accent" aria-hidden="true" />
+                  <p className="text-sm leading-6 text-muted-foreground">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </Section>
 
-      <section className="bg-background py-20 sm:py-24 lg:py-32">
+      <footer className="border-t border-white/10 bg-background py-8">
         <Container>
-          <AnimatedBlock>
-            <div className="relative overflow-hidden rounded-lg border border-white/10 bg-spark-surface-1 p-8 shadow-spark-md sm:p-10 lg:p-12">
-              <div className="absolute inset-0 spark-grid opacity-20" />
-              <div className="relative z-10 grid gap-10 lg:grid-cols-[1fr_0.86fr] lg:items-center">
-                <div>
-                  <p className="text-sm font-medium uppercase tracking-[0.14em] text-accent">
-                    Investor Relations
-                  </p>
-                  <h2 className="mt-4 max-w-3xl text-3xl font-semibold leading-tight tracking-normal text-foreground sm:text-5xl">
-                    Transforming cold data infrastructure into an AI data asset economy.
-                  </h2>
-                  <p className="mt-5 max-w-3xl text-base leading-7 text-muted-foreground">
-                    Spark AI is building the infrastructure layer that preserves enterprise memory, activates private knowledge, and creates the operating rails for data assets.
-                  </p>
-                  <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                    <Button asChild variant="spark" size="lg">
-                      <Link href="/investors">
-                        Download Investor Deck
-                        <Download aria-hidden="true" />
-                      </Link>
-                    </Button>
-                    <Button asChild variant="outline" size="lg">
-                      <Link href="/contact">
-                        Schedule Meeting
-                        <CalendarRange aria-hidden="true" />
-                      </Link>
-                    </Button>
-                    <Button asChild variant="outline" size="lg">
-                      <Link href="mailto:info@sparkai.hk">
-                        Contact Investor Relations
-                        <ArrowRight aria-hidden="true" />
-                      </Link>
-                    </Button>
-                  </div>
-                </div>
-                <div className="grid gap-4">
-                  {[
-                    "Infrastructure thesis: cold data preservation becomes the foundation for enterprise AI memory.",
-                    "Product stack: storage, governance, RAG activation, and data asset services reinforce each other.",
-                    "Hong Kong positioning: capital, compliance, enterprise demand, and cross-border technology access.",
-                  ].map((item) => (
-                    <div key={item} className="rounded-lg border border-white/10 bg-background/68 p-5">
-                      <div className="flex gap-3">
-                        <CheckCircle2 className="mt-1 size-5 shrink-0 text-accent" aria-hidden="true" />
-                        <p className="text-sm leading-6 text-muted-foreground">{item}</p>
-                      </div>
-                    </div>
-                  ))}
-                  <div className="rounded-lg border border-accent/20 bg-accent/10 p-5">
-                    <div className="flex gap-3">
-                      <Mail className="mt-1 size-5 shrink-0 text-accent" aria-hidden="true" />
-                      <div>
-                        <p className="font-semibold text-foreground">info@sparkai.hk</p>
-                        <p className="mt-1 text-sm text-muted-foreground">
-                          Investor relations and strategic partnership inquiries
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </AnimatedBlock>
+          <div className="flex flex-col gap-2 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+            <p>2026 Spark AI Technology Limited</p>
+            <p className="font-medium text-accent/90">Hong Kong AI Data Infrastructure Operator</p>
+          </div>
         </Container>
-      </section>
+      </footer>
     </main>
   );
 }
