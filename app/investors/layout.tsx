@@ -1,4 +1,4 @@
-import type * as React from "react";
+﻿import type * as React from "react";
 
 import { SiteFooter } from "@/components/site/site-footer";
 import { SiteHeader } from "@/components/site/site-header";

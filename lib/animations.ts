@@ -1,4 +1,4 @@
-import type { Easing, Variants } from "framer-motion";
+﻿import type { Easing, Variants } from "framer-motion";
 
 export const easeOutExpo: Easing = [0.16, 1, 0.3, 1];
 

@@ -1,4 +1,4 @@
-import * as React from "react";
+﻿import * as React from "react";
 
 import { Container, type ContainerProps } from "@/components/design-system/container";
 import { cn } from "@/lib/utils";
@@ -46,9 +46,9 @@ export function SectionHeader({
   description,
 }: {
   className?: string;
-  eyebrow?: string;
-  title: string;
-  description?: string;
+  eyebrow?: React.ReactNode;
+  title: React.ReactNode;
+  description?: React.ReactNode;
 }) {
   return (
     <div className={cn("max-w-3xl", className)}>

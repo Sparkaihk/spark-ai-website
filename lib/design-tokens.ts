@@ -1,4 +1,4 @@
-export const sparkColors = {
+﻿export const sparkColors = {
   sparkBlue: "#007AFF",
   dataCyan: "#00D4FF",
   deepSpaceBlack: "#0B1020",

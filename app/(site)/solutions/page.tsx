@@ -1,12 +1,7 @@
-import type { Metadata } from "next";
+﻿import { BrandedOverviewPage, brandMetadata } from "@/components/sections/branded-overview-page";
 
-import { StandardPage } from "@/components/sections/standard-page";
-import { sparkPages } from "@/lib/spark-page-content";
+export const metadata = brandMetadata;
 
-const page = sparkPages.solutions;
-
-export const metadata: Metadata = page.metadata;
-
-export default function SolutionsPage() {
-  return <StandardPage page={page} />;
+export default function Page() {
+  return <BrandedOverviewPage />;
 }

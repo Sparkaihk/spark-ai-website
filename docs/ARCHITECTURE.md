@@ -1,4 +1,4 @@
-# Architecture
+﻿# Architecture
 
 Spark AI is structured as a component-first Next.js application.
 

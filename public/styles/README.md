@@ -1,4 +1,4 @@
-# Spark AI Static Styles
+﻿# Spark AI Static Styles
 
 This folder is reserved for public, static style assets that need to be served directly from `/styles/*`.
 

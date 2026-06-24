@@ -1,4 +1,4 @@
-import type { LucideIcon } from "lucide-react";
+﻿import type { LucideIcon } from "lucide-react";
 
 import { AnimatedStagger } from "@/components/design-system/animated";
 import { Section, SectionHeader } from "@/components/design-system/section";

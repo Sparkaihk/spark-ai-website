@@ -1,0 +1,30 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" rx="24" fill="#F8FBFF"/>
+  <path d="M180 380H1020" stroke="#93C5FD" stroke-width="10" stroke-linecap="round"/>
+  <path d="M180 380H780" stroke="#2563EB" stroke-width="10" stroke-linecap="round"/>
+  <g>
+    <circle cx="210" cy="380" r="42" fill="white" stroke="#2563EB" stroke-width="7"/>
+    <circle cx="470" cy="380" r="42" fill="white" stroke="#2563EB" stroke-width="7"/>
+    <circle cx="730" cy="380" r="42" fill="white" stroke="#2563EB" stroke-width="7"/>
+    <circle cx="990" cy="380" r="42" fill="white" stroke="#93C5FD" stroke-width="7"/>
+  </g>
+  <g fill="#0F172A" font-family="Arial, sans-serif" font-weight="700" font-size="34">
+    <text x="168" y="283">2025</text>
+    <text x="428" y="501">2026</text>
+    <text x="688" y="283">2027</text>
+    <text x="948" y="501">2028</text>
+  </g>
+  <g fill="white" stroke="#BFDBFE" stroke-width="4">
+    <rect x="112" y="162" width="196" height="74" rx="16"/>
+    <rect x="372" y="524" width="196" height="74" rx="16"/>
+    <rect x="632" y="162" width="196" height="74" rx="16"/>
+    <rect x="892" y="524" width="196" height="74" rx="16"/>
+  </g>
+  <g stroke="#60A5FA" stroke-width="8" stroke-linecap="round">
+    <path d="M150 199H270"/>
+    <path d="M410 561H530"/>
+    <path d="M670 199H790"/>
+    <path d="M930 561H1050"/>
+  </g>
+  <path d="M210 338V236M470 422V524M730 338V236M990 422V524" stroke="#93C5FD" stroke-width="5" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,27 @@
+<svg width="1200" height="760" viewBox="0 0 1200 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="760" rx="24" fill="#F8FBFF"/>
+  <circle cx="600" cy="380" r="132" fill="white" stroke="#2563EB" stroke-width="6"/>
+  <circle cx="600" cy="380" r="74" fill="#DBEAFE" stroke="#60A5FA" stroke-width="5"/>
+  <path d="M563 381L590 408L642 344" stroke="#2563EB" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="white" stroke="#BFDBFE" stroke-width="5">
+    <rect x="126" y="162" width="260" height="138" rx="22"/>
+    <rect x="814" y="162" width="260" height="138" rx="22"/>
+    <rect x="126" y="460" width="260" height="138" rx="22"/>
+    <rect x="814" y="460" width="260" height="138" rx="22"/>
+  </g>
+  <g stroke="#2563EB" stroke-width="8" stroke-linecap="round">
+    <path d="M186 211H326M186 251H286"/>
+    <path d="M874 211H1014M874 251H974"/>
+    <path d="M186 509H326M186 549H286"/>
+    <path d="M874 509H1014M874 549H974"/>
+  </g>
+  <path d="M386 231C459 231 501 276 531 314M814 231C741 231 699 276 669 314M386 529C459 529 501 484 531 446M814 529C741 529 699 484 669 446" stroke="#93C5FD" stroke-width="7" stroke-linecap="round"/>
+  <g fill="#0EA5E9">
+    <circle cx="430" cy="231" r="13"/>
+    <circle cx="770" cy="231" r="13"/>
+    <circle cx="430" cy="529" r="13"/>
+    <circle cx="770" cy="529" r="13"/>
+  </g>
+  <rect x="463" y="626" width="274" height="54" rx="16" fill="#2563EB"/>
+  <path d="M510 653H690" stroke="white" stroke-width="8" stroke-linecap="round"/>
+</svg>

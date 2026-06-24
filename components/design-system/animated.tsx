@@ -18,7 +18,7 @@ export function AnimatedBlock({
   return (
     <motion.div
       className={cn(className)}
-      initial={false}
+      initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-80px" }}
       variants={fadeUp(delay)}
@@ -34,7 +34,7 @@ export function AnimatedStagger({
   return (
     <motion.div
       className={cn(className)}
-      initial={false}
+      initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-80px" }}
       variants={staggerContainer}

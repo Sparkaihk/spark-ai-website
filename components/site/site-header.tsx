@@ -1,94 +1,104 @@
 "use client";
 
-import Link from "next/link";
-import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowUpRight, Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
+import type * as React from "react";
+import { useEffect, useState } from "react";
 
 import { LanguageSwitcher } from "@/components/site/language-switcher";
-import { siteRoutes } from "@/components/site/navigation.config";
+import { LocalizedText } from "@/components/site/localized-text";
+import { investorRoutes, siteRoutes, type SiteRoute } from "@/components/site/navigation.config";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-const brandName = "Spark AI Technology Limited";
-const brandSubtitle = "AI data infrastructure operator";
+function scrollToHash(event: React.MouseEvent<HTMLAnchorElement>, href: string) {
+  if (!href.startsWith("#")) return;
+
+  event.preventDefault();
+  document.querySelector(href)?.scrollIntoView({ behavior: "smooth", block: "start" });
+  window.history.replaceState(null, "", href);
+}
+
+function HeaderNavLink({ route, onNavigate, className }: { route: SiteRoute; onNavigate?: () => void; className?: string }) {
+  return (
+    <a
+      href={route.href}
+      onClick={(event) => {
+        scrollToHash(event, route.href);
+        onNavigate?.();
+      }}
+      className={className}
+    >
+      <LocalizedText zh={route.labelZh} en={route.label} />
+    </a>
+  );
+}
 
 export function SiteHeader() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const routes = pathname?.startsWith("/investors") ? investorRoutes : siteRoutes;
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 12);
-
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
-
     return () => {
       document.body.style.overflow = "";
     };
   }, [isOpen]);
 
   return (
-    <motion.header
-      initial={false}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
-      className="fixed inset-x-0 top-0 z-50"
-    >
-      <div className="mx-auto w-full max-w-[92rem] px-4 py-3 sm:px-6 lg:px-8">
+    <motion.header initial={false} animate={{ y: 0, opacity: 1 }} className="fixed inset-x-0 top-0 z-50">
+      <div className="mx-auto w-full max-w-[94rem] px-3 py-3 sm:px-5 lg:px-6">
         <motion.div
           className={cn(
-            "flex h-16 items-center justify-between rounded-lg border px-4 backdrop-blur-xl transition-all duration-300 ease-out lg:px-5",
-            isScrolled
-              ? "border-border/70 bg-background/85 shadow-[0_18px_60px_hsl(var(--deep-space-black)/0.38)] supports-[backdrop-filter]:bg-background/80"
-              : "border-transparent bg-background/0 shadow-none",
+            "flex h-16 items-center justify-between rounded-[20px] border px-3 backdrop-blur-xl transition-all duration-300 lg:px-4",
+            isScrolled ? "border-sky-100 bg-white/94 shadow-[0_16px_50px_rgba(37,99,235,0.12)]" : "border-sky-100/80 bg-white/80 shadow-sm",
           )}
         >
-          <Link
-            href="/"
-            aria-label={`${brandName} home`}
-            className="group flex min-w-0 shrink-0 items-center gap-3.5 whitespace-nowrap lg:basis-[19rem]"
-            onClick={() => setIsOpen(false)}
+          <a
+            href="#home"
+            aria-label="Spark AI home"
+            className="group flex min-w-0 shrink-0 items-center gap-2.5 whitespace-nowrap lg:basis-[10rem] xl:basis-[12rem]"
+            onClick={(event) => {
+              scrollToHash(event, "#home");
+              setIsOpen(false);
+            }}
           >
-            <span className="relative flex size-9 shrink-0 items-center justify-center rounded-md border border-white/10 bg-primary text-sm font-semibold text-primary-foreground shadow-spark-sm">
-              S
-              <span className="absolute inset-0 rounded-md ring-1 ring-inset ring-white/20" />
-            </span>
+            <span className="flex size-9 shrink-0 items-center justify-center rounded-[16px] bg-primary text-sm font-semibold text-white shadow-spark-sm">S</span>
             <span className="hidden min-w-0 sm:block">
-              <span className="block text-sm font-semibold leading-4 tracking-normal text-foreground">
-                {brandName}
-              </span>
-              <span className="block max-w-[15rem] truncate text-[0.67rem] font-medium uppercase leading-4 tracking-[0.12em] text-muted-foreground">
-                {brandSubtitle}
+              <span className="block truncate text-sm font-semibold leading-4 text-foreground">Spark AI</span>
+              <span className="block max-w-[10rem] truncate text-[0.62rem] font-medium uppercase leading-4 tracking-[0.08em] text-muted-foreground">
+                AI Cold Data Platform
               </span>
             </span>
-          </Link>
+          </a>
 
-          <nav aria-label="Main navigation" className="hidden min-w-0 flex-1 items-center justify-center gap-1.5 lg:flex">
-            {siteRoutes.map((route) => (
-              <Link
+          <nav aria-label="Main navigation" className="hidden min-w-0 flex-1 items-center justify-center gap-0.5 lg:flex">
+            {routes.map((route) => (
+              <HeaderNavLink
                 key={route.href}
-                href={route.href}
-                className="whitespace-nowrap rounded-md px-2.5 py-2 text-[0.9rem] font-medium leading-none text-muted-foreground transition-colors duration-200 hover:bg-white/5 hover:text-foreground xl:px-3.5 xl:text-[0.95rem]"
-              >
-                {route.label}
-              </Link>
+                route={route}
+                className="whitespace-nowrap rounded-[16px] px-1.5 py-2 text-[0.66rem] font-medium leading-none text-muted-foreground transition-colors duration-200 hover:bg-sky-50 hover:text-primary xl:px-2 xl:text-[0.75rem] 2xl:px-2.5 2xl:text-[0.82rem]"
+              />
             ))}
           </nav>
 
-          <div className="hidden shrink-0 basis-[19rem] items-center justify-end gap-2.5 whitespace-nowrap lg:flex">
+          <div className="hidden shrink-0 basis-[10.75rem] items-center justify-end gap-1.5 whitespace-nowrap lg:flex xl:basis-[12rem] xl:gap-2">
             <LanguageSwitcher />
-            <Button asChild variant="spark" size="sm">
-              <Link href="/contact">
-                Contact
+            <Button asChild variant="spark" size="sm" className="rounded-[16px] px-2.5 xl:px-3">
+              <a href="#contact-us" onClick={(event) => scrollToHash(event, "#contact-us")}>
+                <LocalizedText zh="聯絡我們" en="Contact" />
                 <ArrowUpRight aria-hidden="true" />
-              </Link>
+              </a>
             </Button>
           </div>
 
@@ -97,13 +107,9 @@ export function SiteHeader() {
             aria-label={isOpen ? "Close navigation" : "Open navigation"}
             aria-expanded={isOpen}
             onClick={() => setIsOpen((value) => !value)}
-            className="inline-flex size-10 items-center justify-center rounded-md border border-white/10 bg-white/5 text-foreground transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring lg:hidden"
+            className="inline-flex size-10 items-center justify-center rounded-[16px] border border-sky-100 bg-white text-foreground transition-colors hover:bg-sky-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring lg:hidden"
           >
-            {isOpen ? (
-              <X className="size-5" aria-hidden="true" />
-            ) : (
-              <Menu className="size-5" aria-hidden="true" />
-            )}
+            {isOpen ? <X className="size-5" aria-hidden="true" /> : <Menu className="size-5" aria-hidden="true" />}
           </button>
         </motion.div>
       </div>
@@ -115,7 +121,7 @@ export function SiteHeader() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-x-0 bottom-0 top-[5.5rem] z-40 bg-background/96 backdrop-blur-xl lg:hidden"
+            className="fixed inset-x-0 bottom-0 top-[5.5rem] z-40 bg-white/96 backdrop-blur-xl lg:hidden"
           >
             <motion.nav
               aria-label="Mobile navigation"
@@ -125,25 +131,28 @@ export function SiteHeader() {
               transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
               className="mx-auto flex w-full max-w-7xl flex-col gap-1 px-6 pb-8 pt-4"
             >
-              {siteRoutes.map((route) => (
-                <Link
+              {routes.map((route) => (
+                <HeaderNavLink
                   key={route.href}
-                  href={route.href}
-                  onClick={() => setIsOpen(false)}
-                  className="flex items-center gap-3 rounded-md px-3 py-3 text-base font-medium text-foreground transition-colors hover:bg-white/[0.06]"
-                >
-                  <route.icon className="size-4 text-accent" aria-hidden="true" />
-                  {route.label}
-                </Link>
+                  route={route}
+                  onNavigate={() => setIsOpen(false)}
+                  className="flex items-center gap-3 rounded-[16px] px-3 py-3 text-base font-medium text-foreground transition-colors hover:bg-sky-50"
+                />
               ))}
               <div className="mt-4">
                 <LanguageSwitcher compact />
               </div>
-              <Button asChild variant="spark" className="mt-4 w-full">
-                <Link href="/contact" onClick={() => setIsOpen(false)}>
-                  Contact
+              <Button asChild variant="spark" className="mt-4 w-full rounded-[16px]">
+                <a
+                  href="#contact-us"
+                  onClick={(event) => {
+                    scrollToHash(event, "#contact-us");
+                    setIsOpen(false);
+                  }}
+                >
+                  <LocalizedText zh="聯絡我們" en="Contact Us" />
                   <ArrowUpRight aria-hidden="true" />
-                </Link>
+                </a>
               </Button>
             </motion.nav>
           </motion.div>
