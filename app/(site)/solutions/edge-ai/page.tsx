@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { SparkContentPage } from "@/components/sections/spark-content-page";
 import { contentPages } from "@/lib/content-pages";
 
-const page = contentPages.about;
+const page = contentPages["edge-ai"];
 
 export const metadata: Metadata = {
   title: `${page.title.zh} | ${page.title.en}`,

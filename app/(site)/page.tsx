@@ -3,8 +3,10 @@ import {
   Banknote,
   BarChart3,
   CalendarDays,
+  Cpu,
   Database,
   FileSearch,
+  HardDrive,
   Mail,
   MapPin,
   ShieldCheck,
@@ -114,6 +116,15 @@ const roadmapItems = [
   { year: "2028", zh: "亚洲冷数据网络", en: "Asian cold data network" },
 ];
 
+const sectionLinks: Record<string, string> = {
+  "cold-data-center": "/solutions/ai-cold-data",
+  solutions: "/solutions/optical-storage",
+  "rag-cloud": "/solutions/rag",
+  "data-asset-bank": "/solutions/data-bank",
+  "investor-highlights": "/technology",
+  roadmap: "/about",
+};
+
 function TopicSection({ section, index }: { section: (typeof sections)[number]; index: number }) {
   const Icon = section.icon;
 
@@ -137,12 +148,63 @@ function TopicSection({ section, index }: { section: (typeof sections)[number]; 
             <img src={section.image} alt="" className="aspect-[16/9] h-auto w-full rounded-[16px] object-cover" />
           </div>
           <Button asChild variant="spark" size="lg" className="mt-8 rounded-[20px]">
-            <a href={`#${section.id}`}>
+            <a href={sectionLinks[section.id] ?? "/"}>
               <LocalizedText zh="了解更多" en="Learn More" />
               <ArrowRight aria-hidden="true" />
             </a>
           </Button>
         </AnimatedBlock>
+      </Container>
+    </section>
+  );
+}
+
+function FlagshipProductSection() {
+  const capabilities = [
+    { zh: "GPU 本地推理", en: "Local GPU inference", icon: Cpu },
+    { zh: "RAG 企業知識庫", en: "RAG knowledge base", icon: FileSearch },
+    { zh: "BlueSafe 冷數據", en: "BlueSafe cold data", icon: HardDrive },
+  ];
+
+  return (
+    <section id="flagship-product" className="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-28">
+      <div className="absolute inset-0 spark-grid opacity-45" />
+      <Container className="relative z-10">
+        <div className="grid gap-10 rounded-[24px] border border-sky-100 bg-[linear-gradient(135deg,rgba(255,255,255,0.92)_0%,rgba(239,246,255,0.86)_100%)] p-5 shadow-spark-md backdrop-blur-xl lg:grid-cols-[0.46fr_0.54fr] lg:items-center lg:p-8">
+          <AnimatedBlock>
+            <p className="inline-flex rounded-[20px] border border-sky-200 bg-white/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-primary shadow-sm">
+              <LocalizedText zh="旗艦產品" en="Flagship Product" />
+            </p>
+            <h2 className="mt-5 text-3xl font-semibold leading-tight text-foreground sm:text-5xl">
+              RTX Spark AI Integrated Appliance
+            </h2>
+            <p className="mt-5 text-[16px] leading-[1.75] text-muted-foreground sm:text-[18px]">
+              <LocalizedText
+                zh="定制集成 GPU 算力、RAG 企業知識庫、BlueSafe AI 冷數據存儲與私有化部署能力，讓企業在一台設備上快速建立安全、可控、可擴展的 AI 應用平台。"
+                en="A customized appliance integrating GPU compute, enterprise RAG, BlueSafe AI cold data storage, and private deployment for secure and scalable enterprise AI."
+              />
+            </p>
+            <div className="mt-6 grid gap-3 sm:grid-cols-3">
+              {capabilities.map((item) => (
+                <div key={item.en} className="rounded-[18px] border border-sky-100 bg-white/78 p-4 shadow-sm transition duration-300 hover:-translate-y-1 hover:bg-white">
+                  <item.icon className="size-5 text-accent" aria-hidden="true" />
+                  <p className="mt-3 text-sm font-semibold text-foreground"><LocalizedText zh={item.zh} en={item.en} /></p>
+                </div>
+              ))}
+            </div>
+            <Button asChild variant="spark" size="lg" className="mt-7 rounded-[20px]">
+              <a href="/products/rtx-spark">
+                <LocalizedText zh="了解 RTX Spark" en="Explore RTX Spark" />
+                <ArrowRight aria-hidden="true" />
+              </a>
+            </Button>
+          </AnimatedBlock>
+          <AnimatedBlock delay={0.08}>
+            <div className="overflow-hidden rounded-[22px] border border-white/80 bg-white/70 p-3 shadow-[0_24px_80px_rgba(37,99,235,0.16)] transition duration-300 hover:-translate-y-1">
+              <img src="/images/rtx-spark-appliance.png" alt="RTX Spark AI Integrated Appliance" className="aspect-[16/10] h-auto w-full rounded-[16px] object-cover" />
+            </div>
+          </AnimatedBlock>
+        </div>
       </Container>
     </section>
   );
@@ -232,6 +294,8 @@ export default function HomePage() {
           </AnimatedStagger>
         </Container>
       </section>
+
+      <FlagshipProductSection />
 
       {sections.map((section, index) => (
         <TopicSection key={section.id} section={section} index={index} />

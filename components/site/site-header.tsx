@@ -65,13 +65,10 @@ export function SiteHeader() {
           )}
         >
           <a
-            href="#home"
+            href="/"
             aria-label="Spark AI home"
             className="group flex min-w-0 shrink-0 items-center gap-2.5 whitespace-nowrap lg:basis-[10rem] xl:basis-[12rem]"
-            onClick={(event) => {
-              scrollToHash(event, "#home");
-              setIsOpen(false);
-            }}
+            onClick={() => setIsOpen(false)}
           >
             <span className="flex size-9 shrink-0 items-center justify-center rounded-[16px] bg-primary text-sm font-semibold text-white shadow-spark-sm">S</span>
             <span className="hidden min-w-0 sm:block">
@@ -87,7 +84,7 @@ export function SiteHeader() {
               <HeaderNavLink
                 key={route.href}
                 route={route}
-                className="whitespace-nowrap rounded-[16px] px-1.5 py-2 text-[0.66rem] font-medium leading-none text-muted-foreground transition-colors duration-200 hover:bg-sky-50 hover:text-primary xl:px-2 xl:text-[0.75rem] 2xl:px-2.5 2xl:text-[0.82rem]"
+                className="whitespace-nowrap rounded-[16px] px-1.5 py-2 text-[0.62rem] font-medium leading-none text-muted-foreground transition-colors duration-200 hover:bg-sky-50 hover:text-primary xl:px-2 xl:text-[0.72rem] 2xl:px-2.5 2xl:text-[0.8rem]"
               />
             ))}
           </nav>
@@ -95,8 +92,8 @@ export function SiteHeader() {
           <div className="hidden shrink-0 basis-[10.75rem] items-center justify-end gap-1.5 whitespace-nowrap lg:flex xl:basis-[12rem] xl:gap-2">
             <LanguageSwitcher />
             <Button asChild variant="spark" size="sm" className="rounded-[16px] px-2.5 xl:px-3">
-              <a href="#contact-us" onClick={(event) => scrollToHash(event, "#contact-us")}>
-                <LocalizedText zh="聯絡我們" en="Contact" />
+              <a href="/contact">
+                <LocalizedText zh="聯絡" en="Contact" />
                 <ArrowUpRight aria-hidden="true" />
               </a>
             </Button>
@@ -143,13 +140,7 @@ export function SiteHeader() {
                 <LanguageSwitcher compact />
               </div>
               <Button asChild variant="spark" className="mt-4 w-full rounded-[16px]">
-                <a
-                  href="#contact-us"
-                  onClick={(event) => {
-                    scrollToHash(event, "#contact-us");
-                    setIsOpen(false);
-                  }}
-                >
+                <a href="/contact" onClick={() => setIsOpen(false)}>
                   <LocalizedText zh="聯絡我們" en="Contact Us" />
                   <ArrowUpRight aria-hidden="true" />
                 </a>
