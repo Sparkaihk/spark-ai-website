@@ -16,15 +16,21 @@ export function SiteFooter() {
                 <span className="block text-sm text-muted-foreground">AI Cold Data Platform</span>
               </span>
             </Link>
+            <p className="mt-4 max-w-sm text-sm leading-6 text-muted-foreground">
+              <LocalizedText
+                zh="面向 AI 時代的冷數據基礎設施，連接低能耗儲存、企業知識啟用與數據資產化。"
+                en="Cold data infrastructure for the AI era, connecting low-energy storage, enterprise knowledge activation, and data assetization."
+              />
+            </p>
           </div>
 
           <div>
             <h2 className="text-sm font-medium text-foreground">
-              <LocalizedText zh="導航" en="Navigation" />
+              <LocalizedText zh="網站導覽" en="Navigation" />
             </h2>
             <div className="mt-4 grid grid-cols-2 gap-3">
               {siteRoutes.map((route) => (
-                <Link key={route.href} href={`/${route.href}`} className="text-sm leading-6 text-muted-foreground transition-colors hover:text-primary">
+                <Link key={route.href} href={route.href} className="text-sm leading-6 text-muted-foreground transition-colors hover:text-primary">
                   <LocalizedText zh={route.labelZh} en={route.label} />
                 </Link>
               ))}
@@ -41,14 +47,14 @@ export function SiteFooter() {
               </Link>
               <p>Hong Kong</p>
               <Link href="mailto:info@sparkai.hk?subject=Book%20a%20Meeting%20with%20Spark%20AI" className="block text-primary transition-colors hover:text-accent">
-                Book a Meeting
+                <LocalizedText zh="預約會議" en="Book a Meeting" />
               </Link>
             </div>
           </div>
         </div>
 
         <div className="mt-10 border-t border-sky-100 pt-6 text-xs text-muted-foreground">
-          <p>2026 All Rights Reserved</p>
+          <p>2026 Spark AI Technology Limited. All rights reserved.</p>
         </div>
       </div>
     </footer>

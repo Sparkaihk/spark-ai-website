@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import type * as React from "react";
 import "./globals.css";
 
-const titleZh = "海量冷數據是 AI 應用的藍海 | Spark AI";
-const titleEn = "Spark AI | AI Cold Data Platform";
-const descriptionZh = "Spark AI 建設 AI 冷數據中心、藍光存儲系統、BlueSafe RAG Cloud 與 Data Asset Bank，釋放冷數據的智能與資產價值。";
+const titleZh = "Spark AI | AI 冷數據基礎設施平台";
+const titleEn = "Spark AI | AI Cold Data Infrastructure Platform";
+const descriptionZh =
+  "Spark AI 建構面向投資人、政府與企業的 AI 冷數據基礎設施，結合光碟冷儲存、BlueSafe RAG Cloud 與 Data Asset Bank，釋放沉睡數據價值。";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://sparkai.hk"),

@@ -32,7 +32,7 @@ export function LanguageSwitcher({ compact = false }: { compact?: boolean }) {
   return (
     <button
       type="button"
-      aria-label={language === "zh" ? "Switch language to English" : "切換語言為繁體中文"}
+      aria-label={language === "zh" ? "Switch language to English" : "切換語言至繁體中文"}
       onClick={toggleLanguage}
       className="inline-flex h-9 items-center justify-center gap-2 rounded-md border border-sky-100 bg-white px-3 text-xs font-semibold text-muted-foreground transition-colors hover:bg-sky-50 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
     >
