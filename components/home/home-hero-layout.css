@@ -3,7 +3,7 @@
   isolation: isolate;
   overflow-x: clip;
   min-height: clamp(720px, 100svh, 760px);
-  padding-block: clamp(72px, 9vh, 88px) clamp(24px, 3vh, 36px);
+  padding-block: clamp(52px, 7vh, 68px) clamp(24px, 3vh, 36px);
 }
 
 .homeHeroInner {
@@ -13,7 +13,7 @@
   grid-template-columns: 1fr;
   align-items: center;
   width: min(1440px, calc(100% - 48px));
-  min-height: calc(clamp(720px, 100svh, 760px) - 112px);
+  min-height: calc(clamp(720px, 100svh, 760px) - 92px);
   margin-inline: auto;
   gap: clamp(28px, 4vw, 64px);
 }
@@ -76,9 +76,9 @@
 
 .home-hero-background {
   background:
-    radial-gradient(circle at 18% 22%, rgba(37, 99, 235, 0.13), transparent 28rem),
-    radial-gradient(circle at 78% 16%, rgba(14, 165, 233, 0.12), transparent 30rem),
-    linear-gradient(180deg, #f8fbff 0%, #eef6ff 58%, #f8fbff 100%);
+    radial-gradient(circle at 18% 20%, rgba(37, 99, 235, 0.1), transparent 28rem),
+    radial-gradient(circle at 78% 14%, rgba(14, 165, 233, 0.09), transparent 30rem),
+    linear-gradient(180deg, #fbfdff 0%, #f0f7ff 56%, #f8fbff 100%);
 }
 
 .home-hero-background::after {
@@ -86,16 +86,16 @@
   inset: 0;
   pointer-events: none;
   content: "";
-  opacity: 0.13;
+  opacity: 0.1;
   mix-blend-mode: multiply;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.76' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='.16'/%3E%3C/svg%3E");
 }
 
 .home-hero-grid {
-  opacity: 0.42;
+  opacity: 0.24;
   background-image:
-    linear-gradient(rgba(37, 99, 235, 0.075) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(37, 99, 235, 0.075) 1px, transparent 1px);
+    linear-gradient(rgba(37, 99, 235, 0.052) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, 0.052) 1px, transparent 1px);
   background-size: 48px 48px;
   mask-image: radial-gradient(circle at 50% 42%, black 0%, transparent 72%);
 }

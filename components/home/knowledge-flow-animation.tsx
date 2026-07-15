@@ -23,6 +23,13 @@ const nodes = [
 const path =
   "M116 74 C168 72 188 116 250 126 C310 136 338 176 392 188 C356 214 326 238 280 264 C330 286 372 312 430 340 C482 366 510 400 555 420";
 
+const particles = [
+  { offset: 0, radius: 4.5, duration: 4.8, delay: 0 },
+  { offset: 0.16, radius: 3, duration: 5.4, delay: -0.4 },
+  { offset: 0.34, radius: 5, duration: 5.1, delay: -0.8 },
+  { offset: 0.58, radius: 3.5, duration: 4.9, delay: -1.1 },
+];
+
 export function KnowledgeFlowAnimation() {
   return (
     <div className="knowledgeFlow" role="img" aria-label="Enterprise data flows through intelligent storage, retrieval, AI Agent, knowledge, and archive">
@@ -50,8 +57,19 @@ export function KnowledgeFlowAnimation() {
           strokeLinecap="round"
           strokeWidth="3"
           initial={{ pathLength: 0.82, opacity: 0.45 }}
-          animate={{ pathLength: [0.84, 1, 0.84], opacity: [0.42, 0.78, 0.42] }}
+          animate={{ pathLength: [0.84, 1, 0.84], opacity: [0.48, 0.9, 0.48] }}
           transition={{ duration: 5.8, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.path
+          d={path}
+          fill="none"
+          stroke="#60A5FA"
+          strokeLinecap="round"
+          strokeWidth="12"
+          initial={{ opacity: 0.08 }}
+          animate={{ opacity: [0.08, 0.18, 0.08] }}
+          transition={{ duration: 4.8, repeat: Infinity, ease: "easeInOut" }}
+          filter="url(#knowledgeFlowSoftGlow)"
         />
         <motion.path
           d={path}
@@ -65,18 +83,18 @@ export function KnowledgeFlowAnimation() {
           transition={{ duration: 7.5, repeat: Infinity, ease: "linear" }}
         />
 
-        {[0, 0.24, 0.5].map((offset) => (
+        {particles.map((particle) => (
           <motion.circle
-            key={offset}
-            r="5"
+            key={particle.offset}
+            r={particle.radius}
             fill="#2563EB"
             filter="url(#knowledgeFlowSoftGlow)"
-            initial={{ offsetDistance: `${offset * 100}%`, opacity: 0 }}
+            initial={{ offsetDistance: `${particle.offset * 100}%`, opacity: 0 }}
             animate={{
-              offsetDistance: [`${offset * 100}%`, `${(offset + 1) * 100}%`],
-              opacity: [0, 0.9, 0.9, 0],
+              offsetDistance: [`${particle.offset * 100}%`, `${(particle.offset + 1) * 100}%`],
+              opacity: [0, 0.92, 0.92, 0],
             }}
-            transition={{ duration: 4.9, repeat: Infinity, ease: "linear" }}
+            transition={{ duration: particle.duration, repeat: Infinity, ease: "linear", delay: particle.delay }}
             style={{ offsetPath: `path("${path}")` }}
           />
         ))}
@@ -84,9 +102,25 @@ export function KnowledgeFlowAnimation() {
         {nodes.map((node, index) => (
           <motion.g
             key={steps[index]}
-            animate={{ x: [0, index % 2 ? 5 : -5, 0], y: [0, index % 2 ? -4 : 4, 0] }}
+            animate={{
+              x: [0, index % 2 ? 5 : -5, 0],
+              y: [0, index % 2 ? -4 : 4, 0],
+              scale: [1, index === 4 ? 1.035 : 1.025, 1],
+            }}
             transition={{ duration: 5.5 + index * 0.3, repeat: Infinity, ease: "easeInOut" }}
           >
+            {index === 4 ? (
+              <motion.circle
+                cx={node.x}
+                cy={node.y}
+                r="28"
+                fill="#2563EB"
+                initial={{ opacity: 0.12 }}
+                animate={{ opacity: [0.12, 0.28, 0.12], r: [26, 31, 26] }}
+                transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut" }}
+                filter="url(#knowledgeFlowSoftGlow)"
+              />
+            ) : null}
             <circle cx={node.x} cy={node.y} r="16" fill="#EFF6FF" stroke="#BFDBFE" strokeWidth="1.5" />
             <circle cx={node.x} cy={node.y} r="6" fill={index === 4 ? "#2563EB" : "#38BDF8"} />
           </motion.g>

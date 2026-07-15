@@ -47,7 +47,7 @@ function HeaderNavLink({
       }}
       className={cn(
         className,
-        active && "text-primary data-[active=true]:after:scale-x-100"
+        active && "bg-white/72 text-primary shadow-[0_12px_34px_rgba(37,99,235,0.12)] ring-1 ring-sky-100/80 data-[active=true]:after:scale-x-100"
       )}
       data-active={active ? "true" : undefined}
     >
@@ -111,7 +111,7 @@ export function SiteHeader() {
                 key={route.href}
                 route={route}
                 active={isActiveRoute(pathname, route.href)}
-                className="relative inline-flex items-center gap-1.5 whitespace-nowrap rounded-full px-2.5 py-2 text-[0.68rem] font-medium leading-none text-muted-foreground transition-all duration-200 after:absolute after:bottom-0 after:left-3 after:right-3 after:h-px after:origin-center after:scale-x-0 after:bg-[linear-gradient(90deg,#2563eb,#22d3ee)] after:transition-transform after:duration-200 hover:bg-white/70 hover:text-transparent hover:bg-clip-text hover:bg-[linear-gradient(90deg,#2563eb,#0284c7)] hover:shadow-[0_12px_34px_rgba(14,165,233,0.14)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 data-[active=true]:after:scale-x-100 xl:px-3 xl:text-[0.76rem] 2xl:px-3.5 2xl:text-[0.82rem]"
+                className="relative inline-flex items-center gap-1.5 whitespace-nowrap rounded-full px-2.5 py-2 text-[0.68rem] font-medium leading-none text-muted-foreground transition-[color,background,box-shadow,transform] duration-300 ease-out after:absolute after:bottom-0 after:left-3 after:right-3 after:h-px after:origin-center after:scale-x-0 after:bg-[linear-gradient(90deg,#2563eb,#22d3ee)] after:transition-transform after:duration-300 hover:-translate-y-px hover:bg-white/72 hover:text-transparent hover:bg-clip-text hover:bg-[linear-gradient(90deg,#2563eb,#0284c7)] hover:shadow-[0_14px_38px_rgba(14,165,233,0.16)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 data-[active=true]:after:scale-x-100 xl:px-3 xl:text-[0.76rem] 2xl:px-3.5 2xl:text-[0.82rem]"
               />
             ))}
           </nav>
