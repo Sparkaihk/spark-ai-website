@@ -88,7 +88,7 @@ const capabilities = [
   {
     icon: Cpu,
     title: "AI Compute",
-    titleZh: "AI 计算",
+    titleZh: "AI 算力",
     body: "Runs private AI workloads close to controlled data for retrieval, embedding, reranking, and agent execution.",
     bodyZh:
       "在受控数据环境内提供本地 AI 算力，支持向量化、重排序、检索增强和 Agent 执行，降低数据外流风险，提升组织内部知识应用的响应效率。",
@@ -192,7 +192,7 @@ const specifications = [
     labelZh: "核心平台价值",
     value:
       "AI compute, intelligent tiered storage, enterprise retrieval, AI Agents, trust governance, and long-term archive in one deployable platform",
-    valueZh: "在一个可部署平台中整合 AI 计算、智能分层存储、企业级检索、AI Agent、可信治理和长期归档。",
+    valueZh: "在一个可部署平台中整合 AI 算力、智能分层存储、机构级检索、AI Agent、可信治理和长期归档。",
   },
   {
     label: "Data scope",
@@ -356,7 +356,7 @@ export default function SparkAiAppliancePage() {
                 <LocalizedText
                   zh={
                     <>
-                      AI 时代的知识基础设施一体机
+                      面向 AI 时代的知识基础设施一体机
                     </>
                   }
                   en={
@@ -369,7 +369,7 @@ export default function SparkAiAppliancePage() {
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
                 <LocalizedText
-                  zh="通过 AI 计算、智能存储、企业级检索、AI Agent 与长期归档，把机构长期积累的数据转化为可治理、可检索、可复用、可持续沉淀的知识资产。"
+                  zh="将机构数据转化为可治理、可检索、可复用、可长期保存的知识资产，并在一套平台中统一提供 AI 算力、智能分层存储、机构级检索、AI Agent 与可信治理能力。"
                   en="Turn institutional data into governed, retrievable, reusable and enduring knowledge with AI compute, intelligent storage, enterprise retrieval, AI Agents and long-term archive."
                 />
               </p>
@@ -382,7 +382,7 @@ export default function SparkAiAppliancePage() {
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <Button asChild variant="spark" size="lg" className="rounded-[18px]">
                   <Link href="/architecture">
-                    <LocalizedText zh="探索架构" en="Explore Architecture" /> <ArrowRight aria-hidden="true" />
+                    <LocalizedText zh="查看产品架构" en="Explore Architecture" /> <ArrowRight aria-hidden="true" />
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="rounded-[18px] bg-white/75">
@@ -434,7 +434,7 @@ export default function SparkAiAppliancePage() {
             title="The Flagship Knowledge Infrastructure Appliance for the AI Era"
             titleZh="面向 AI 时代的旗舰级知识基础设施一体机"
             body="AI compute, intelligent tiered storage, enterprise retrieval, AI Agents, trust governance, and long-term archive in one deployable platform."
-            bodyZh="Spark AI Appliance 将 AI 计算、智能分层存储、企业级检索、AI Agent、可信治理与长期归档整合为一个可部署平台，帮助组织把数据资产转化为长期可用的知识能力。"
+            bodyZh="Spark AI Appliance 将 AI 算力、智能分层存储、机构级检索、AI Agent、可信治理与长期归档整合为一个可部署平台，帮助组织把数据资产转化为长期可用的知识能力。"
           />
           <AnimatedStagger className="mt-10 grid gap-5 md:grid-cols-3">
             {overviewStats.map((item) => (
@@ -501,11 +501,11 @@ export default function SparkAiAppliancePage() {
               <LocalizedText zh="品牌使命" en="Brand Mission" />
             </p>
             <h2 className="mt-5 text-3xl font-semibold leading-tight text-slate-950 sm:text-5xl">
-              <LocalizedText zh="为 AI 建立记忆，为未来建立信任。" en="Memory for AI. Trust for Tomorrow." />
+              <LocalizedText zh="为 AI 沉淀知识，为未来建立信任。" en="Memory for AI. Trust for Tomorrow." />
             </h2>
             <p className="mx-auto mt-5 max-w-3xl text-[16px] leading-8 text-slate-600">
               <LocalizedText
-                zh="Spark AI 构建知识基础设施，让每一个企业和机构都能在可信、连续、长期有价值的基础上使用 AI，而不是把关键知识留在分散系统和短期试点中。"
+                zh="构建 AI 时代的知识基础设施，让每一个组织都能够持续、安全、可信地积累和应用知识。"
                 en="Build the knowledge infrastructure that enables every organization to use AI with trust, continuity and long-term value."
               />
             </p>
@@ -585,7 +585,7 @@ export default function SparkAiAppliancePage() {
               <LocalizedText zh="商业合作" en="Commercial CTA" />
             </p>
             <h2 className="mt-5 text-3xl font-semibold leading-tight text-slate-950 sm:text-5xl">
-              <LocalizedText zh="准备建设您的知识基础设施了吗？" en="Ready to build your knowledge infrastructure?" />
+              <LocalizedText zh="准备建立您的知识基础设施了吗？" en="Ready to build your knowledge infrastructure?" />
             </h2>
             <p className="mx-auto mt-5 max-w-3xl text-[16px] leading-8 text-slate-600">
               <LocalizedText
