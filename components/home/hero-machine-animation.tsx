@@ -3,7 +3,7 @@
 import { LocalizedText } from "@/components/site/localized-text";
 import { dataSources, knowledgeCapabilities } from "@/data/home-knowledge-flow";
 
-const productImage = "/images/rtx-spark/investor-hero-final-v1.png";
+const productImage = "/images/products/spark-ai-appliance/hero-render-v1.png";
 const applianceName = "Spark AI Appliance\u2122";
 
 export function HeroMachineAnimation() {

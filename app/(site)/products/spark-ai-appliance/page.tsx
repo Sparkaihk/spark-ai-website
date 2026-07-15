@@ -26,7 +26,7 @@ import { LocalizedText } from "@/components/site/localized-text";
 import { Button } from "@/components/ui/button";
 
 const applianceName = "Spark AI Appliance\u2122";
-const productImage = "/images/rtx-spark-appliance.png";
+const productImage = "/images/products/spark-ai-appliance/hero-render-v1.png";
 
 export const metadata: Metadata = {
   title: "Spark AI Appliance | Spark AI",
