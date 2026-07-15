@@ -9,12 +9,13 @@ const baseCards = [
   { title: { zh: "Trust Governance", en: "Trust Governance" }, body: { zh: "Support access control, auditability, lifecycle policy, and data integrity.", en: "Support access control, auditability, lifecycle policy, and data integrity." }, icon: ShieldCheck },
 ];
 
-function page(title: string, subtitle: string, diagram: string[], icon = Sparkles): PageContent {
+function page(title: string, subtitle: string, diagram: string[], icon = Sparkles, heroImage?: PageContent["heroImage"]): PageContent {
   return {
     eyebrow: { zh: "Spark AI", en: "Spark AI" },
     title: { zh: title, en: title },
     subtitle: { zh: subtitle, en: subtitle },
     diagram,
+    heroImage,
     sections: [
       { eyebrow: { zh: "Overview", en: "Overview" }, title: { zh: title, en: title }, body: { zh: subtitle, en: subtitle }, cards: baseCards },
       { eyebrow: { zh: "Why It Matters", en: "Why It Matters" }, title: { zh: "Memory for AI. Trust for Tomorrow.", en: "Memory for AI. Trust for Tomorrow." }, body: { zh: "Knowledge Infrastructure for the AI Era connects data, governance, retrieval, and AI workflows.", en: "Knowledge Infrastructure for the AI Era connects data, governance, retrieval, and AI workflows." }, cards: [
@@ -29,7 +30,13 @@ function page(title: string, subtitle: string, diagram: string[], icon = Sparkle
 
 export const productPage: PageContent = page(applianceName, `${applianceName} unifies AI compute, intelligent storage, enterprise retrieval, AI Agents, long-term archival, and trust governance.`, ["Compute", "Storage", "Retrieval", "Agents", "Archive", "Trust"], BrainCircuit);
 export const platformPage: PageContent = page("Knowledge Infrastructure for the AI Era", "Spark AI helps organizations preserve, govern, retrieve, and activate long-term knowledge for AI.", ["Data", "Metadata", "Storage", "Retrieval", "Agents", "Governance"], Layers3);
-export const solutionsPage: PageContent = page("Solutions", "Spark AI serves government, enterprise, research, media, and data-intensive organizations that need long-term trust.", ["Government", "Enterprise", "Research", "Media", "Compliance", "AI"], Landmark);
+export const solutionsPage: PageContent = page("Solutions", "Spark AI serves government, enterprise, research, media, and data-intensive organizations that need long-term trust.", ["Government", "Enterprise", "Research", "Media", "Compliance", "AI"], Landmark, {
+  src: "/images/visual-upgrade/solutions-hero-v1.png",
+  alt: "Spark AI solutions hero image with appliance, industry knowledge network, and enterprise data flows",
+});
 export const resourcesPage: PageContent = page("Resources", "Approved Spark AI materials are available through consultation and partner review.", ["Principles", "White Papers", "Architecture", "Product", "Research", "Contact"], Database);
-export const aboutPage: PageContent = page("About Spark AI", "Spark AI builds Knowledge Infrastructure for the AI Era so organizational data can become reliable memory for AI.", ["Vision", "Mission", "Product", "Trust", "Ecosystem", "Value"], Sparkles);
+export const aboutPage: PageContent = page("About Spark AI", "Spark AI builds Knowledge Infrastructure for the AI Era so organizational data can become reliable memory for AI.", ["Vision", "Mission", "Product", "Trust", "Ecosystem", "Value"], Sparkles, {
+  src: "/images/visual-upgrade/about-hero-v1.png",
+  alt: "Spark AI company hero image with appliance, Hong Kong skyline, and knowledge infrastructure layers",
+});
 export const architecturePage: PageContent = page("Architecture", "Spark AI architecture connects compute, storage, retrieval, AI Agents, long-term archive, and governance.", ["Compute", "Storage", "Metadata", "Retrieval", "Agents", "Governance"], Layers3);

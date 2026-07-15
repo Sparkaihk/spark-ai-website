@@ -1,5 +1,6 @@
 import type { LucideIcon } from "lucide-react";
 import { ArrowLeft, ArrowRight, CheckCircle2, Mail } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 import { AnimatedBlock, AnimatedStagger } from "@/components/design-system/animated";
@@ -27,6 +28,10 @@ export type InvestorPageProps = {
   secondaryCta?: Bilingual;
   secondaryHref?: string;
   diagram: string[];
+  heroImage?: {
+    src: string;
+    alt: string;
+  };
   sections: Array<{
     eyebrow: Bilingual;
     title: Bilingual;
@@ -70,6 +75,22 @@ function FlowDiagram({ items }: { items: string[] }) {
   );
 }
 
+function HeroImage({ src, alt }: { src: string; alt: string }) {
+  return (
+    <div className="premium-visual relative aspect-video overflow-hidden rounded-[28px] border border-blue-100/60 bg-white/75 p-2 shadow-xl">
+      <Image
+        src={src}
+        alt={alt}
+        width={3840}
+        height={2160}
+        priority
+        sizes="(min-width: 1024px) 52vw, 100vw"
+        className="h-full w-full rounded-[1.35rem] object-cover"
+      />
+    </div>
+  );
+}
+
 export function InvestorPage({
   eyebrow,
   title,
@@ -79,6 +100,7 @@ export function InvestorPage({
   secondaryCta = { zh: "联系 Spark AI", en: "Contact Spark AI" },
   secondaryHref = "/contact",
   diagram,
+  heroImage,
   sections,
 }: InvestorPageProps) {
   return (
@@ -112,7 +134,7 @@ export function InvestorPage({
               </div>
             </AnimatedBlock>
             <AnimatedBlock delay={0.08}>
-              <FlowDiagram items={diagram} />
+              {heroImage ? <HeroImage src={heroImage.src} alt={heroImage.alt} /> : <FlowDiagram items={diagram} />}
             </AnimatedBlock>
           </div>
         </Container>

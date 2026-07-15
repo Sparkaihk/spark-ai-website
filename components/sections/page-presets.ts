@@ -193,6 +193,10 @@ export const pagePresets: Record<string, InvestorPageProps> = {
     primaryHref: "/contact",
     secondaryHref: "/products/spark-ai-appliance",
     diagram: ["Storage", "Metadata", "Retrieval", "Models", "Agents", "Governance"],
+    heroImage: {
+      src: "/images/visual-upgrade/technology-hero-v1.png",
+      alt: "Spark AI technology architecture hero image with appliance, data pipelines, and knowledge network layers",
+    },
     sections: [
       {
         eyebrow: { zh: "架构层", en: "Architecture Layers" },
@@ -273,6 +277,10 @@ export const pagePresets: Record<string, InvestorPageProps> = {
     secondaryCta: { zh: "返回首页", en: "Back Home" },
     secondaryHref: "/",
     diagram: ["Inquiry", "Discovery", "Architecture", "Pilot", "Deployment", "Scale"],
+    heroImage: {
+      src: "/images/visual-upgrade/contact-hero-v1.png",
+      alt: "Spark AI contact hero image with enterprise meeting room, appliance, deployment map, and knowledge network",
+    },
     sections: [
       {
         eyebrow: { zh: "合作流程", en: "Collaboration" },
