@@ -1,62 +1,16 @@
+﻿import { Mail } from "lucide-react";
 import Link from "next/link";
 
 import { LocalizedText } from "@/components/site/localized-text";
-import { siteRoutes } from "@/components/site/navigation.config";
+
+const applianceName = "Spark AI Appliance\u2122";
+const footerGroups = [
+  { title: { zh: "Platform", en: "Platform" }, links: [{ label: { zh: "Knowledge Infrastructure", en: "Knowledge Infrastructure" }, href: "/platform/ai-cold-data" }, { label: { zh: "Architecture", en: "Architecture" }, href: "/architecture" }, { label: { zh: "Technology", en: "Technology" }, href: "/technology" }] },
+  { title: { zh: "Products", en: "Products" }, links: [{ label: { zh: applianceName, en: applianceName }, href: "/products/spark-ai-appliance" }, { label: { zh: "Product Portfolio", en: "Product Portfolio" }, href: "/products" }, { label: { zh: "Resources", en: "Resources" }, href: "/resources" }] },
+  { title: { zh: "Knowledge", en: "Knowledge" }, links: [{ label: { zh: "Knowledge Center", en: "Knowledge Center" }, href: "/knowledge" }, { label: { zh: "Principles", en: "Principles" }, href: "/principles" }, { label: { zh: "Solutions", en: "Solutions" }, href: "/solutions" }] },
+  { title: { zh: "Company", en: "Company" }, links: [{ label: { zh: "About", en: "About" }, href: "/about" }, { label: { zh: "Contact", en: "Contact" }, href: "/contact" }, { label: { zh: "Cases", en: "Cases" }, href: "/cases" }] },
+];
 
 export function SiteFooter() {
-  return (
-    <footer className="border-t border-sky-100 bg-white">
-      <div className="mx-auto w-full max-w-7xl px-5 py-12 sm:px-8 lg:px-10">
-        <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr_0.8fr]">
-          <div>
-            <Link href="/" className="inline-flex items-center gap-3">
-              <span className="flex size-10 items-center justify-center rounded-[20px] bg-primary text-sm font-semibold text-white shadow-spark-sm">S</span>
-              <span>
-                <span className="block text-base font-semibold text-foreground">Spark AI Technology Limited</span>
-                <span className="block text-sm text-muted-foreground">AI Cold Data Platform</span>
-              </span>
-            </Link>
-            <p className="mt-4 max-w-sm text-sm leading-6 text-muted-foreground">
-              <LocalizedText
-                zh="面向 AI 時代的冷數據基礎設施，連接低能耗儲存、企業知識啟用與數據資產化。"
-                en="Cold data infrastructure for the AI era, connecting low-energy storage, enterprise knowledge activation, and data assetization."
-              />
-            </p>
-          </div>
-
-          <div>
-            <h2 className="text-sm font-medium text-foreground">
-              <LocalizedText zh="網站導覽" en="Navigation" />
-            </h2>
-            <div className="mt-4 grid grid-cols-2 gap-3">
-              {siteRoutes.map((route) => (
-                <Link key={route.href} href={route.href} className="text-sm leading-6 text-muted-foreground transition-colors hover:text-primary">
-                  <LocalizedText zh={route.labelZh} en={route.label} />
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <h2 className="text-sm font-medium text-foreground">
-              <LocalizedText zh="聯絡我們" en="Contact" />
-            </h2>
-            <div className="mt-4 space-y-3 text-sm leading-6 text-muted-foreground">
-              <Link href="mailto:info@sparkai.hk" className="block text-accent transition-colors hover:text-primary">
-                info@sparkai.hk
-              </Link>
-              <p>Hong Kong</p>
-              <Link href="mailto:info@sparkai.hk?subject=Book%20a%20Meeting%20with%20Spark%20AI" className="block text-primary transition-colors hover:text-accent">
-                <LocalizedText zh="預約會議" en="Book a Meeting" />
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-10 border-t border-sky-100 pt-6 text-xs text-muted-foreground">
-          <p>2026 Spark AI Technology Limited. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
-  );
+  return <footer className="border-t border-sky-100 bg-[linear-gradient(180deg,#f7f9fc_0%,#ffffff_100%)]"><div className="mx-auto w-full max-w-7xl px-5 py-12 sm:px-8 lg:px-10"><div className="grid gap-10 lg:grid-cols-[1.2fr_2fr_0.8fr]"><div><Link href="/" className="inline-flex items-center gap-3"><span className="flex size-10 items-center justify-center rounded-[18px] bg-[linear-gradient(135deg,hsl(var(--primary)),hsl(var(--accent)))] text-sm font-semibold text-white shadow-spark-sm">S</span><span><span className="block text-lg font-semibold text-foreground">Spark AI</span><span className="block text-xs font-medium text-muted-foreground">Knowledge Infrastructure for the AI Era</span></span></Link><p className="mt-4 max-w-sm text-sm leading-6 text-muted-foreground"><LocalizedText zh="Memory for AI. Trust for Tomorrow. We build trusted Knowledge Infrastructure for the AI Era." en="Memory for AI. Trust for Tomorrow. We build trusted Knowledge Infrastructure for the AI Era." /></p><p className="mt-4 text-sm font-semibold text-foreground">Technology changes. Trust endures.</p></div><div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-4">{footerGroups.map((group) => <div key={group.title.en}><h2 className="text-sm font-semibold text-foreground"><LocalizedText zh={group.title.zh} en={group.title.en} /></h2><div className="mt-4 space-y-3">{group.links.map((link) => <Link key={link.href + link.label.en} href={link.href} className="block text-sm leading-5 text-muted-foreground transition-colors hover:text-primary"><LocalizedText zh={link.label.zh} en={link.label.en} /></Link>)}</div></div>)}</div><div><h2 className="text-sm font-semibold text-foreground"><LocalizedText zh="Contact" en="Contact" /></h2><div className="mt-4 space-y-3 text-sm leading-6 text-muted-foreground"><Link href="mailto:info@sparkai.hk" className="flex items-center gap-2 text-primary transition-colors hover:text-accent"><Mail className="size-4" aria-hidden="true" />info@sparkai.hk</Link><p>Spark AI Technology Limited</p><p>Hong Kong</p></div></div></div><div className="mt-10 flex flex-col gap-3 border-t border-sky-100 pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between"><p>© 2026 Spark AI Technology Limited. All rights reserved.</p><p><Link href="/contact" className="hover:text-primary">Privacy</Link> · <Link href="/contact" className="hover:text-primary">Terms</Link> · <Link href="/contact" className="hover:text-primary">Contact</Link></p></div></div></footer>;
 }

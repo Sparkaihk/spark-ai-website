@@ -10,6 +10,12 @@ export default function SiteLayout({
 }>) {
   return (
     <>
+      <div className="site-ambient" aria-hidden="true">
+        <span className="floating-particle left-[9%] top-[18%]" />
+        <span className="floating-particle left-[78%] top-[24%] [animation-delay:1.8s]" />
+        <span className="floating-particle left-[18%] top-[68%] [animation-delay:3.1s]" />
+        <span className="floating-particle left-[86%] top-[72%] [animation-delay:4.6s]" />
+      </div>
       <SiteHeader />
       {children}
       <SiteFooter />

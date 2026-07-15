@@ -18,7 +18,7 @@ export function SurfaceCard({
   return (
     <Card
       className={cn(
-        "border-sky-100 bg-white shadow-spark-sm backdrop-blur",
+        "premium-glass",
         className,
       )}
       {...props}

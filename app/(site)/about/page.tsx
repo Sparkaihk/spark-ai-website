@@ -1,16 +1,13 @@
 import type { Metadata } from "next";
 
-import { SparkContentPage } from "@/components/sections/spark-content-page";
-import { contentPages } from "@/lib/content-pages";
-
-const page = contentPages.about;
+import { InvestorShell } from "@/components/sections/investor-shell";
+import { aboutPage } from "@/data/investor-content";
 
 export const metadata: Metadata = {
-  title: `${page.title.zh} | ${page.title.en}`,
-  description: page.seoDescription,
-  alternates: { canonical: page.href },
+  title: "About | Spark AI",
+  description: "Spark AI mission, vision, technology belief, product roadmap and contact CTA.",
 };
 
-export default function Page() {
-  return <SparkContentPage page={page} />;
+export default function AboutPage() {
+  return <InvestorShell {...aboutPage} />;
 }

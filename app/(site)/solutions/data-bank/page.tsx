@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
 
-import { SparkContentPage } from "@/components/sections/spark-content-page";
-import { contentPages } from "@/lib/content-pages";
-
-const page = contentPages["data-bank"];
+import { InvestorPage } from "@/components/sections/investor-page";
+import { pagePresets } from "@/components/sections/page-presets";
 
 export const metadata: Metadata = {
-  title: `${page.title.zh} | ${page.title.en}`,
-  description: page.seoDescription,
-  alternates: { canonical: page.href },
+  title: "Knowledge Infrastructure | Spark AI",
+  description: "Transform enterprise cold data into governed, searchable and reusable AI-ready knowledge assets.",
+  alternates: { canonical: "/solutions/data-bank" },
 };
 
-export default function Page() {
-  return <SparkContentPage page={page} />;
+export default function DataBankPage() {
+  return <InvestorPage {...pagePresets.dataBank} />;
 }

@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
 
-import { SparkContentPage } from "@/components/sections/spark-content-page";
-import { contentPages } from "@/lib/content-pages";
-
-const page = contentPages["optical-storage"];
+import { InvestorPage } from "@/components/sections/investor-page";
+import { pagePresets } from "@/components/sections/page-presets";
 
 export const metadata: Metadata = {
-  title: `${page.title.zh} | ${page.title.en}`,
-  description: page.seoDescription,
-  alternates: { canonical: page.href },
+  title: "Blu-ray Optical Storage | Spark AI",
+  description: "Blu-ray optical cold storage for 50+ year archive, WORM, low power and compliance preservation.",
+  alternates: { canonical: "/solutions/optical-storage" },
 };
 
-export default function Page() {
-  return <SparkContentPage page={page} />;
+export default function OpticalStoragePage() {
+  return <InvestorPage {...pagePresets.optical} />;
 }

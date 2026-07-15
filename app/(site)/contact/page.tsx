@@ -1,7 +1,14 @@
-﻿import { BrandedOverviewPage, brandMetadata } from "@/components/sections/branded-overview-page";
+import type { Metadata } from "next";
 
-export const metadata = brandMetadata;
+import { InvestorPage } from "@/components/sections/investor-page";
+import { pagePresets } from "@/components/sections/page-presets";
 
-export default function Page() {
-  return <BrandedOverviewPage />;
+export const metadata: Metadata = {
+  title: "Contact Spark AI",
+  description: "Contact Spark AI for AI cold data center, Enterprise RAG, Edge Appliance and Knowledge Infrastructure discussions.",
+  alternates: { canonical: "/contact" },
+};
+
+export default function ContactPage() {
+  return <InvestorPage {...pagePresets.contact} />;
 }

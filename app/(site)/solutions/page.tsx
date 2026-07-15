@@ -1,7 +1,13 @@
-﻿import { BrandedOverviewPage, brandMetadata } from "@/components/sections/branded-overview-page";
+import type { Metadata } from "next";
 
-export const metadata = brandMetadata;
+import { InvestorShell } from "@/components/sections/investor-shell";
+import { solutionsPage } from "@/data/investor-content";
 
-export default function Page() {
-  return <BrandedOverviewPage />;
+export const metadata: Metadata = {
+  title: "Solutions | Spark AI",
+  description: "Spark AI solution overview for government, healthcare, finance, manufacturing, education and AI research.",
+};
+
+export default function SolutionsPage() {
+  return <InvestorShell {...solutionsPage} />;
 }

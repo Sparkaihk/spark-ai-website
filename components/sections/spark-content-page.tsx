@@ -291,7 +291,7 @@ function relatedHref(name: string) {
     "AI Cold Data Center": "/solutions/ai-cold-data",
     "Optical Storage": "/solutions/optical-storage",
     "AI Knowledge Platform": "/solutions/rag",
-    "Data Asset Bank": "/solutions/data-bank",
+    "Knowledge Infrastructure": "/solutions/data-bank",
     "Edge AI": "/solutions/edge-ai",
     "Storage Products": "/products/storage",
     "Technology Architecture": "/technology",

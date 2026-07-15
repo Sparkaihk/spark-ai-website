@@ -1,0 +1,54 @@
+<svg width="1200" height="820" viewBox="0 0 1200 820" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="820" rx="48" fill="#06162F"/>
+  <defs>
+    <radialGradient id="g1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(760 438) rotate(90) scale(300 470)">
+      <stop stop-color="#0EA5E9" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#0EA5E9" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="box" x1="310" y1="210" x2="860" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#223653"/>
+      <stop offset="0.45" stop-color="#0E1E35"/>
+      <stop offset="1" stop-color="#071326"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="420" y1="170" x2="900" y2="535" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7DD3FC"/>
+      <stop offset="0.45" stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <filter id="shadow" x="150" y="80" width="900" height="680" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="40" stdDeviation="40" flood-color="#0284C7" flood-opacity="0.34"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="820" fill="url(#g1)"/>
+  <g opacity="0.24" stroke="#60A5FA">
+    <path d="M80 160H1120M80 260H1120M80 360H1120M80 460H1120M80 560H1120M80 660H1120"/>
+    <path d="M160 80V740M280 80V740M400 80V740M520 80V740M640 80V740M760 80V740M880 80V740M1000 80V740"/>
+  </g>
+  <ellipse cx="650" cy="610" rx="410" ry="86" stroke="#0EA5E9" stroke-width="5" opacity="0.75"/>
+  <ellipse cx="650" cy="610" rx="310" ry="58" stroke="#38BDF8" stroke-width="2" opacity="0.55"/>
+  <g filter="url(#shadow)">
+    <path d="M275 270L760 190L940 286L455 386L275 270Z" fill="#293B58"/>
+    <path d="M455 386L940 286V548L455 662V386Z" fill="url(#box)"/>
+    <path d="M275 270L455 386V662L275 528V270Z" fill="#0A1830"/>
+    <path d="M275 270L760 190L940 286L455 386L275 270Z" stroke="url(#edge)" stroke-width="4"/>
+    <path d="M455 386L940 286V548L455 662V386Z" stroke="#1D4ED8" stroke-width="3"/>
+    <path d="M275 270L455 386V662L275 528V270Z" stroke="#2563EB" stroke-width="3"/>
+    <g opacity="0.88">
+      <path d="M318 312L409 369V598L318 532V312Z" fill="#081225"/>
+      <path d="M340 328V548M364 344V566M388 360V584M412 376V604" stroke="#93C5FD" stroke-width="8" stroke-linecap="round"/>
+      <path d="M326 548L424 618" stroke="#0EA5E9" stroke-width="8" stroke-linecap="round"/>
+    </g>
+    <path d="M548 436L850 370" stroke="#38BDF8" stroke-width="4" opacity="0.8"/>
+    <path d="M548 480L850 414" stroke="#1D4ED8" stroke-width="3" opacity="0.55"/>
+    <rect x="634" y="430" width="148" height="58" rx="14" transform="rotate(-12 634 430)" fill="#0B1830" stroke="#38BDF8" stroke-width="2"/>
+    <text x="662" y="452" fill="#E0F2FE" font-family="Arial, sans-serif" font-size="20" font-weight="700" transform="rotate(-12 662 452)">Spark AI</text>
+    <text x="665" y="480" fill="#38BDF8" font-family="Arial, sans-serif" font-size="14" font-weight="700" transform="rotate(-12 665 480)">RTX Appliance</text>
+  </g>
+  <g opacity="0.88">
+    <circle cx="226" cy="184" r="5" fill="#38BDF8"/>
+    <circle cx="976" cy="228" r="5" fill="#60A5FA"/>
+    <circle cx="1018" cy="604" r="5" fill="#0EA5E9"/>
+    <path d="M226 184C390 120 528 118 690 170C854 222 942 182 976 228" stroke="#38BDF8" stroke-width="2" stroke-dasharray="10 12"/>
+    <path d="M834 594C910 562 972 560 1018 604" stroke="#60A5FA" stroke-width="2" stroke-dasharray="10 12"/>
+  </g>
+</svg>

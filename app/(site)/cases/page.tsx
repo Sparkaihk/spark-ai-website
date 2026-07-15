@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
 
-import { SparkContentPage } from "@/components/sections/spark-content-page";
-import { contentPages } from "@/lib/content-pages";
-
-const page = contentPages.cases;
+import { InvestorPage } from "@/components/sections/investor-page";
+import { pagePresets } from "@/components/sections/page-presets";
 
 export const metadata: Metadata = {
-  title: `${page.title.zh} | ${page.title.en}`,
-  description: page.seoDescription,
-  alternates: { canonical: page.href },
+  title: "Case Studies | Spark AI",
+  description: "Spark AI case scenarios for healthcare, government archives, finance, manufacturing, AI companies and research.",
+  alternates: { canonical: "/cases" },
 };
 
-export default function Page() {
-  return <SparkContentPage page={page} />;
+export default function CasesPage() {
+  return <InvestorPage {...pagePresets.cases} />;
 }

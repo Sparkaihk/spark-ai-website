@@ -14,6 +14,12 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+*.log
+*.err.log
+
+# local browser verification profiles
+.chrome-*
+.edge-*
 
 # env
 .env

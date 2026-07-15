@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
 
-import { SparkContentPage } from "@/components/sections/spark-content-page";
-import { contentPages } from "@/lib/content-pages";
-
-const page = contentPages["ai-cold-data"];
+import { InvestorPage } from "@/components/sections/investor-page";
+import { pagePresets } from "@/components/sections/page-presets";
 
 export const metadata: Metadata = {
-  title: `${page.title.zh} | ${page.title.en}`,
-  description: page.seoDescription,
-  alternates: { canonical: page.href },
+  title: "AI Cold Data Center | Spark AI",
+  description: "PB-scale knowledge infrastructure for the AI era for long-term preservation, governance, RAG and AI activation.",
+  alternates: { canonical: "/solutions/ai-cold-data" },
 };
 
-export default function Page() {
-  return <SparkContentPage page={page} />;
+export default function AiColdDataPage() {
+  return <InvestorPage {...pagePresets.coldData} />;
 }

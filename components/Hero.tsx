@@ -1,0 +1,12 @@
+﻿import Link from "next/link";
+import { ArrowRight, Mail } from "lucide-react";
+
+import { Container } from "@/components/design-system/container";
+import { LocalizedText } from "@/components/site/localized-text";
+import { Button } from "@/components/ui/button";
+
+const applianceName = "Spark AI Appliance\u2122";
+
+export function Hero() {
+  return <section className="hero-shell pb-16 pt-28 sm:pb-20 lg:pb-24 lg:pt-32"><Container className="relative z-10"><div className="grid gap-10 lg:grid-cols-[0.48fr_0.52fr] lg:items-center"><div><p className="premium-eyebrow"><LocalizedText zh={applianceName} en={applianceName} /></p><h1 className="mt-6 max-w-[720px] text-[2.25rem] font-semibold leading-[1.08] tracking-normal text-foreground sm:text-[3.4rem] lg:text-[4.1rem]"><LocalizedText zh="Knowledge Infrastructure for the AI Era" en="Knowledge Infrastructure for the AI Era" /></h1><p className="mt-6 max-w-[680px] text-[16px] leading-[1.8] text-muted-foreground sm:text-[18px]"><LocalizedText zh="Spark AI unifies AI compute, intelligent tiered storage, enterprise retrieval, AI Agents, long-term archival, and trust governance." en="Spark AI unifies AI compute, intelligent tiered storage, enterprise retrieval, AI Agents, long-term archival, and trust governance." /></p><p className="mt-4 text-lg font-semibold text-primary">Memory for AI. Trust for Tomorrow.</p><div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap"><Button asChild variant="spark" size="lg" className="rounded-[20px]"><Link href="/products/spark-ai-appliance">Explore Product <ArrowRight aria-hidden="true" /></Link></Button><Button asChild variant="outline" size="lg" className="rounded-[20px]"><Link href="/contact">Contact Spark AI <Mail aria-hidden="true" /></Link></Button></div></div><div className="premium-visual relative overflow-hidden rounded-[28px] p-6"><div className="relative rounded-[24px] border border-sky-100 bg-white/78 p-6 shadow-spark-sm"><div className="flex h-24 items-center justify-center rounded-[20px] bg-slate-950 text-lg font-semibold text-white">Spark AI</div><div className="mt-5 grid gap-3 sm:grid-cols-2">{["Compute", "Retrieve", "Archive", "Govern"].map((item) => <div key={item} className="rounded-2xl border border-sky-100 bg-white px-4 py-3 text-sm font-semibold text-slate-700">{item}</div>)}</div></div></div></div></Container></section>;
+}

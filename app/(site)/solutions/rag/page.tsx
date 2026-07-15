@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
 
-import { SparkContentPage } from "@/components/sections/spark-content-page";
-import { contentPages } from "@/lib/content-pages";
-
-const page = contentPages.rag;
+import { InvestorPage } from "@/components/sections/investor-page";
+import { pagePresets } from "@/components/sections/page-presets";
 
 export const metadata: Metadata = {
-  title: `${page.title.zh} | ${page.title.en}`,
-  description: page.seoDescription,
-  alternates: { canonical: page.href },
+  title: "Enterprise RAG Knowledge Platform | Spark AI",
+  description: "Enterprise RAG knowledge platform for private AI, hybrid retrieval, multimodal parsing and trusted answers.",
+  alternates: { canonical: "/solutions/rag" },
 };
 
-export default function Page() {
-  return <SparkContentPage page={page} />;
+export default function RagPage() {
+  return <InvestorPage {...pagePresets.rag} />;
 }
