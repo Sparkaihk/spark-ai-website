@@ -4,7 +4,6 @@ import Link from "next/link";
 import {
   Archive,
   ArrowDown,
-  ArrowRight,
   Bot,
   BrainCircuit,
   Check,
@@ -39,9 +38,9 @@ const applianceName = "Spark AI Appliance\u2122";
 const productImage = "/images/products/spark-ai-appliance/hero-render-v1.png";
 
 export const metadata: Metadata = {
-  title: "Spark AI Appliance | Knowledge Infrastructure Appliance",
+  title: "Spark AI Appliance | The First Knowledge Infrastructure Appliance",
   description:
-    "Spark AI Appliance is the knowledge infrastructure appliance for the AI era, combining AI computing, AI memory, enterprise RAG, governance and intelligent tiered storage.",
+    "Spark AI Appliance is the first knowledge infrastructure appliance for the AI era, unifying compute, memory, knowledge and governance.",
   alternates: { canonical: "/products/spark-ai-appliance" },
 };
 
@@ -137,21 +136,23 @@ export default function SparkAiAppliancePage() {
       <section className={styles.hero}>
         <div className={styles.heroGrid}>
           <AnimatedBlock className={styles.heroCopy}>
-            <p className={styles.eyebrow}>Spark AI Flagship System</p>
             <h1>{applianceName}</h1>
-            <h2>The Knowledge Infrastructure Appliance for the AI Era</h2>
-            <p className={styles.heroBody}>
-              An integrated platform combining AI computing, long-term knowledge storage, enterprise RAG, governance and
-              AI memory—built to transform enterprise data into trusted, reusable knowledge.
-            </p>
+            <h2>
+              The First Knowledge Infrastructure Appliance
+              <span>for the AI Era</span>
+            </h2>
+            <div className={styles.heroPillars} aria-label="Product foundations">
+              <span>Compute</span>
+              <span>Memory</span>
+              <span>Knowledge</span>
+              <span>Governance</span>
+            </div>
             <div className={styles.heroActions}>
               <Button asChild variant="spark" size="lg">
-                <Link href="#architecture">
-                  Explore Architecture <ArrowRight aria-hidden="true" />
-                </Link>
+                <Link href="/contact">Book Demo</Link>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <Link href="/contact">Book Demo</Link>
+                <Link href="/resources">Download White Paper</Link>
               </Button>
             </div>
           </AnimatedBlock>
@@ -169,6 +170,13 @@ export default function SparkAiAppliancePage() {
             />
             <div className={styles.particles} aria-hidden="true">
               {Array.from({ length: 14 }, (_, index) => <span key={index} />)}
+            </div>
+            <div className={styles.productWordmark}>Spark AI Appliance</div>
+            <div className={styles.heroLayerStack} aria-label="Spark AI Appliance infrastructure layers">
+              <span>AI Layer</span>
+              <span>Knowledge Layer</span>
+              <span>Enterprise Memory Layer</span>
+              <span>Intelligent Storage Layer</span>
             </div>
           </AnimatedBlock>
         </div>
