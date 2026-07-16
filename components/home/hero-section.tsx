@@ -6,12 +6,19 @@ import "@/components/home/home-hero-layout.css";
 export function HeroSection() {
   return (
     <section className="homeHero" aria-labelledby="home-hero-title">
-      <h1 id="home-hero-title" className="sr-only">
-        Knowledge Infrastructure for the AI Era
-      </h1>
-      <p className="sr-only">
-        Spark AI Appliance transforms enterprise data into trusted knowledge for AI applications and long-term archival.
-      </p>
+      <div className="homeHeroCopyOverlay">
+        <h1 id="home-hero-title">
+          <span>Knowledge Infrastructure</span>
+          <span>for the AI Era</span>
+        </h1>
+        <p>
+          Spark AI helps organizations preserve, activate and continuously create value from their knowledge.
+        </p>
+        <div className="homeHeroActions" aria-label="Hero actions">
+          <Link href="/products/spark-ai-appliance">Explore Spark AI Appliance™</Link>
+          <Link href="/contact">Schedule Demo</Link>
+        </div>
+      </div>
 
       <div className="homeHeroArtworkFrame">
         <Image
@@ -22,21 +29,6 @@ export function HeroSection() {
           sizes="(min-width: 1536px) 1536px, 100vw"
           className="homeHeroArtwork"
         />
-        <Link
-          href="/products/spark-ai-appliance"
-          className="homeHeroHotspot homeHeroHotspotProduct"
-          aria-label="Explore Spark AI Appliance"
-        />
-        <Link
-          href="/contact"
-          className="homeHeroHotspot homeHeroHotspotDemo"
-          aria-label="Schedule a demo"
-        />
-      </div>
-
-      <div className="homeHeroMobileActions" aria-label="Hero actions">
-        <Link href="/products/spark-ai-appliance">Explore Spark AI Appliance</Link>
-        <Link href="/contact">Schedule Demo</Link>
       </div>
     </section>
   );

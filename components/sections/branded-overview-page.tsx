@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import HomePage from "@/app/(site)/page";
 
 export const brandMetadata: Metadata = {
-  title: "Spark AI | Knowledge Infrastructure for the AI Era",
+  title: "Knowledge Infrastructure for the AI Era",
   description:
-    "AI cold data center, Blu-ray storage, Knowledge Infrastructure, Knowledge Infrastructure, investor highlights, and roadmap.",
+    "Spark AI helps organizations preserve, activate and continuously create value from their knowledge.",
 };
 
 export function BrandedOverviewPage() {
