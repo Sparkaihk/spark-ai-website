@@ -22,7 +22,7 @@
   position: relative;
   width: min(100%, 1728px);
   margin-inline: auto;
-  aspect-ratio: 1536 / 928;
+  aspect-ratio: 1672 / 941;
   overflow: hidden;
   box-shadow: 0 36px 90px -64px rgba(15, 76, 164, 0.55);
 }
