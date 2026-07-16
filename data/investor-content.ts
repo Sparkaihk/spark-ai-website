@@ -29,7 +29,10 @@ function page(title: string, subtitle: string, diagram: string[], icon = Sparkle
 }
 
 export const productPage: PageContent = page(applianceName, `${applianceName} unifies AI compute, intelligent storage, enterprise retrieval, AI Agents, long-term archival, and trust governance.`, ["Compute", "Storage", "Retrieval", "Agents", "Archive", "Trust"], BrainCircuit);
-export const platformPage: PageContent = page("Knowledge Infrastructure for the AI Era", "Spark AI helps organizations preserve, govern, retrieve, and activate long-term knowledge for AI.", ["Data", "Metadata", "Storage", "Retrieval", "Agents", "Governance"], Layers3);
+export const platformPage: PageContent = page("Knowledge Infrastructure for the AI Era", "Spark AI helps organizations preserve, govern, retrieve, and activate long-term knowledge for AI.", ["Data", "Metadata", "Storage", "Retrieval", "Agents", "Governance"], Layers3, {
+  src: "/images/visual-upgrade/platform-knowledge-infrastructure-hero-v2.png",
+  alt: "Spark AI knowledge infrastructure platform connecting multimodal enterprise data to governed knowledge and AI applications",
+});
 export const solutionsPage: PageContent = page("Solutions", "Spark AI serves government, enterprise, research, media, and data-intensive organizations that need long-term trust.", ["Government", "Enterprise", "Research", "Media", "Compliance", "AI"], Landmark, {
   src: "/images/visual-upgrade/solutions-hero-v1.png",
   alt: "Spark AI solutions hero image with appliance, industry knowledge network, and enterprise data flows",
