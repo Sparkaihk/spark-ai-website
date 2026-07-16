@@ -22,8 +22,8 @@ export function HeroSection() {
 
       <div className="homeHeroArtworkFrame">
         <Image
-          src="/images/home/knowledge-infrastructure-hero-v4.png"
-          alt="Spark AI knowledge infrastructure with the Spark AI Appliance supporting data, memory, knowledge, and governance layers."
+          src="/images/home/homepage-hero-v3-final.png"
+          alt="Spark AI knowledge infrastructure: enterprise data flows through Spark AI Appliance into the knowledge layer, AI applications, and long-term archive."
           fill
           priority
           sizes="(min-width: 1536px) 1536px, 100vw"
