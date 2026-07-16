@@ -1,9 +1,49 @@
 .homeHero {
   position: relative;
   isolation: isolate;
-  overflow-x: clip;
-  min-height: clamp(720px, 100svh, 760px);
-  padding-block: clamp(52px, 7vh, 68px) clamp(24px, 3vh, 36px);
+  overflow: hidden;
+  padding-top: 96px;
+  background: #f4f8ff;
+}
+
+.homeHeroArtworkFrame {
+  position: relative;
+  width: min(100%, 1536px);
+  margin-inline: auto;
+  aspect-ratio: 1536 / 928;
+  overflow: hidden;
+}
+
+.homeHeroArtwork {
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+.homeHeroHotspot {
+  position: absolute;
+  z-index: 2;
+  top: 60.24%;
+  height: 5.1%;
+  border-radius: 999px;
+}
+
+.homeHeroHotspot:focus-visible {
+  outline: 3px solid #0f62fe;
+  outline-offset: 4px;
+}
+
+.homeHeroHotspotProduct {
+  left: 3.2%;
+  width: 17.25%;
+}
+
+.homeHeroHotspotDemo {
+  left: 21.4%;
+  width: 12.1%;
+}
+
+.homeHeroMobileActions {
+  display: none;
 }
 
 .homeHeroInner {
@@ -58,7 +98,7 @@
 }
 
 @media (max-width: 1023px) {
-  .homeHero { min-height: auto; padding-top: 112px; }
+  .homeHero { padding-top: 96px; }
   .homeHeroInner { min-height: auto; }
   .homeHeroCopy { margin-inline: auto; }
   .homeHeroVisual .hero-machine-animation,
@@ -66,7 +106,30 @@
 }
 
 @media (max-width: 640px) {
-  .homeHero { padding-top: 104px; }
+  .homeHero { padding-top: 88px; padding-bottom: 20px; }
+  .homeHeroArtworkFrame { aspect-ratio: 1536 / 928; }
+  .homeHeroHotspot { display: none; }
+  .homeHeroMobileActions {
+    display: grid;
+    gap: 10px;
+    padding: 16px 16px 0;
+  }
+  .homeHeroMobileActions a {
+    display: flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #0f62fe;
+    border-radius: 999px;
+    background: #0f62fe;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 650;
+  }
+  .homeHeroMobileActions a:last-child {
+    background: #fff;
+    color: #0f62fe;
+  }
   .homeHeroInner { width: min(100% - 32px, 1440px); gap: 24px; }
   .homeHeroCopy h1 { font-size: clamp(40px, 11vw, 48px); }
   .homeHeroDescription { margin-top: 20px; font-size: 16px; line-height: 1.65; }
