@@ -3,46 +3,79 @@
   isolation: isolate;
   overflow: hidden;
   padding-top: 96px;
-  background: #f4f8ff;
+  background:
+    radial-gradient(ellipse at 69% 38%, rgba(111, 181, 255, 0.16), transparent 38%),
+    linear-gradient(180deg, #f8fbff 0%, #f1f7ff 56%, #f7faff 100%);
+}
+
+.homeHero::after {
+  position: absolute;
+  z-index: 4;
+  inset: auto 0 0;
+  height: 1px;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.18), transparent);
 }
 
 .homeHeroArtworkFrame {
   position: relative;
-  width: min(100%, 1536px);
+  width: min(100%, 1728px);
   margin-inline: auto;
   aspect-ratio: 1536 / 928;
   overflow: hidden;
+  box-shadow: 0 36px 90px -64px rgba(15, 76, 164, 0.55);
+}
+
+.homeHeroArtworkFrame::before {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 65% 45%, rgba(146, 207, 255, 0.2) 0%, rgba(72, 156, 255, 0.08) 24%, transparent 46%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 38%);
+  mix-blend-mode: screen;
+  animation: homeHeroLightBreath 7s ease-in-out 1.2s infinite alternate;
 }
 
 .homeHeroArtworkFrame::after {
   position: absolute;
-  z-index: 1;
-  inset: 0 auto 17% 0;
-  width: 40%;
+  z-index: 3;
+  inset: 0 auto 16% 0;
+  width: 41%;
   content: "";
   pointer-events: none;
-  background: linear-gradient(90deg, #f4f8ff 0%, rgba(244, 248, 255, 0.98) 78%, rgba(244, 248, 255, 0) 100%);
+  background: linear-gradient(90deg, #f5f9ff 0%, rgba(245, 249, 255, 0.99) 72%, rgba(245, 249, 255, 0.86) 84%, transparent 100%);
 }
 
 .homeHeroArtwork {
   object-fit: cover;
   object-position: center bottom;
+  filter: contrast(1.025) saturate(1.035);
+  transform: scale(1.006);
+  transform-origin: center 52%;
+  animation: homeHeroArtworkReveal 1.35s cubic-bezier(0.2, 0.72, 0.2, 1) both;
 }
 
 .homeHeroCopyOverlay {
   position: absolute;
-  z-index: 3;
-  top: clamp(140px, 11vw, 174px);
-  left: max(3.2%, calc((100% - 1536px) / 2 + 49px));
-  width: min(31%, 480px);
+  z-index: 5;
+  top: clamp(146px, 10.6vw, 184px);
+  left: max(3.2%, calc((100% - 1728px) / 2 + 55px));
+  width: min(31.5%, 510px);
+  animation: homeHeroCopyReveal 0.95s cubic-bezier(0.2, 0.72, 0.2, 1) 0.12s both;
 }
 
 .homeHeroCopyOverlay h1 {
-  color: #0b1328;
-  font-size: clamp(46px, 4.25vw, 66px);
-  font-weight: 700;
-  line-height: 1.03;
-  letter-spacing: -0.035em;
+  max-width: 510px;
+  color: #080f20;
+  font-size: clamp(50px, 4.45vw, 76px);
+  font-weight: 680;
+  line-height: 0.99;
+  letter-spacing: -0.052em;
+  text-wrap: balance;
 }
 
 .homeHeroCopyOverlay h1 span {
@@ -50,52 +83,77 @@
 }
 
 .homeHeroCopyOverlay h1 span:last-child {
-  color: #1260ee;
+  background: linear-gradient(105deg, #0757ee 4%, #1477ff 54%, #0055d8 100%);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 .homeHeroCopyOverlay > p {
-  max-width: 460px;
-  margin-top: clamp(22px, 2.2vw, 32px);
-  color: #334155;
-  font-size: clamp(16px, 1.25vw, 19px);
-  line-height: 1.7;
+  max-width: 445px;
+  margin-top: clamp(26px, 2.25vw, 36px);
+  color: #3d4b63;
+  font-size: clamp(17px, 1.2vw, 20px);
+  font-weight: 430;
+  line-height: 1.62;
+  letter-spacing: -0.012em;
 }
 
 .homeHeroActions {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  margin-top: clamp(24px, 2.4vw, 34px);
+  gap: 14px;
+  margin-top: clamp(28px, 2.5vw, 38px);
 }
 
 .homeHeroActions a {
   display: inline-flex;
-  min-height: 46px;
+  min-height: 50px;
   align-items: center;
   justify-content: center;
-  border: 1px solid #0f62fe;
+  border: 1px solid rgba(7, 87, 238, 0.92);
   border-radius: 999px;
-  background: #0f62fe;
-  padding: 0 22px;
+  background: linear-gradient(135deg, #0757ee 0%, #0878ff 100%);
+  padding: 0 25px;
   color: #fff;
   font-size: 14px;
-  font-weight: 650;
-  transition: transform 180ms ease, box-shadow 180ms ease;
+  font-weight: 640;
+  letter-spacing: -0.01em;
+  box-shadow: 0 12px 28px rgba(7, 87, 238, 0.2), inset 0 1px rgba(255, 255, 255, 0.28);
+  transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease;
 }
 
 .homeHeroActions a:last-child {
-  background: rgba(255, 255, 255, 0.88);
-  color: #0f62fe;
+  border-color: rgba(7, 87, 238, 0.62);
+  background: rgba(255, 255, 255, 0.76);
+  color: #0757ee;
+  box-shadow: 0 10px 28px rgba(28, 91, 173, 0.08), inset 0 1px rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(14px);
 }
 
 .homeHeroActions a:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 14px 34px rgba(15, 98, 254, 0.18);
+  transform: translateY(-2px);
+  box-shadow: 0 18px 38px rgba(7, 87, 238, 0.24), inset 0 1px rgba(255, 255, 255, 0.32);
 }
 
 .homeHeroActions a:focus-visible {
   outline: 3px solid #0f62fe;
   outline-offset: 4px;
+}
+
+@keyframes homeHeroCopyReveal {
+  from { opacity: 0; transform: translate3d(0, 22px, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+@keyframes homeHeroArtworkReveal {
+  from { opacity: 0.62; transform: scale(1.024) translate3d(0, 10px, 0); filter: contrast(0.98) saturate(0.96); }
+  to { opacity: 1; transform: scale(1.006) translate3d(0, 0, 0); filter: contrast(1.025) saturate(1.035); }
+}
+
+@keyframes homeHeroLightBreath {
+  from { opacity: 0.72; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1.025); }
 }
 
 .homeHeroInner {
@@ -158,34 +216,60 @@
 }
 
 @media (max-width: 900px) {
-  .homeHero { padding-top: 88px; padding-bottom: 20px; }
+  .homeHero { padding-top: 88px; padding-bottom: 28px; }
   .homeHeroCopyOverlay {
     position: relative;
     top: auto;
     left: auto;
     width: auto;
-    padding: 30px 20px 26px;
+    max-width: 720px;
+    margin-inline: auto;
+    padding: 44px 28px 34px;
   }
   .homeHeroCopyOverlay h1 {
-    font-size: clamp(40px, 8vw, 58px);
+    max-width: 680px;
+    font-size: clamp(44px, 8.4vw, 64px);
+    line-height: 1;
   }
   .homeHeroCopyOverlay > p {
-    max-width: 620px;
-    margin-top: 20px;
+    max-width: 580px;
+    margin-top: 24px;
   }
   .homeHeroArtworkFrame { aspect-ratio: 4 / 3; }
-  .homeHeroArtworkFrame::after { display: none; }
-  .homeHeroArtwork { object-position: 70% bottom; }
+  .homeHeroArtworkFrame::after {
+    display: block;
+    inset: 0 auto 0 0;
+    width: 28%;
+    background: linear-gradient(90deg, #f4f8ff 0%, rgba(244, 248, 255, 0.72) 48%, transparent 100%);
+  }
+  .homeHeroArtwork { object-position: right bottom; }
 }
 
 @media (max-width: 640px) {
+  .homeHeroCopyOverlay { padding: 36px 20px 28px; }
+  .homeHeroCopyOverlay h1 { font-size: clamp(40px, 11.5vw, 52px); }
+  .homeHeroCopyOverlay > p { font-size: 16px; line-height: 1.62; }
   .homeHeroActions { display: grid; }
   .homeHeroActions a { width: 100%; }
+  .homeHeroArtworkFrame { aspect-ratio: 1.08; }
+  .homeHeroArtworkFrame::after { width: 20%; }
   .homeHeroInner { width: min(100% - 32px, 1440px); gap: 24px; }
   .homeHeroCopy h1 { font-size: clamp(40px, 11vw, 48px); }
   .homeHeroDescription { margin-top: 20px; font-size: 16px; line-height: 1.65; }
   .homeHeroVisual .hero-machine-animation,
   .homeHeroVisual .knowledgeFlow { height: clamp(330px, 96vw, 390px); min-height: 330px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .homeHeroArtwork,
+  .homeHeroArtworkFrame::before,
+  .homeHeroCopyOverlay {
+    animation: none;
+  }
+
+  .homeHeroActions a {
+    transition: none;
+  }
 }
 
 .home-hero-background {

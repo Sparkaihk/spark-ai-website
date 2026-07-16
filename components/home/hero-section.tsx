@@ -15,7 +15,7 @@ export function HeroSection() {
           Spark AI helps organizations preserve, activate and continuously create value from their knowledge.
         </p>
         <div className="homeHeroActions" aria-label="Hero actions">
-          <Link href="/products/spark-ai-appliance">Explore Spark AI Appliance™</Link>
+          <Link href="/products/spark-ai-appliance">Explore Spark AI Appliance{"\u2122"}</Link>
           <Link href="/contact">Schedule Demo</Link>
         </div>
       </div>
