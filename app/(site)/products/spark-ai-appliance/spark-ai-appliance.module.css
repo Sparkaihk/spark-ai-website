@@ -251,6 +251,92 @@
 .heroLayerStack span:nth-child(3) { animation-delay: -2.2s; }
 .heroLayerStack span:nth-child(4) { animation-delay: -3.3s; }
 
+.categorySection {
+  position: relative;
+  padding: 104px 0;
+  background: #f8fbff;
+}
+
+.categoryCard {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(300px, 0.82fr) minmax(420px, 1.18fr);
+  align-items: center;
+  gap: clamp(48px, 7vw, 100px);
+  overflow: hidden;
+  border: 1px solid rgba(159, 207, 255, 0.82);
+  border-radius: 38px;
+  background:
+    radial-gradient(circle at 18% 24%, rgba(67, 151, 255, 0.14), transparent 30%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(234, 246, 255, 0.86));
+  padding: clamp(44px, 6vw, 82px);
+  box-shadow: 0 32px 90px rgba(39, 111, 191, 0.12), inset 0 1px rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(24px);
+}
+
+.categoryCard::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  content: "";
+  background: linear-gradient(180deg, #0757ee, #55c8ff 54%, rgba(85, 200, 255, 0));
+}
+
+.categoryCard::after {
+  position: absolute;
+  right: -8%;
+  bottom: -52%;
+  width: 420px;
+  height: 420px;
+  border: 1px solid rgba(59, 130, 246, 0.13);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+  box-shadow: 0 0 0 52px rgba(96, 165, 250, 0.035), 0 0 0 104px rgba(96, 165, 250, 0.025);
+}
+
+.categoryHeading,
+.categoryBody {
+  position: relative;
+  z-index: 1;
+}
+
+.categoryEyebrow {
+  color: #0757ee;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+}
+
+.categoryHeading h2 {
+  margin-top: 20px;
+  color: #091326;
+  font-size: clamp(38px, 4vw, 58px);
+  font-weight: 670;
+  line-height: 1.02;
+  letter-spacing: -0.052em;
+  text-wrap: balance;
+}
+
+.categoryBody {
+  border-left: 1px solid rgba(147, 197, 253, 0.62);
+  padding-left: clamp(28px, 4vw, 52px);
+}
+
+.categoryBody p {
+  color: #46566d;
+  font-size: 17px;
+  line-height: 1.78;
+}
+
+.categoryBody p + p {
+  margin-top: 22px;
+  color: #27364d;
+}
+
 .section,
 .architectureSection,
 .hardwareSection,
@@ -556,6 +642,8 @@
   .capabilityGrid,
   .hardwareGrid,
   .industryGrid { grid-template-columns: repeat(2, 1fr); }
+  .categoryCard { grid-template-columns: 1fr; gap: 34px; }
+  .categoryBody { border-top: 1px solid rgba(147, 197, 253, 0.62); border-left: 0; padding-top: 30px; padding-left: 0; }
 }
 
 @media (max-width: 640px) {
@@ -571,11 +659,15 @@
   .productWordmark { left: 16px; bottom: 16px; }
   .heroLayerStack { top: 14px; right: 14px; width: 44%; }
   .section,
+  .categorySection,
   .architectureSection,
   .hardwareSection,
   .comparisonSection { padding: 82px 0; }
   .sectionHeader h2 { font-size: 37px; }
   .sectionHeader > div { font-size: 16px; }
+  .categoryCard { border-radius: 28px; padding: 34px 24px; }
+  .categoryHeading h2 { font-size: 39px; }
+  .categoryBody p { font-size: 16px; line-height: 1.72; }
   .architectureShell { margin-top: 42px; border-radius: 28px; padding: 24px 16px; }
   .architectureCard { padding: 15px; }
   .storageGrid { grid-template-columns: repeat(2, 1fr); }

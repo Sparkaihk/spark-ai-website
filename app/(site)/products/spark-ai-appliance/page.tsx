@@ -30,6 +30,7 @@ import {
 
 import { AnimatedBlock, AnimatedStagger } from "@/components/design-system/animated";
 import { Container } from "@/components/design-system/container";
+import { LocalizedText } from "@/components/site/localized-text";
 import { Button } from "@/components/ui/button";
 
 import styles from "./spark-ai-appliance.module.css";
@@ -180,6 +181,35 @@ export default function SparkAiAppliancePage() {
             </div>
           </AnimatedBlock>
         </div>
+      </section>
+
+      <section className={styles.categorySection}>
+        <Container>
+          <AnimatedBlock className={styles.categoryCard}>
+            <div className={styles.categoryHeading}>
+              <p className={styles.categoryEyebrow}>
+                <LocalizedText zh="AI 基礎設施的新類別" en="A NEW CATEGORY OF AI INFRASTRUCTURE" />
+              </p>
+              <h2>
+                <LocalizedText zh="Knowledge Infrastructure Appliance" en="Knowledge Infrastructure Appliance" />
+              </h2>
+            </div>
+            <div className={styles.categoryBody}>
+              <p>
+                <LocalizedText
+                  zh="Spark AI 正在定義一個全新的產品類別：Knowledge Infrastructure Appliance，讓每一個機構都能擁有專屬的 AI 知識基礎設施。"
+                  en="Spark AI is defining a new category: the Knowledge Infrastructure Appliance—giving every organization its own AI knowledge infrastructure."
+                />
+              </p>
+              <p>
+                <LocalizedText
+                  zh="它不是一台普通的 AI 伺服器，也不是單純的儲存設備。它將 AI 算力、長期知識儲存、企業 RAG、AI 記憶與數據治理，整合為一套可私有部署、可持續演進的知識基礎設施。"
+                  en="It is not simply an AI server or a storage system. It integrates AI computing, long-term knowledge storage, enterprise RAG, AI memory and data governance into one privately deployable and continuously evolving platform."
+                />
+              </p>
+            </div>
+          </AnimatedBlock>
+        </Container>
       </section>
 
       <section id="architecture" className={styles.architectureSection}>
