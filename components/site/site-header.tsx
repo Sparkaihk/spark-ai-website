@@ -6,9 +6,10 @@ import type * as React from "react";
 import { useEffect, useState } from "react";
 
 import { LanguageSwitcher } from "@/components/site/language-switcher";
-import { LocalizedText } from "@/components/site/localized-text";
 import { investorRoutes, siteRoutes, type SiteRoute } from "@/components/site/navigation.config";
+import { T } from "@/components/site/translated-text";
 import { Button } from "@/components/ui/button";
+import { useI18n } from "@/i18n/i18n-provider";
 import { cn } from "@/lib/utils";
 
 function scrollToHash(event: React.MouseEvent<HTMLAnchorElement>, href: string) {
@@ -52,7 +53,7 @@ function HeaderNavLink({
       data-active={active ? "true" : undefined}
     >
       {showIcon ? <Icon className="size-4 shrink-0" aria-hidden="true" /> : null}
-      <LocalizedText zh={route.labelZh} en={route.label} />
+      <T id={route.labelKey} />
     </a>
   );
 }
@@ -62,6 +63,7 @@ export function SiteHeader() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const routes = pathname?.startsWith("/investors") ? investorRoutes : siteRoutes;
+  const { t } = useI18n();
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 12);
@@ -90,7 +92,7 @@ export function SiteHeader() {
         >
           <a
             href="/"
-            aria-label="Spark AI home"
+            aria-label={t("header.homeLabel")}
             className="group flex min-w-0 shrink-0 items-center gap-3 whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 lg:basis-[11rem] xl:basis-[13rem]"
             onClick={() => setIsOpen(false)}
           >
@@ -100,12 +102,12 @@ export function SiteHeader() {
             <span className="hidden min-w-0 sm:block">
               <span className="block truncate text-[0.95rem] font-semibold leading-4 text-foreground">Spark AI</span>
               <span className="block max-w-[10rem] truncate text-[0.62rem] font-medium uppercase leading-4 tracking-[0.08em] text-muted-foreground">
-                Knowledge Infrastructure for the AI Era
+                <T id="brand.tagline" />
               </span>
             </span>
           </a>
 
-          <nav aria-label="Main navigation" className="hidden min-w-0 flex-1 items-center justify-center gap-2 lg:flex">
+          <nav aria-label={t("common.mainNavigation")} className="hidden min-w-0 flex-1 items-center justify-center gap-2 lg:flex">
             {routes.map((route) => (
               <HeaderNavLink
                 key={route.href}
@@ -120,7 +122,7 @@ export function SiteHeader() {
             <LanguageSwitcher />
             <Button asChild variant="spark" size="sm" className="h-10 rounded-full px-3 shadow-[0_14px_38px_rgba(37,99,235,0.20)] hover:shadow-[0_22px_56px_rgba(37,99,235,0.32)] xl:px-4">
               <a href="/contact">
-                <LocalizedText zh={"\u9884\u7ea6\u6f14\u793a"} en="Book Demo" />
+                <T id="common.bookDemo" />
                 <ArrowUpRight aria-hidden="true" />
               </a>
             </Button>
@@ -128,7 +130,7 @@ export function SiteHeader() {
 
           <button
             type="button"
-            aria-label={isOpen ? "Close navigation" : "Open navigation"}
+            aria-label={isOpen ? t("common.closeNavigation") : t("common.openNavigation")}
             aria-expanded={isOpen}
             onClick={() => setIsOpen((value) => !value)}
             className="inline-flex size-10 items-center justify-center rounded-[16px] border border-sky-100 bg-white/82 text-foreground shadow-sm backdrop-blur-xl transition-colors hover:bg-sky-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring lg:hidden"
@@ -142,7 +144,7 @@ export function SiteHeader() {
         <div className="fixed inset-x-0 bottom-0 top-[5.5rem] z-40 overflow-y-auto bg-[linear-gradient(180deg,rgba(248,251,255,0.96)_0%,rgba(224,242,254,0.9)_100%)] backdrop-blur-2xl lg:hidden">
           <div className="pointer-events-none absolute inset-0 spark-grid opacity-35" aria-hidden="true" />
           <div className="pointer-events-none absolute -right-20 top-10 h-64 w-64 rounded-full bg-sky-200/50 blur-3xl" aria-hidden="true" />
-          <nav aria-label="Mobile navigation" className="relative mx-auto flex w-full max-w-7xl flex-col gap-2 px-6 pb-8 pt-4">
+          <nav aria-label={t("common.mobileNavigation")} className="relative mx-auto flex w-full max-w-7xl flex-col gap-2 px-6 pb-8 pt-4">
             {routes.map((route) => (
               <HeaderNavLink
                 key={route.href}
@@ -158,7 +160,7 @@ export function SiteHeader() {
             </div>
             <Button asChild variant="spark" className="mt-4 w-full rounded-[16px]">
               <a href="/contact" onClick={() => setIsOpen(false)}>
-                <LocalizedText zh={"\u9884\u7ea6\u6f14\u793a"} en="Book Demo" />
+                <T id="common.bookDemo" />
                 <ArrowUpRight aria-hidden="true" />
               </a>
             </Button>

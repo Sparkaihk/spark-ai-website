@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "next dev --webpack",
     "lint": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
+    "check:i18n": "node scripts/check-i18n.mjs",
     "build": "next build --webpack",
     "start": "next start"
   },

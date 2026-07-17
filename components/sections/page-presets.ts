@@ -44,7 +44,7 @@ export const pagePresets: Record<string, InvestorPageProps> = {
           en: "The portfolio covers local AI compute, intelligent tiered storage, long-term archival, enterprise retrieval, AI Agents, and governance.",
         },
         cards: [
-          { title: { zh: "Spark AI Appliance™", en: "Spark AI Appliance™" }, body: { zh: "面向企业与机构的一体化知识基础设施设备。", en: "An integrated knowledge infrastructure appliance for enterprises and institutions." }, icon: Cpu },
+          { title: { zh: "Spark AI Appliance™", en: "Spark AI Appliance™" }, body: { zh: "面向企业及机构的一体化知识基础设施一体机。", en: "An integrated knowledge infrastructure appliance for enterprises and institutions." }, icon: Cpu },
           { title: { zh: "企业检索", en: "Enterprise Retrieval" }, body: { zh: "把文档、图像、记录与知识库转化为可引用、可追溯的 AI 知识。", en: "Turn documents, images, records, and knowledge bases into attributable AI knowledge." }, icon: FileSearch },
           { title: { zh: "长期归档", en: "Long-Term Archive" }, body: { zh: "支持长期保存、完整性保护、访问控制与审计治理。", en: "Support durable preservation, integrity, access control, and audit governance." }, icon: Archive },
         ],
@@ -195,7 +195,7 @@ export const pagePresets: Record<string, InvestorPageProps> = {
     diagram: ["Storage", "Metadata", "Retrieval", "Models", "Agents", "Governance"],
     heroImage: {
       src: "/images/visual-upgrade/technology-hero-v1.png",
-      alt: "Spark AI technology architecture hero image with appliance, data pipelines, and knowledge network layers",
+      alt: { zh: "Spark AI 一体机、数据管道与知识网络组成的技术架构", en: "Spark AI technology architecture hero image with appliance, data pipelines, and knowledge network layers" },
     },
     sections: [
       {
@@ -267,10 +267,10 @@ export const pagePresets: Record<string, InvestorPageProps> = {
   },
   contact: {
     eyebrow: { zh: "联系", en: "Contact" },
-    title: { zh: "与 Spark AI 讨论您的知识基础设施", en: "Discuss Your Knowledge Infrastructure with Spark AI" },
+    title: { zh: "联系光慧科技有限公司", en: "Contact Spark AI Technology Limited" },
     subtitle: {
-      zh: "欢迎政府、企业、投资机构和产业伙伴联系 Spark AI，讨论 Spark AI Appliance™、企业检索、长期归档与知识基础设施合作。",
-      en: "Government agencies, enterprises, investors, and partners are welcome to discuss Spark AI Appliance™, enterprise retrieval, long-term archival, and knowledge infrastructure collaboration.",
+      zh: "欢迎政府、企业、投资机构和产业伙伴联系光慧科技有限公司，讨论 Spark AI Appliance™、企业检索、长期归档与知识基础设施合作。",
+      en: "Government agencies, enterprises, investors, and partners are welcome to contact Spark AI Technology Limited about Spark AI Appliance™, enterprise retrieval, long-term archival, and knowledge infrastructure collaboration.",
     },
     primaryCta: { zh: "发送邮件", en: "Email Us" },
     primaryHref: "mailto:info@sparkai.hk",
@@ -279,7 +279,7 @@ export const pagePresets: Record<string, InvestorPageProps> = {
     diagram: ["Inquiry", "Discovery", "Architecture", "Pilot", "Deployment", "Scale"],
     heroImage: {
       src: "/images/visual-upgrade/contact-hero-v1.png",
-      alt: "Spark AI contact hero image with enterprise meeting room, appliance, deployment map, and knowledge network",
+      alt: { zh: "企业会议空间、Spark AI 一体机、部署地图与知识网络", en: "Spark AI contact hero image with enterprise meeting room, appliance, deployment map, and knowledge network" },
     },
     sections: [
       {

@@ -1,11 +1,12 @@
 import type { LucideIcon } from "lucide-react";
 import { ArrowLeft, ArrowRight, CheckCircle2, Mail } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 
 import { AnimatedBlock, AnimatedStagger } from "@/components/design-system/animated";
 import { Container } from "@/components/design-system/container";
+import { BilingualImage, type BilingualAlt } from "@/components/site/bilingual-image";
 import { LocalizedText } from "@/components/site/localized-text";
+import { LocalizedSvgText } from "@/components/site/localized-svg-text";
 import { Button } from "@/components/ui/button";
 
 export type Bilingual = {
@@ -30,7 +31,7 @@ export type InvestorPageProps = {
   diagram: string[];
   heroImage?: {
     src: string;
-    alt: string;
+    alt: BilingualAlt;
   };
   sections: Array<{
     eyebrow: Bilingual;
@@ -40,10 +41,19 @@ export type InvestorPageProps = {
   }>;
 };
 
+const diagramZh: Record<string, string> = {
+  Data: "数据", Metadata: "元数据", Knowledge: "知识", Retrieval: "智能检索", Agents: "AI 智能体", Governance: "治理",
+  Appliance: "一体机", Compute: "算力", Storage: "存储", Trust: "可信治理", Archive: "归档", Policy: "策略",
+  Integrity: "完整性", Index: "索引", Audit: "审计", Sources: "数据源", Parsing: "解析", Search: "检索", Models: "模型",
+  Answers: "回答", Rights: "确权", Reuse: "复用", Value: "价值", Vision: "愿景", Mission: "使命", Product: "产品",
+  Ecosystem: "生态", Inquiry: "需求沟通", Discovery: "需求分析", Architecture: "架构", Pilot: "试点", Deployment: "部署", Scale: "扩展",
+};
+
 function FlowDiagram({ items }: { items: string[] }) {
   return (
     <div className="premium-visual relative overflow-hidden rounded-[28px] p-5 sm:p-6">
-      <svg viewBox="0 0 760 380" role="img" aria-label={items.join(" to ")} className="h-auto w-full">
+      <svg viewBox="0 0 760 380" role="img" className="h-auto w-full">
+        <LocalizedText as="title" zh="知识基础设施流程图" en="Knowledge infrastructure flow diagram" />
         <defs>
           <linearGradient id="flow-line" x1="0" x2="1">
             <stop stopColor="#2563eb" stopOpacity="0.95" />
@@ -64,9 +74,7 @@ function FlowDiagram({ items }: { items: string[] }) {
               <path d={`M${x + 54} ${y + 34}V190`} stroke="#93c5fd" strokeWidth="2" strokeLinecap="round" />
               <rect x={x} y={y} width="108" height="68" rx="20" fill="#ffffff" stroke="#dbeafe" />
               <circle cx={x + 24} cy={y + 24} r="10" fill={index === items.length - 1 ? "#2563eb" : "#e0f2fe"} />
-              <text x={x + 54} y={y + 39} textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="12" fontWeight="700" fill="#0f172a">
-                {item}
-              </text>
+              <LocalizedSvgText zh={diagramZh[item] ?? item} en={item} x={x + 54} y={y + 39} textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="12" fontWeight="700" fill="#0f172a" />
             </g>
           );
         })}
@@ -75,10 +83,10 @@ function FlowDiagram({ items }: { items: string[] }) {
   );
 }
 
-function HeroImage({ src, alt }: { src: string; alt: string }) {
+function HeroImage({ src, alt }: { src: string; alt: BilingualAlt }) {
   return (
     <div className="premium-visual relative aspect-video overflow-hidden rounded-[28px] border border-blue-100/60 bg-white/75 p-2 shadow-xl">
-      <Image
+      <BilingualImage
         src={src}
         alt={alt}
         width={3840}
@@ -181,12 +189,12 @@ export function InvestorPage({
           <AnimatedBlock className="premium-cta rounded-[32px] p-8 text-center text-white sm:p-12">
             <CheckCircle2 className="mx-auto size-8" aria-hidden="true" />
             <h2 className="mx-auto mt-5 max-w-[820px] text-3xl font-semibold leading-tight sm:text-5xl">
-              <LocalizedText zh="与 Spark AI 建设 AI 时代知识基础设施" en="Build Knowledge Infrastructure for the AI Era with Spark AI." />
+              <LocalizedText zh="与 Spark AI 携手构建 AI 时代的知识基础设施。" en="Build Knowledge Infrastructure for the AI Era with Spark AI." />
             </h2>
             <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
               <Button asChild variant="secondary" size="lg" className="rounded-[20px]">
                 <Link href="/contact">
-                  <LocalizedText zh="预约演示" en="Request Demo" />
+                  <LocalizedText zh="预约产品演示" en="Request Demo" />
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="rounded-[20px] border-white/60 bg-transparent text-white hover:bg-white hover:text-primary">

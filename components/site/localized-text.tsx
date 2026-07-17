@@ -1,5 +1,8 @@
+"use client";
+
 import type { ElementType, ReactNode } from "react";
 
+import { useI18n } from "@/i18n/i18n-provider";
 import { cn } from "@/lib/utils";
 
 type LocalizedTextProps = {
@@ -9,16 +12,7 @@ type LocalizedTextProps = {
   className?: string;
 };
 
-export function LocalizedText({
-  zh,
-  en,
-  as: Component = "span",
-  className,
-}: LocalizedTextProps) {
-  return (
-    <>
-      <Component className={cn("lang-zh", className)}>{zh}</Component>
-      <Component className={cn("lang-en", className)}>{en}</Component>
-    </>
-  );
+export function LocalizedText({ zh, en, as: Component = "span", className }: LocalizedTextProps) {
+  const { locale } = useI18n();
+  return <Component className={cn(className)}>{locale === "zh-CN" ? zh : en}</Component>;
 }

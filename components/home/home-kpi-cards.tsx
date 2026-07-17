@@ -1,4 +1,4 @@
-﻿import { Archive, Cpu, Database, Gauge, Network, ShieldCheck } from "lucide-react";
+import { Archive, Cpu, Database, Gauge, Network, ShieldCheck } from "lucide-react";
 
 import { LocalizedText } from "@/components/site/localized-text";
 import { homeKpis } from "@/data/home-knowledge-flow";
@@ -7,7 +7,7 @@ const icons = [ShieldCheck, Database, Network, Cpu, Gauge, Database, ShieldCheck
 
 export function HomeKpiCards() {
   return (
-    <div className="home-kpi-grid" aria-label="Spark AI Appliance™key metrics">
+    <div className="home-kpi-grid" aria-label="Spark AI Appliance™ key metrics">
       {homeKpis.map((kpi, index) => {
         const Icon = icons[index];
         return (

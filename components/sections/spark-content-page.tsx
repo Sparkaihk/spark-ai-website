@@ -5,6 +5,9 @@ import { ArrowLeft, ArrowRight, CheckCircle2, ChevronRight, Mail } from "lucide-
 import { AnimatedBlock, AnimatedStagger } from "@/components/design-system/animated";
 import { Container } from "@/components/design-system/container";
 import { LocalizedText } from "@/components/site/localized-text";
+import { LocalizedSvgText } from "@/components/site/localized-svg-text";
+import { LocalizedSvg } from "@/components/site/localized-svg";
+import { T } from "@/components/site/translated-text";
 import { Button } from "@/components/ui/button";
 
 export type Bilingual = { zh: string; en: string };
@@ -30,20 +33,20 @@ export type ContentPageData = {
 };
 
 function TechIllustration({ type }: { type: ContentPageData["illustration"] }) {
-  const labels: Record<ContentPageData["illustration"], string[]> = {
-    "cold-data": ["Hot", "Warm", "Cold", "100PB"],
-    optical: ["WORM", "Archive", "50Y+", "Low Power"],
-    rag: ["Search", "Vector", "Graph", "LLM"],
-    bank: ["Govern", "Value", "Rights", "Trade"],
-    edge: ["GPU", "RTX", "Infer", "Offline"],
-    storage: ["NVMe", "HDD", "Optical", "Object"],
-    technology: ["AI Lake", "RAG", "LLM", "Knowledge"],
-    cases: ["Health", "Gov", "Finance", "Research"],
-    about: ["Vision", "Mission", "Value", "Milestone"],
+  const labels: Record<ContentPageData["illustration"], Bilingual[]> = {
+    "cold-data": [{ zh: "热数据", en: "Hot" }, { zh: "温数据", en: "Warm" }, { zh: "冷数据", en: "Cold" }, { zh: "100PB", en: "100PB" }],
+    optical: [{ zh: "WORM", en: "WORM" }, { zh: "归档", en: "Archive" }, { zh: "50 年+", en: "50Y+" }, { zh: "低功耗", en: "Low Power" }],
+    rag: [{ zh: "检索", en: "Search" }, { zh: "向量", en: "Vector" }, { zh: "图谱", en: "Graph" }, { zh: "大模型", en: "LLM" }],
+    bank: [{ zh: "治理", en: "Govern" }, { zh: "价值", en: "Value" }, { zh: "确权", en: "Rights" }, { zh: "流通", en: "Trade" }],
+    edge: [{ zh: "GPU", en: "GPU" }, { zh: "RTX", en: "RTX" }, { zh: "推理", en: "Infer" }, { zh: "离线", en: "Offline" }],
+    storage: [{ zh: "NVMe", en: "NVMe" }, { zh: "HDD", en: "HDD" }, { zh: "光学", en: "Optical" }, { zh: "对象存储", en: "Object" }],
+    technology: [{ zh: "AI 数据湖", en: "AI Lake" }, { zh: "RAG", en: "RAG" }, { zh: "大模型", en: "LLM" }, { zh: "知识", en: "Knowledge" }],
+    cases: [{ zh: "医疗", en: "Health" }, { zh: "政府", en: "Gov" }, { zh: "金融", en: "Finance" }, { zh: "科研", en: "Research" }],
+    about: [{ zh: "愿景", en: "Vision" }, { zh: "使命", en: "Mission" }, { zh: "价值", en: "Value" }, { zh: "里程碑", en: "Milestone" }],
   };
 
   return (
-    <svg viewBox="0 0 720 460" role="img" aria-label="Spark AI technology illustration" className="h-auto w-full">
+    <LocalizedSvg viewBox="0 0 720 460" role="img" ariaEn="Spark AI technology illustration" ariaZh="Spark AI 技术示意图" className="h-auto w-full">
       <defs>
         <linearGradient id={`bg-${type}`} x1="0" x2="1" y1="0" y2="1">
           <stop offset="0%" stopColor="#e0f2fe" />
@@ -71,10 +74,10 @@ function TechIllustration({ type }: { type: ContentPageData["illustration"] }) {
         <rect x="180" y="306" width="360" height="76" rx="20" fill="#ffffff" stroke="#bfdbfe" />
       </g>
       <g fill="#0f172a" fontFamily="Arial, sans-serif" fontWeight="700">
-        <text x="104" y="130" fontSize="24">{labels[type][0]}</text>
-        <text x="302" y="220" fontSize="24">{labels[type][1]}</text>
-        <text x="500" y="130" fontSize="24">{labels[type][2]}</text>
-        <text x="306" y="352" fontSize="24">{labels[type][3]}</text>
+        <LocalizedSvgText x="104" y="130" fontSize="24" {...labels[type][0]} />
+        <LocalizedSvgText x="302" y="220" fontSize="24" {...labels[type][1]} />
+        <LocalizedSvgText x="500" y="130" fontSize="24" {...labels[type][2]} />
+        <LocalizedSvgText x="306" y="352" fontSize="24" {...labels[type][3]} />
       </g>
       <g fill="#2563eb">
         <circle cx="162" cy="164" r="10" />
@@ -85,15 +88,15 @@ function TechIllustration({ type }: { type: ContentPageData["illustration"] }) {
       <g stroke="#06b6d4" strokeWidth="3" fill="none" opacity="0.9">
         <path d="M252 140h68M450 230h68M360 284v22" />
       </g>
-    </svg>
+    </LocalizedSvg>
   );
 }
 
 function ArchitectureSvg() {
-  const nodes = ["NVMe", "HDD", "Optical", "Object Storage", "AI Data Lake", "RAG", "LLM", "Enterprise KB"];
+  const nodes: Bilingual[] = [{ zh: "NVMe", en: "NVMe" }, { zh: "HDD", en: "HDD" }, { zh: "光学归档", en: "Optical" }, { zh: "对象存储", en: "Object Storage" }, { zh: "AI 数据湖", en: "AI Data Lake" }, { zh: "RAG", en: "RAG" }, { zh: "大模型", en: "LLM" }, { zh: "企业知识库", en: "Enterprise KB" }];
   return (
     <div className="mt-8 overflow-hidden rounded-[20px] border border-sky-100 bg-white p-4 shadow-spark-sm">
-      <svg viewBox="0 0 980 520" role="img" aria-label="Spark AI full architecture diagram" className="h-auto w-full">
+      <LocalizedSvg viewBox="0 0 980 520" role="img" ariaEn="Spark AI full architecture diagram" ariaZh="Spark AI 完整架构图" className="h-auto w-full">
         <defs>
           <linearGradient id="arch-line" x1="0" x2="1">
             <stop stopColor="#2563eb" />
@@ -109,17 +112,17 @@ function ArchitectureSvg() {
           const x = i < 4 ? 72 + i * 218 : 72 + (i - 4) * 218;
           const y = i < 4 ? 98 : 314;
           return (
-            <g key={node}>
+            <g key={node.en}>
               <rect x={x} y={y} width="168" height="92" rx="18" fill="#fff" stroke="#bfdbfe" />
-              <text x={x + 84} y={y + 54} textAnchor="middle" fontFamily="Arial" fontSize="19" fontWeight="700" fill="#0f172a">{node}</text>
+              <LocalizedSvgText zh={node.zh} en={node.en} x={x + 84} y={y + 54} textAnchor="middle" fontFamily="Arial" fontSize="19" fontWeight="700" fill="#0f172a" />
               <circle cx={x + 84} cy={y + 78} r="6" fill="#2563eb" />
             </g>
           );
         })}
         <path d="M156 190V260H810V314M374 190V260M592 190V260M810 190V314M156 260V314M374 260V314M592 260V314" fill="none" stroke="url(#arch-line)" strokeWidth="5" strokeLinecap="round" />
         <rect x="360" y="226" width="260" height="68" rx="18" fill="#eff6ff" stroke="#93c5fd" />
-        <text x="490" y="268" textAnchor="middle" fontFamily="Arial" fontSize="20" fontWeight="700" fill="#1d4ed8">Policy + Metadata + Security</text>
-      </svg>
+        <LocalizedSvgText zh="策略 + 元数据 + 安全" en="Policy + Metadata + Security" x="490" y="268" textAnchor="middle" fontFamily="Arial" fontSize="20" fontWeight="700" fill="#1d4ed8" />
+      </LocalizedSvg>
     </div>
   );
 }
@@ -130,8 +133,9 @@ export function SparkContentPage({ page }: { page: ContentPageData }) {
       <section className="relative isolate overflow-hidden bg-[linear-gradient(180deg,#f8fbff_0%,#eef7ff_100%)] pb-16 pt-12 sm:pb-20">
         <div className="absolute inset-0 spark-grid opacity-60" />
         <Container className="relative z-10">
-          <nav aria-label="Breadcrumb" className="mb-8 flex flex-wrap items-center gap-2 text-sm font-medium text-muted-foreground">
-            <Link href="/" className="hover:text-primary">Home</Link>
+          <span id="content-breadcrumb-label" className="sr-only"><T id="common.breadcrumb" /></span>
+          <nav aria-labelledby="content-breadcrumb-label" className="mb-8 flex flex-wrap items-center gap-2 text-sm font-medium text-muted-foreground">
+            <Link href="/" className="hover:text-primary"><T id="common.home" /></Link>
             <ChevronRight className="size-4" aria-hidden="true" />
             <span className="text-foreground"><LocalizedText zh={page.title.zh} en={page.title.en} /></span>
           </nav>
@@ -149,14 +153,14 @@ export function SparkContentPage({ page }: { page: ContentPageData }) {
               <div className="mt-7 flex flex-col gap-3 sm:flex-row">
                 <Button asChild variant="spark" size="lg" className="rounded-[20px]">
                   <Link href="/contact">
-                    <LocalizedText zh="立即聯絡 Spark AI" en="Contact Spark AI" />
+                    <LocalizedText zh="立即联络 Spark AI" en="Contact Spark AI" />
                     <Mail aria-hidden="true" />
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="rounded-[20px] bg-white">
                   <Link href="/">
                     <ArrowLeft aria-hidden="true" />
-                    <LocalizedText zh="返回首頁" en="Back to Home" />
+                    <LocalizedText zh="返回首页" en="Back to Home" />
                   </Link>
                 </Button>
               </div>
@@ -246,7 +250,7 @@ export function SparkContentPage({ page }: { page: ContentPageData }) {
         <Container>
           <AnimatedBlock className="mx-auto max-w-[760px] text-center">
             <p className="text-sm font-semibold uppercase tracking-[0.14em] text-accent">FAQ</p>
-            <h2 className="mt-3 text-3xl font-semibold text-foreground"><LocalizedText zh="常見問題" en="Frequently Asked Questions" /></h2>
+            <h2 className="mt-3 text-3xl font-semibold text-foreground"><T id="common.faq" /></h2>
           </AnimatedBlock>
           <div className="mt-8 grid gap-4 md:grid-cols-2">
             {page.faqs.map((faq) => (
@@ -258,7 +262,7 @@ export function SparkContentPage({ page }: { page: ContentPageData }) {
           </div>
 
           <AnimatedBlock className="mt-10 rounded-[20px] border border-sky-100 bg-white p-6 shadow-spark-sm">
-            <h2 className="text-2xl font-semibold text-foreground"><LocalizedText zh="關聯方案" en="Related Solutions" /></h2>
+            <h2 className="text-2xl font-semibold text-foreground"><T id="common.relatedSolutions" /></h2>
             <div className="mt-5 flex flex-wrap gap-3">
               {page.related.map((item) => (
                 <Link key={item.en} href={relatedHref(item.en)} className="rounded-[20px] border border-sky-100 bg-sky-50 px-4 py-2 text-sm font-semibold text-primary transition hover:-translate-y-0.5 hover:bg-white hover:shadow-sm">
@@ -269,13 +273,13 @@ export function SparkContentPage({ page }: { page: ContentPageData }) {
           </AnimatedBlock>
 
           <AnimatedBlock className="mt-10 rounded-[24px] bg-primary p-8 text-center text-white shadow-spark-md">
-            <h2 className="text-3xl font-semibold"><LocalizedText zh="立即聯絡 Spark AI" en="Contact Spark AI Today" /></h2>
+            <h2 className="text-3xl font-semibold"><LocalizedText zh="立即联络 Spark AI" en="Contact Spark AI Today" /></h2>
             <p className="mx-auto mt-4 max-w-[680px] text-sm leading-7 text-blue-50">
-              <LocalizedText zh="與我們討論 AI 冷數據中心、RAG 知識平台、光學存儲與數據資產化方案，建立可擴展、低成本、安全合規的企業 AI 基礎設施。" en="Talk to us about AI cold data centers, RAG knowledge platforms, optical storage, and data assetization infrastructure for scalable enterprise AI." />
+              <LocalizedText zh="与我们讨论 AI 冷数据中心、RAG 知识平台、光学存储与数据资产化方案，建立可扩展、低成本、安全合规的企业 AI 基础设施。" en="Talk to us about AI cold data centers, RAG knowledge platforms, optical storage, and data assetization infrastructure for scalable enterprise AI." />
             </p>
             <Button asChild variant="secondary" size="lg" className="mt-6 rounded-[20px] bg-white text-primary hover:bg-blue-50">
               <Link href="/contact">
-                Contact Us
+                <T id="common.contactUs" />
                 <ArrowRight aria-hidden="true" />
               </Link>
             </Button>

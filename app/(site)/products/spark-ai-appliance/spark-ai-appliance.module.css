@@ -570,47 +570,50 @@
 .industryGrid { grid-template-columns: repeat(3, 1fr); }
 
 .industryCard {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
   overflow: hidden;
   border: 1px solid rgba(191, 219, 254, 0.82);
   border-radius: 28px;
   background: rgba(255, 255, 255, 0.82);
   box-shadow: 0 18px 48px rgba(39, 111, 191, 0.08);
-  transition: transform 240ms ease, box-shadow 240ms ease;
+  transition: transform 360ms ease-out, border-color 360ms ease-out, box-shadow 360ms ease-out;
 }
 
-.industryCard:hover { transform: translateY(-5px); box-shadow: 0 30px 66px rgba(39, 111, 191, 0.14); }
+.industryCard:hover {
+  border-color: rgba(125, 184, 244, 0.95);
+  transform: translateY(-4px);
+  box-shadow: 0 28px 62px rgba(39, 111, 191, 0.13);
+}
 
-.industryIllustration {
+.industryImageWrapper {
   position: relative;
-  display: grid;
-  height: 190px;
-  place-items: center;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
-  background:
-    radial-gradient(circle at 50% 50%, rgba(72, 158, 255, 0.2), transparent 38%),
-    linear-gradient(135deg, #eff8ff, #dceeff 55%, #f8fcff);
+  background: linear-gradient(135deg, #eef7ff, #f8fbff);
 }
 
-.industryIllustration[data-variant="1"] { background: radial-gradient(circle at 62% 42%, rgba(50, 190, 230, 0.18), transparent 36%), linear-gradient(135deg, #f5fbff, #e4f5ff 58%, #eef4ff); }
-.industryIllustration[data-variant="2"] { background: radial-gradient(circle at 42% 48%, rgba(84, 132, 255, 0.2), transparent 36%), linear-gradient(135deg, #edf5ff, #e9efff 58%, #f8fbff); }
+.industryImage {
+  object-fit: cover;
+  transition: transform 420ms ease-out;
+}
 
-.industryIllustration span {
+.industryImageFade {
   position: absolute;
-  width: 138px;
-  height: 138px;
-  border: 1px solid rgba(59, 130, 246, 0.25);
-  border-radius: 35%;
-  transform: rotate(28deg);
-  animation: illustrationOrbit 12s linear infinite;
+  inset: auto 0 0;
+  z-index: 1;
+  height: 24%;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.2));
 }
 
-.industryIllustration span:nth-child(2) { width: 92px; height: 92px; border-radius: 50%; animation-direction: reverse; }
-.industryIllustration > svg { position: relative; z-index: 2; width: 44px; height: 44px; color: #0757ee; filter: drop-shadow(0 12px 18px rgba(37, 99, 235, 0.2)); }
+.industryCard:hover .industryImage { transform: scale(1.03); }
 
-.industryContent { padding: 26px; }
+.industryContent { display: flex; flex: 1; flex-direction: column; padding: 26px; }
 .industryContent h3 { font-size: 21px; font-weight: 650; }
-.industryContent p { min-height: 74px; margin-top: 12px; color: #64748b; font-size: 14px; line-height: 1.7; }
-.industryContent a { display: inline-flex; align-items: center; gap: 5px; margin-top: 18px; color: #0757ee; font-size: 13px; font-weight: 650; }
+.industryContent p { margin-top: 12px; color: #64748b; font-size: 14px; line-height: 1.72; }
+.industryContent a { display: inline-flex; width: fit-content; align-items: center; gap: 5px; margin-top: auto; padding-top: 22px; color: #0757ee; font-size: 13px; font-weight: 650; }
 .industryContent a svg { width: 15px; transition: transform 180ms ease; }
 .industryContent a:hover svg { transform: translateX(3px); }
 
@@ -662,7 +665,6 @@
 @keyframes beamShift { to { transform: translateX(58px); } }
 @keyframes connectorFlow { from { transform: translateY(-35%); opacity: 0; } 50% { opacity: 1; } to { transform: translateY(35%); opacity: 0; } }
 @keyframes particleFloat { 0%, 100% { transform: translate3d(0, 0, 0); opacity: 0.42; } 50% { transform: translate3d(7px, -13px, 0); opacity: 1; } }
-@keyframes illustrationOrbit { to { transform: rotate(388deg); } }
 @keyframes layerFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
 @keyframes categoryNetworkDrift { to { background-position: 72px 36px, 72px 36px, 36px 18px; } }
 @keyframes categoryBeamFlow {
@@ -734,15 +736,14 @@
   .heroLayerStack span,
   .categorySection::before,
   .categorySection::after,
-  .flowConnector::before,
-  .industryIllustration span {
-    animation: none;
-  }
+  .flowConnector::before { animation: none; }
 
   .capabilityCard,
   .hardwareCard,
   .industryCard,
-  .architectureCard {
-    transition: none;
-  }
+  .industryImage,
+  .architectureCard { transition: none; }
+
+  .industryCard:hover { transform: none; }
+  .industryCard:hover .industryImage { transform: none; }
 }
