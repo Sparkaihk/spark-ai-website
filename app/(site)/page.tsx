@@ -21,6 +21,7 @@ import {
 
 import { AnimatedBlock, AnimatedStagger } from "@/components/design-system/animated";
 import { Container } from "@/components/design-system/container";
+import { DlsmBusinessSection } from "@/components/home/dlsm-business-section";
 import { HeroSection } from "@/components/home/hero-section";
 import { T } from "@/components/site/translated-text";
 import { Button } from "@/components/ui/button";
@@ -148,6 +149,8 @@ export default function HomePage() {
           </AnimatedBlock>
         </Container>
       </section>
+
+      <DlsmBusinessSection />
 
       <section className="premium-section py-20">
         <Container>
