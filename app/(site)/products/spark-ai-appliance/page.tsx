@@ -58,6 +58,23 @@ const storageTiers = [
   { icon: Cloud, title: copy("Cloud", "云端") },
 ];
 
+const memoryTiers = [
+  { medium: "HBM", activity: copy("Very high activity", "极高活度知识") },
+  { medium: "DRAM / NVMe", activity: copy("High activity", "高活度知识") },
+  { medium: "SSD / HDD", activity: copy("Medium activity", "中活度知识") },
+  { medium: "Object Storage", activity: copy("Low activity", "低活度知识") },
+  { medium: "Optical", activity: copy("Long-term retained knowledge", "长期沉淀知识") },
+];
+
+const knowledgeActivityFactors = [
+  copy("Access frequency", "访问频率"),
+  copy("RAG hit rate", "RAG 命中率"),
+  copy("Agent invocation probability", "Agent 调用概率"),
+  copy("Timeliness", "时效性"),
+  copy("Business value", "业务价值"),
+  copy("Recovery cost", "恢复成本"),
+];
+
 const capabilities = [
   {
     icon: BrainCircuit,
@@ -312,6 +329,40 @@ export default function SparkAiAppliancePage() {
               </div>
             </div>
           </AnimatedBlock>
+          <div className={styles.memoryFramework} id="hierarchical-ai-memory">
+            <header className={styles.memoryHeading}>
+              <LocalizedText as="p" {...copy("Research framework", "研究框架")} />
+              <h3><LocalizedText {...copy("Hierarchical AI Memory Infrastructure", "分层 AI 记忆基础设施")} /></h3>
+              <LocalizedText as="p" {...copy("We study the data lifecycle across HBM → DRAM → NVMe → HDD → Optical. The goal: place knowledge where it best serves its current value, within governance and recovery constraints.", "我们研究 HBM → DRAM → NVMe → HDD → Optical 之间的数据生命周期。目标是在治理与恢复约束下，让知识自动进入最适合其当前价值的层级。")} />
+            </header>
+            <div className={styles.memoryColumns}>
+              <div>
+                <h4><LocalizedText {...copy("Knowledge activity guides placement", "以知识活度引导分层配置")} /></h4>
+                <ol className={styles.memoryTierList}>
+                  {memoryTiers.map((tier) => (
+                    <li key={tier.medium}>
+                      <LocalizedText {...tier.activity} />
+                      <span aria-hidden="true">→</span>
+                      <strong>{tier.medium}</strong>
+                    </li>
+                  ))}
+                </ol>
+                <LocalizedText as="p" className={styles.memoryNote} {...copy("Illustrative placement, not a mandatory migration sequence. HBM and DRAM represent runtime memory, not durable archives; object storage is an access model, not a physical medium. NVMe identifies an interface, while SSD identifies a storage device.", "以上为示意配置，并非必须逐层迁移的路径。HBM 与 DRAM 属于运行时内存，而非持久归档；对象存储是访问模型，并非物理介质。NVMe 表示接口，SSD 表示存储设备。")} />
+              </div>
+              <div>
+                <h4><LocalizedText {...copy("Knowledge Activity (KA)", "知识活度（KA）")} /></h4>
+                <p className={styles.memoryFormula}><LocalizedText {...copy("KA = f(access frequency, RAG hit rate, Agent invocation probability, timeliness, business value, recovery cost)", "KA = f(访问频率、RAG 命中率、Agent 调用概率、时效性、业务价值、恢复成本)")} /></p>
+                <ul className={styles.memoryFactors}>
+                  {knowledgeActivityFactors.map((factor) => <li key={factor.en}><LocalizedText {...factor} /></li>)}
+                </ul>
+                <LocalizedText as="p" className={styles.memoryNote} {...copy("KA is a research decision framework, not a validated scoring algorithm. Weights, observation windows and thresholds require workload-specific validation; this diagram does not assert that every tier ships in the appliance.", "KA 是研究中的决策框架，并非已验证的评分算法。权重、观测窗口与阈值需要结合实际工作负载验证；该图不代表一体机已交付全部层级能力。")} />
+              </div>
+            </div>
+            <div className={styles.memoryPolicy}>
+              <h4><LocalizedText {...copy("Placement changes as knowledge value changes", "知识价值变化，配置随之调整")} /></h4>
+              <LocalizedText as="p" {...copy("The proposed policy promotes knowledge when demand rises and moves it toward capacity or archive tiers as activity falls. Reactivation includes retrieval, verification and loading into runtime memory when needed—not simply moving a file into HBM. Retention rules, permissions, integrity checks and recovery objectives constrain every transition.", "拟议策略在需求上升时提升知识所在层级，在活度下降时转向容量层或归档层。知识重新激活包括检索、校验，以及按需加载至运行时内存，而非简单把文件搬进 HBM。每次转换均须遵守保留规则、访问权限、完整性校验与恢复目标。")} />
+            </div>
+          </div>
         </Container>
       </section>
 
