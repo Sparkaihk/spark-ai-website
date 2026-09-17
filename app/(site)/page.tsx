@@ -1,3 +1,4 @@
+import { DlsmBusinessSection } from "@/components/home/dlsm-business-section";
 import type { Metadata } from "next";
 import { localizedPageMetadata } from "@/i18n/server";
 import Link from "next/link";
@@ -140,6 +141,8 @@ export default function HomePage() {
           </AnimatedBlock>
         </Container>
       </section>
+
+      <DlsmBusinessSection />
 
       <section className="bg-white py-16"><Container><T id="workflow.title" as="h2" className="text-3xl font-semibold" /><T id="workflow.intro" as="p" className="mt-5 max-w-3xl text-base leading-8 text-slate-600" /><Button asChild variant="outline" className="mt-6"><Link href="/principles#knowledge-workflow"><T id="principles.workflowCta" /><ArrowRight aria-hidden="true" /></Link></Button></Container></section>
 
