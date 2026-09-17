@@ -272,7 +272,7 @@ export const pagePresets: Record<string, InvestorPageProps> = {
       zh: "欢迎政府、企业、投资机构和产业伙伴联系光慧科技有限公司，讨论 Spark AI Appliance™、企业检索、长期归档与知识基础设施合作。",
       en: "Government agencies, enterprises, investors, and partners are welcome to contact Spark AI Technology Limited about Spark AI Appliance™, enterprise retrieval, long-term archival, and knowledge infrastructure collaboration.",
     },
-    primaryCta: { zh: "发送邮件", en: "Email Us" },
+    primaryCta: { zh: "联系团队", en: "Contact the team" },
     primaryHref: "mailto:info@sparkai.hk",
     secondaryCta: { zh: "返回首页", en: "Back Home" },
     secondaryHref: "/",
@@ -284,13 +284,13 @@ export const pagePresets: Record<string, InvestorPageProps> = {
     sections: [
       {
         eyebrow: { zh: "合作流程", en: "Collaboration" },
-        title: { zh: "从咨询到部署", en: "From Consultation to Deployment" },
+        title: { zh: "交流应用场景", en: "Discuss your use case" },
         body: {
-          zh: "我们可以协助完成需求梳理、架构评估、试点验证和分阶段部署。",
-          en: "We can support discovery, architecture assessment, pilot validation, and phased deployment.",
+          zh: "从保存年限、资料类型、使用频率、权限和恢复要求出发，共同讨论设计与验证范围。",
+          en: "Discuss design and validation scope based on retention periods, record types, access frequency, permissions and recovery requirements.",
         },
         cards: [
-          { title: { zh: "产品演示", en: "Product Demo" }, body: { zh: "了解 Spark AI Appliance™ 如何支撑企业知识基础设施。", en: "See how Spark AI Appliance™ supports enterprise knowledge infrastructure." }, icon: Cpu },
+          { title: { zh: "产品设计交流", en: "Product design discussion" }, body: { zh: "交流 Spark AI Appliance 的设计方向与适用条件。", en: "Discuss Spark AI Appliance design directions and applicability." }, icon: Cpu },
           { title: { zh: "方案咨询", en: "Solution Consulting" }, body: { zh: "评估数据保存、检索、治理和 AI 应用路径。", en: "Assess data preservation, retrieval, governance, and AI application paths." }, icon: Network },
           { title: { zh: "合作伙伴", en: "Partnership" }, body: { zh: "欢迎产业、技术、渠道与投资合作沟通。", en: "We welcome industry, technology, channel, and investment partnership discussions." }, icon: Mail },
         ],

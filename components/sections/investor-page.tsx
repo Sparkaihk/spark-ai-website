@@ -194,7 +194,7 @@ export function InvestorPage({
             <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
               <Button asChild variant="secondary" size="lg" className="rounded-[20px]">
                 <Link href="/contact">
-                  <LocalizedText zh="预约产品演示" en="Request Demo" />
+                  <LocalizedText zh="联系团队" en="Contact the team" />
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="rounded-[20px] border-white/60 bg-transparent text-white hover:bg-white hover:text-primary">

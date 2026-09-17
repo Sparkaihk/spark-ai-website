@@ -11,13 +11,16 @@ function extract(file) {
 
 const en = extract("i18n/locales/en.ts");
 const zh = extract("i18n/locales/zh-CN.ts");
+const tw = extract("i18n/locales/zh-TW.ts");
 const errors = [];
+for (const key of en.keys()) if (!tw.has(key)) errors.push(`Missing zh-TW key: ${key}`);
+for (const key of tw.keys()) if (!en.has(key)) errors.push(`Unknown zh-TW key: ${key}`);
 
 for (const key of en.keys()) if (!zh.has(key)) errors.push(`Missing zh-CN key: ${key}`);
 for (const key of zh.keys()) if (!en.has(key)) errors.push(`Unknown zh-CN key: ${key}`);
-for (const [key, value] of [...en, ...zh]) if (!value.trim()) errors.push(`Empty translation: ${key}`);
+for (const [key, value] of [...en, ...zh, ...tw]) if (!value.trim()) errors.push(`Empty translation: ${key}`);
 for (const [key, value] of zh) {
-  if (/^[\x00-\x7F\s™©|.-]+$/.test(value) && !/^(Spark AI|AI |RAG|FAQ|CAD \/ PLM|©|中文 \/ English)/.test(value)) {
+  if (/^[\x00-\x7F\s™©|.-]+$/.test(value) && !/^(Memory for AI\.|Trust for Tomorrow\.|Spark AI|AI |RAG|FAQ|CAD \/ PLM|©|中文 \/ English)/.test(value)) {
     errors.push(`Suspicious English-only zh-CN value: ${key}`);
   }
 }
@@ -59,4 +62,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`i18n OK: ${en.size} keys aligned across en and zh-CN.`);
+console.log(`i18n OK: ${en.size} keys aligned across en, zh-CN and zh-TW.`);

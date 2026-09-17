@@ -5,6 +5,7 @@ import type * as React from "react";
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
 
 import { translate, type TranslationKey } from "@/i18n/dictionary";
+import { resolveLocale } from "@/i18n/locale";
 import type { Locale } from "@/i18n/types";
 
 type I18nContextValue = {
@@ -20,24 +21,23 @@ const legacyStorageKey = "spark-ai-language";
 export function I18nProvider({ initialLocale, children }: { initialLocale: Locale; children: React.ReactNode }) {
   const [locale, setLocaleState] = useState<Locale>(initialLocale);
 
+  // Keep the server cookie authoritative on hydration; fall back to legacy local preferences only when absent.
+  const [preferenceReady, setPreferenceReady] = useState(false);
   useEffect(() => {
-    const saved = window.localStorage.getItem(storageKey) ?? window.localStorage.getItem(legacyStorageKey);
-    const normalized: Locale = saved === "zh" || saved === "zh-CN"
-      ? "zh-CN"
-      : saved === "en"
-        ? "en"
-        : window.navigator.language.toLowerCase().startsWith("zh")
-          ? "zh-CN"
-          : "en";
-    if (normalized && normalized !== locale) setLocaleState(normalized);
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+    let saved: string | null = null;
+    const cookie = document.cookie.split("; ").find((entry) => entry.startsWith("spark-ai-locale="))?.split("=")[1];
+    try { saved = window.localStorage.getItem(storageKey) ?? window.localStorage.getItem(legacyStorageKey); } catch { /* Browser storage may be disabled. */ }
+    setLocaleState(resolveLocale(cookie ?? saved, window.navigator.languages.join(",")));
+    setPreferenceReady(true);
+  }, []);
 
   useEffect(() => {
+    if (!preferenceReady) return;
     document.documentElement.lang = locale;
     document.documentElement.dataset.language = locale;
-    window.localStorage.setItem(storageKey, locale);
+    try { window.localStorage.setItem(storageKey, locale); } catch { /* The cookie still preserves the language. */ }
     document.cookie = `spark-ai-locale=${locale}; Path=/; Max-Age=31536000; SameSite=Lax`;
-  }, [locale]);
+  }, [locale, preferenceReady]);
 
   const value = useMemo<I18nContextValue>(() => ({
     locale,
@@ -84,6 +84,7 @@ function LocalizedMetadata() {
     const title = t(route.title);
     const description = t(route.description);
     document.title = title;
+    setMeta('meta[property="og:locale"]', "content", { en: "en_US", "zh-CN": "zh_CN", "zh-TW": "zh_TW" }[locale]);
     setMeta('meta[name="description"]', "content", description);
     setMeta('meta[property="og:title"]', "content", title);
     setMeta('meta[property="og:description"]', "content", description);

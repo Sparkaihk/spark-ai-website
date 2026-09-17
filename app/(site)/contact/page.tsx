@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
+import { localizedPageMetadata } from "@/i18n/server";
 
 import { InvestorPage } from "@/components/sections/investor-page";
 import { pagePresets } from "@/components/sections/page-presets";
 
-export const metadata: Metadata = {
-  title: "Contact Spark AI",
-  description: "Contact Spark AI for AI cold data center, Enterprise RAG, Edge Appliance and Knowledge Infrastructure discussions.",
-  alternates: { canonical: "/contact" },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return localizedPageMetadata("meta.contact.title", "meta.contact.description", "/contact");
+}
 
 export default function ContactPage() {
   return <InvestorPage {...pagePresets.contact} />;

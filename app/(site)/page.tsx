@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
+import { localizedPageMetadata } from "@/i18n/server";
 import Link from "next/link";
 import {
-  Archive,
-  ArrowDown,
   ArrowRight,
   Database,
   FileText,
@@ -21,25 +20,16 @@ import {
 
 import { AnimatedBlock, AnimatedStagger } from "@/components/design-system/animated";
 import { Container } from "@/components/design-system/container";
+import { KnowledgePositioning, KnowledgePhilosophy } from "@/components/sections/knowledge-design";
 import { HeroSection } from "@/components/home/hero-section";
 import { T } from "@/components/site/translated-text";
 import { Button } from "@/components/ui/button";
 import type { TranslationKey } from "@/i18n/dictionary";
 
-export const metadata: Metadata = {
-  title: "Knowledge Infrastructure for the AI Era",
-  description:
-    "Spark AI helps organizations preserve, activate and continuously create value from their knowledge.",
-  alternates: { canonical: "/" },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return localizedPageMetadata("meta.home.title", "meta.home.description", "/");
+}
 
-const knowledgeFlow: Array<{ icon: typeof Database; label: TranslationKey }> = [
-  { icon: Database, label: "home.flow.enterpriseData" },
-  { icon: Server, label: "home.flow.appliance" },
-  { icon: Network, label: "home.flow.infrastructure" },
-  { icon: Sparkles, label: "home.flow.applications" },
-  { icon: Archive, label: "home.flow.archive" },
-];
 
 const industries: Array<{ icon: typeof HeartPulse; title: TranslationKey; body: TranslationKey }> = [
   { icon: HeartPulse, title: "home.industry.healthcare.title", body: "home.industry.healthcare.body" },
@@ -80,6 +70,8 @@ export default function HomePage() {
   return (
     <main className="overflow-x-hidden bg-[#f7f9fc] text-slate-950">
       <HeroSection />
+      <KnowledgePositioning />
+      <KnowledgePhilosophy />
 
       <section className="border-y border-sky-100 bg-white py-16 sm:py-20">
         <Container>
@@ -149,31 +141,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="premium-section py-20">
-        <Container>
-          <SectionHeader
-            eyebrow="home.flow.eyebrow"
-            title="home.flow.title"
-            body="home.flow.description"
-          />
-          <AnimatedStagger className="mx-auto mt-12 grid max-w-6xl items-center gap-3 md:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr_auto_1fr]">
-            {knowledgeFlow.map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <div key={item.label} className="contents">
-                  <div className="premium-card flex min-h-36 flex-col items-center justify-center p-5 text-center">
-                    <Icon className="size-7 text-primary" aria-hidden="true" />
-                    <T id={item.label} as="h3" className="mt-4 text-sm font-semibold leading-6 text-slate-950" />
-                  </div>
-                  {index < knowledgeFlow.length - 1 ? (
-                    <ArrowDown className="mx-auto size-5 text-primary md:-rotate-90" aria-hidden="true" />
-                  ) : null}
-                </div>
-              );
-            })}
-          </AnimatedStagger>
-        </Container>
-      </section>
+      <section className="bg-white py-16"><Container><T id="workflow.title" as="h2" className="text-3xl font-semibold" /><T id="workflow.intro" as="p" className="mt-5 max-w-3xl text-base leading-8 text-slate-600" /><Button asChild variant="outline" className="mt-6"><Link href="/principles#knowledge-workflow"><T id="principles.workflowCta" /><ArrowRight aria-hidden="true" /></Link></Button></Container></section>
 
       <section className="bg-[#eef4fa] py-20">
         <Container>

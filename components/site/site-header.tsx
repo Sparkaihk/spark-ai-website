@@ -66,6 +66,13 @@ export function SiteHeader() {
   const { t } = useI18n();
 
   useEffect(() => {
+    const desktop = window.matchMedia("(min-width: 1280px)");
+    const closeOnDesktop = () => { if (desktop.matches) setIsOpen(false); };
+    desktop.addEventListener("change", closeOnDesktop);
+    return () => desktop.removeEventListener("change", closeOnDesktop);
+  }, []);
+
+  useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 12);
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -93,7 +100,7 @@ export function SiteHeader() {
           <a
             href="/"
             aria-label={t("header.homeLabel")}
-            className="group flex min-w-0 shrink-0 items-center gap-3 whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 lg:basis-[11rem] xl:basis-[13rem]"
+            className="group flex min-w-0 shrink-0 items-center gap-3 whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 xl:basis-[11rem]"
             onClick={() => setIsOpen(false)}
           >
             <span className="flex size-10 shrink-0 items-center justify-center rounded-[16px] bg-[linear-gradient(135deg,hsl(var(--primary)),hsl(var(--accent)))] text-white shadow-spark-sm transition-transform duration-300 group-hover:rotate-[2deg]">
@@ -107,7 +114,7 @@ export function SiteHeader() {
             </span>
           </a>
 
-          <nav aria-label={t("common.mainNavigation")} className="hidden min-w-0 flex-1 items-center justify-center gap-2 lg:flex">
+          <nav aria-label={t("common.mainNavigation")} className="hidden min-w-0 flex-1 items-center justify-center gap-2 xl:flex">
             {routes.map((route) => (
               <HeaderNavLink
                 key={route.href}
@@ -118,7 +125,7 @@ export function SiteHeader() {
             ))}
           </nav>
 
-          <div className="hidden shrink-0 basis-[12.5rem] items-center justify-end gap-2 whitespace-nowrap lg:flex xl:basis-[14rem] xl:gap-2.5">
+          <div className="hidden shrink-0 basis-[18rem] items-center justify-end gap-2 whitespace-nowrap lg:flex xl:basis-[18rem] xl:gap-2.5">
             <LanguageSwitcher />
             <Button asChild variant="spark" size="sm" className="h-10 rounded-full px-3 shadow-[0_14px_38px_rgba(37,99,235,0.20)] hover:shadow-[0_22px_56px_rgba(37,99,235,0.32)] xl:px-4">
               <a href="/contact">
@@ -133,7 +140,7 @@ export function SiteHeader() {
             aria-label={isOpen ? t("common.closeNavigation") : t("common.openNavigation")}
             aria-expanded={isOpen}
             onClick={() => setIsOpen((value) => !value)}
-            className="inline-flex size-10 items-center justify-center rounded-[16px] border border-sky-100 bg-white/82 text-foreground shadow-sm backdrop-blur-xl transition-colors hover:bg-sky-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring lg:hidden"
+            className="inline-flex size-10 items-center justify-center rounded-[16px] border border-sky-100 bg-white/82 text-foreground shadow-sm backdrop-blur-xl transition-colors hover:bg-sky-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring xl:hidden"
           >
             {isOpen ? <X className="size-5" aria-hidden="true" /> : <Menu className="size-5" aria-hidden="true" />}
           </button>
@@ -141,7 +148,7 @@ export function SiteHeader() {
       </div>
 
       {isOpen ? (
-        <div className="fixed inset-x-0 bottom-0 top-[5.5rem] z-40 overflow-y-auto bg-[linear-gradient(180deg,rgba(248,251,255,0.96)_0%,rgba(224,242,254,0.9)_100%)] backdrop-blur-2xl lg:hidden">
+        <div className="fixed inset-x-0 bottom-0 top-[5.5rem] z-40 overflow-y-auto bg-[linear-gradient(180deg,rgba(248,251,255,0.96)_0%,rgba(224,242,254,0.9)_100%)] backdrop-blur-2xl xl:hidden">
           <div className="pointer-events-none absolute inset-0 spark-grid opacity-35" aria-hidden="true" />
           <div className="pointer-events-none absolute -right-20 top-10 h-64 w-64 rounded-full bg-sky-200/50 blur-3xl" aria-hidden="true" />
           <nav aria-label={t("common.mobileNavigation")} className="relative mx-auto flex w-full max-w-7xl flex-col gap-2 px-6 pb-8 pt-4">

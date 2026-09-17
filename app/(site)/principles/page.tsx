@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { localizedPageMetadata } from "@/i18n/server";
 import Link from "next/link";
 import { ArrowRight, Sparkles } from "lucide-react";
 
@@ -8,13 +9,12 @@ import { LocalizedImage } from "@/components/site/localized-image";
 import { LocalizedText } from "@/components/site/localized-text";
 import { T } from "@/components/site/translated-text";
 import { Button } from "@/components/ui/button";
+import { KnowledgeWorkflow, KnowledgeInvestor } from "@/components/sections/knowledge-design";
 import { principleCards } from "@/lib/principles";
 
-export const metadata: Metadata = {
-  title: "Spark AI Principles | Knowledge Infrastructure for the AI Era",
-  description:
-    "The principles behind Spark AI's trusted, sovereign, and enduring knowledge infrastructure for the AI era.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return localizedPageMetadata("meta.principles.title", "meta.principles.description", "/principles");
+}
 
 export default function PrinciplesPage() {
   return (
@@ -56,10 +56,10 @@ export default function PrinciplesPage() {
                   className="mt-5 text-xl font-semibold leading-snug text-slate-950 sm:text-2xl"
                 />
                 <LocalizedText
-                  en={<span className="block leading-[1.7]">{principle.descriptionEn}</span>}
-                  zh={<span className="block leading-[1.85]">{principle.descriptionZh}</span>}
+                  en={principle.descriptionEn}
+                  zh={principle.descriptionZh}
                   as="p"
-                  className="mt-4 max-w-2xl text-[15px] text-slate-600 sm:text-base"
+                  className="mt-4 max-w-2xl text-[15px] leading-[1.85] text-slate-600 sm:text-base"
                 />
               </article>
             ))}
@@ -67,6 +67,8 @@ export default function PrinciplesPage() {
         </Container>
       </section>
 
+      <KnowledgeWorkflow />
+      <KnowledgeInvestor />
       <section className="bg-[#eef4fa] py-14">
         <Container>
           <div className="text-center">
