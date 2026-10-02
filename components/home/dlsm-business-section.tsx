@@ -5,6 +5,7 @@ import { AnimatedBlock, AnimatedStagger } from "@/components/design-system/anima
 import { Container } from "@/components/design-system/container";
 import { LocalizedText } from "@/components/site/localized-text";
 import { Button } from "@/components/ui/button";
+import { DlsmOverviewVideo } from "@/components/sections/dlsm-overview-video";
 
 const lifecycleStages = [
   {
@@ -78,6 +79,10 @@ export function DlsmBusinessSection() {
             );
           })}
         </AnimatedStagger>
+
+        <div className="mt-10">
+          <DlsmOverviewVideo />
+        </div>
 
         <AnimatedBlock className="mt-8 flex flex-col gap-5 rounded-[26px] border border-blue-100 bg-[#eef6ff] p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
           <p className="max-w-3xl text-sm leading-7 text-slate-700">

@@ -5,6 +5,7 @@ import { AnimatedBlock, AnimatedStagger } from "@/components/design-system/anima
 import { Container } from "@/components/design-system/container";
 import { LocalizedText } from "@/components/site/localized-text";
 import { Button } from "@/components/ui/button";
+import { DlsmOverviewVideo } from "@/components/sections/dlsm-overview-video";
 
 const architectureLayers = [
   { icon: Database, title: { zh: "AI 数据对象", en: "AI data objects" }, body: { zh: "数据集、向量库、模型、检查点与衍生数据", en: "Datasets, vector stores, models, checkpoints, and derivatives" } },
@@ -61,6 +62,12 @@ export function DlsmInvestorPage() {
               </div>
             </AnimatedBlock>
           </div>
+        </Container>
+      </section>
+
+      <section className="py-12 sm:py-16">
+        <Container>
+          <DlsmOverviewVideo />
         </Container>
       </section>
 
