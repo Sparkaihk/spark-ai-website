@@ -1,6 +1,8 @@
 import type { TranslationKey } from "@/i18n/locales/en";
 
 export const zhCN = {
+  "meta.knowledgeAppliance.title": "知识基础设施一体机：类别定义与参考架构｜Spark AI",
+  "meta.knowledgeAppliance.description": "知识基础设施一体机的参考定义与架构：将企业 AI 算力、受治理的检索、持久记忆、知识服务和分层存储整合为协同基础设施。",
   "common.scheduleDemo": "交流应用场景",
   "common.bookDemo": "交流应用场景",
   "common.viewResources": "查看产品资料",

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { localizedPageMetadata } from "@/i18n/server";
 import Link from "next/link";
 import { ArrowRight, BrainCircuit, Database, FileSearch, Layers3, ShieldCheck, Waypoints } from "lucide-react";
 
@@ -6,19 +7,14 @@ import { Container } from "@/components/design-system/container";
 import { LocalizedText } from "@/components/site/localized-text";
 import { Button } from "@/components/ui/button";
 
-export const metadata: Metadata = {
-  title: "Knowledge Infrastructure Appliance — Category Definition | Spark AI",
-  description:
-    "A reference definition and architecture for the Knowledge Infrastructure Appliance category: enterprise AI compute, governed retrieval, persistent memory, knowledge services and tiered storage in one infrastructure system.",
-  alternates: { canonical: "/knowledge/knowledge-infrastructure-appliance" },
-  openGraph: {
-    title: "Knowledge Infrastructure Appliance — Category Definition",
-    description:
-      "Reference definition and architecture for enterprise knowledge infrastructure in the AI era.",
-    url: "/knowledge/knowledge-infrastructure-appliance",
-    type: "article",
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const metadata = await localizedPageMetadata(
+    "meta.knowledgeAppliance.title",
+    "meta.knowledgeAppliance.description",
+    "/knowledge/knowledge-infrastructure-appliance",
+  );
+  return { ...metadata, openGraph: { ...metadata.openGraph, type: "article" } };
+}
 
 const definition = {
   en: "A Knowledge Infrastructure Appliance is an integrated enterprise infrastructure system designed to turn governed organizational data into persistent, retrievable and reusable knowledge for AI applications and agents. It combines AI compute, enterprise retrieval, knowledge and memory services, governance controls, and tiered data storage as coordinated infrastructure.",
@@ -35,10 +31,26 @@ const layers = [
 ];
 
 const comparisons = [
-  ["AI server", "Primarily provides compute for model training or inference.", "Adds governed retrieval, persistent knowledge, memory and data lifecycle infrastructure."],
-  ["RAG appliance", "Primarily focuses on retrieval pipelines and model grounding.", "Extends retrieval into governance, persistent memory and multi-tier data infrastructure."],
-  ["NAS / storage appliance", "Primarily stores and serves files or data.", "Treats stored data as governed knowledge that can be discovered, retrieved and activated by AI."],
-  ["Archive system", "Primarily optimizes long-term retention and preservation.", "Connects retained data back to active AI retrieval and knowledge workflows when required."],
+  {
+    system: { en: "AI server", zh: "AI 服务器" },
+    role: { en: "Primarily provides compute for model training or inference.", zh: "主要为模型训练或推理提供算力。" },
+    distinction: { en: "Adds governed retrieval, persistent knowledge, memory and data lifecycle infrastructure.", zh: "进一步整合受治理的检索、持久知识、记忆和数据生命周期基础设施。" },
+  },
+  {
+    system: { en: "RAG appliance", zh: "RAG 一体机" },
+    role: { en: "Primarily focuses on retrieval pipelines and model grounding.", zh: "主要关注检索流程及模型回答的来源依据。" },
+    distinction: { en: "Extends retrieval into governance, persistent memory and multi-tier data infrastructure.", zh: "将检索扩展至治理、持久记忆和多层数据基础设施。" },
+  },
+  {
+    system: { en: "NAS / storage appliance", zh: "NAS / 存储一体机" },
+    role: { en: "Primarily stores and serves files or data.", zh: "主要存储文件或数据，并提供访问服务。" },
+    distinction: { en: "Treats stored data as governed knowledge that can be discovered, retrieved and activated by AI.", zh: "将存储数据作为受治理的知识，供 AI 发现、检索和启用。" },
+  },
+  {
+    system: { en: "Archive system", zh: "归档系统" },
+    role: { en: "Primarily optimizes long-term retention and preservation.", zh: "主要优化长期保留与保存。" },
+    distinction: { en: "Connects retained data back to active AI retrieval and knowledge workflows when required.", zh: "在需要时，将保留数据重新接入活跃的 AI 检索与知识工作流。" },
+  },
 ];
 
 const faqs = [
@@ -76,7 +88,7 @@ const articleJsonLd = {
   "@context": "https://schema.org",
   "@type": "TechArticle",
   headline: "Knowledge Infrastructure Appliance — Category Definition & Reference Architecture",
-  description: metadata.description,
+  description: "A reference definition and architecture for the Knowledge Infrastructure Appliance category: enterprise AI compute, governed retrieval, persistent memory, knowledge services and tiered storage in one infrastructure system.",
   author: { "@type": "Organization", name: "Spark AI Technology Limited", url: "https://sparkai.hk" },
   publisher: { "@type": "Organization", name: "Spark AI Technology Limited", url: "https://sparkai.hk" },
   mainEntityOfPage: "https://sparkai.hk/knowledge/knowledge-infrastructure-appliance",
@@ -134,10 +146,10 @@ export default function KnowledgeInfrastructureAppliancePage() {
           <LocalizedText en="What makes the category different" zh="这一类别与传统系统有何不同" as="h2" className="mt-4 text-3xl font-semibold sm:text-4xl" />
           <div className="mt-10 overflow-x-auto rounded-[28px] border border-blue-100">
             <table className="w-full min-w-[760px] text-left">
-              <thead className="bg-blue-50/70"><tr><th className="p-5">System</th><th className="p-5">Primary role</th><th className="p-5">Knowledge Infrastructure distinction</th></tr></thead>
+              <thead className="bg-blue-50/70"><tr><th className="p-5"><LocalizedText en="System" zh="系统" /></th><th className="p-5"><LocalizedText en="Primary role" zh="主要用途" /></th><th className="p-5"><LocalizedText en="Knowledge Infrastructure distinction" zh="知识基础设施的区别" /></th></tr></thead>
               <tbody>
-                {comparisons.map(([system, role, distinction]) => (
-                  <tr key={system} className="border-t border-blue-100 align-top"><th className="p-5 font-semibold">{system}</th><td className="p-5 leading-7 text-slate-600">{role}</td><td className="p-5 leading-7 text-slate-600">{distinction}</td></tr>
+                {comparisons.map(({ system, role, distinction }) => (
+                  <tr key={system.en} className="border-t border-blue-100 align-top"><th className="p-5 font-semibold"><LocalizedText {...system} /></th><td className="p-5 leading-7 text-slate-600"><LocalizedText {...role} /></td><td className="p-5 leading-7 text-slate-600"><LocalizedText {...distinction} /></td></tr>
                 ))}
               </tbody>
             </table>
