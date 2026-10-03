@@ -1,4 +1,6 @@
 export const en = {
+  "meta.knowledgeAppliance.title": "Knowledge Infrastructure Appliance — Category Definition | Spark AI",
+  "meta.knowledgeAppliance.description": "A reference definition and architecture for the Knowledge Infrastructure Appliance category: enterprise AI compute, governed retrieval, persistent memory, knowledge services and tiered storage in one infrastructure system.",
   "common.scheduleDemo": "Discuss your use case",
   "common.bookDemo": "Discuss your use case",
   "common.viewResources": "View Resources",

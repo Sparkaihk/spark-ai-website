@@ -148,6 +148,13 @@ export default function SparkAiAppliancePage() {
               <p>
                 <T id="technical.intro" />
               </p>
+              <Link
+                href="/knowledge/knowledge-infrastructure-appliance"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition-opacity hover:opacity-75"
+              >
+                <LocalizedText en="Read the category definition" zh="阅读类别定义" zhTW="閱讀類別定義" />
+                <span aria-hidden="true">→</span>
+              </Link>
             </div>
           </AnimatedBlock>
         </Container>

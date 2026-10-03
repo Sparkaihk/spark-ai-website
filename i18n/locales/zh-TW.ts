@@ -1,6 +1,8 @@
 import type { TranslationKey } from "@/i18n/locales/en";
 
 export const zhTW = {
+  "meta.knowledgeAppliance.title": "知識基礎設施一體機：類別定義與參考架構｜Spark AI",
+  "meta.knowledgeAppliance.description": "知識基礎設施一體機的參考定義與架構：將企業 AI 算力、受治理的檢索、持久記憶、知識服務和分層儲存整合為協同基礎設施。",
   "common.scheduleDemo": "交流應用場景",
   "common.bookDemo": "交流應用場景",
   "common.viewResources": "查看產品資料",

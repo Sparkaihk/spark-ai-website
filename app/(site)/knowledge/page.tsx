@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, LockKeyhole, Radio } from "lucide-react";
+import { ArrowRight, BookOpenCheck, LockKeyhole, Radio } from "lucide-react";
 
 import { AnimatedBlock, AnimatedStagger } from "@/components/design-system/animated";
 import { Container } from "@/components/design-system/container";
@@ -42,6 +42,34 @@ export default function KnowledgePage() {
         </Container>
       </section>
 
+      <section className="pb-4">
+        <Container>
+          <AnimatedBlock className="rounded-[28px] border border-blue-100 bg-white/80 p-6 shadow-sm sm:p-8">
+            <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+              <div className="max-w-3xl">
+                <div className="flex items-center gap-3">
+                  <BookOpenCheck className="size-6 text-primary" aria-hidden="true" />
+                  <LocalizedText en="Canonical category definition" zh="权威类别定义" zhTW="權威類別定義" as="p" className="premium-eyebrow" />
+                </div>
+                <h2 className="mt-4 text-2xl font-semibold sm:text-3xl">Knowledge Infrastructure Appliance</h2>
+                <LocalizedText
+                  en="Read Spark AI's reference definition, category boundaries and architecture for enterprise knowledge infrastructure in the AI era."
+                  zh="阅读 Spark AI 对 AI 时代企业知识基础设施的参考定义、类别边界与参考架构。" zhTW="閱讀 Spark AI 對 AI 時代企業知識基礎設施的參考定義、類別邊界與參考架構。"
+                  as="p"
+                  className="mt-3 leading-7 text-slate-600"
+                />
+              </div>
+              <Button asChild variant="spark" className="w-fit shrink-0">
+                <Link href="/knowledge/knowledge-infrastructure-appliance">
+                  <LocalizedText en="Read the definition" zh="阅读定义" zhTW="閱讀定義" />
+                  <ArrowRight aria-hidden="true" />
+                </Link>
+              </Button>
+            </div>
+          </AnimatedBlock>
+        </Container>
+      </section>
+
       <section className="premium-section py-20">
         <Container>
           <AnimatedStagger className="grid items-stretch gap-5 md:grid-cols-2 xl:grid-cols-3">
@@ -58,18 +86,8 @@ export default function KnowledgePage() {
                       <LocalizedText en={isPublic ? "Public" : "Controlled access"} zh={isPublic ? "公开资源" : "受控资料"} />
                     </span>
                   </div>
-                  <LocalizedText
-                    en={resource.title.en}
-                    zh={resource.title.zh}
-                    as="h2"
-                    className="mt-5 text-xl font-semibold leading-snug text-slate-950"
-                  />
-                  <LocalizedText
-                    en={resource.description.en}
-                    zh={resource.description.zh}
-                    as="p"
-                    className="mt-4 flex-1 text-[15px] leading-7 text-slate-600"
-                  />
+                  <LocalizedText en={resource.title.en} zh={resource.title.zh} as="h2" className="mt-5 text-xl font-semibold leading-snug text-slate-950" />
+                  <LocalizedText en={resource.description.en} zh={resource.description.zh} as="p" className="mt-4 flex-1 text-[15px] leading-7 text-slate-600" />
                   <Button asChild variant="outline" className="mt-6 w-fit rounded-[16px] bg-white/75">
                     <Link href={resource.href}>
                       <LocalizedText en={resource.cta.en} zh={resource.cta.zh} />
