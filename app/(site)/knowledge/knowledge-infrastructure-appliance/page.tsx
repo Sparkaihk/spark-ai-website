@@ -18,59 +18,59 @@ export async function generateMetadata(): Promise<Metadata> {
 
 const definition = {
   en: "A Knowledge Infrastructure Appliance is an integrated enterprise infrastructure system designed to turn governed organizational data into persistent, retrievable and reusable knowledge for AI applications and agents. It combines AI compute, enterprise retrieval, knowledge and memory services, governance controls, and tiered data storage as coordinated infrastructure.",
-  zh: "Knowledge Infrastructure Appliance（知识基础设施一体机）是一类面向企业的集成式基础设施系统，旨在将经过治理的组织数据转化为可持续保存、可检索、可复用的 AI 知识。它把 AI 算力、企业检索、知识与记忆服务、治理控制以及分层数据存储作为协同基础设施进行整合。",
+  zh: "Knowledge Infrastructure Appliance（知识基础设施一体机）是一类面向企业的集成式基础设施系统，旨在将经过治理的组织数据转化为可持续保存、可检索、可复用的 AI 知识。它把 AI 算力、企业检索、知识与记忆服务、治理控制以及分层数据存储作为协同基础设施进行整合。", zhTW: "Knowledge Infrastructure Appliance（知識基礎設施一體機）是一類面向企業的整合式基礎設施系統，旨在將經過治理的組織資料轉化為可持續保存、可檢索、可重用的 AI 知識。它把 AI 算力、企業檢索、知識與記憶服務、治理控制以及分層儲存作為協同基礎設施進行整合。",
 };
 
 const layers = [
-  { icon: BrainCircuit, en: "AI Applications & Agents", zh: "AI 应用与智能体", bodyEn: "Use governed enterprise context to support reasoning, workflows and automation.", bodyZh: "利用经过治理的企业上下文支持推理、工作流与自动化。" },
-  { icon: FileSearch, en: "Retrieval & Knowledge Services", zh: "检索与知识服务", bodyEn: "Enterprise RAG, indexing and knowledge access connect models to authoritative sources.", bodyZh: "通过企业 RAG、索引与知识访问，将模型连接到可信来源。" },
-  { icon: Waypoints, en: "Persistent AI Memory", zh: "持久化 AI 记忆", bodyEn: "Preserve institutional context and relationships beyond an individual model session.", bodyZh: "让机构上下文与知识关系超越单次模型会话持续存在。" },
-  { icon: ShieldCheck, en: "Governance & Trust", zh: "治理与可信", bodyEn: "Permissions, provenance, retention, integrity and policy constrain knowledge access and movement.", bodyZh: "以权限、来源、保留、完整性与策略约束知识的访问和流动。" },
-  { icon: Layers3, en: "Intelligent Data Placement", zh: "智能数据配置", bodyEn: "Place data across performance, capacity and archive tiers according to workload and policy.", bodyZh: "依据工作负载与治理策略，将数据配置到性能层、容量层与归档层。" },
-  { icon: Database, en: "Durable Data Foundation", zh: "持久数据底座", bodyEn: "SSD, HDD, object and archival media provide durable foundations for enterprise knowledge.", bodyZh: "由 SSD、HDD、对象存储及归档介质构成企业知识的持久数据底座。" },
+  { icon: BrainCircuit, en: "AI Applications & Agents", zh: "AI 应用与智能体", zhTW: "AI 應用與代理", bodyEn: "Use governed enterprise context to support reasoning, workflows and automation.", bodyZh: "利用经过治理的企业上下文支持推理、工作流与自动化。", bodyZhTW: "利用經過治理的企業上下文支援推理、工作流程與自動化。" },
+  { icon: FileSearch, en: "Retrieval & Knowledge Services", zh: "检索与知识服务", zhTW: "檢索與知識服務", bodyEn: "Enterprise RAG, indexing and knowledge access connect models to authoritative sources.", bodyZh: "通过企业 RAG、索引与知识访问，将模型连接到可信来源。", bodyZhTW: "透過企業 RAG、索引與知識存取，將模型連接到可信來源。" },
+  { icon: Waypoints, en: "Persistent AI Memory", zh: "持久化 AI 记忆", zhTW: "持久化 AI 記憶", bodyEn: "Preserve institutional context and relationships beyond an individual model session.", bodyZh: "让机构上下文与知识关系超越单次模型会话持续存在。", bodyZhTW: "讓機構上下文與知識關係超越單次模型工作階段持續存在。" },
+  { icon: ShieldCheck, en: "Governance & Trust", zh: "治理与可信", zhTW: "治理與可信", bodyEn: "Permissions, provenance, retention, integrity and policy constrain knowledge access and movement.", bodyZh: "以权限、来源、保留、完整性与策略约束知识的访问和流动。", bodyZhTW: "以權限、來源、保留、完整性與策略約束知識的存取和流動。" },
+  { icon: Layers3, en: "Intelligent Data Placement", zh: "智能数据配置", zhTW: "智慧資料配置", bodyEn: "Place data across performance, capacity and archive tiers according to workload and policy.", bodyZh: "依据工作负载与治理策略，将数据配置到性能层、容量层与归档层。", bodyZhTW: "依據工作負載與治理策略，將資料配置到效能層、容量層與歸檔層。" },
+  { icon: Database, en: "Durable Data Foundation", zh: "持久数据底座", zhTW: "持久資料基礎", bodyEn: "SSD, HDD, object and archival media provide durable foundations for enterprise knowledge.", bodyZh: "由 SSD、HDD、对象存储及归档介质构成企业知识的持久数据底座。", bodyZhTW: "由 SSD、HDD、物件儲存及歸檔媒體構成企業知識的持久資料基礎。" },
 ];
 
 const comparisons = [
   {
-    system: { en: "AI server", zh: "AI 服务器" },
-    role: { en: "Primarily provides compute for model training or inference.", zh: "主要为模型训练或推理提供算力。" },
-    distinction: { en: "Adds governed retrieval, persistent knowledge, memory and data lifecycle infrastructure.", zh: "进一步整合受治理的检索、持久知识、记忆和数据生命周期基础设施。" },
+    system: { en: "AI server", zh: "AI 服务器", zhTW: "AI 伺服器" },
+    role: { en: "Primarily provides compute for model training or inference.", zh: "主要为模型训练或推理提供算力。", zhTW: "主要為模型訓練或推理提供算力。" },
+    distinction: { en: "Adds governed retrieval, persistent knowledge, memory and data lifecycle infrastructure.", zh: "进一步整合受治理的检索、持久知识、记忆和数据生命周期基础设施。", zhTW: "進一步整合受治理的檢索、持久知識、記憶和資料生命週期基礎設施。" },
   },
   {
-    system: { en: "RAG appliance", zh: "RAG 一体机" },
-    role: { en: "Primarily focuses on retrieval pipelines and model grounding.", zh: "主要关注检索流程及模型回答的来源依据。" },
-    distinction: { en: "Extends retrieval into governance, persistent memory and multi-tier data infrastructure.", zh: "将检索扩展至治理、持久记忆和多层数据基础设施。" },
+    system: { en: "RAG appliance", zh: "RAG 一体机", zhTW: "RAG 一體機" },
+    role: { en: "Primarily focuses on retrieval pipelines and model grounding.", zh: "主要关注检索流程及模型回答的来源依据。", zhTW: "主要關注檢索流程及模型回答的來源依據。" },
+    distinction: { en: "Extends retrieval into governance, persistent memory and multi-tier data infrastructure.", zh: "将检索扩展至治理、持久记忆和多层数据基础设施。", zhTW: "將檢索擴展至治理、持久記憶和多層資料基礎設施。" },
   },
   {
-    system: { en: "NAS / storage appliance", zh: "NAS / 存储一体机" },
-    role: { en: "Primarily stores and serves files or data.", zh: "主要存储文件或数据，并提供访问服务。" },
-    distinction: { en: "Treats stored data as governed knowledge that can be discovered, retrieved and activated by AI.", zh: "将存储数据作为受治理的知识，供 AI 发现、检索和启用。" },
+    system: { en: "NAS / storage appliance", zh: "NAS / 存储一体机", zhTW: "NAS / 儲存一體機" },
+    role: { en: "Primarily stores and serves files or data.", zh: "主要存储文件或数据，并提供访问服务。", zhTW: "主要儲存檔案或資料，並提供存取服務。" },
+    distinction: { en: "Treats stored data as governed knowledge that can be discovered, retrieved and activated by AI.", zh: "将存储数据作为受治理的知识，供 AI 发现、检索和启用。", zhTW: "將儲存資料作為受治理的知識，供 AI 發現、檢索和啟用。" },
   },
   {
-    system: { en: "Archive system", zh: "归档系统" },
-    role: { en: "Primarily optimizes long-term retention and preservation.", zh: "主要优化长期保留与保存。" },
-    distinction: { en: "Connects retained data back to active AI retrieval and knowledge workflows when required.", zh: "在需要时，将保留数据重新接入活跃的 AI 检索与知识工作流。" },
+    system: { en: "Archive system", zh: "归档系统", zhTW: "歸檔系統" },
+    role: { en: "Primarily optimizes long-term retention and preservation.", zh: "主要优化长期保留与保存。", zhTW: "主要最佳化長期保留與保存。" },
+    distinction: { en: "Connects retained data back to active AI retrieval and knowledge workflows when required.", zh: "在需要时，将保留数据重新接入活跃的 AI 检索与知识工作流。", zhTW: "在需要時，將保留資料重新接入活躍的 AI 檢索與知識工作流程。" },
   },
 ];
 
 const faqs = [
   {
     qEn: "Is a Knowledge Infrastructure Appliance the same as an AI server?",
-    qZh: "Knowledge Infrastructure Appliance 与 AI 服务器相同吗？",
+    qZh: "Knowledge Infrastructure Appliance 与 AI 服务器相同吗？", qZhTW: "Knowledge Infrastructure Appliance 與 AI 伺服器相同嗎？",
     aEn: "No. An AI server is principally a compute platform. A Knowledge Infrastructure Appliance is defined here as a broader infrastructure category combining compute with retrieval, persistent knowledge, governance and tiered storage.",
-    aZh: "不同。AI 服务器主要是计算平台；这里定义的 Knowledge Infrastructure Appliance 是更广泛的基础设施类别，把计算与检索、持久知识、治理和分层存储整合起来。",
+    aZh: "不同。AI 服务器主要是计算平台；这里定义的 Knowledge Infrastructure Appliance 是更广泛的基础设施类别，把计算与检索、持久知识、治理和分层存储整合起来。", aZhTW: "不同。AI 伺服器主要是運算平台；這裡定義的 Knowledge Infrastructure Appliance 是更廣泛的基礎設施類別，把運算與檢索、持久知識、治理和分層儲存整合起來。",
   },
   {
     qEn: "Why does enterprise AI need persistent knowledge infrastructure?",
-    qZh: "为什么企业 AI 需要持久知识基础设施？",
+    qZh: "为什么企业 AI 需要持久知识基础设施？", qZhTW: "為什麼企業 AI 需要持久知識基礎設施？",
     aEn: "Models and agent sessions are transient, while enterprise records, permissions, provenance and institutional context must persist. Knowledge infrastructure provides a governed layer between durable organizational data and AI consumption.",
-    aZh: "模型与智能体会话具有暂态性，而企业记录、权限、来源信息及机构上下文需要长期存在。知识基础设施在持久组织数据与 AI 使用之间提供受治理的连接层。",
+    aZh: "模型与智能体会话具有暂态性，而企业记录、权限、来源信息及机构上下文需要长期存在。知识基础设施在持久组织数据与 AI 使用之间提供受治理的连接层。", aZhTW: "模型與代理工作階段具有暫態性，而企業記錄、權限、來源資訊及機構上下文需要長期存在。知識基礎設施在持久組織資料與 AI 使用之間提供受治理的連接層。",
   },
   {
     qEn: "How does Spark AI relate to this category?",
-    qZh: "Spark AI 与这一类别是什么关系？",
+    qZh: "Spark AI 与这一类别是什么关系？", qZhTW: "Spark AI 與這一類別是什麼關係？",
     aEn: "Spark AI uses Knowledge Infrastructure Appliance as the category framework for the Spark AI Appliance product architecture. Product capabilities and delivery configurations should be evaluated separately from this reference definition.",
-    aZh: "Spark AI 以 Knowledge Infrastructure Appliance 作为 Spark AI Appliance 产品架构的类别框架。具体产品能力和交付配置应与本参考定义分别评估。",
+    aZh: "Spark AI 以 Knowledge Infrastructure Appliance 作为 Spark AI Appliance 产品架构的类别框架。具体产品能力和交付配置应与本参考定义分别评估。", aZhTW: "Spark AI 以 Knowledge Infrastructure Appliance 作為 Spark AI Appliance 產品架構的類別框架。具體產品能力和交付配置應與本參考定義分別評估。",
   },
 ];
 
@@ -110,15 +110,15 @@ export default function KnowledgeInfrastructureAppliancePage() {
       <section className="hero-shell py-20">
         <Container>
           <div className="mx-auto max-w-5xl">
-            <LocalizedText en="CATEGORY DEFINITION · REFERENCE ARCHITECTURE" zh="类别定义 · 参考架构" as="p" className="premium-eyebrow" />
+            <LocalizedText en="CATEGORY DEFINITION · REFERENCE ARCHITECTURE" zh="类别定义 · 参考架构" zhTW="類別定義 · 參考架構" as="p" className="premium-eyebrow" />
             <h1 className="mt-6 text-4xl font-semibold leading-tight sm:text-6xl">
               Knowledge Infrastructure Appliance
             </h1>
-            <LocalizedText en="Enterprise knowledge infrastructure for the AI era" zh="面向 AI 时代的企业知识基础设施" as="p" className="mt-5 text-2xl font-medium text-slate-800" />
+            <LocalizedText en="Enterprise knowledge infrastructure for the AI era" zh="面向 AI 时代的企业知识基础设施" zhTW="面向 AI 時代的企業知識基礎設施" as="p" className="mt-5 text-2xl font-medium text-slate-800" />
             <LocalizedText {...definition} as="p" className="mt-8 max-w-4xl text-lg leading-8 text-slate-600" />
             <div className="mt-9 flex flex-wrap gap-3">
               <Button asChild variant="spark"><Link href="/products/spark-ai-appliance">Spark AI Appliance <ArrowRight /></Link></Button>
-              <Button asChild variant="outline"><Link href="/knowledge"><LocalizedText en="Knowledge Center" zh="知识中心" /></Link></Button>
+              <Button asChild variant="outline"><Link href="/knowledge"><LocalizedText en="Knowledge Center" zh="知识中心" zhTW="知識中心" /></Link></Button>
             </div>
           </div>
         </Container>
@@ -126,14 +126,14 @@ export default function KnowledgeInfrastructureAppliancePage() {
 
       <section className="premium-section py-20">
         <Container>
-          <LocalizedText en="Reference architecture" zh="参考架构" as="p" className="premium-eyebrow" />
-          <LocalizedText en="Six coordinated infrastructure layers" zh="六个协同基础设施层" as="h2" className="mt-4 text-3xl font-semibold sm:text-4xl" />
+          <LocalizedText en="Reference architecture" zh="参考架构" zhTW="參考架構" as="p" className="premium-eyebrow" />
+          <LocalizedText en="Six coordinated infrastructure layers" zh="六个协同基础设施层" zhTW="六個協同基礎設施層" as="h2" className="mt-4 text-3xl font-semibold sm:text-4xl" />
           <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             {layers.map(({ icon: Icon, ...layer }) => (
               <article key={layer.en} className="premium-card p-6">
                 <Icon className="size-6 text-primary" aria-hidden="true" />
-                <LocalizedText en={layer.en} zh={layer.zh} as="h3" className="mt-5 text-xl font-semibold" />
-                <LocalizedText en={layer.bodyEn} zh={layer.bodyZh} as="p" className="mt-3 text-[15px] leading-7 text-slate-600" />
+                <LocalizedText en={layer.en} zh={layer.zh} zhTW={layer.zhTW} as="h3" className="mt-5 text-xl font-semibold" />
+                <LocalizedText en={layer.bodyEn} zh={layer.bodyZh} zhTW={layer.bodyZhTW} as="p" className="mt-3 text-[15px] leading-7 text-slate-600" />
               </article>
             ))}
           </div>
@@ -142,11 +142,11 @@ export default function KnowledgeInfrastructureAppliancePage() {
 
       <section className="bg-white py-20">
         <Container>
-          <LocalizedText en="Category boundaries" zh="类别边界" as="p" className="premium-eyebrow" />
-          <LocalizedText en="What makes the category different" zh="这一类别与传统系统有何不同" as="h2" className="mt-4 text-3xl font-semibold sm:text-4xl" />
+          <LocalizedText en="Category boundaries" zh="类别边界" zhTW="類別邊界" as="p" className="premium-eyebrow" />
+          <LocalizedText en="What makes the category different" zh="这一类别与传统系统有何不同" zhTW="這一類別與傳統系統有何不同" as="h2" className="mt-4 text-3xl font-semibold sm:text-4xl" />
           <div className="mt-10 overflow-x-auto rounded-[28px] border border-blue-100">
             <table className="w-full min-w-[760px] text-left">
-              <thead className="bg-blue-50/70"><tr><th className="p-5"><LocalizedText en="System" zh="系统" /></th><th className="p-5"><LocalizedText en="Primary role" zh="主要用途" /></th><th className="p-5"><LocalizedText en="Knowledge Infrastructure distinction" zh="知识基础设施的区别" /></th></tr></thead>
+              <thead className="bg-blue-50/70"><tr><th className="p-5"><LocalizedText en="System" zh="系统" zhTW="系統" /></th><th className="p-5"><LocalizedText en="Primary role" zh="主要用途" zhTW="主要用途" /></th><th className="p-5"><LocalizedText en="Knowledge Infrastructure distinction" zh="知识基础设施的区别" zhTW="知識基礎設施的區別" /></th></tr></thead>
               <tbody>
                 {comparisons.map(({ system, role, distinction }) => (
                   <tr key={system.en} className="border-t border-blue-100 align-top"><th className="p-5 font-semibold"><LocalizedText {...system} /></th><td className="p-5 leading-7 text-slate-600"><LocalizedText {...role} /></td><td className="p-5 leading-7 text-slate-600"><LocalizedText {...distinction} /></td></tr>
@@ -160,11 +160,11 @@ export default function KnowledgeInfrastructureAppliancePage() {
       <section className="premium-section py-20">
         <Container>
           <div className="max-w-4xl">
-            <LocalizedText en="Design principles" zh="设计原则" as="p" className="premium-eyebrow" />
-            <LocalizedText en="From stored data to governed enterprise knowledge" zh="从存储数据走向受治理的企业知识" as="h2" className="mt-4 text-3xl font-semibold sm:text-4xl" />
+            <LocalizedText en="Design principles" zh="设计原则" zhTW="設計原則" as="p" className="premium-eyebrow" />
+            <LocalizedText en="From stored data to governed enterprise knowledge" zh="从存储数据走向受治理的企业知识" zhTW="從儲存資料走向受治理的企業知識" as="h2" className="mt-4 text-3xl font-semibold sm:text-4xl" />
             <LocalizedText
               en="The reference architecture treats enterprise data as a lifecycle rather than a single storage tier. Knowledge may be indexed, retrieved, verified, promoted for active workloads, retained for compliance, or moved toward archival tiers as activity changes. Placement decisions remain constrained by permissions, integrity, retention and recovery requirements."
-              zh="该参考架构把企业数据视为完整生命周期，而不是单一存储层。知识可以被索引、检索、校验，在活跃工作负载中提升配置，也可以因合规要求长期保留，并随活度变化进入归档层。所有配置决策均受权限、完整性、保留规则与恢复要求约束。"
+              zh="该参考架构把企业数据视为完整生命周期，而不是单一存储层。知识可以被索引、检索、校验，在活跃工作负载中提升配置，也可以因合规要求长期保留，并随活度变化进入归档层。所有配置决策均受权限、完整性、保留规则与恢复要求约束。" zhTW="該參考架構把企業資料視為完整生命週期，而非單一儲存層。知識可以被索引、檢索、驗證，在活躍工作負載中提升配置，也可以因合規要求長期保留，並隨活躍程度變化進入歸檔層。所有配置決策均受權限、完整性、保留規則與復原要求約束。"
               as="p" className="mt-6 text-lg leading-8 text-slate-600"
             />
           </div>
@@ -173,12 +173,12 @@ export default function KnowledgeInfrastructureAppliancePage() {
 
       <section className="bg-white py-20">
         <Container>
-          <LocalizedText en="Frequently asked questions" zh="常见问题" as="h2" className="text-3xl font-semibold sm:text-4xl" />
+          <LocalizedText en="Frequently asked questions" zh="常见问题" zhTW="常見問題" as="h2" className="text-3xl font-semibold sm:text-4xl" />
           <div className="mt-10 grid gap-5">
             {faqs.map((item) => (
               <article key={item.qEn} className="premium-card p-6 sm:p-7">
-                <LocalizedText en={item.qEn} zh={item.qZh} as="h3" className="text-xl font-semibold" />
-                <LocalizedText en={item.aEn} zh={item.aZh} as="p" className="mt-4 leading-7 text-slate-600" />
+                <LocalizedText en={item.qEn} zh={item.qZh} zhTW={item.qZhTW} as="h3" className="text-xl font-semibold" />
+                <LocalizedText en={item.aEn} zh={item.aZh} zhTW={item.aZhTW} as="p" className="mt-4 leading-7 text-slate-600" />
               </article>
             ))}
           </div>
@@ -187,8 +187,8 @@ export default function KnowledgeInfrastructureAppliancePage() {
 
       <section className="bg-[#eef4fa] py-16">
         <Container>
-          <LocalizedText en="Explore the implementation" zh="了解产品实现" as="h2" className="text-2xl font-semibold" />
-          <LocalizedText en="See how Spark AI applies this reference framework to the Spark AI Appliance product architecture." zh="了解 Spark AI 如何把这一参考框架应用于 Spark AI Appliance 产品架构。" as="p" className="mt-3 text-slate-600" />
+          <LocalizedText en="Explore the implementation" zh="了解产品实现" zhTW="瞭解產品實現" as="h2" className="text-2xl font-semibold" />
+          <LocalizedText en="See how Spark AI applies this reference framework to the Spark AI Appliance product architecture." zh="了解 Spark AI 如何把这一参考框架应用于 Spark AI Appliance 产品架构。" zhTW="瞭解 Spark AI 如何把這一參考框架應用於 Spark AI Appliance 產品架構。" as="p" className="mt-3 text-slate-600" />
           <Button asChild variant="spark" className="mt-6"><Link href="/products/spark-ai-appliance">Spark AI Appliance <ArrowRight /></Link></Button>
         </Container>
       </section>

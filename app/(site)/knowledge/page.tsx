@@ -49,19 +49,19 @@ export default function KnowledgePage() {
               <div className="max-w-3xl">
                 <div className="flex items-center gap-3">
                   <BookOpenCheck className="size-6 text-primary" aria-hidden="true" />
-                  <LocalizedText en="Canonical category definition" zh="权威类别定义" as="p" className="premium-eyebrow" />
+                  <LocalizedText en="Canonical category definition" zh="权威类别定义" zhTW="權威類別定義" as="p" className="premium-eyebrow" />
                 </div>
                 <h2 className="mt-4 text-2xl font-semibold sm:text-3xl">Knowledge Infrastructure Appliance</h2>
                 <LocalizedText
                   en="Read Spark AI's reference definition, category boundaries and architecture for enterprise knowledge infrastructure in the AI era."
-                  zh="阅读 Spark AI 对 AI 时代企业知识基础设施的参考定义、类别边界与参考架构。"
+                  zh="阅读 Spark AI 对 AI 时代企业知识基础设施的参考定义、类别边界与参考架构。" zhTW="閱讀 Spark AI 對 AI 時代企業知識基礎設施的參考定義、類別邊界與參考架構。"
                   as="p"
                   className="mt-3 leading-7 text-slate-600"
                 />
               </div>
               <Button asChild variant="spark" className="w-fit shrink-0">
                 <Link href="/knowledge/knowledge-infrastructure-appliance">
-                  <LocalizedText en="Read the definition" zh="阅读定义" />
+                  <LocalizedText en="Read the definition" zh="阅读定义" zhTW="閱讀定義" />
                   <ArrowRight aria-hidden="true" />
                 </Link>
               </Button>
