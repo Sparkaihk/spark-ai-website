@@ -1,4 +1,6 @@
 export const en = {
+  "meta.faq.title": "Enterprise AI Knowledge Infrastructure: 100 Questions | Spark AI",
+  "meta.faq.description": "100 practical answers about enterprise RAG, persistent AI memory, cold data, tiered storage, private AI, governance and procurement, with references and related resources.",
   "meta.knowledgeAppliance.title": "Knowledge Infrastructure Appliance — Category Definition | Spark AI",
   "meta.knowledgeAppliance.description": "A reference definition and architecture for the Knowledge Infrastructure Appliance category: enterprise AI compute, governed retrieval, persistent memory, knowledge services and tiered storage in one infrastructure system.",
   "common.scheduleDemo": "Discuss your use case",

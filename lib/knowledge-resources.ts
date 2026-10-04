@@ -4,6 +4,7 @@ import { BookOpen, Boxes, FileText, Landmark, Network, ShieldCheck } from "lucid
 type LocalizedCopy = Readonly<{
   en: string;
   zh: string;
+  zhTW?: string;
 }>;
 
 export type KnowledgeResource = Readonly<{
@@ -17,6 +18,15 @@ export type KnowledgeResource = Readonly<{
 }>;
 
 export const knowledgeResources = [
+  {
+    id: "faq",
+    title: { en: "100 Questions on Enterprise AI", zh: "企业 AI 100 问", zhTW: "企業 AI 100 問" },
+    description: { en: "Definitions, architecture choices and procurement criteria for RAG, memory, archives, private AI and governance.", zh: "查阅 RAG、记忆、归档、私有 AI 与治理的概念、架构选择及采购标准。", zhTW: "查閱 RAG、記憶、歸檔、私有 AI 與治理的概念、架構選擇及採購標準。" },
+    cta: { en: "Browse Questions", zh: "查看常见问题", zhTW: "查看常見問題" },
+    href: "/knowledge/faq",
+    access: "public",
+    icon: BookOpen,
+  },
   {
     id: "principles",
     title: { en: "Principles", zh: "核心原则" },
@@ -91,7 +101,7 @@ export const knowledgeResources = [
   },
 ] as const satisfies readonly KnowledgeResource[];
 
-export type KnowledgeSectionSlug = Exclude<(typeof knowledgeResources)[number]["id"], "principles">;
+export type KnowledgeSectionSlug = Exclude<(typeof knowledgeResources)[number]["id"], "principles" | "faq">;
 
 type KnowledgeSection = Readonly<{
   introduction: LocalizedCopy;

@@ -1,6 +1,8 @@
 import type { TranslationKey } from "@/i18n/locales/en";
 
 export const zhCN = {
+  "meta.faq.title": "企业 AI 知识基础设施 100 问｜Spark AI",
+  "meta.faq.description": "关于企业 RAG、持久 AI 记忆、冷数据、分层存储、私有 AI、治理及采购的 100 条实用问答，附参考资料与相关内容。",
   "meta.knowledgeAppliance.title": "知识基础设施一体机：类别定义与参考架构｜Spark AI",
   "meta.knowledgeAppliance.description": "知识基础设施一体机的参考定义与架构：将企业 AI 算力、受治理的检索、持久记忆、知识服务和分层存储整合为协同基础设施。",
   "common.scheduleDemo": "交流应用场景",

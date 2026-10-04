@@ -1,6 +1,8 @@
 import type { TranslationKey } from "@/i18n/locales/en";
 
 export const zhTW = {
+  "meta.faq.title": "企業 AI 知識基礎設施 100 問｜Spark AI",
+  "meta.faq.description": "關於企業 RAG、持久 AI 記憶、冷資料、分層儲存、私有 AI、治理及採購的 100 條實用問答，附參考資料與相關內容。",
   "meta.knowledgeAppliance.title": "知識基礎設施一體機：類別定義與參考架構｜Spark AI",
   "meta.knowledgeAppliance.description": "知識基礎設施一體機的參考定義與架構：將企業 AI 算力、受治理的檢索、持久記憶、知識服務和分層儲存整合為協同基礎設施。",
   "common.scheduleDemo": "交流應用場景",

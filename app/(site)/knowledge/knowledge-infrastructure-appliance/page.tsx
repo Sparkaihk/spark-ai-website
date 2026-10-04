@@ -174,6 +174,7 @@ export default function KnowledgeInfrastructureAppliancePage() {
       <section className="bg-white py-20">
         <Container>
           <LocalizedText en="Frequently asked questions" zh="常见问题" zhTW="常見問題" as="h2" className="text-3xl font-semibold sm:text-4xl" />
+          <Link href="/knowledge/faq" className="mt-4 inline-flex items-center gap-2 font-medium text-blue-700 hover:underline"><LocalizedText en="Explore all 100 enterprise AI questions" zh="查看全部 100 条企业 AI 问答" zhTW="查看全部 100 條企業 AI 問答" /><ArrowRight aria-hidden="true" className="h-4 w-4" /></Link>
           <div className="mt-10 grid gap-5">
             {faqs.map((item) => (
               <article key={item.qEn} className="premium-card p-6 sm:p-7">

@@ -86,11 +86,11 @@ export default function KnowledgePage() {
                       <LocalizedText en={isPublic ? "Public" : "Controlled access"} zh={isPublic ? "公开资源" : "受控资料"} />
                     </span>
                   </div>
-                  <LocalizedText en={resource.title.en} zh={resource.title.zh} as="h2" className="mt-5 text-xl font-semibold leading-snug text-slate-950" />
-                  <LocalizedText en={resource.description.en} zh={resource.description.zh} as="p" className="mt-4 flex-1 text-[15px] leading-7 text-slate-600" />
+                  <LocalizedText en={resource.title.en} zh={resource.title.zh} zhTW={"zhTW" in resource.title ? resource.title.zhTW : undefined} as="h2" className="mt-5 text-xl font-semibold leading-snug text-slate-950" />
+                  <LocalizedText en={resource.description.en} zh={resource.description.zh} zhTW={"zhTW" in resource.description ? resource.description.zhTW : undefined} as="p" className="mt-4 flex-1 text-[15px] leading-7 text-slate-600" />
                   <Button asChild variant="outline" className="mt-6 w-fit rounded-[16px] bg-white/75">
                     <Link href={resource.href}>
-                      <LocalizedText en={resource.cta.en} zh={resource.cta.zh} />
+                      <LocalizedText en={resource.cta.en} zh={resource.cta.zh} zhTW={"zhTW" in resource.cta ? resource.cta.zhTW : undefined} />
                       <ArrowRight aria-hidden="true" />
                     </Link>
                   </Button>

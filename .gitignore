@@ -8,6 +8,7 @@ out
 # production
 build
 dist
+.vercel
 
 # debug
 npm-debug.log*

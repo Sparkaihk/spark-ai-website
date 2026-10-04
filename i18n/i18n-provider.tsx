@@ -55,6 +55,7 @@ export function useI18n() {
 }
 
 const metadataRoutes: Array<{ test: (path: string) => boolean; title: TranslationKey; description: TranslationKey }> = [
+  { test: (path) => path === "/knowledge/faq", title: "meta.faq.title", description: "meta.faq.description" },
   { test: (path) => path === "/knowledge/knowledge-infrastructure-appliance", title: "meta.knowledgeAppliance.title", description: "meta.knowledgeAppliance.description" },
   { test: (path) => path === "/", title: "meta.home.title", description: "meta.home.description" },
   { test: (path) => path.startsWith("/platform"), title: "meta.platform.title", description: "meta.platform.description" },

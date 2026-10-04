@@ -10,6 +10,7 @@ const routes = [
   "/contact",
   "/industries",
   "/knowledge",
+  "/knowledge/faq",
   "/knowledge/knowledge-infrastructure-appliance",
   "/platform/ai-cold-data",
   "/principles",

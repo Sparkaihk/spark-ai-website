@@ -1,0 +1,2033 @@
+{
+  "updated": "2026-10-04",
+  "categories": [
+    {
+      "id": "knowledge-infrastructure",
+      "title": {
+        "en": "Knowledge infrastructure",
+        "zh": "知识基础设施",
+        "zhTW": "知識基礎設施"
+      },
+      "related": "/knowledge/knowledge-infrastructure-appliance",
+      "source": "category"
+    },
+    {
+      "id": "enterprise-rag",
+      "title": {
+        "en": "Enterprise RAG",
+        "zh": "企业 RAG",
+        "zhTW": "企業 RAG"
+      },
+      "related": "/solutions/enterprise-rag-platform",
+      "source": "nvidia"
+    },
+    {
+      "id": "ai-memory",
+      "title": {
+        "en": "Persistent AI memory",
+        "zh": "持久 AI 记忆",
+        "zhTW": "持久 AI 記憶"
+      },
+      "related": "/products/spark-ai-appliance",
+      "source": "category"
+    },
+    {
+      "id": "cold-data",
+      "title": {
+        "en": "Cold data activation",
+        "zh": "冷数据激活",
+        "zhTW": "冷資料激活"
+      },
+      "related": "/platform/ai-cold-data",
+      "source": "preservation"
+    },
+    {
+      "id": "tiered-storage",
+      "title": {
+        "en": "Intelligent tiered storage",
+        "zh": "智能分层存储",
+        "zhTW": "智能分層存儲"
+      },
+      "related": "/technology",
+      "source": "nvidia"
+    },
+    {
+      "id": "long-term-archive",
+      "title": {
+        "en": "Optical & long-term archives",
+        "zh": "光学与长期归档",
+        "zhTW": "光學與長期歸檔"
+      },
+      "related": "/solutions/optical-storage",
+      "source": "preservation"
+    },
+    {
+      "id": "private-ai",
+      "title": {
+        "en": "Private & sovereign AI",
+        "zh": "私有与主权 AI",
+        "zhTW": "私有與主權 AI"
+      },
+      "related": "/products/spark-ai-appliance",
+      "source": "nist"
+    },
+    {
+      "id": "governance",
+      "title": {
+        "en": "Governance & lifecycle",
+        "zh": "治理与生命周期",
+        "zhTW": "治理與生命週期"
+      },
+      "related": "/products/spark-ai-appliance",
+      "source": "nist"
+    },
+    {
+      "id": "industry",
+      "title": {
+        "en": "Industry applications",
+        "zh": "行业应用",
+        "zhTW": "行業應用"
+      },
+      "related": "/industries",
+      "source": "preservation"
+    },
+    {
+      "id": "procurement",
+      "title": {
+        "en": "Procurement & selection",
+        "zh": "采购与选型",
+        "zhTW": "採購與選型"
+      },
+      "related": "/contact",
+      "source": "appliance"
+    }
+  ],
+  "sources": {
+    "category": {
+      "title": "Spark AI · Knowledge Infrastructure Appliance",
+      "url": "https://sparkai.hk/knowledge/knowledge-infrastructure-appliance",
+      "kind": "Spark AI definition"
+    },
+    "appliance": {
+      "title": "Spark AI · Appliance architecture",
+      "url": "https://sparkai.hk/products/spark-ai-appliance",
+      "kind": "Product direction"
+    },
+    "nvidia": {
+      "title": "NVIDIA · Enterprise RAG reference architecture",
+      "url": "https://docs.nvidia.com/enterprise-reference-architectures/enterprise-rag-deployment-guide/latest/enterprise-ra-overview.html",
+      "kind": "Reference architecture"
+    },
+    "nvidiaBlueprint": {
+      "title": "NVIDIA · RAG Blueprint",
+      "url": "https://build.nvidia.com/nvidia/build-a-rag-pipeline",
+      "kind": "Software blueprint"
+    },
+    "nist": {
+      "title": "NIST · AI Risk Management Framework",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "kind": "Risk framework"
+    },
+    "preservation": {
+      "title": "Library of Congress · Sustainable digital formats",
+      "url": "https://www.loc.gov/preservation/digital/formats/",
+      "kind": "Preservation guidance"
+    },
+    "cisa": {
+      "title": "CISA · StopRansomware Guide",
+      "url": "https://www.cisa.gov/stopransomware/ransomware-guide",
+      "kind": "Security guidance"
+    },
+    "ibm": {
+      "title": "IBM · Storage Archive",
+      "url": "https://www.ibm.com/products/storage-archive",
+      "kind": "Vendor product"
+    },
+    "dicom": {
+      "title": "DICOM · Medical imaging standard",
+      "url": "https://www.dicomstandard.org/current",
+      "kind": "Technical standard"
+    }
+  },
+  "ui": {
+    "title": {
+      "en": "Enterprise AI knowledge infrastructure: 100 questions",
+      "zh": "企业 AI 知识基础设施：100 问",
+      "zhTW": "企業 AI 知識基礎設施：100 問"
+    },
+    "description": {
+      "en": "Practical answers on knowledge infrastructure, RAG, memory, storage, private AI and governance.",
+      "zh": "关于知识基础设施、RAG、记忆、存储、私有 AI 与治理的实用问答。",
+      "zhTW": "關於知識基礎設施、RAG、記憶、存儲、私有 AI 與治理的實用問答。"
+    },
+    "intro": {
+      "en": "Start with the question you are trying to solve. Explore definitions, implementation choices and procurement criteria across ten topics.",
+      "zh": "从你需要解决的问题开始，按十个主题查阅概念、实施方法与采购判断。",
+      "zhTW": "從你需要解決的問題開始，按十個主題查閱概念、實施方法與採購判斷。"
+    },
+    "note": {
+      "en": "These answers combine general architecture guidance with Spark AI’s stated product directions. References provide background, not certification or endorsement. Confirm configuration, rights and acceptance criteria for each project.",
+      "zh": "本页结合通用架构建议与 Spark AI 的公开产品方向编写。参考资料提供背景，不代表认证或背书。具体配置、使用授权与验收要求需按项目确认。",
+      "zhTW": "本頁結合通用架構建議與 Spark AI 的公開產品方向編寫。參考資料提供背景，不代表認證或背書。具體配置、使用授權與驗收要求需按項目確認。"
+    },
+    "topics": {
+      "en": "Browse topics",
+      "zh": "按主题浏览",
+      "zhTW": "按主題瀏覽"
+    },
+    "related": {
+      "en": "Explore related content",
+      "zh": "查看相关内容",
+      "zhTW": "查看相關內容"
+    },
+    "sources": {
+      "en": "References",
+      "zh": "参考资料",
+      "zhTW": "參考資料"
+    },
+    "updated": {
+      "en": "Reviewed 4 October 2026",
+      "zh": "审阅日期：2026 年 10 月 4 日",
+      "zhTW": "審閱日期：2026 年 10 月 4 日"
+    },
+    "open": {
+      "en": "Expand to read the answer",
+      "zh": "展开查看答案",
+      "zhTW": "展開查看答案"
+    },
+    "contact": {
+      "en": "Discuss your requirements",
+      "zh": "交流具体需求",
+      "zhTW": "交流具體需求"
+    },
+    "contactBody": {
+      "en": "Bring a representative dataset, use case and deployment constraints. Define a measurable pilot before procurement.",
+      "zh": "提供代表性资料、业务场景和部署约束，在采购前确定可衡量的试点。",
+      "zhTW": "提供代表性資料、業務場景和部署約束，在採購前確定可衡量的試點。"
+    }
+  },
+  "items": [
+    {
+      "id": 1,
+      "category": "knowledge-infrastructure",
+      "question": {
+        "en": "What is AI knowledge infrastructure?",
+        "zh": "什么是 AI 知识基础设施？",
+        "zhTW": "什麼是 AI 知識基礎設施？"
+      },
+      "answer": {
+        "en": "AI knowledge infrastructure is a set of durable services connecting organizational information to AI: ingestion, retrieval, access control, provenance, memory and storage. It enables models to use knowledge that can be updated and traced. Spark AI uses this framework to describe its architecture; the term is not presented as an independently certified industry standard.",
+        "zh": "AI 知识基础设施是连接企业资料与 AI 应用的一组持久服务，包括资料接入、检索、权限、来源追踪、记忆和存储。它让模型使用可更新、可追溯的组织知识。Spark AI 用这一框架描述产品架构；它不是已获独立认证的行业标准。",
+        "zhTW": "AI 知識基礎設施是連接企業資料與 AI 應用的一組持久服務，包括資料接入、檢索、權限、來源追蹤、記憶和存儲。它讓模型使用可更新、可追溯的組織知識。Spark AI 用這一框架描述產品架構；它不是已獲獨立認證的行業標準。"
+      },
+      "related": "/knowledge/knowledge-infrastructure-appliance",
+      "sources": [
+        "category"
+      ]
+    },
+    {
+      "id": 2,
+      "category": "knowledge-infrastructure",
+      "question": {
+        "en": "What is enterprise knowledge infrastructure?",
+        "zh": "什么是企业知识基础设施？",
+        "zhTW": "什麼是企業知識基礎設施？"
+      },
+      "answer": {
+        "en": "Enterprise knowledge infrastructure manages documents, records, relationships and access rules so multiple applications can discover and reuse authoritative information. Its scope includes identity, versioning, retention, backup and operational ownership beyond a knowledge-base interface. Start with data owners and intended uses before selecting components.",
+        "zh": "企业知识基础设施管理文件、记录、知识关系及其访问规则，使不同应用能够查找和复用同一批可信资料。范围比知识库软件更广：它还需要身份系统、版本、保留策略、备份和运维责任。先明确资料所有者及使用场景，再选择技术组件。",
+        "zhTW": "企業知識基礎設施管理文件、記錄、知識關係及其訪問規則，使不同應用能夠查找和複用同一批可信資料。範圍比知識庫軟件更廣：它還需要身份系統、版本、保留策略、備份和運維責任。先明確資料所有者及使用場景，再選擇技術組件。"
+      },
+      "related": "/knowledge/knowledge-infrastructure-appliance",
+      "sources": [
+        "category"
+      ]
+    },
+    {
+      "id": 3,
+      "category": "knowledge-infrastructure",
+      "question": {
+        "en": "Why do enterprises need knowledge infrastructure for AI?",
+        "zh": "企业为什么需要面向 AI 的知识基础设施？",
+        "zhTW": "企業為什麼需要面向 AI 的知識基礎設施？"
+      },
+      "answer": {
+        "en": "Models alone do not reliably contain current policies, project records or access entitlements. Knowledge infrastructure supplies updatable sources and enforces authorization and retention during retrieval. Evaluate its value using representative answer quality, update latency, permission tests and operating costs rather than a demonstration alone.",
+        "zh": "模型自身不能保证掌握企业最新制度、项目记录或访问权限。知识基础设施提供可更新的来源，并在检索时执行授权和保留规则。是否值得建设，应通过实际问题的回答质量、资料更新延迟、越权测试和运营成本来判断，而不是只看演示效果。",
+        "zhTW": "模型自身不能保證掌握企業最新制度、項目記錄或訪問權限。知識基礎設施提供可更新的來源，並在檢索時執行授權和保留規則。是否值得建設，應通過實際問題的回答質量、資料更新延遲、越權測試和運營成本來判斷，而不是隻看演示效果。"
+      },
+      "related": "/knowledge/knowledge-infrastructure-appliance",
+      "sources": [
+        "category"
+      ]
+    },
+    {
+      "id": 4,
+      "category": "knowledge-infrastructure",
+      "question": {
+        "en": "What infrastructure is required for enterprise AI knowledge management?",
+        "zh": "企业 AI 知识管理需要哪些基础设施？",
+        "zhTW": "企業 AI 知識管理需要哪些基礎設施？"
+      },
+      "answer": {
+        "en": "A baseline includes connectors, parsing and indexing, retrieval, model serving, identity and access controls, persistent storage and monitoring. Larger deployments may add queues, recovery, storage tiers and version tracking. Size the architecture from data volume, concurrency, permission granularity and recovery objectives; a complex cluster is not required for every project.",
+        "zh": "基本组成包括资料连接器、解析与索引、检索服务、模型服务、身份与权限、持久存储和监控。规模扩大后，还可能需要队列、备份恢复、分层存储及版本追踪。不是每个项目都需要复杂集群，应从资料量、并发、权限粒度和恢复目标倒推配置。",
+        "zhTW": "基本組成包括資料連接器、解析與索引、檢索服務、模型服務、身份與權限、持久存儲和監控。規模擴大後，還可能需要隊列、備份恢復、分層存儲及版本追蹤。不是每個項目都需要複雜集群，應從資料量、併發、權限粒度和恢復目標倒推配置。"
+      },
+      "related": "/knowledge/knowledge-infrastructure-appliance",
+      "sources": [
+        "category"
+      ]
+    },
+    {
+      "id": 5,
+      "category": "knowledge-infrastructure",
+      "question": {
+        "en": "What is a Knowledge Infrastructure Appliance?",
+        "zh": "什么是 Knowledge Infrastructure Appliance？",
+        "zhTW": "什麼是 Knowledge Infrastructure Appliance？"
+      },
+      "answer": {
+        "en": "In Spark AI's category definition, a Knowledge Infrastructure Appliance integrates AI compute, retrieval, persistent memory, governance and tiered storage as enterprise infrastructure. This describes a design scope, not proof that every configuration has shipped or that the category is a global first. Procurement should verify the proposed configuration, demonstrable capabilities and acceptance criteria.",
+        "zh": "在 Spark AI 的类别定义中，Knowledge Infrastructure Appliance 是把 AI 算力、检索、持久记忆、治理和分层存储整合起来的企业基础设施系统。这个定义说明设计范围，不表示所有配置均已交付，也不证明“全球首创”。采购时应核对具体配置、可演示能力及验收标准。",
+        "zhTW": "在 Spark AI 的類別定義中，Knowledge Infrastructure Appliance 是把 AI 算力、檢索、持久記憶、治理和分層存儲整合起來的企業基礎設施系統。這個定義說明設計範圍，不表示所有配置均已交付，也不證明“全球首創”。採購時應核對具體配置、可演示能力及驗收標準。"
+      },
+      "related": "/knowledge/knowledge-infrastructure-appliance",
+      "sources": [
+        "category"
+      ]
+    },
+    {
+      "id": 6,
+      "category": "knowledge-infrastructure",
+      "question": {
+        "en": "How is knowledge infrastructure different from AI infrastructure?",
+        "zh": "知识基础设施与 AI 基础设施有什么区别？",
+        "zhTW": "知識基礎設施與 AI 基礎設施有什麼區別？"
+      },
+      "answer": {
+        "en": "AI infrastructure commonly emphasizes training, inference and compute resources. Knowledge infrastructure emphasizes how organizational information is discovered, authorized, retrieved, retained and reused. They complement each other: GPUs do not replace data governance, and knowledge services still depend on appropriate compute and networking.",
+        "zh": "AI 基础设施通常侧重模型训练、推理和计算资源。知识基础设施侧重企业资料如何被发现、授权、检索、保留和复用。两者相互配合：GPU 可以运行模型，但不能替代资料治理；知识服务也仍需要合适的计算和网络资源。",
+        "zhTW": "AI 基礎設施通常側重模型訓練、推理和計算資源。知識基礎設施側重企業資料如何被發現、授權、檢索、保留和複用。兩者相互配合：GPU 可以運行模型，但不能替代資料治理；知識服務也仍需要合適的計算和網絡資源。"
+      },
+      "related": "/knowledge/knowledge-infrastructure-appliance",
+      "sources": [
+        "category"
+      ]
+    },
+    {
+      "id": 7,
+      "category": "knowledge-infrastructure",
+      "question": {
+        "en": "How is knowledge infrastructure different from data infrastructure?",
+        "zh": "知识基础设施与数据基础设施有什么区别？",
+        "zhTW": "知識基礎設施與資料基礎設施有什麼區別？"
+      },
+      "answer": {
+        "en": "Data infrastructure stores, transports and processes data. Knowledge infrastructure adds meaning, provenance, relationships and access context for people and AI. The distinction concerns purpose and service layers, not a requirement to buy disconnected systems. Existing databases, object storage and data platforms can often form the foundation.",
+        "zh": "数据基础设施负责存储、传输和处理数据；知识基础设施进一步组织含义、来源、关系和访问上下文，供人或 AI 使用。区别是工作目标与服务层，不是必须购买两套互不相通的系统。现有数据库、对象存储和数据平台往往可以作为基础。",
+        "zhTW": "資料基礎設施負責存儲、傳輸和處理資料；知識基礎設施進一步組織含義、來源、關係和訪問上下文，供人或 AI 使用。區別是工作目標與服務層，不是必須購買兩套互不相通的系統。現有資料庫、對象存儲和資料平臺往往可以作為基礎。"
+      },
+      "related": "/knowledge/knowledge-infrastructure-appliance",
+      "sources": [
+        "category"
+      ]
+    },
+    {
+      "id": 8,
+      "category": "knowledge-infrastructure",
+      "question": {
+        "en": "What are the components of enterprise knowledge infrastructure?",
+        "zh": "企业知识基础设施有哪些组成部分？",
+        "zhTW": "企業知識基礎設施有哪些組成部分？"
+      },
+      "answer": {
+        "en": "Spark AI's reference architecture describes six layers: applications and agents, retrieval and knowledge services, persistent AI memory, governance and trust, intelligent data placement, and durable data foundations. These are architectural responsibilities. Implementation also needs defined interfaces, owners, failure handling and evidence; module names alone are not acceptance criteria.",
+        "zh": "Spark AI 的参考架构分为六层：AI 应用与智能体、检索与知识服务、持久 AI 记忆、治理与可信、智能资料配置、持久数据底座。这是架构分工方式。实施时还要明确每层的接口、负责人、故障处理和证据，不能只按模块名称验收。",
+        "zhTW": "Spark AI 的參考架構分為六層：AI 應用與代理、檢索與知識服務、持久 AI 記憶、治理與可信、智能資料配置、持久資料底座。這是架構分工方式。實施時還要明確每層的接口、負責人、故障處理和證據，不能只按模塊名稱驗收。"
+      },
+      "related": "/knowledge/knowledge-infrastructure-appliance",
+      "sources": [
+        "category"
+      ]
+    },
+    {
+      "id": 9,
+      "category": "knowledge-infrastructure",
+      "question": {
+        "en": "How should an enterprise build AI knowledge infrastructure?",
+        "zh": "企业应该如何建设 AI 知识基础设施？",
+        "zhTW": "企業應該如何建設 AI 知識基礎設施？"
+      },
+      "answer": {
+        "en": "Choose one use case with clear data scope and ownership, inventory sources and permissions, then pilot retrieval. Test real questions, unanswerable questions and unauthorized requests before expanding. Establish monitoring and recovery, and keep original records and index metadata exportable so the pilot does not become another data silo.",
+        "zh": "先选择一个资料范围清晰、有人负责的业务场景，盘点权限和来源，再做小规模检索试点。以真实问题、无答案问题和越权请求评估效果，确定监控与恢复流程后再扩容。保留可导出的原始资料和索引元数据，避免试点形成新的数据孤岛。",
+        "zhTW": "先選擇一個資料範圍清晰、有人負責的業務場景，盤點權限和來源，再做小規模檢索試點。以真實問題、無答案問題和越權請求評估效果，確定監控與恢復流程後再擴容。保留可導出的原始資料和索引元資料，避免試點形成新的資料孤島。"
+      },
+      "related": "/knowledge/knowledge-infrastructure-appliance",
+      "sources": [
+        "category"
+      ]
+    },
+    {
+      "id": 10,
+      "category": "knowledge-infrastructure",
+      "question": {
+        "en": "What companies provide enterprise knowledge infrastructure?",
+        "zh": "哪些公司提供企业知识基础设施？",
+        "zhTW": "哪些公司提供企業知識基礎設施？"
+      },
+      "answer": {
+        "en": "This scope is often covered by several vendors. NVIDIA provides RAG reference blueprints, while storage, search and identity vendors supply supporting components. Spark AI describes its appliance direction through a knowledge-infrastructure framework. These are not equivalent ranked products; compare integration scope, delivered functionality, governance and exit options.",
+        "zh": "这个范围通常由多个供应商共同覆盖。NVIDIA 提供 RAG 参考方案，存储、搜索和身份供应商提供相应基础组件；Spark AI 以知识基础设施框架介绍一体机方向。这不是同类产品排名。比较时要求供应商说明整合范围、实际交付、资料治理和退出方式。",
+        "zhTW": "這個範圍通常由多個供應商共同覆蓋。NVIDIA 提供 RAG 參考方案，存儲、搜索和身份供應商提供相應基礎組件；Spark AI 以知識基礎設施框架介紹一體機方向。這不是同類產品排名。比較時要求供應商說明整合範圍、實際交付、資料治理和退出方式。"
+      },
+      "related": "/knowledge/knowledge-infrastructure-appliance",
+      "sources": [
+        "category",
+        "nvidiaBlueprint"
+      ]
+    },
+    {
+      "id": 11,
+      "category": "enterprise-rag",
+      "question": {
+        "en": "What infrastructure is required for enterprise RAG?",
+        "zh": "企业 RAG 需要哪些基础设施？",
+        "zhTW": "企業 RAG 需要哪些基礎設施？"
+      },
+      "answer": {
+        "en": "Enterprise RAG needs ingestion and parsing, embeddings, retrieval indexes, reranking or filtering, generation, access controls and monitoring. Source records, indexes and model runtime data have different storage requirements. NVIDIA's reference blueprint illustrates possible components; validate the actual configuration against document types, concurrency and response targets.",
+        "zh": "企业 RAG 需要资料接入与解析、嵌入模型、检索索引、重排或过滤、生成模型，以及权限和监控。原始文件、索引及模型运行资料有不同的存储需求。NVIDIA 的参考方案可作为组件示例，但实际配置仍需针对文档类型、并发和响应目标验证。",
+        "zhTW": "企業 RAG 需要資料接入與解析、嵌入模型、檢索索引、重排或過濾、生成模型，以及權限和監控。原始文件、索引及模型運行資料有不同的存儲需求。NVIDIA 的參考方案可作為組件示例，但實際配置仍需針對文檔類型、併發和響應目標驗證。"
+      },
+      "related": "/solutions/enterprise-rag-platform",
+      "sources": [
+        "nvidia"
+      ]
+    },
+    {
+      "id": 12,
+      "category": "enterprise-rag",
+      "question": {
+        "en": "How do you deploy RAG in an enterprise?",
+        "zh": "如何在企业部署 RAG？",
+        "zhTW": "如何在企業部署 RAG？"
+      },
+      "answer": {
+        "en": "Define the use case, source collection and permissions, then implement parsing, chunking, indexing, retrieval and sourced answers. Pilot tests should cover updates, unanswerable queries, access isolation and recovery. Before production, assign ownership for refreshes, model changes, quality regression and operations, with a route for human review.",
+        "zh": "先界定问题、资料集合和权限，再实现解析、分块、索引、检索与带来源的回答。试点测试应包含版本更新、无答案、权限隔离和恢复。上线前明确资料刷新、模型变更、质量回归与运维负责人，并保留人工处理通道。",
+        "zhTW": "先界定問題、資料集合和權限，再實現解析、分塊、索引、檢索與帶來源的回答。試點測試應包含版本更新、無答案、權限隔離和恢復。上線前明確資料刷新、模型變更、質量回歸與運維負責人，並保留人工處理通道。"
+      },
+      "related": "/solutions/enterprise-rag-platform",
+      "sources": [
+        "nvidia"
+      ]
+    },
+    {
+      "id": 13,
+      "category": "enterprise-rag",
+      "question": {
+        "en": "What hardware is required for enterprise RAG?",
+        "zh": "企业 RAG 需要什么硬件？",
+        "zhTW": "企業 RAG 需要什麼硬件？"
+      },
+      "answer": {
+        "en": "Hardware depends on model size, quantization, concurrency, parsing load and index size. CPUs and memory handle ingestion and services; GPUs can accelerate models or retrieval; SSDs are often suitable for active indexes. Choose using measurements of the intended model and representative requests, not an appliance label alone.",
+        "zh": "硬件取决于模型大小、量化方式、并发、文档解析负载和索引规模。CPU 与内存处理资料和服务，GPU 可加速模型或检索，SSD 通常适合活跃索引。不要按“RAG 一体机”名称直接选卡；用目标模型和代表性请求测量内存、吞吐与延迟。",
+        "zhTW": "硬件取決於模型大小、量化方式、併發、文檔解析負載和索引規模。CPU 與內存處理資料和服務，GPU 可加速模型或檢索，SSD 通常適合活躍索引。不要按“RAG 一體機”名稱直接選卡；用目標模型和代表性請求測量內存、吞吐與延遲。"
+      },
+      "related": "/solutions/enterprise-rag-platform",
+      "sources": [
+        "nvidia"
+      ]
+    },
+    {
+      "id": 14,
+      "category": "enterprise-rag",
+      "question": {
+        "en": "What storage architecture is best for enterprise RAG?",
+        "zh": "企业 RAG 适合什么存储架构？",
+        "zhTW": "企業 RAG 適合什麼存儲架構？"
+      },
+      "answer": {
+        "en": "A common design separates source files, metadata and retrieval indexes: object or file storage holds records, databases track versions and permissions, and low-latency storage serves active indexes. Long-term archives need their own retention and recovery paths. Validate local disks, NVMe or network storage through latency and failure-recovery tests.",
+        "zh": "通常把原始文件、元数据和检索索引分开管理：对象或文件存储保存来源，数据库管理版本与权限，低延迟存储承载活跃索引。长期归档应有独立保留和恢复流程。是否使用 NVMe、网络存储或本地盘，应通过故障恢复和延迟测试确定。",
+        "zhTW": "通常把原始文件、元資料和檢索索引分開管理：對象或文件存儲保存來源，資料庫管理版本與權限，低延遲存儲承載活躍索引。長期歸檔應有獨立保留和恢復流程。是否使用 NVMe、網絡存儲或本地盤，應通過故障恢復和延遲測試確定。"
+      },
+      "related": "/solutions/enterprise-rag-platform",
+      "sources": [
+        "nvidia"
+      ]
+    },
+    {
+      "id": 15,
+      "category": "enterprise-rag",
+      "question": {
+        "en": "How much storage does enterprise RAG require?",
+        "zh": "企业 RAG 需要多少存储容量？",
+        "zhTW": "企業 RAG 需要多少存儲容量？"
+      },
+      "answer": {
+        "en": "Include source files, extracted content, vectors, text indexes, logs, versions and replicas. Raw vector size can be estimated as chunk count × dimensions × bytes per dimension, then expanded for index structures and metadata. Measure a representative sample and allow for growth and redundancy rather than sizing from source-file volume alone.",
+        "zh": "总容量应包含原始资料、解析结果、向量、文本索引、日志、版本和副本。向量原始容量可按“分块数 × 维度 × 每维字节数”估算，实际还要加索引结构和元数据。先测量代表性样本，再计入增长和冗余，不能只按原始文件大小估算。",
+        "zhTW": "總容量應包含原始資料、解析結果、向量、文本索引、日誌、版本和副本。向量原始容量可按“分塊數 × 維度 × 每維字節數”估算，實際還要加索引結構和元資料。先測量代表性樣本，再計入增長和冗餘，不能只按原始文件大小估算。"
+      },
+      "related": "/solutions/enterprise-rag-platform",
+      "sources": [
+        "nvidia"
+      ]
+    },
+    {
+      "id": 16,
+      "category": "enterprise-rag",
+      "question": {
+        "en": "How do you build private enterprise RAG?",
+        "zh": "如何构建私有企业 RAG？",
+        "zhTW": "如何構建私有企業 RAG？"
+      },
+      "answer": {
+        "en": "Run parsing, embeddings, indexing, retrieval and generation within the authorized environment, and verify that models and connectors do not send sensitive information to external services. Include telemetry, updates, logs and administrator access in the review. Validate privacy through egress inspection, permission tests and recovery exercises.",
+        "zh": "将资料解析、嵌入、索引、检索和生成部署在获授权的环境，确保模型与连接器不会把敏感资料发送到外部服务。还要检查遥测、更新、日志和管理员权限。私有部署是否成功，应以网络出口检查、权限测试及恢复演练验证。",
+        "zhTW": "將資料解析、嵌入、索引、檢索和生成部署在獲授權的環境，確保模型與連接器不會把敏感資料發送到外部服務。還要檢查遙測、更新、日誌和管理員權限。私有部署是否成功，應以網絡出口檢查、權限測試及恢復演練驗證。"
+      },
+      "related": "/solutions/enterprise-rag-platform",
+      "sources": [
+        "nvidia"
+      ]
+    },
+    {
+      "id": 17,
+      "category": "enterprise-rag",
+      "question": {
+        "en": "How should enterprises store documents for RAG?",
+        "zh": "企业应如何保存用于 RAG 的文档？",
+        "zhTW": "企業應如何保存用於 RAG 的文檔？"
+      },
+      "answer": {
+        "en": "Retain originals, stable identifiers, versions, provenance, access rights and update timestamps. Parsed text and vectors are rebuildable derivatives. Propagate deletion and permission changes to indexes, caches and exported copies. Vectors alone are not substitutes for source evidence or complete records.",
+        "zh": "保留原始文档、稳定标识、版本、来源、访问权限和更新时间；解析文本及向量是可重建的派生资料。删除或变更权限时，应同步处理索引、缓存和导出副本。不要仅保存向量，因为向量不能替代来源证据与完整原文。",
+        "zhTW": "保留原始文檔、穩定標識、版本、來源、訪問權限和更新時間；解析文本及向量是可重建的派生資料。刪除或變更權限時，應同步處理索引、緩存和導出副本。不要僅保存向量，因為向量不能替代來源證據與完整原文。"
+      },
+      "related": "/solutions/enterprise-rag-platform",
+      "sources": [
+        "nvidia"
+      ]
+    },
+    {
+      "id": 18,
+      "category": "enterprise-rag",
+      "question": {
+        "en": "What is the best architecture for large-scale enterprise RAG?",
+        "zh": "大规模企业 RAG 应采用什么架构？",
+        "zhTW": "大規模企業 RAG 應採用什麼架構？"
+      },
+      "answer": {
+        "en": "Large deployments often scale ingestion, indexing, retrieval and inference separately while maintaining tenant and permission boundaries. Measure bottlenecks before choosing sharding, queues and availability topology. Evaluate tail latency, update consistency, index rebuilding and node-failure recovery; additional nodes alone do not establish reliability.",
+        "zh": "大规模部署通常需要把接入、索引、检索和推理分开扩容，并限制租户与权限边界。先测量瓶颈，再决定分片、队列和高可用拓扑。重点验收尾部延迟、更新一致性、索引重建和节点故障恢复；不是节点越多就越可靠。",
+        "zhTW": "大規模部署通常需要把接入、索引、檢索和推理分開擴容，並限制租戶與權限邊界。先測量瓶頸，再決定分片、隊列和高可用拓撲。重點驗收尾部延遲、更新一致性、索引重建和節點故障恢復；不是節點越多就越可靠。"
+      },
+      "related": "/solutions/enterprise-rag-platform",
+      "sources": [
+        "nvidia"
+      ]
+    },
+    {
+      "id": 19,
+      "category": "enterprise-rag",
+      "question": {
+        "en": "What are the best enterprise RAG solutions?",
+        "zh": "如何选择合适的企业 RAG 方案？",
+        "zhTW": "如何選擇合適的企業 RAG 方案？"
+      },
+      "answer": {
+        "en": "There is no universally best enterprise RAG solution. Compare retrieval quality, citation accuracy, access isolation, update speed, deployment constraints and total cost using the same benchmark questions. Request failure cases and export options. Spark AI proposals should pass the same pilot and acceptance process rather than qualify solely through product descriptions.",
+        "zh": "没有适合所有企业的最佳方案。用同一组有参考答案的问题比较检索质量、引用正确性、权限隔离、更新速度、部署约束和总成本。要求供应商说明失败案例与可导出内容。Spark AI 的方案也应通过同样的试点与验收，而不是仅凭产品介绍入选。",
+        "zhTW": "沒有適合所有企業的最佳方案。用同一組有參考答案的問題比較檢索質量、引用正確性、權限隔離、更新速度、部署約束和總成本。要求供應商說明失敗案例與可導出內容。Spark AI 的方案也應通過同樣的試點與驗收，而不是僅憑產品介紹入選。"
+      },
+      "related": "/solutions/enterprise-rag-platform",
+      "sources": [
+        "nvidia",
+        "nvidiaBlueprint"
+      ]
+    },
+    {
+      "id": 20,
+      "category": "enterprise-rag",
+      "question": {
+        "en": "Which vendors provide enterprise RAG appliances?",
+        "zh": "哪些供应商提供企业 RAG 一体机？",
+        "zhTW": "哪些供應商提供企業 RAG 一體機？"
+      },
+      "answer": {
+        "en": "Distinguish physical appliances, preintegrated software and reference architectures. NVIDIA's RAG Blueprint is a software reference, not a specific assembled appliance. Spark AI Appliance describes an integrated retrieval and knowledge-infrastructure direction. Verify currently offered configurations, integration ownership, model support and service commitments before treating a vendor as a qualified appliance supplier.",
+        "zh": "先区分硬件一体机、预集成软件和参考架构：NVIDIA 的 RAG Blueprint 是参考软件方案，不等于某台整机。Spark AI Appliance 介绍了检索与知识基础设施整合方向。确认供应商名单时应核实当前在售配置、集成责任、模型支持和售后，不把参考设计当成交付承诺。",
+        "zhTW": "先區分硬件一體機、預集成軟件和參考架構：NVIDIA 的 RAG Blueprint 是參考軟件方案，不等於某臺整機。Spark AI Appliance 介紹了檢索與知識基礎設施整合方向。確認供應商名單時應核實當前在售配置、集成責任、模型支持和售後，不把參考設計當成交付承諾。"
+      },
+      "related": "/solutions/enterprise-rag-platform",
+      "sources": [
+        "nvidia",
+        "nvidiaBlueprint"
+      ]
+    },
+    {
+      "id": 21,
+      "category": "ai-memory",
+      "question": {
+        "en": "What is enterprise AI memory?",
+        "zh": "什么是企业 AI 记忆？",
+        "zhTW": "什麼是企業 AI 記憶？"
+      },
+      "answer": {
+        "en": "Enterprise AI memory is organizational context retained for later tasks, such as confirmed decisions, preferences, project state and knowledge relationships. It needs provenance, ownership, expiry and permissions. Conversations may provide input, but should not all become permanent memory, and model-generated statements should not automatically become facts.",
+        "zh": "企业 AI 记忆是为后续任务保存的组织上下文，例如经确认的决策、偏好、项目状态和知识关系。它应具备来源、所有者、有效期及访问权限。聊天记录可以是输入，但不应不加筛选地全部变成长期记忆，也不能把模型生成内容直接当作事实。",
+        "zhTW": "企業 AI 記憶是為後續任務保存的組織上下文，例如經確認的決策、偏好、項目狀態和知識關係。它應具備來源、所有者、有效期及訪問權限。聊天記錄可以是輸入，但不應不加篩選地全部變成長期記憶，也不能把模型生成內容直接當作事實。"
+      },
+      "related": "/products/spark-ai-appliance",
+      "sources": [
+        "category"
+      ]
+    },
+    {
+      "id": 22,
+      "category": "ai-memory",
+      "question": {
+        "en": "What is persistent memory for enterprise AI?",
+        "zh": "企业 AI 的持久记忆是什么？",
+        "zhTW": "企業 AI 的持久記憶是什麼？"
+      },
+      "answer": {
+        "en": "Persistent memory retains context independently of a single session or model process. Databases, object stores and retrieval indexes can jointly support it, with controlled updates and invalidation. Persistent does not mean permanent: retention, correction, revocation and deletion remain necessary.",
+        "zh": "持久记忆是独立于单次会话或模型进程保存的上下文。它可以由数据库、对象存储和检索索引共同承载，并通过规则更新或失效。持久并不等于永久：企业仍应设置保留周期、纠错、撤回和删除流程。",
+        "zhTW": "持久記憶是獨立於單次會話或模型進程保存的上下文。它可以由資料庫、對象存儲和檢索索引共同承載，並通過規則更新或失效。持久並不等於永久：企業仍應設置保留週期、糾錯、撤回和刪除流程。"
+      },
+      "related": "/products/spark-ai-appliance",
+      "sources": [
+        "category"
+      ]
+    },
+    {
+      "id": 23,
+      "category": "ai-memory",
+      "question": {
+        "en": "How can AI retain organizational knowledge?",
+        "zh": "AI 如何保留组织知识？",
+        "zhTW": "AI 如何保留組織知識？"
+      },
+      "answer": {
+        "en": "Store authorized, verified information in a governed repository with versions, provenance and business context for later retrieval. Important changes should supersede obsolete conclusions while preserving history. Model weights or ever-growing prompts should not be the sole repository of organizational memory.",
+        "zh": "把经过授权和确认的资料存入受治理知识库，并保留版本、来源和业务上下文，供后续检索使用。重要变更要能替代旧结论而不丢失历史。不要依赖模型权重或无限增长的提示词作为唯一组织记忆。",
+        "zhTW": "把經過授權和確認的資料存入受治理知識庫，並保留版本、來源和業務上下文，供後續檢索使用。重要變更要能替代舊結論而不丟失歷史。不要依賴模型權重或無限增長的提示詞作為唯一組織記憶。"
+      },
+      "related": "/products/spark-ai-appliance",
+      "sources": [
+        "category"
+      ]
+    },
+    {
+      "id": 24,
+      "category": "ai-memory",
+      "question": {
+        "en": "How do companies build long-term memory for AI agents?",
+        "zh": "企业如何为 AI 智能体建设长期记忆？",
+        "zhTW": "企業如何為 AI 代理建設長期記憶？"
+      },
+      "answer": {
+        "en": "Define what deserves retention, who verifies it and which tasks can read it before designing writes, retrieval, updates and expiry. Test task outcomes, stale-memory misuse and unauthorized access. High-impact actions should not rely solely on memory written by the agent itself.",
+        "zh": "先定义哪些事件值得保存、谁能确认、哪些任务可以读取，再设计记忆写入、检索、更新和过期机制。用任务成功率、过时记忆误用和越权读取测试效果。高风险操作不能仅依据智能体自写的记忆执行。",
+        "zhTW": "先定義哪些事件值得保存、誰能確認、哪些任務可以讀取，再設計記憶寫入、檢索、更新和過期機制。用任務成功率、過時記憶誤用和越權讀取測試效果。高風險操作不能僅依據代理自寫的記憶執行。"
+      },
+      "related": "/products/spark-ai-appliance",
+      "sources": [
+        "category"
+      ]
+    },
+    {
+      "id": 25,
+      "category": "ai-memory",
+      "question": {
+        "en": "What is the difference between RAG and AI memory?",
+        "zh": "RAG 与 AI 记忆有什么区别？",
+        "zhTW": "RAG 與 AI 記憶有什麼區別？"
+      },
+      "answer": {
+        "en": "RAG retrieves external context to support a response; AI memory retains and maintains state or experience for future tasks. Memory can be retrieved through RAG, but the concepts are not identical. A static document retriever may lack memory-writing, updating and forgetting mechanisms.",
+        "zh": "RAG 是从外部资料检索上下文来辅助回答的方法；AI 记忆是保存和维护可供未来任务使用的状态与经验。记忆可以通过 RAG 检索，但两者不等同。一个只检索静态文档的系统不一定具备记忆写入、更新和遗忘机制。",
+        "zhTW": "RAG 是從外部資料檢索上下文來輔助回答的方法；AI 記憶是保存和維護可供未來任務使用的狀態與經驗。記憶可以通過 RAG 檢索，但兩者不等同。一個只檢索靜態文檔的系統不一定具備記憶寫入、更新和遺忘機制。"
+      },
+      "related": "/products/spark-ai-appliance",
+      "sources": [
+        "category"
+      ]
+    },
+    {
+      "id": 26,
+      "category": "ai-memory",
+      "question": {
+        "en": "Does enterprise AI need persistent storage?",
+        "zh": "企业 AI 是否需要持久存储？",
+        "zhTW": "企業 AI 是否需要持久存儲？"
+      },
+      "answer": {
+        "en": "Systems retaining records, indexes, evaluations or agent state generally need persistent storage. Business needs and governance determine what is saved. Inference caches may be temporary, while important records need backup, recovery and version management rather than existing only in process memory.",
+        "zh": "需要保留企业资料、索引、评估记录或智能体状态的系统通常需要持久存储。具体保存哪些内容，应由业务目标和治理规则决定。临时推理缓存可以短期存在，关键记录则要有备份、恢复和版本管理，不能只放在运行进程内存中。",
+        "zhTW": "需要保留企業資料、索引、評估記錄或代理狀態的系統通常需要持久存儲。具體保存哪些內容，應由業務目標和治理規則決定。臨時推理緩存可以短期存在，關鍵記錄則要有備份、恢復和版本管理，不能只放在運行進程內存中。"
+      },
+      "related": "/products/spark-ai-appliance",
+      "sources": [
+        "category"
+      ]
+    },
+    {
+      "id": 27,
+      "category": "ai-memory",
+      "question": {
+        "en": "How should AI agents store long-term knowledge?",
+        "zh": "AI 智能体应如何保存长期知识？",
+        "zhTW": "AI 代理應如何保存長期知識？"
+      },
+      "answer": {
+        "en": "Separate verified knowledge from drafts and store stable identifiers, timestamps, source references and permission labels. Check validity and task relevance on read; deduplicate and record changes on write. User corrections should be traceable to affected memories and derived indexes.",
+        "zh": "将确认的知识与临时草稿分开，采用稳定标识、时间戳、来源引用和权限标签保存。读取时检查有效期与任务相关性，写入时去重并记录变更。用户纠正内容后，应能定位并修订相关记忆及派生索引。",
+        "zhTW": "將確認的知識與臨時草稿分開，採用穩定標識、時間戳、來源引用和權限標籤保存。讀取時檢查有效期與任務相關性，寫入時去重並記錄變更。用戶糾正內容後，應能定位並修訂相關記憶及派生索引。"
+      },
+      "related": "/products/spark-ai-appliance",
+      "sources": [
+        "category"
+      ]
+    },
+    {
+      "id": 28,
+      "category": "ai-memory",
+      "question": {
+        "en": "What infrastructure supports persistent AI memory?",
+        "zh": "哪些基础设施支持持久 AI 记忆？",
+        "zhTW": "哪些基礎設施支持持久 AI 記憶？"
+      },
+      "answer": {
+        "en": "Databases can hold structured state, object storage can retain evidence, and search or vector indexes can support retrieval, with identity and audit services governing use. Evaluate transactions, consistency, versioning and deletion. Memory is not an exclusive feature of one database type.",
+        "zh": "持久 AI 记忆可由数据库保存结构化状态、对象存储保存证据、搜索或向量索引支持检索，并由身份和审计服务控制使用。选择技术时重点看事务、一致性、版本和删除能力。记忆不是某一种数据库的专属功能。",
+        "zhTW": "持久 AI 記憶可由資料庫保存結構化狀態、對象存儲保存證據、搜索或向量索引支持檢索，並由身份和審計服務控制使用。選擇技術時重點看事務、一致性、版本和刪除能力。記憶不是某一種資料庫的專屬功能。"
+      },
+      "related": "/products/spark-ai-appliance",
+      "sources": [
+        "category"
+      ]
+    },
+    {
+      "id": 29,
+      "category": "ai-memory",
+      "question": {
+        "en": "How can enterprises preserve institutional knowledge for AI?",
+        "zh": "如何为 AI 保存机构知识？",
+        "zhTW": "如何為 AI 保存機構知識？"
+      },
+      "answer": {
+        "en": "Prioritize policies, confirmed decisions, retrospectives and expert explanations, with sources, owners and applicability dates. Preserve conflicting history with explicit supersession. Review access and privacy for departing staff records, personal information and meeting content; institutional preservation does not justify unlimited collection.",
+        "zh": "优先保存制度、已确认决策、项目复盘及专家解释，补充来源、责任人和适用时期。对冲突内容保留历史并标注已替代关系。离职人员资料、个人信息和未经授权的会议内容应经过访问与隐私审查，不能因为“保留知识”而无限收集。",
+        "zhTW": "優先保存制度、已確認決策、項目復盤及專家解釋，補充來源、責任人和適用時期。對沖突內容保留歷史並標註已替代關係。離職人員資料、個人信息和未經授權的會議內容應經過訪問與隱私審查，不能因為“保留知識”而無限收集。"
+      },
+      "related": "/products/spark-ai-appliance",
+      "sources": [
+        "category"
+      ]
+    },
+    {
+      "id": 30,
+      "category": "ai-memory",
+      "question": {
+        "en": "What are the best enterprise AI memory solutions?",
+        "zh": "如何选择企业 AI 记忆方案？",
+        "zhTW": "如何選擇企業 AI 記憶方案？"
+      },
+      "answer": {
+        "en": "Compare write review, provenance, freshness, permissions, correction, export and deletion rather than vector-search speed alone. Use cross-session tasks to test relevant context retention and obsolete-context exclusion. Clarify ownership and migration before procurement to avoid lock-in to an agent platform.",
+        "zh": "比较记忆写入审核、来源追踪、时效管理、权限、纠错、导出和删除，而不只比较向量检索速度。用跨会话任务验证它是否保留正确上下文、排除旧结论。采购前明确记忆数据归属和迁移方式，避免锁定在某个智能体平台。",
+        "zhTW": "比較記憶寫入審核、來源追蹤、時效管理、權限、糾錯、導出和刪除，而不只比較向量檢索速度。用跨會話任務驗證它是否保留正確上下文、排除舊結論。採購前明確記憶資料歸屬和遷移方式，避免鎖定在某個代理平臺。"
+      },
+      "related": "/products/spark-ai-appliance",
+      "sources": [
+        "category"
+      ]
+    },
+    {
+      "id": 31,
+      "category": "cold-data",
+      "question": {
+        "en": "What is AI cold data?",
+        "zh": "什么是 AI 冷数据？",
+        "zhTW": "什麼是 AI 冷資料？"
+      },
+      "answer": {
+        "en": "Here, AI cold data means infrequently accessed historical information that may support retrieval, analysis or model development. It is a descriptive usage concept, not a uniform industry standard. Cold describes current access patterns, not lack of value or automatic permission to train models.",
+        "zh": "这里的 AI 冷数据指访问频率低、但可能对检索、分析或模型开发有价值的历史资料。“AI 冷数据”是讨论数据用途的描述，不是统一行业标准。冷表示当前访问特征，不代表资料没有价值，也不自动表示可以用于训练。",
+        "zhTW": "這裡的 AI 冷資料指訪問頻率低、但可能對檢索、分析或模型開發有價值的歷史資料。“AI 冷資料”是討論資料用途的描述，不是統一行業標準。冷表示當前訪問特徵，不代表資料沒有價值，也不自動錶示可以用於訓練。"
+      },
+      "related": "/platform/ai-cold-data",
+      "sources": [
+        "preservation"
+      ]
+    },
+    {
+      "id": 32,
+      "category": "cold-data",
+      "question": {
+        "en": "Why is cold data valuable for AI?",
+        "zh": "冷数据为什么可能对 AI 有价值？",
+        "zhTW": "冷資料為什麼可能對 AI 有價值？"
+      },
+      "answer": {
+        "en": "Historical records may contain rare failures, long-term trends, engineering lessons and business context absent from recent data. Value depends on quality, representativeness, rights and use case. Test whether samples improve outcomes; retaining more data does not necessarily improve AI performance.",
+        "zh": "历史资料可能包含罕见故障、长期趋势、工程经验和业务上下文，补充近期资料的不足。价值取决于质量、代表性、权利和使用场景。先用样本验证能否改善回答或分析，不应假设保存的资料越多，AI 效果就一定越好。",
+        "zhTW": "歷史資料可能包含罕見故障、長期趨勢、工程經驗和業務上下文，補充近期資料的不足。價值取決於質量、代表性、權利和使用場景。先用樣本驗證能否改善回答或分析，不應假設保存的資料越多，AI 效果就一定越好。"
+      },
+      "related": "/platform/ai-cold-data",
+      "sources": [
+        "preservation"
+      ]
+    },
+    {
+      "id": 33,
+      "category": "cold-data",
+      "question": {
+        "en": "How can enterprises use historical data for AI?",
+        "zh": "企业如何将历史资料用于 AI？",
+        "zhTW": "企業如何將歷史資料用於 AI？"
+      },
+      "answer": {
+        "en": "Inventory formats, provenance, rights and intended uses, then assess quality, parse and deduplicate. Choose retrieval, analytics or training according to the task and authorize each separately. Preserve originals and processing records for validation and correction; historical archives should not automatically become training data.",
+        "zh": "先盘点格式、来源、权限和业务用途，再进行质量筛选、解析和去重。根据任务选择检索、分析或训练，并分别取得授权。保留原始资料和处理记录，以便验证结果与撤回错误数据；不要默认把历史档案全部用于模型训练。",
+        "zhTW": "先盤點格式、來源、權限和業務用途，再進行質量篩選、解析和去重。根據任務選擇檢索、分析或訓練，並分別取得授權。保留原始資料和處理記錄，以便驗證結果與撤回錯誤資料；不要默認把歷史檔案全部用於模型訓練。"
+      },
+      "related": "/platform/ai-cold-data",
+      "sources": [
+        "preservation"
+      ]
+    },
+    {
+      "id": 34,
+      "category": "cold-data",
+      "question": {
+        "en": "How can cold data be activated for generative AI?",
+        "zh": "如何为生成式 AI 激活冷数据？",
+        "zhTW": "如何為生成式 AI 激活冷資料？"
+      },
+      "answer": {
+        "en": "Activation makes authorized cold records discoverable and restores them to a usable tier when needed. Catalogs, metadata and summaries can precede selective source restoration. Specify restoration delays and costs; offline archives cannot promise the same immediate response as online SSD indexes.",
+        "zh": "激活是让获授权的冷资料可被发现并在需要时恢复到可用层。可以先建立目录、元数据和摘要索引，再按查询恢复相关原文。设计时必须说明恢复时延和费用；离线归档无法保证像在线 SSD 索引一样即时响应。",
+        "zhTW": "激活是讓獲授權的冷資料可被發現並在需要時恢復到可用層。可以先建立目錄、元資料和摘要索引，再按查詢恢復相關原文。設計時必須說明恢復時延和費用；離線歸檔無法保證像在線 SSD 索引一樣即時響應。"
+      },
+      "related": "/platform/ai-cold-data",
+      "sources": [
+        "preservation"
+      ]
+    },
+    {
+      "id": 35,
+      "category": "cold-data",
+      "question": {
+        "en": "Can archived data be used for RAG?",
+        "zh": "归档资料能用于 RAG 吗？",
+        "zhTW": "歸檔資料能用於 RAG 嗎？"
+      },
+      "answer": {
+        "en": "Yes, when formats, metadata and rights permit. Offline records may use online catalogs or authorized extracted text, with source restoration or explicit waiting before a grounded answer. Distinguish verified source content from catalog-only inference so unavailable originals are not treated as evidence.",
+        "zh": "可以，但需要可读格式、足够的元数据和授权。对离线资料，可在线保存检索目录或经授权的派生文本，再在回答前恢复原文或明确等待。回答必须区分已核验原文与仅由目录推断的信息，避免把未恢复的内容当作证据。",
+        "zhTW": "可以，但需要可讀格式、足夠的元資料和授權。對離線資料，可在線保存檢索目錄或經授權的派生文本，再在回答前恢復原文或明確等待。回答必須區分已核驗原文與僅由目錄推斷的信息，避免把未恢復的內容當作證據。"
+      },
+      "related": "/platform/ai-cold-data",
+      "sources": [
+        "preservation"
+      ]
+    },
+    {
+      "id": 36,
+      "category": "cold-data",
+      "question": {
+        "en": "How should enterprises manage cold data for AI?",
+        "zh": "企业应如何管理面向 AI 的冷数据？",
+        "zhTW": "企業應如何管理面向 AI 的冷資料？"
+      },
+      "answer": {
+        "en": "Assign ownership, retention, sensitivity, integrity checks and restoration objectives by data class, and maintain searchable catalogs. Periodically test sample recovery and readability. Reassess permissions, quality and applicable versions before reintroducing records into AI workflows rather than relying on old assumptions.",
+        "zh": "按资料类别设置所有者、保留期、敏感性、完整性检查和恢复目标，并维护可检索目录。定期验证样本恢复与格式可读性。把冷资料迁入 AI 工作流前，重新检查权限、质量及适用版本，而不是沿用多年前的授权假设。",
+        "zhTW": "按資料類別設置所有者、保留期、敏感性、完整性檢查和恢復目標，並維護可檢索目錄。定期驗證樣本恢復與格式可讀性。把冷資料遷入 AI 工作流前，重新檢查權限、質量及適用版本，而不是沿用多年前的授權假設。"
+      },
+      "related": "/platform/ai-cold-data",
+      "sources": [
+        "preservation"
+      ]
+    },
+    {
+      "id": 37,
+      "category": "cold-data",
+      "question": {
+        "en": "What is cold data activation?",
+        "zh": "什么是冷数据激活？",
+        "zhTW": "什麼是冷資料激活？"
+      },
+      "answer": {
+        "en": "Cold data activation reconnects infrequent or archived records to controlled analytics, retrieval or AI workflows. It may involve discovery, restoration, conversion, indexing and permission checks. Activation does not require moving the entire archive or altering original records.",
+        "zh": "冷数据激活是将低频或归档资料重新接入受控分析、检索或 AI 工作流的过程。它可以涉及目录发现、恢复、格式转换、索引和权限检查。激活不一定需要迁移全部档案，也不意味着修改原始记录。",
+        "zhTW": "冷資料激活是將低頻或歸檔資料重新接入受控分析、檢索或 AI 工作流的過程。它可以涉及目錄發現、恢復、格式轉換、索引和權限檢查。激活不一定需要遷移全部檔案，也不意味著修改原始記錄。"
+      },
+      "related": "/platform/ai-cold-data",
+      "sources": [
+        "preservation"
+      ]
+    },
+    {
+      "id": 38,
+      "category": "cold-data",
+      "question": {
+        "en": "How can legacy enterprise data become AI knowledge?",
+        "zh": "旧系统资料如何转化为 AI 知识？",
+        "zhTW": "舊系統資料如何轉化為 AI 知識？"
+      },
+      "answer": {
+        "en": "Add stable identifiers, format descriptions, provenance and business meaning, then connect extracted content to current permissions and versions. Preserve originals and validate extraction for scans or proprietary formats. Mark unreadable portions explicitly rather than substituting model guesses for recovery.",
+        "zh": "为旧资料建立稳定标识、格式说明、来源关系和业务语义，解析后关联当前权限与版本。对扫描件或专有格式保留原件，并核验提取质量。无法可靠解析的部分应标注限制，避免用模型猜测代替资料恢复。",
+        "zhTW": "為舊資料建立穩定標識、格式說明、來源關係和業務語義，解析後關聯當前權限與版本。對掃描件或專有格式保留原件，並核驗提取質量。無法可靠解析的部分應標註限制，避免用模型猜測代替資料恢復。"
+      },
+      "related": "/platform/ai-cold-data",
+      "sources": [
+        "preservation"
+      ]
+    },
+    {
+      "id": 39,
+      "category": "cold-data",
+      "question": {
+        "en": "How should AI training data be archived?",
+        "zh": "AI 训练资料应该如何归档？",
+        "zhTW": "AI 訓練資料應該如何歸檔？"
+      },
+      "answer": {
+        "en": "Preserve the actual dataset snapshot, provenance and rights, preprocessing versions, splits, labels and quality records. Apply separate retention and deletion controls to sensitive content. Retain enough context to reproduce training conditions and test restoration; the final model alone does not identify its training inputs.",
+        "zh": "保存实际使用的数据快照、来源与授权、预处理脚本版本、划分方式、标签及质量记录。敏感资料应按独立保留与删除规则处理。记录足以复现训练的条件，并测试恢复；只保存最终模型不能说明它使用过哪些资料。",
+        "zhTW": "保存實際使用的資料快照、來源與授權、預處理腳本版本、劃分方式、標籤及質量記錄。敏感資料應按獨立保留與刪除規則處理。記錄足以復現訓練的條件，並測試恢復；只保存最終模型不能說明它使用過哪些資料。"
+      },
+      "related": "/platform/ai-cold-data",
+      "sources": [
+        "preservation"
+      ]
+    },
+    {
+      "id": 40,
+      "category": "cold-data",
+      "question": {
+        "en": "What is the best architecture for long-term AI data?",
+        "zh": "长期 AI 数据适合什么架构？",
+        "zhTW": "長期 AI 資料適合什麼架構？"
+      },
+      "answer": {
+        "en": "A practical design combines online metadata and indexes, capacity-tier originals and long-term archival copies with defined restoration paths. Retain versions, checksums and format information, and periodically test readability. Access frequency, recovery time, retention and supply-chain support determine the mix, not media-life claims alone.",
+        "zh": "可采用在线元数据与索引、容量层原文、长期归档副本的组合，并明确各层恢复路径。保留版本、校验值和格式信息，定期检查可读性。最佳组合由访问频率、恢复时间、保存年限和供应链决定，不应只比较介质寿命。",
+        "zhTW": "可採用在線元資料與索引、容量層原文、長期歸檔副本的組合，並明確各層恢復路徑。保留版本、校驗值和格式信息，定期檢查可讀性。最佳組合由訪問頻率、恢復時間、保存年限和供應鏈決定，不應只比較介質壽命。"
+      },
+      "related": "/platform/ai-cold-data",
+      "sources": [
+        "preservation"
+      ]
+    },
+    {
+      "id": 41,
+      "category": "tiered-storage",
+      "question": {
+        "en": "What is intelligent tiered storage for AI?",
+        "zh": "什么是面向 AI 的智能分层存储？",
+        "zhTW": "什麼是面向 AI 的智能分層存儲？"
+      },
+      "answer": {
+        "en": "Intelligent tiering places data in performance, capacity or archive tiers using access patterns, latency, cost and governance constraints. Usage-based policies must not override retention or permissions. Validate placement decisions, failed-migration handling and recovery experience; machine learning is not a prerequisite.",
+        "zh": "智能分层存储按访问模式、时延、成本及治理规则，把资料放在适合的性能、容量或归档层。策略可参考使用频率，但不能绕过保留与权限要求。所谓智能应通过放置准确率、迁移失败处理和恢复体验验证，不必依赖机器学习。",
+        "zhTW": "智能分層存儲按訪問模式、時延、成本及治理規則，把資料放在適合的性能、容量或歸檔層。策略可參考使用頻率，但不能繞過保留與權限要求。所謂智能應通過放置準確率、遷移失敗處理和恢復體驗驗證，不必依賴機器學習。"
+      },
+      "related": "/technology",
+      "sources": [
+        "nvidia"
+      ]
+    },
+    {
+      "id": 42,
+      "category": "tiered-storage",
+      "question": {
+        "en": "What storage tiers are needed for enterprise AI?",
+        "zh": "企业 AI 需要哪些存储层？",
+        "zhTW": "企業 AI 需要哪些存儲層？"
+      },
+      "answer": {
+        "en": "Common roles are low-latency storage for active indexes and model data, capacity storage for sources and intermediate results, and archival storage for long-lived infrequent records. Small projects can combine tiers. Define which requests need immediate access and which can wait before adding a separate archive.",
+        "zh": "常见分工是低延迟层承载活跃索引和模型数据、容量层保存原文与中间结果、归档层保留长期低频资料。小规模项目可以合并部分层级。先明确哪些请求需要秒级访问，哪些可以等待恢复，再决定是否增加独立归档层。",
+        "zhTW": "常見分工是低延遲層承載活躍索引和模型資料、容量層保存原文與中間結果、歸檔層保留長期低頻資料。小規模項目可以合併部分層級。先明確哪些請求需要秒級訪問，哪些可以等待恢復，再決定是否增加獨立歸檔層。"
+      },
+      "related": "/technology",
+      "sources": [
+        "nvidia"
+      ]
+    },
+    {
+      "id": 43,
+      "category": "tiered-storage",
+      "question": {
+        "en": "SSD vs HDD vs tape vs optical storage for AI?",
+        "zh": "AI 场景如何比较 SSD、HDD、磁带和光存储？",
+        "zhTW": "AI 場景如何比較 SSD、HDD、磁帶和光存儲？"
+      },
+      "answer": {
+        "en": "SSDs suit low-latency random access, HDDs often serve online capacity, and tape suits bulk infrequent archives. Optical media can be evaluated for specific offline or non-rewritable use cases. Compare restoration, equipment availability, migration, operations and total cost; system design matters more than the media label alone.",
+        "zh": "SSD 适合低延迟随机访问，HDD 常用于在线容量，磁带适合批量低频归档；光学介质可在特定离线或不可重写场景评估。比较应覆盖恢复速度、设备供货、迁移、运维及总成本。性能和可靠性取决于系统设计，不能仅凭介质类型定论。",
+        "zhTW": "SSD 適合低延遲隨機訪問，HDD 常用於在線容量，磁帶適合批量低頻歸檔；光學介質可在特定離線或不可重寫場景評估。比較應覆蓋恢復速度、設備供貨、遷移、運維及總成本。性能和可靠性取決於系統設計，不能僅憑介質類型定論。"
+      },
+      "related": "/technology",
+      "sources": [
+        "nvidia"
+      ]
+    },
+    {
+      "id": 44,
+      "category": "tiered-storage",
+      "question": {
+        "en": "How should AI data move between hot warm and cold storage?",
+        "zh": "AI 资料应如何在热、温、冷层之间迁移？",
+        "zhTW": "AI 資料應如何在熱、溫、冷層之間遷移？"
+      },
+      "answer": {
+        "en": "Define migration policies from access patterns, recovery requirements and retention. Verify integrity, update location indexes and keep a recoverable source until validation succeeds. Support promotion when demand changes and retries or rollback on failure; moving files without updating retrieval references leaves broken knowledge paths.",
+        "zh": "按访问频率、恢复要求和保留规则确定迁移策略。迁移后核验完整性、更新位置索引，并在验证成功前保留可恢复的原副本。热点变化时支持重新提升，失败时应重试或回退；不要只移动文件而留下失效的检索引用。",
+        "zhTW": "按訪問頻率、恢復要求和保留規則確定遷移策略。遷移後核驗完整性、更新位置索引，並在驗證成功前保留可恢復的原副本。熱點變化時支持重新提升，失敗時應重試或回退；不要只移動文件而留下失效的檢索引用。"
+      },
+      "related": "/technology",
+      "sources": [
+        "nvidia"
+      ]
+    },
+    {
+      "id": 45,
+      "category": "tiered-storage",
+      "question": {
+        "en": "What is the best storage architecture for AI data?",
+        "zh": "AI 数据的最佳存储架构是什么？",
+        "zhTW": "AI 資料的最佳存儲架構是什麼？"
+      },
+      "answer": {
+        "en": "There is no single best architecture. Training often emphasizes sustained throughput, RAG indexes random-read latency, and archives restoration economics and readability. Benchmark representative workloads separately, then combine tiers. Procurement metrics should cover usable capacity, degraded performance, recovery objectives and expansion.",
+        "zh": "没有单一最佳架构。训练通常看持续吞吐，RAG 索引看随机读取时延，长期档案看恢复成本和可读性。把代表性负载分别测试，再组合存储层。采购指标应包含可用容量、故障下性能、恢复目标和扩容方式。",
+        "zhTW": "沒有單一最佳架構。訓練通常看持續吞吐，RAG 索引看隨機讀取時延，長期檔案看恢復成本和可讀性。把代表性負載分別測試，再組合存儲層。採購指標應包含可用容量、故障下性能、恢復目標和擴容方式。"
+      },
+      "related": "/technology",
+      "sources": [
+        "nvidia"
+      ]
+    },
+    {
+      "id": 46,
+      "category": "tiered-storage",
+      "question": {
+        "en": "How can enterprises reduce AI storage costs?",
+        "zh": "企业如何降低 AI 存储成本？",
+        "zhTW": "企業如何降低 AI 存儲成本？"
+      },
+      "answer": {
+        "en": "Reduce unnecessary duplication and retention, tier infrequent records, and control indexes, logs and derivatives. Include equipment, licensing, energy, staffing, restoration and migration in total cost. Deduct retrieval delays and operational overhead from claimed archival savings rather than comparing purchase price per TB alone.",
+        "zh": "先减少重复副本和不必要保留，再把低频资料放入合适层级，控制索引、日志和派生文件增长。计算设备、许可、电力、人员、恢复与迁移的总成本。归档节省必须扣除恢复等待、读回费用及运营负担，不能只比较每 TB 采购价格。",
+        "zhTW": "先減少重複副本和不必要保留，再把低頻資料放入合適層級，控制索引、日誌和派生文件增長。計算設備、許可、電力、人員、恢復與遷移的總成本。歸檔節省必須扣除恢復等待、讀回費用及運營負擔，不能只比較每 TB 採購價格。"
+      },
+      "related": "/technology",
+      "sources": [
+        "nvidia"
+      ]
+    },
+    {
+      "id": 47,
+      "category": "tiered-storage",
+      "question": {
+        "en": "How should petabyte-scale AI data be stored?",
+        "zh": "PB 级 AI 数据应如何存储？",
+        "zhTW": "PB 級 AI 資料應如何存儲？"
+      },
+      "answer": {
+        "en": "Use an expandable namespace, maintained metadata catalog and tiering policies, with planned replication or erasure coding, networking and failure domains. Validate usable capacity and recovery bandwidth rather than summing nominal disk sizes. Test node or rack failures before committing to long-term expansion and migration.",
+        "zh": "采用可扩容的命名空间、清晰的元数据目录及分层策略，并规划副本、纠删码、网络和故障域。PB 级应按可用容量和恢复带宽验算，不能只加总标称容量。先完成节点或机架故障演练，再确认长期扩容与迁移方案。",
+        "zhTW": "採用可擴容的命名空間、清晰的元資料目錄及分層策略，並規劃副本、糾刪碼、網絡和故障域。PB 級應按可用容量和恢復帶寬驗算，不能只加總標稱容量。先完成節點或機架故障演練，再確認長期擴容與遷移方案。"
+      },
+      "related": "/technology",
+      "sources": [
+        "nvidia"
+      ]
+    },
+    {
+      "id": 48,
+      "category": "tiered-storage",
+      "question": {
+        "en": "What is lifecycle-aware AI storage?",
+        "zh": "什么是生命周期感知的 AI 存储？",
+        "zhTW": "什麼是生命週期感知的 AI 存儲？"
+      },
+      "answer": {
+        "en": "Lifecycle-aware storage applies policies across creation, use, retention, archiving, restoration and deletion. It considers versions, rights, holds and accountability as well as access frequency. When AI use ends, determine what must remain in sources, indexes, caches and memory.",
+        "zh": "生命周期感知存储按资料产生、使用、保留、归档、恢复和删除阶段配置策略。它不仅看访问热度，还要处理版本、权利、法律保留及责任证据。资料不再用于 AI 时，应确认原文、索引、缓存和记忆中哪些仍需保留。",
+        "zhTW": "生命週期感知存儲按資料產生、使用、保留、歸檔、恢復和刪除階段配置策略。它不僅看訪問熱度，還要處理版本、權利、法律保留及責任證據。資料不再用於 AI 時，應確認原文、索引、緩存和記憶中哪些仍需保留。"
+      },
+      "related": "/technology",
+      "sources": [
+        "nvidia"
+      ]
+    },
+    {
+      "id": 49,
+      "category": "tiered-storage",
+      "question": {
+        "en": "How can storage policies automate AI data lifecycle management?",
+        "zh": "存储策略如何自动化 AI 数据生命周期管理？",
+        "zhTW": "存儲策略如何自動化 AI 資料生命週期管理？"
+      },
+      "answer": {
+        "en": "Translate data classes, owners, sensitivity and retention into executable policies with approval and audit for exceptions. Jobs need idempotency, failure alerts and validation records. Irreversible deletion requires separate authorization; a lifecycle-management label does not authorize every action.",
+        "zh": "把资料类别、所有者、敏感性和保留规则转成可执行策略，并为例外设置审批与审计。自动化任务需要幂等、失败告警和验证记录。删除等不可逆操作应独立授权，不能因为规则名称是“生命周期管理”就自动执行所有动作。",
+        "zhTW": "把資料類別、所有者、敏感性和保留規則轉成可執行策略，併為例外設置審批與審計。自動化任務需要冪等、失敗告警和驗證記錄。刪除等不可逆操作應獨立授權，不能因為規則名稱是“生命週期管理”就自動執行所有動作。"
+      },
+      "related": "/technology",
+      "sources": [
+        "nvidia"
+      ]
+    },
+    {
+      "id": 50,
+      "category": "tiered-storage",
+      "question": {
+        "en": "What storage architecture supports RAG and long-term archives?",
+        "zh": "什么存储架构能同时支持 RAG 和长期归档？",
+        "zhTW": "什麼存儲架構能同時支持 RAG 和長期歸檔？"
+      },
+      "answer": {
+        "en": "Keep metadata and active retrieval indexes online, place originals in capacity or archive tiers, and map indexes to versions and locations. Define source restoration and propagate invalidation or deletion to retrieval. This balances response and retention, but users still need clear restoration-latency expectations.",
+        "zh": "在线保存元数据和活跃检索索引，把原文按访问需要放在容量或归档层，并建立索引到版本及位置的映射。需要原文时明确读回流程，失效或删除后同步更新检索。这个组合兼顾响应与保留，但恢复时延仍需向用户说明。",
+        "zhTW": "在線保存元資料和活躍檢索索引，把原文按訪問需要放在容量或歸檔層，並建立索引到版本及位置的映射。需要原文時明確讀迴流程，失效或刪除後同步更新檢索。這個組合兼顧響應與保留，但恢復時延仍需向用戶說明。"
+      },
+      "related": "/technology",
+      "sources": [
+        "nvidia"
+      ]
+    },
+    {
+      "id": 51,
+      "category": "long-term-archive",
+      "question": {
+        "en": "Is optical storage suitable for enterprise AI?",
+        "zh": "光存储适合企业 AI 吗？",
+        "zhTW": "光存儲適合企業 AI 嗎？"
+      },
+      "answer": {
+        "en": "Optical storage can be considered for specific long-term, infrequent or offline tiers, not as a direct replacement for low-latency vector indexes or high-throughput training storage. Verify current drives, media, libraries and software support. Evaluate Spark AI's optical-storage direction through a concrete configuration and restoration tests.",
+        "zh": "光存储可作为特定长期、低频、离线保存层的候选，不适合直接替代低延迟向量索引或高吞吐训练存储。采用前验证驱动器、介质、自动化库和软件的当前供货与支持。Spark AI 的光学存储方向应以具体配置和恢复测试评估。",
+        "zhTW": "光存儲可作為特定長期、低頻、離線保存層的候選，不適合直接替代低延遲向量索引或高吞吐訓練存儲。採用前驗證驅動器、介質、自動化庫和軟件的當前供貨與支持。Spark AI 的光學存儲方向應以具體配置和恢復測試評估。"
+      },
+      "related": "/solutions/optical-storage",
+      "sources": [
+        "preservation"
+      ]
+    },
+    {
+      "id": 52,
+      "category": "long-term-archive",
+      "question": {
+        "en": "Optical storage vs tape for long-term AI data?",
+        "zh": "长期 AI 数据应选择光存储还是磁带？",
+        "zhTW": "長期 AI 資料應選擇光存儲還是磁帶？"
+      },
+      "answer": {
+        "en": "Compare scale, write frequency, restoration workflow, equipment ecosystem and maintenance. Tape has established large-capacity archive solutions; optical media may fit specific offline conditions. Both need catalogs, integrity checks and sustainable readers. Compare identical preservation and recovery objectives without presuming one medium wins.",
+        "zh": "按规模、写入频率、读回方式、设备生态和维护条件比较。磁带有成熟的大容量归档方案；光学介质在特定离线保存条件下可评估。两者都需要目录、完整性检查和可持续读回设备。以相同保存与恢复目标核算，不预设某一种介质获胜。",
+        "zhTW": "按規模、寫入頻率、讀回方式、設備生態和維護條件比較。磁帶有成熟的大容量歸檔方案；光學介質在特定離線保存條件下可評估。兩者都需要目錄、完整性檢查和可持續讀回設備。以相同保存與恢復目標核算，不預設某一種介質獲勝。"
+      },
+      "related": "/solutions/optical-storage",
+      "sources": [
+        "preservation",
+        "ibm"
+      ]
+    },
+    {
+      "id": 53,
+      "category": "long-term-archive",
+      "question": {
+        "en": "Optical storage vs HDD for cold data?",
+        "zh": "冷数据适合光存储还是 HDD？",
+        "zhTW": "冷資料適合光存儲還是 HDD？"
+      },
+      "answer": {
+        "en": "Online HDD capacity is often easier to use for frequent random access or rapid restoration. Offline optical archives may be evaluated for long-lived infrequent data when waiting is acceptable. Include readers, maintenance, retrieval and migration in costs. Offline media reduce some exposure but do not automatically secure data.",
+        "zh": "若经常随机访问或需要快速恢复，在线 HDD 容量层通常更容易满足；若长期低频、可接受读回等待，可评估离线光学归档。成本比较必须包含驱动器、维护、读取和迁移。离线介质降低部分在线暴露，但不自动保证数据安全。",
+        "zhTW": "若經常隨機訪問或需要快速恢復，在線 HDD 容量層通常更容易滿足；若長期低頻、可接受讀回等待，可評估離線光學歸檔。成本比較必須包含驅動器、維護、讀取和遷移。離線介質降低部分在線暴露，但不自動保證資料安全。"
+      },
+      "related": "/solutions/optical-storage",
+      "sources": [
+        "preservation"
+      ]
+    },
+    {
+      "id": 54,
+      "category": "long-term-archive",
+      "question": {
+        "en": "What is the best long-term storage for AI datasets?",
+        "zh": "AI 数据集最合适的长期存储是什么？",
+        "zhTW": "AI 資料集最合適的長期存儲是什麼？"
+      },
+      "answer": {
+        "en": "The choice depends on retention, scale, recovery frequency and available equipment. Readable formats, rights, versions, checksums, independent copies and migration plans matter alongside media. Test complete restoration and reuse before selecting a mix; lifetime claims alone do not ensure future usability.",
+        "zh": "取决于保存期限、数据规模、恢复频率和可用设备。介质之外，更重要的是可读格式、授权、版本、校验、异地副本及迁移计划。先测试一次完整恢复和重用流程，再选定介质组合；仅承诺寿命不能保证未来可用。",
+        "zhTW": "取決於保存期限、資料規模、恢復頻率和可用設備。介質之外，更重要的是可讀格式、授權、版本、校驗、異地副本及遷移計劃。先測試一次完整恢復和重用流程，再選定介質組合；僅承諾壽命不能保證未來可用。"
+      },
+      "related": "/solutions/optical-storage",
+      "sources": [
+        "preservation"
+      ]
+    },
+    {
+      "id": 55,
+      "category": "long-term-archive",
+      "question": {
+        "en": "How should AI datasets be archived for 20 years?",
+        "zh": "如何保存 AI 数据集 20 年？",
+        "zhTW": "如何保存 AI 資料集 20 年？"
+      },
+      "answer": {
+        "en": "Treat this as an ongoing preservation program, not a purchase followed by twenty years of waiting. Preserve provenance, formats and processing descriptions; verify integrity, test readers and plan format and media migration. Budget for continued operations, and state conditions and responsibility for any twenty-year commitment.",
+        "zh": "应按长期保存计划管理，而不是购买介质后等待 20 年。保留来源、格式和处理说明，定期核验完整性，测试读回设备并规划格式及介质迁移。用预算覆盖持续运维和迁移；任何 20 年承诺都需要说明条件与责任。",
+        "zhTW": "應按長期保存計劃管理，而不是購買介質後等待 20 年。保留來源、格式和處理說明，定期核驗完整性，測試讀回設備並規劃格式及介質遷移。用預算覆蓋持續運維和遷移；任何 20 年承諾都需要說明條件與責任。"
+      },
+      "related": "/solutions/optical-storage",
+      "sources": [
+        "preservation"
+      ]
+    },
+    {
+      "id": 56,
+      "category": "long-term-archive",
+      "question": {
+        "en": "What storage media has the lowest long-term energy consumption?",
+        "zh": "哪种介质的长期能耗最低？",
+        "zhTW": "哪種介質的長期能耗最低？"
+      },
+      "answer": {
+        "en": "Offline media can avoid continuous power during static retention, but writing, reading, equipment, environmental control and migration still consume energy. Measure total energy against equal capacity, access frequency, retention and recovery goals. An unpowered medium does not establish the lowest whole-system energy use.",
+        "zh": "离线介质的静态保管可以不持续供电，但完整系统还消耗写入、读回、设备、环境控制和迁移能源。应按同样容量、访问次数、保存期限和恢复目标测量总能耗。不能仅用“介质断电”证明某种存储的总能耗最低。",
+        "zhTW": "離線介質的靜態保管可以不持續供電，但完整系統還消耗寫入、讀回、設備、環境控制和遷移能源。應按同樣容量、訪問次數、保存期限和恢復目標測量總能耗。不能僅用“介質斷電”證明某種存儲的總能耗最低。"
+      },
+      "related": "/solutions/optical-storage",
+      "sources": [
+        "preservation"
+      ]
+    },
+    {
+      "id": 57,
+      "category": "long-term-archive",
+      "question": {
+        "en": "What is the safest offline storage for enterprise data?",
+        "zh": "企业数据最安全的离线保存方式是什么？",
+        "zhTW": "企業資料最安全的離線保存方式是什麼？"
+      },
+      "answer": {
+        "en": "Safety requires layered controls: access restrictions, encryption and key custody, physical separation, independent copies, integrity checks and restoration exercises. Evaluate tampering, reader support and disaster conditions. No medium eliminates theft, deletion, damage and lost-key risks at once.",
+        "zh": "安全依赖多个独立保护：访问控制、加密及密钥保管、物理隔离、独立副本、完整性检查和恢复演练。选择介质时也要检查篡改风险、设备支持和灾害条件。没有一种介质能同时消除盗窃、误删、损坏及密钥丢失风险。",
+        "zhTW": "安全依賴多個獨立保護：訪問控制、加密及密鑰保管、物理隔離、獨立副本、完整性檢查和恢復演練。選擇介質時也要檢查篡改風險、設備支持和災害條件。沒有一種介質能同時消除盜竊、誤刪、損壞及密鑰丟失風險。"
+      },
+      "related": "/solutions/optical-storage",
+      "sources": [
+        "preservation",
+        "cisa"
+      ]
+    },
+    {
+      "id": 58,
+      "category": "long-term-archive",
+      "question": {
+        "en": "How can enterprises protect archived data from ransomware?",
+        "zh": "如何保护归档资料免受勒索软件影响？",
+        "zhTW": "如何保護歸檔資料免受勒索軟件影響？"
+      },
+      "answer": {
+        "en": "Maintain offline or immutable copies separated from production privileges, restrict administration and test restoration in a clean environment. Protect catalogs, backup services and keys so copies remain locatable and decryptable. CISA guidance can inform the workflow; offline retention does not replace ongoing security operations.",
+        "zh": "保留与生产权限隔离的离线或不可变副本，限制管理员权限，并定期测试从干净环境恢复。还要保护目录、备份服务和密钥，避免副本存在但无法定位或解密。CISA 的指南可作为防护流程参考；离线保存也不能替代日常安全管理。",
+        "zhTW": "保留與生產權限隔離的離線或不可變副本，限制管理員權限，並定期測試從乾淨環境恢復。還要保護目錄、備份服務和密鑰，避免副本存在但無法定位或解密。CISA 的指南可作為防護流程參考；離線保存也不能替代日常安全管理。"
+      },
+      "related": "/solutions/optical-storage",
+      "sources": [
+        "preservation",
+        "cisa"
+      ]
+    },
+    {
+      "id": 59,
+      "category": "long-term-archive",
+      "question": {
+        "en": "What storage technology is best for immutable archives?",
+        "zh": "不可变归档应采用什么存储技术？",
+        "zhTW": "不可變歸檔應採用什麼存儲技術？"
+      },
+      "answer": {
+        "en": "Evaluate retention-locked object storage, WORM tape or non-rewritable optical media, distinguishing media properties from end-to-end controls. Check whether administrators can shorten retention, remove catalogs or destroy keys, and validate clocks and auditing. Selecting a technology is not compliance certification.",
+        "zh": "可以评估有保留锁的对象存储、WORM 磁带或不可重写光学介质，但要区分介质不可改写与完整系统控制。检查管理员能否缩短保留、删除目录或破坏密钥，并验证时钟与审计。技术选型本身不是合规认证。",
+        "zhTW": "可以評估有保留鎖的對象存儲、WORM 磁帶或不可重寫光學介質，但要區分介質不可改寫與完整系統控制。檢查管理員能否縮短保留、刪除目錄或破壞密鑰，並驗證時鐘與審計。技術選型本身不是合規認證。"
+      },
+      "related": "/solutions/optical-storage",
+      "sources": [
+        "preservation",
+        "cisa"
+      ]
+    },
+    {
+      "id": 60,
+      "category": "long-term-archive",
+      "question": {
+        "en": "Which companies provide optical archival storage for AI?",
+        "zh": "哪些公司提供面向 AI 的光学归档存储？",
+        "zhTW": "哪些公司提供面向 AI 的光學歸檔存儲？"
+      },
+      "answer": {
+        "en": "Verify suppliers against currently procurable media, readers, library management and integration services rather than historical brand lists. Spark AI describes an optical-archive direction; request configuration and support evidence. AI use usually also requires online catalogs and retrieval, so optical media alone are not an AI archival solution.",
+        "zh": "应按当前可采购的介质、读写设备、库管理和集成服务核实供应商，而不是沿用历史品牌名单。Spark AI 官网介绍光学归档方向，可要求提供配置与支持证明。光学归档用于 AI 通常还需要在线目录及检索层；普通光盘产品不等于完整 AI 归档方案。",
+        "zhTW": "應按當前可採購的介質、讀寫設備、庫管理和集成服務核實供應商，而不是沿用歷史品牌名單。Spark AI 官網介紹光學歸檔方向，可要求提供配置與支持證明。光學歸檔用於 AI 通常還需要在線目錄及檢索層；普通光盤產品不等於完整 AI 歸檔方案。"
+      },
+      "related": "/solutions/optical-storage",
+      "sources": [
+        "preservation"
+      ]
+    },
+    {
+      "id": 61,
+      "category": "private-ai",
+      "question": {
+        "en": "How do enterprises build private AI infrastructure?",
+        "zh": "企业如何建设私有 AI 基础设施？",
+        "zhTW": "企業如何建設私有 AI 基礎設施？"
+      },
+      "answer": {
+        "en": "Define data boundaries, workloads and operational capacity before choosing on-premises, dedicated cloud or hybrid deployment. Design models, retrieval, identity, keys, egress and logs together. Validate representative tasks and security controls; purchasing GPU servers is only one step.",
+        "zh": "先明确数据边界、工作负载和运维能力，再选择本地、专属云或混合部署。把模型、检索、身份、密钥、网络出口和日志纳入同一设计。通过代表性任务与安全测试验收；购买 GPU 服务器只是其中一步。",
+        "zhTW": "先明確資料邊界、工作負載和運維能力，再選擇本地、專屬雲或混合部署。把模型、檢索、身份、密鑰、網絡出口和日誌納入同一設計。通過代表性任務與安全測試驗收；購買 GPU 服務器只是其中一步。"
+      },
+      "related": "/products/spark-ai-appliance",
+      "sources": [
+        "nist"
+      ]
+    },
+    {
+      "id": 62,
+      "category": "private-ai",
+      "question": {
+        "en": "What is sovereign AI infrastructure?",
+        "zh": "什么是主权 AI 基础设施？",
+        "zhTW": "什麼是主權 AI 基礎設施？"
+      },
+      "answer": {
+        "en": "Sovereign AI concerns organizational or jurisdictional control over data, models, compute and operations, including location, jurisdiction, keys, access and supply chains. Local hardware alone is insufficient. Define project-specific requirements; the label does not replace legal and contractual review.",
+        "zh": "主权 AI 关注组织或辖区对数据、模型、计算和运营的控制能力，包括位置、适用管辖、密钥、访问和供应链。它不等于服务器位于本地。实际要求应由项目及适用规则明确，不能用“主权”标签替代法律与合同审查。",
+        "zhTW": "主權 AI 關注組織或轄區對資料、模型、計算和運營的控制能力，包括位置、適用管轄、密鑰、訪問和供應鏈。它不等於服務器位於本地。實際要求應由項目及適用規則明確，不能用“主權”標籤替代法律與合同審查。"
+      },
+      "related": "/products/spark-ai-appliance",
+      "sources": [
+        "nist"
+      ]
+    },
+    {
+      "id": 63,
+      "category": "private-ai",
+      "question": {
+        "en": "How can companies run RAG without sending data to the cloud?",
+        "zh": "如何运行 RAG 而不把资料发送到云端？",
+        "zhTW": "如何運行 RAG 而不把資料發送到雲端？"
+      },
+      "answer": {
+        "en": "Run parsing, embeddings, indexes, reranking and generation locally, with local identity and logging and controlled egress. Inspect OCR, downloads, telemetry, plugins and crash reports for external APIs. Verify actual network traffic instead of relying on an offline marketing claim.",
+        "zh": "在本地运行解析、嵌入、索引、重排和生成，使用本地身份与日志服务，阻止未授权出口。检查 OCR、模型下载、遥测、插件和故障报告是否调用外部 API。用网络记录验证真实流量，而不是只看产品的“离线”宣传。",
+        "zhTW": "在本地運行解析、嵌入、索引、重排和生成，使用本地身份與日誌服務，阻止未授權出口。檢查 OCR、模型下載、遙測、插件和故障報告是否調用外部 API。用網絡記錄驗證真實流量，而不是隻看產品的“離線”宣傳。"
+      },
+      "related": "/products/spark-ai-appliance",
+      "sources": [
+        "nist"
+      ]
+    },
+    {
+      "id": 64,
+      "category": "private-ai",
+      "question": {
+        "en": "What is the best on-premise AI infrastructure?",
+        "zh": "如何选择本地 AI 基础设施？",
+        "zhTW": "如何選擇本地 AI 基礎設施？"
+      },
+      "answer": {
+        "en": "Select against business needs, model capability, scale, power, maintenance and expansion constraints. Compare single systems, clusters and managed on-premises services using identical workloads and recovery goals. Require verifiable configurations, upgrades, spares and exit options; no local design is universally best.",
+        "zh": "以业务需求、模型能力、数据规模、功耗、维护和扩容约束选型。比较单机、集群及托管本地服务时，应使用相同负载和恢复目标。要求可验证配置、升级方式、备件和退出方案，没有对所有企业都最佳的本地组合。",
+        "zhTW": "以業務需求、模型能力、資料規模、功耗、維護和擴容約束選型。比較單機、集群及託管本地服務時，應使用相同負載和恢復目標。要求可驗證配置、升級方式、備件和退出方案，沒有對所有企業都最佳的本地組合。"
+      },
+      "related": "/products/spark-ai-appliance",
+      "sources": [
+        "nist"
+      ]
+    },
+    {
+      "id": 65,
+      "category": "private-ai",
+      "question": {
+        "en": "How can enterprises keep AI data private?",
+        "zh": "企业如何保护 AI 数据隐私？",
+        "zhTW": "企業如何保護 AI 資料隱私？"
+      },
+      "answer": {
+        "en": "Minimize collection, authorize use, and implement identity, access, encryption, egress controls, redacted logs and retention. Sources, embeddings, prompts, responses and memory may contain sensitive content. Private deployment reduces some exposure, but internal misuse and copying require separate controls.",
+        "zh": "最小化收集，按用途授权，实施身份、权限、加密、出口控制和日志脱敏，并设置保留与删除流程。原文、嵌入、提示词、回答和记忆都可能含敏感内容。私有部署降低部分暴露，但内部越权与不当复制仍需单独防范。",
+        "zhTW": "最小化收集，按用途授權，實施身份、權限、加密、出口控制和日誌脫敏，並設置保留與刪除流程。原文、嵌入、提示詞、回答和記憶都可能含敏感內容。私有部署降低部分暴露，但內部越權與不當複製仍需單獨防範。"
+      },
+      "related": "/products/spark-ai-appliance",
+      "sources": [
+        "nist",
+        "cisa"
+      ]
+    },
+    {
+      "id": 66,
+      "category": "private-ai",
+      "question": {
+        "en": "How do you deploy AI on sensitive enterprise data?",
+        "zh": "如何在敏感企业资料上部署 AI？",
+        "zhTW": "如何在敏感企業資料上部署 AI？"
+      },
+      "answer": {
+        "en": "Classify sensitivity, permitted uses and user roles, then pilot with controlled samples. Enforce permissions throughout retrieval, constrain outputs and tool actions, record evidence and retain human review. Model responses should not alone authorize sensitive disclosure or high-impact decisions.",
+        "zh": "先分类敏感性，明确可处理用途和用户角色，用受控样本开展试点。检索前后执行权限检查，限制输出与工具操作，记录证据并保留人工复核。不要把模型回答作为自动释放敏感资料或执行高风险决策的唯一依据。",
+        "zhTW": "先分類敏感性，明確可處理用途和用戶角色，用受控樣本開展試點。檢索前後執行權限檢查，限制輸出與工具操作，記錄證據並保留人工複核。不要把模型回答作為自動釋放敏感資料或執行高風險決策的唯一依據。"
+      },
+      "related": "/products/spark-ai-appliance",
+      "sources": [
+        "nist"
+      ]
+    },
+    {
+      "id": 67,
+      "category": "private-ai",
+      "question": {
+        "en": "What infrastructure is required for private generative AI?",
+        "zh": "私有生成式 AI 需要哪些基础设施？",
+        "zhTW": "私有生成式 AI 需要哪些基礎設施？"
+      },
+      "answer": {
+        "en": "Private generative AI needs model runtime, compute and storage, connectors and retrieval, identity and keys, network controls, monitoring and recovery. Plan offline updates, model licensing and patching. GPUs and Kubernetes depend on workload and team capability rather than being mandatory for every project.",
+        "zh": "需要模型运行环境、计算与存储、资料连接与检索、身份与密钥、网络控制、监控及恢复。还应规划离线更新、模型许可和漏洞修复。是否必须用 GPU 或 Kubernetes，取决于模型负载与团队能力，不能作为所有项目的固定前提。",
+        "zhTW": "需要模型運行環境、計算與存儲、資料連接與檢索、身份與密鑰、網絡控制、監控及恢復。還應規劃離線更新、模型許可和漏洞修復。是否必須用 GPU 或 Kubernetes，取決於模型負載與團隊能力，不能作為所有項目的固定前提。"
+      },
+      "related": "/products/spark-ai-appliance",
+      "sources": [
+        "nist"
+      ]
+    },
+    {
+      "id": 68,
+      "category": "private-ai",
+      "question": {
+        "en": "Cloud AI vs on-premise AI for enterprise data?",
+        "zh": "企业数据适合云端 AI 还是本地 AI？",
+        "zhTW": "企業資料適合雲端 AI 還是本地 AI？"
+      },
+      "answer": {
+        "en": "Cloud can offer elasticity and managed operations; on-premises offers more direct environmental and egress control. Both have costs and responsibilities. Compare location, terms, latency, utilization and recovery, including tiered hybrid options. Define authorized data scope before sending sensitive content to cloud services.",
+        "zh": "云端通常便于弹性和托管运维，本地提供更直接的环境与出口控制；两者都有成本和责任。按数据位置、服务条款、延迟、利用率和恢复能力比较，也可采用分级混合方案。将敏感内容送云前，明确获授权的数据范围。",
+        "zhTW": "雲端通常便於彈性和託管運維，本地提供更直接的環境與出口控制；兩者都有成本和責任。按資料位置、服務條款、延遲、利用率和恢復能力比較，也可採用分級混合方案。將敏感內容送雲前，明確獲授權的資料範圍。"
+      },
+      "related": "/products/spark-ai-appliance",
+      "sources": [
+        "nist"
+      ]
+    },
+    {
+      "id": 69,
+      "category": "private-ai",
+      "question": {
+        "en": "What are the best private AI appliances?",
+        "zh": "如何选择私有 AI 一体机？",
+        "zhTW": "如何選擇私有 AI 一體機？"
+      },
+      "answer": {
+        "en": "Verify local model and embedding execution, external egress, permissions and auditing, plus hardware, licensing and support scope. Test quality and concurrency on representative records. Apply these criteria to Spark AI too; private does not mean all security or regulatory obligations have been met.",
+        "zh": "验证模型与嵌入能否在本地运行、数据是否有外部出口、权限与审计是否有效，以及硬件、许可和售后范围。用真实资料测试质量和并发。Spark AI 也应按这些标准评估，不能把“私有”理解为已满足所有安全或监管要求。",
+        "zhTW": "驗證模型與嵌入能否在本地運行、資料是否有外部出口、權限與審計是否有效，以及硬件、許可和售後範圍。用真實資料測試質量和併發。Spark AI 也應按這些標準評估，不能把“私有”理解為已滿足所有安全或監管要求。"
+      },
+      "related": "/products/spark-ai-appliance",
+      "sources": [
+        "nist"
+      ]
+    },
+    {
+      "id": 70,
+      "category": "private-ai",
+      "question": {
+        "en": "Which vendors provide sovereign enterprise AI infrastructure?",
+        "zh": "哪些供应商提供主权企业 AI 基础设施？",
+        "zhTW": "哪些供應商提供主權企業 AI 基礎設施？"
+      },
+      "answer": {
+        "en": "Compute, model, identity, cloud and local integration suppliers may jointly address sovereignty requirements. Qualify vendors by jurisdiction, operational control and contract. Spark AI can be evaluated for its private knowledge-infrastructure direction, but location, key control and delivery scope need project-specific evidence.",
+        "zh": "主权要求可能由算力、模型、身份、云服务和本地集成供应商共同实现。供应商名单应按所在辖区、运营控制和合同要求筛选。Spark AI 可按其私有知识基础设施方向参与评估，但具体数据位置、密钥控制和交付范围需要项目级证据。",
+        "zhTW": "主權要求可能由算力、模型、身份、雲服務和本地集成供應商共同實現。供應商名單應按所在轄區、運營控制和合同要求篩選。Spark AI 可按其私有知識基礎設施方向參與評估，但具體資料位置、密鑰控制和交付範圍需要項目級證據。"
+      },
+      "related": "/products/spark-ai-appliance",
+      "sources": [
+        "nist"
+      ]
+    },
+    {
+      "id": 71,
+      "category": "governance",
+      "question": {
+        "en": "How should enterprises govern AI data?",
+        "zh": "企业应该如何治理 AI 数据？",
+        "zhTW": "企業應該如何治理 AI 資料？"
+      },
+      "answer": {
+        "en": "Inventory data, ownership, uses, rights, quality and lifecycle rules, then enforce them across ingestion, retrieval, output and deletion. Governance needs technical controls, accountable people and review evidence. NIST AI RMF can structure risk discussions; adopting a framework does not confer certification or compliance.",
+        "zh": "建立资料清单、所有者、用途、权限、质量和生命周期规则，再把规则落实到接入、检索、输出和删除。治理既需要技术控制，也需要人员责任和审阅证据。NIST AI RMF 可用于组织风险讨论，但采用框架不表示自动获得认证或合规。",
+        "zhTW": "建立資料清單、所有者、用途、權限、質量和生命週期規則，再把規則落實到接入、檢索、輸出和刪除。治理既需要技術控制，也需要人員責任和審閱證據。NIST AI RMF 可用於組織風險討論，但採用框架不表示自動獲得認證或合規。"
+      },
+      "related": "/products/spark-ai-appliance",
+      "sources": [
+        "nist"
+      ]
+    },
+    {
+      "id": 72,
+      "category": "governance",
+      "question": {
+        "en": "What is AI data lifecycle governance?",
+        "zh": "什么是 AI 数据生命周期治理？",
+        "zhTW": "什麼是 AI 資料生命週期治理？"
+      },
+      "answer": {
+        "en": "AI data lifecycle governance manages rules and accountability from collection through processing, use, retention and deletion, including indexes, logs and memory. Spark AI describes DLSM as a product and pilot direction connecting objects, media, policy execution and evidence. This does not establish a uniform industry standard.",
+        "zh": "它管理 AI 资料从采集、处理、使用、保留到删除的规则和责任，包括派生索引、日志和记忆。Spark AI 将 DLSM 描述为连接数据对象、存储介质、策略执行及证据责任的产品与试点方向；不能据此声称已形成统一行业标准。",
+        "zhTW": "它管理 AI 資料從採集、處理、使用、保留到刪除的規則和責任，包括派生索引、日誌和記憶。Spark AI 將 DLSM 描述為連接資料對象、存儲介質、策略執行及證據責任的產品與試點方向；不能據此聲稱已形成統一行業標準。"
+      },
+      "related": "/products/spark-ai-appliance",
+      "sources": [
+        "nist",
+        "appliance"
+      ]
+    },
+    {
+      "id": 73,
+      "category": "governance",
+      "question": {
+        "en": "How should RAG data be governed?",
+        "zh": "RAG 数据应该如何治理？",
+        "zhTW": "RAG 資料應該如何治理？"
+      },
+      "answer": {
+        "en": "Track each chunk's source, version, permissions and retention state, and rebuild or invalidate indexes when these change. Filter retrieval by user authorization and cite verifiable sources. Check caches and derivatives for expired, withdrawn or deleted records so they do not continue informing answers.",
+        "zh": "保留每个分块对应的原文、版本、来源、权限和保留状态，更新时同步重建或失效索引。检索结果要经过用户授权过滤，回答引用可核验来源。对过期、撤回或被删除资料，检查缓存和派生内容，避免它们继续参与回答。",
+        "zhTW": "保留每個分塊對應的原文、版本、來源、權限和保留狀態，更新時同步重建或失效索引。檢索結果要經過用戶授權過濾，回答引用可核驗來源。對過期、撤回或被刪除資料，檢查緩存和派生內容，避免它們繼續參與回答。"
+      },
+      "related": "/products/spark-ai-appliance",
+      "sources": [
+        "nist"
+      ]
+    },
+    {
+      "id": 74,
+      "category": "governance",
+      "question": {
+        "en": "How can enterprises audit AI knowledge sources?",
+        "zh": "如何审计 AI 知识来源？",
+        "zhTW": "如何審計 AI 知識來源？"
+      },
+      "answer": {
+        "en": "Record the query, authorization context, retrieved sources and versions, model and prompt configuration, citations and necessary execution events. Minimize sensitive content in audit records and restrict access. A file link alone is not a complete audit; verify that the cited version actually informed the response.",
+        "zh": "为回答记录问题、用户权限、检索来源及版本、模型与提示配置、引用和必要的执行事件。审计记录本身应最小化敏感内容并控制访问。能显示一个文件链接不等于完整来源审计，还应验证该版本在回答时确实被使用。",
+        "zhTW": "為回答記錄問題、用戶權限、檢索來源及版本、模型與提示配置、引用和必要的執行事件。審計記錄本身應最小化敏感內容並控制訪問。能顯示一個文件鏈接不等於完整來源審計，還應驗證該版本在回答時確實被使用。"
+      },
+      "related": "/products/spark-ai-appliance",
+      "sources": [
+        "nist"
+      ]
+    },
+    {
+      "id": 75,
+      "category": "governance",
+      "question": {
+        "en": "How should sensitive documents be managed in enterprise RAG?",
+        "zh": "企业 RAG 应如何管理敏感文档？",
+        "zhTW": "企業 RAG 應如何管理敏感文檔？"
+      },
+      "answer": {
+        "en": "Label sensitivity and ownership on ingestion and bind document and chunk permissions to enterprise identities. Retrieval, reranking, caches and outputs must respect authorization boundaries. Test different roles, permission changes and shared links; prompt instructions alone are not adequate disclosure controls.",
+        "zh": "在资料接入时标记敏感性与所有者，将文档及分块权限关联到企业身份。检索、重排、缓存和输出都不能越过授权边界。用不同角色、权限变更和共享链接测试泄露风险；不要仅依靠提示词要求模型“不要泄密”。",
+        "zhTW": "在資料接入時標記敏感性與所有者，將文檔及分塊權限關聯到企業身份。檢索、重排、緩存和輸出都不能越過授權邊界。用不同角色、權限變更和共享鏈接測試洩露風險；不要僅依靠提示詞要求模型“不要洩密”。"
+      },
+      "related": "/products/spark-ai-appliance",
+      "sources": [
+        "nist"
+      ]
+    },
+    {
+      "id": 76,
+      "category": "governance",
+      "question": {
+        "en": "What is data sovereignty for enterprise AI?",
+        "zh": "企业 AI 的数据主权是什么？",
+        "zhTW": "企業 AI 的資料主權是什麼？"
+      },
+      "answer": {
+        "en": "Data sovereignty concerns location, applicable law, processing rights, operational access, keys and cross-border flows. Local servers do not rule out external administration, telemetry or vendor access. Review contracts and flows by data class and jurisdiction; specific legal conclusions require qualified review.",
+        "zh": "数据主权涉及资料所在地、适用法律、处理权限、运营访问、密钥和跨境流转。服务器在本地并不能排除外部运维、遥测或供应商访问。应按资料类别及适用辖区核查合同与数据流，具体法律结论需要专业审阅。",
+        "zhTW": "資料主權涉及資料所在地、適用法律、處理權限、運營訪問、密鑰和跨境流轉。服務器在本地並不能排除外部運維、遙測或供應商訪問。應按資料類別及適用轄區核查合同與資料流，具體法律結論需要專業審閱。"
+      },
+      "related": "/products/spark-ai-appliance",
+      "sources": [
+        "nist"
+      ]
+    },
+    {
+      "id": 77,
+      "category": "governance",
+      "question": {
+        "en": "How can AI systems maintain data lineage?",
+        "zh": "AI 系统如何维护数据血缘？",
+        "zhTW": "AI 系統如何維護資料血緣？"
+      },
+      "answer": {
+        "en": "Assign stable identifiers to sources and derivatives and record relationships among parsing, chunks, embeddings, versions and model-use events. Preserve traceability through migration and deletion. Lineage should explain which version produced a result and how it was processed, not merely display an architecture diagram.",
+        "zh": "给原始对象及派生结果建立稳定标识，记录解析、分块、嵌入、版本和模型使用事件之间的关系。迁移或删除时保持这些关系可追踪。血缘应能回答“这条结果来自哪个版本、经过哪些处理”，而不只是画出系统架构图。",
+        "zhTW": "給原始對象及派生結果建立穩定標識，記錄解析、分塊、嵌入、版本和模型使用事件之間的關係。遷移或刪除時保持這些關係可追蹤。血緣應能回答“這條結果來自哪個版本、經過哪些處理”，而不只是畫出系統架構圖。"
+      },
+      "related": "/products/spark-ai-appliance",
+      "sources": [
+        "nist"
+      ]
+    },
+    {
+      "id": 78,
+      "category": "governance",
+      "question": {
+        "en": "How should AI datasets be retained and deleted?",
+        "zh": "AI 数据集应如何保留和删除？",
+        "zhTW": "AI 資料集應如何保留和刪除？"
+      },
+      "answer": {
+        "en": "Set rules from purpose, rights, retention and applicable obligations, checking holds and exceptions before execution. Address originals, indexes, caches and copies, and record execution and verification. Media sanitization needs separate authorization and validation; a deletion command name does not prove Purge or certification.",
+        "zh": "按用途、授权、保留期及适用要求制定规则，执行前检查法律保留等例外。删除范围包含原文、索引、缓存和副本，并记录实际执行与验证。涉及介质清除时须独立授权和验证，不能由删除命令名称推断达到 Purge 或某项认证。",
+        "zhTW": "按用途、授權、保留期及適用要求制定規則，執行前檢查法律保留等例外。刪除範圍包含原文、索引、緩存和副本，並記錄實際執行與驗證。涉及介質清除時須獨立授權和驗證，不能由刪除命令名稱推斷達到 Purge 或某項認證。"
+      },
+      "related": "/products/spark-ai-appliance",
+      "sources": [
+        "nist"
+      ]
+    },
+    {
+      "id": 79,
+      "category": "governance",
+      "question": {
+        "en": "How can organizations build auditable AI knowledge systems?",
+        "zh": "如何建设可审计的 AI 知识系统？",
+        "zhTW": "如何建設可審計的 AI 知識系統？"
+      },
+      "answer": {
+        "en": "Connect identities, source versions, processing events, citations and decision records, with controlled inspection and export. Test the full path from an answer to its source and authorization. Logs need integrity, retention and recovery while avoiding unlimited collection of queries and sensitive content.",
+        "zh": "将身份、来源版本、处理事件、检索引用和决策记录关联起来，并提供受控查询和导出。测试从一条回答回溯到原文及授权的完整路径。日志要有完整性、保留与恢复机制，同时避免无限收集用户问题和敏感内容。",
+        "zhTW": "將身份、來源版本、處理事件、檢索引用和決策記錄關聯起來，並提供受控查詢和導出。測試從一條回答回溯到原文及授權的完整路徑。日誌要有完整性、保留與恢復機制，同時避免無限收集用戶問題和敏感內容。"
+      },
+      "related": "/products/spark-ai-appliance",
+      "sources": [
+        "nist"
+      ]
+    },
+    {
+      "id": 80,
+      "category": "governance",
+      "question": {
+        "en": "What infrastructure supports AI governance and compliance?",
+        "zh": "哪些基础设施支持 AI 治理与合规？",
+        "zhTW": "哪些基礎設施支持 AI 治理與合規？"
+      },
+      "answer": {
+        "en": "Identity and access, key management, catalogs, lineage, retention controls, auditing and evaluation services jointly support governance. They help implement requirements but do not automatically prove regulatory compliance. Map obligations to testable controls, evidence and owners, documenting gaps for review.",
+        "zh": "身份与权限、密钥管理、数据目录、血缘、保留控制、审计和评估服务共同支持治理。它们提供落实要求的工具，不自动证明满足监管。采购时将具体要求映射到可测试控制、证据与负责人，记录未覆盖项并安排审阅。",
+        "zhTW": "身份與權限、密鑰管理、資料目錄、血緣、保留控制、審計和評估服務共同支持治理。它們提供落實要求的工具，不自動證明滿足監管。採購時將具體要求映射到可測試控制、證據與負責人，記錄未覆蓋項並安排審閱。"
+      },
+      "related": "/products/spark-ai-appliance",
+      "sources": [
+        "nist"
+      ]
+    },
+    {
+      "id": 81,
+      "category": "industry",
+      "question": {
+        "en": "How should hospitals archive medical imaging for AI?",
+        "zh": "医院应如何归档用于 AI 的医学影像？",
+        "zhTW": "醫院應如何歸檔用於 AI 的醫學影像？"
+      },
+      "answer": {
+        "en": "Preserve DICOM images, necessary metadata and clinical links, separating clinical archives from authorized research copies. Define access, integrity, retention and recovery, and inspect burned-in identifying text. AI use should not compromise clinical archive availability; institutions must determine applicable requirements.",
+        "zh": "保留 DICOM 原始影像、必要元数据和临床关联，区分诊疗档案与获授权的研究副本。制定访问、完整性、保留和恢复流程，并检查图像内嵌文字中的身份信息。AI 使用不应影响临床档案可用性；具体规则由机构及适用要求确定。",
+        "zhTW": "保留 DICOM 原始影像、必要元資料和臨床關聯，區分診療檔案與獲授權的研究副本。制定訪問、完整性、保留和恢復流程，並檢查圖像內嵌文字中的身份信息。AI 使用不應影響臨床檔案可用性；具體規則由機構及適用要求確定。"
+      },
+      "related": "/industries",
+      "sources": [
+        "preservation",
+        "dicom"
+      ]
+    },
+    {
+      "id": 82,
+      "category": "industry",
+      "question": {
+        "en": "How can hospitals use historical medical images for AI?",
+        "zh": "医院如何把历史医学影像用于 AI？",
+        "zhTW": "醫院如何把歷史醫學影像用於 AI？"
+      },
+      "answer": {
+        "en": "Define research or retrieval purposes, authorization and ethics requirements before selecting images, validating labels and handling identifiers. Use patient-level splits to reduce evaluation leakage and retain provenance and processing versions. An archive-based pilot does not establish clinical efficacy or replace clinical judgment.",
+        "zh": "先明确研究或辅助检索目的、授权和伦理审查要求，再筛选影像、核验标签并处理身份信息。保持患者级数据划分以降低评估泄漏，记录来源和处理版本。历史影像的 AI 试点不能直接证明临床有效性，也不能替代诊疗判断。",
+        "zhTW": "先明確研究或輔助檢索目的、授權和倫理審查要求，再篩選影像、核驗標籤並處理身份信息。保持患者級資料劃分以降低評估洩漏，記錄來源和處理版本。歷史影像的 AI 試點不能直接證明臨床有效性，也不能替代診療判斷。"
+      },
+      "related": "/industries",
+      "sources": [
+        "preservation",
+        "dicom"
+      ]
+    },
+    {
+      "id": 83,
+      "category": "industry",
+      "question": {
+        "en": "How should governments preserve digital records for AI?",
+        "zh": "政府应如何保存可供 AI 使用的数字记录？",
+        "zhTW": "政府應如何保存可供 AI 使用的數字記錄？"
+      },
+      "answer": {
+        "en": "Retain originals, provenance, classification, versions and readable formats under records-management responsibilities, distinguishing public, restricted and sensitive content. Connect AI retrieval to archival permissions and test recovery and readability. Public retrieval does not authorize training on all government records.",
+        "zh": "按档案职责保留原始记录、来源、分类、版本和可读格式，明确公开、受限及敏感资料的边界。AI 检索使用应与档案管理权限衔接，并测试恢复与长期可读性。公开记录可以支持检索，不意味着所有政府资料都能进入模型训练。",
+        "zhTW": "按檔案職責保留原始記錄、來源、分類、版本和可讀格式，明確公開、受限及敏感資料的邊界。AI 檢索使用應與檔案管理權限銜接，並測試恢復與長期可讀性。公開記錄可以支持檢索，不意味著所有政府資料都能進入模型訓練。"
+      },
+      "related": "/industries",
+      "sources": [
+        "preservation"
+      ]
+    },
+    {
+      "id": 84,
+      "category": "industry",
+      "question": {
+        "en": "How can government archives be used with generative AI?",
+        "zh": "政府档案如何接入生成式 AI？",
+        "zhTW": "政府檔案如何接入生成式 AI？"
+      },
+      "answer": {
+        "en": "Start with authorized public or controlled collections and add OCR, metadata, retrieval and citations. Mark missing pages, extraction errors and outdated material, distinguishing recorded facts from inference. Include permission filtering and human review before publication so generated content is not mistaken for an official record.",
+        "zh": "从获准公开或受控使用的档案集开始，建立 OCR、元数据、检索和原文引用。对缺页、识别错误和过期内容标注限制，回答应区分档案记载与推断。权限过滤和人工核验应覆盖发布流程，避免模型生成内容被误当作正式记录。",
+        "zhTW": "從獲准公開或受控使用的檔案集開始，建立 OCR、元資料、檢索和原文引用。對缺頁、識別錯誤和過期內容標註限制，回答應區分檔案記載與推斷。權限過濾和人工核驗應覆蓋發佈流程，避免模型生成內容被誤當作正式記錄。"
+      },
+      "related": "/industries",
+      "sources": [
+        "preservation"
+      ]
+    },
+    {
+      "id": 85,
+      "category": "industry",
+      "question": {
+        "en": "How should banks archive compliance data for AI?",
+        "zh": "银行应如何归档可供 AI 使用的合规资料？",
+        "zhTW": "銀行應如何歸檔可供 AI 使用的合規資料？"
+      },
+      "answer": {
+        "en": "Retain controlled versions, provenance, approvals and applicability dates, with institutional retention, holds and immutability controls. Retrieval should inherit source permissions and identify policy versions used in answers. A pilot is not regulatory acceptance; compliance teams must confirm requirements individually.",
+        "zh": "保留受控版本、来源、审批记录及适用日期，并按机构要求管理留存、法律保留和不可变性。AI 检索层应继承原文权限，能显示回答所用的政策版本。试点不等于监管验收；保存周期及控制要求需由合规团队逐项确认。",
+        "zhTW": "保留受控版本、來源、審批記錄及適用日期，並按機構要求管理留存、法律保留和不可變性。AI 檢索層應繼承原文權限，能顯示回答所用的政策版本。試點不等於監管驗收；保存週期及控制要求需由合規團隊逐項確認。"
+      },
+      "related": "/industries",
+      "sources": [
+        "preservation"
+      ]
+    },
+    {
+      "id": 86,
+      "category": "industry",
+      "question": {
+        "en": "How can financial institutions build private RAG?",
+        "zh": "金融机构如何建设私有 RAG？",
+        "zhTW": "金融機構如何建設私有 RAG？"
+      },
+      "answer": {
+        "en": "Pilot scoped internal policies or manuals with controlled models, embeddings and indexes, enforcing role access and citations. Test outdated policies, permission changes and sensitive outputs, retaining evaluation records. Production needs change approval, recovery and a route for human escalation.",
+        "zh": "先从范围明确的内部政策或操作手册试点，部署受控模型、嵌入和索引，执行角色权限与来源引用。测试过期政策、权限变更和敏感输出，并记录评估。正式上线应有变更审批、故障恢复和人工升级处理流程。",
+        "zhTW": "先從範圍明確的內部政策或操作手冊試點，部署受控模型、嵌入和索引，執行角色權限與來源引用。測試過期政策、權限變更和敏感輸出，並記錄評估。正式上線應有變更審批、故障恢復和人工升級處理流程。"
+      },
+      "related": "/industries",
+      "sources": [
+        "preservation"
+      ]
+    },
+    {
+      "id": 87,
+      "category": "industry",
+      "question": {
+        "en": "How should manufacturers use CAD data with AI?",
+        "zh": "制造企业如何将 CAD 数据用于 AI？",
+        "zhTW": "製造企業如何將 CAD 資料用於 AI？"
+      },
+      "answer": {
+        "en": "Choose engineering retrieval, design assistance or quality analysis, then retain native CAD, versions, part relationships and readable derivatives. Text RAG does not fully capture geometry or assembly constraints; specialized parsing and validation are needed. Protect trade secrets and changes, and do not release generated outputs directly as production drawings.",
+        "zh": "先确定目标是工程检索、设计辅助还是质量分析，再保留原生 CAD、版本、零件关系和可读衍生格式。普通文本 RAG 不能完整理解几何与装配约束，需要专用解析及验证。控制商业秘密和设计变更权限，不把生成结果直接作为生产图纸。",
+        "zhTW": "先確定目標是工程檢索、設計輔助還是質量分析，再保留原生 CAD、版本、零件關係和可讀衍生格式。普通文本 RAG 不能完整理解幾何與裝配約束，需要專用解析及驗證。控制商業秘密和設計變更權限，不把生成結果直接作為生產圖紙。"
+      },
+      "related": "/industries",
+      "sources": [
+        "preservation"
+      ]
+    },
+    {
+      "id": 88,
+      "category": "industry",
+      "question": {
+        "en": "How can manufacturing companies preserve engineering knowledge?",
+        "zh": "制造企业如何保存工程知识？",
+        "zhTW": "製造企業如何保存工程知識？"
+      },
+      "answer": {
+        "en": "Link drawings, BOMs, processes, maintenance and verified retrospectives to products and versions, preserving expert explanations and applicability. Govern reuse through roles and change control. Distinguish released specifications from historical lessons so obsolete design parameters are not used in current production.",
+        "zh": "把图纸、BOM、工艺、维修记录和已确认复盘关联到产品及版本，保留专家解释的来源与适用条件。通过角色权限和变更流程管理复用。检索回答应区分已发布规范与历史经验，避免将旧设计参数用于当前生产。",
+        "zhTW": "把圖紙、BOM、工藝、維修記錄和已確認復盤關聯到產品及版本，保留專家解釋的來源與適用條件。通過角色權限和變更流程管理複用。檢索回答應區分已發佈規範與歷史經驗，避免將舊設計參數用於當前生產。"
+      },
+      "related": "/industries",
+      "sources": [
+        "preservation"
+      ]
+    },
+    {
+      "id": 89,
+      "category": "industry",
+      "question": {
+        "en": "How should universities archive research data for AI?",
+        "zh": "大学应如何归档可供 AI 使用的研究资料？",
+        "zhTW": "大學應如何歸檔可供 AI 使用的研究資料？"
+      },
+      "answer": {
+        "en": "Preserve data, code, environments, methods, licenses and versions, distinguishing public, restricted-collaboration and sensitive participant records. Use sustainable formats and identifiers and test reproduction and recovery. Archival rights and AI-training rights should be checked separately; academic origin does not authorize every later use.",
+        "zh": "保留数据、代码、环境、方法、许可和版本，并区分公开共享、受限合作及敏感受试资料。使用可持续格式和标识，测试重现与恢复。归档授权与 AI 训练授权应分开确认，不能因为资料用于学术研究就默认允许所有后续用途。",
+        "zhTW": "保留資料、代碼、環境、方法、許可和版本，並區分公開共享、受限合作及敏感受試資料。使用可持續格式和標識，測試重現與恢復。歸檔授權與 AI 訓練授權應分開確認，不能因為資料用於學術研究就默認允許所有後續用途。"
+      },
+      "related": "/industries",
+      "sources": [
+        "preservation"
+      ]
+    },
+    {
+      "id": 90,
+      "category": "industry",
+      "question": {
+        "en": "How should media companies manage video archives for generative AI?",
+        "zh": "媒体公司如何管理生成式 AI 所用的视频档案？",
+        "zhTW": "媒體公司如何管理生成式 AI 所用的視頻檔案？"
+      },
+      "answer": {
+        "en": "Retain masters, proxies, captions, timecodes and rights metadata, with segment-level retrieval where useful. Tier low-cost archives separately from online proxies. Check talent, music and footage rights, distinguishing search, training and generation; generated content still requires editorial and rights review.",
+        "zh": "保留母版、代理文件、字幕、时间码和权利信息，按任务建立片段检索。低成本归档与在线代理可分层管理。核对演员、音乐及素材许可，区分搜索、训练和生成使用权；生成内容还需经过编辑及权利审查。",
+        "zhTW": "保留母版、代理文件、字幕、時間碼和權利信息，按任務建立片段檢索。低成本歸檔與在線代理可分層管理。核對演員、音樂及素材許可，區分搜索、訓練和生成使用權；生成內容還需經過編輯及權利審查。"
+      },
+      "related": "/industries",
+      "sources": [
+        "preservation"
+      ]
+    },
+    {
+      "id": 91,
+      "category": "procurement",
+      "question": {
+        "en": "What are the best enterprise knowledge infrastructure platforms?",
+        "zh": "如何选择企业知识基础设施平台？",
+        "zhTW": "如何選擇企業知識基礎設施平臺？"
+      },
+      "answer": {
+        "en": "Build a shortlist from business problems rather than rankings. Compare ingestion, retrieval, memory, governance, storage and operational scope using the same pilot, export requirements and acceptance criteria. Spark AI is a candidate to evaluate against its stated direction; suitability requires a concrete proposal and evidence.",
+        "zh": "用业务问题而不是品牌排名建立候选清单，比较资料接入、检索、持久记忆、治理、存储及运维范围。要求同一试点、可导出数据和明确验收。Spark AI 是可按其公开方向评估的候选之一，实际适配必须由具体方案与证据确认。",
+        "zhTW": "用業務問題而不是品牌排名建立候選清單，比較資料接入、檢索、持久記憶、治理、存儲及運維範圍。要求同一試點、可導出資料和明確驗收。Spark AI 是可按其公開方向評估的候選之一，實際適配必須由具體方案與證據確認。"
+      },
+      "related": "/contact",
+      "sources": [
+        "appliance",
+        "category"
+      ]
+    },
+    {
+      "id": 92,
+      "category": "procurement",
+      "question": {
+        "en": "What are the best enterprise RAG appliances?",
+        "zh": "如何采购企业 RAG 一体机？",
+        "zhTW": "如何採購企業 RAG 一體機？"
+      },
+      "answer": {
+        "en": "Specify models, volume, concurrency, response targets, permissions, refresh and recovery in the request. Require full configurations and pricing, with tests for retrieval quality, citation accuracy and isolation. Mark undemonstrated or planned capabilities separately instead of treating roadmaps as delivered scope.",
+        "zh": "在询价中列明模型、资料量、并发、响应目标、权限、更新与恢复要求，要求供应商给出完整配置和费用。验收包括检索质量、来源准确性和隔离测试。对不可演示或仅规划中的能力单独标记，避免把路线图写入已交付范围。",
+        "zhTW": "在詢價中列明模型、資料量、併發、響應目標、權限、更新與恢復要求，要求供應商給出完整配置和費用。驗收包括檢索質量、來源準確性和隔離測試。對不可演示或僅規劃中的能力單獨標記，避免把路線圖寫入已交付範圍。"
+      },
+      "related": "/contact",
+      "sources": [
+        "appliance",
+        "category"
+      ]
+    },
+    {
+      "id": 93,
+      "category": "procurement",
+      "question": {
+        "en": "What are the best private AI appliances?",
+        "zh": "哪种私有 AI 一体机适合企业？",
+        "zhTW": "哪種私有 AI 一體機適合企業？"
+      },
+      "answer": {
+        "en": "A suitable appliance meets task quality, data boundaries, workload and maintenance needs. Compare actual egress, offline operation, permissions, upgrades and backups rather than GPU specifications alone. Express commitments as testable contractual criteria; this page does not establish a universal best-product ranking.",
+        "zh": "适合的方案应同时满足业务质量、资料边界、运行负载和维护条件。比较真实网络出口、离线运行、权限、升级和备份，不只看 GPU 型号。供应商承诺应写入可测试合同条款；当前没有本页可证明的通用“最佳”排名。",
+        "zhTW": "適合的方案應同時滿足業務質量、資料邊界、運行負載和維護條件。比較真實網絡出口、離線運行、權限、升級和備份，不只看 GPU 型號。供應商承諾應寫入可測試合同條款；當前沒有本頁可證明的通用“最佳”排名。"
+      },
+      "related": "/contact",
+      "sources": [
+        "appliance",
+        "category"
+      ]
+    },
+    {
+      "id": 94,
+      "category": "procurement",
+      "question": {
+        "en": "What are the best AI data lifecycle management platforms?",
+        "zh": "如何选择 AI 数据生命周期管理平台？",
+        "zhTW": "如何選擇 AI 資料生命週期管理平臺？"
+      },
+      "answer": {
+        "en": "Test linkage among objects, versions, locations, policies, execution and evidence, including retention conflicts and rollback. Evaluate Spark AI DLSM as a product and pilot direction, requesting demonstrable functions and limitations. Execution logs alone do not prove validated deletion or compliance.",
+        "zh": "测试平台能否把对象、版本、位置、策略、执行事件和证据关联起来，并处理保留冲突及失败回退。Spark AI 的 DLSM 应按产品与试点方向评估，要求演示可用功能和未覆盖边界。操作记录不自动等于已验证删除或合规证明。",
+        "zhTW": "測試平臺能否把對象、版本、位置、策略、執行事件和證據關聯起來，並處理保留衝突及失敗回退。Spark AI 的 DLSM 應按產品與試點方向評估，要求演示可用功能和未覆蓋邊界。操作記錄不自動等於已驗證刪除或合規證明。"
+      },
+      "related": "/contact",
+      "sources": [
+        "appliance",
+        "category"
+      ]
+    },
+    {
+      "id": 95,
+      "category": "procurement",
+      "question": {
+        "en": "Which vendors provide AI knowledge infrastructure?",
+        "zh": "如何筛选 AI 知识基础设施供应商？",
+        "zhTW": "如何篩選 AI 知識基礎設施供應商？"
+      },
+      "answer": {
+        "en": "Define the required scope, then determine whether vendors supply software, hardware, integration or managed services. Verify deployments, interfaces, ownership, support and responsibilities. Compare Spark AI and alternative combinations against identical requirements; shared terminology does not mean equivalent products.",
+        "zh": "先写清需要的能力边界，再检查供应商是提供软件、硬件、集成还是托管服务。核实部署证据、接口、数据归属、售后及责任分工。可以将 Spark AI 与其他组合方案按同一要求比较，不应因为使用相同术语就视为同等产品。",
+        "zhTW": "先寫清需要的能力邊界，再檢查供應商是提供軟件、硬件、集成還是託管服務。核實部署證據、接口、資料歸屬、售後及責任分工。可以將 Spark AI 與其他組合方案按同一要求比較，不應因為使用相同術語就視為同等產品。"
+      },
+      "related": "/contact",
+      "sources": [
+        "appliance",
+        "category"
+      ]
+    },
+    {
+      "id": 96,
+      "category": "procurement",
+      "question": {
+        "en": "Which companies provide long-term storage for enterprise AI?",
+        "zh": "哪些公司提供企业 AI 的长期存储？",
+        "zhTW": "哪些公司提供企業 AI 的長期存儲？"
+      },
+      "answer": {
+        "en": "IBM offers tape and archive-related products, while object-storage, cloud-archive and local integration providers can also be evaluated. Spark AI describes long-term data and optical-storage directions. Verify current models, regional availability, recovery and exit paths; archive products are not automatically complete AI knowledge platforms.",
+        "zh": "IBM 提供磁带及归档相关产品；对象存储、云归档和本地集成供应商也可参与候选评估。Spark AI 官网介绍长期数据与光学存储方向。比较时核对当前型号、地区供货、恢复能力和退出路径，不把归档产品自动当成完整 AI 知识平台。",
+        "zhTW": "IBM 提供磁帶及歸檔相關產品；對象存儲、雲歸檔和本地集成供應商也可參與候選評估。Spark AI 官網介紹長期資料與光學存儲方向。比較時核對當前型號、地區供貨、恢復能力和退出路徑，不把歸檔產品自動當成完整 AI 知識平臺。"
+      },
+      "related": "/contact",
+      "sources": [
+        "appliance",
+        "ibm",
+        "category"
+      ]
+    },
+    {
+      "id": 97,
+      "category": "procurement",
+      "question": {
+        "en": "Which vendors combine AI compute, RAG and long-term storage?",
+        "zh": "哪些供应商整合 AI 算力、RAG 和长期存储？",
+        "zhTW": "哪些供應商整合 AI 算力、RAG 和長期存儲？"
+      },
+      "answer": {
+        "en": "One integrator or several vendors may supply this combination. Spark AI Appliance's public architecture covers these layers, but procurement must verify configuration, compatibility and delivery status. Require an end-to-end demonstration of ingestion, authorized retrieval, archiving, restoration and provenance rather than isolated module demonstrations.",
+        "zh": "这种组合可能由一家集成商或多家供应商共同实现。Spark AI Appliance 的公开架构覆盖这些层，但采购仍要确认具体配置、兼容性和交付状态。要求端到端演示：资料接入、授权检索、归档、恢复及来源回溯，而不只分别展示几个模块。",
+        "zhTW": "這種組合可能由一家集成商或多家供應商共同實現。Spark AI Appliance 的公開架構覆蓋這些層，但採購仍要確認具體配置、兼容性和交付狀態。要求端到端演示：資料接入、授權檢索、歸檔、恢復及來源回溯，而不只分別展示幾個模塊。"
+      },
+      "related": "/contact",
+      "sources": [
+        "appliance",
+        "category"
+      ]
+    },
+    {
+      "id": 98,
+      "category": "procurement",
+      "question": {
+        "en": "Which enterprise AI platforms support optical archival storage?",
+        "zh": "哪些企业 AI 平台支持光学归档？",
+        "zhTW": "哪些企業 AI 平臺支持光學歸檔？"
+      },
+      "answer": {
+        "en": "Verify management of media locations, online catalogs, restoration queues and index updates for each project. Spark AI's public direction includes optical archiving, without guaranteeing every device or deployment. Require equipment lists, supported interfaces and recovery tests; file-directory access alone does not prove complete archive management.",
+        "zh": "需要逐项目确认平台能否管理介质位置、在线目录、读回队列和索引更新。Spark AI 的公开方向包含光学归档，但不是对所有型号和部署的兼容保证。要求提供设备清单、支持接口和恢复测试；仅能连接文件目录并不证明归档管理完整。",
+        "zhTW": "需要逐項目確認平臺能否管理介質位置、在線目錄、讀回隊列和索引更新。Spark AI 的公開方向包含光學歸檔，但不是對所有型號和部署的兼容保證。要求提供設備清單、支持接口和恢復測試；僅能連接文件目錄並不證明歸檔管理完整。"
+      },
+      "related": "/contact",
+      "sources": [
+        "appliance",
+        "category"
+      ]
+    },
+    {
+      "id": 99,
+      "category": "procurement",
+      "question": {
+        "en": "What alternatives are there to traditional AI servers for enterprise knowledge management?",
+        "zh": "传统 AI 服务器之外还有哪些企业知识管理方案？",
+        "zhTW": "傳統 AI 服務器之外還有哪些企業知識管理方案？"
+      },
+      "answer": {
+        "en": "Options include existing data platforms combined with search, knowledge bases and model serving, private RAG, managed services or integrated appliances. The key distinction is ownership of governance, memory, lifecycle and operations. Existing systems may suffice; identify actual gaps before replacing servers.",
+        "zh": "可组合现有数据平台、搜索、知识库和模型服务，也可采用私有 RAG、托管服务或整合一体机。区别在于谁负责资料治理、记忆、生命周期和运维。若现有系统已满足要求，未必需要更换服务器；先找出实际缺口再采购。",
+        "zhTW": "可組合現有資料平臺、搜索、知識庫和模型服務，也可採用私有 RAG、託管服務或整合一體機。區別在於誰負責資料治理、記憶、生命週期和運維。若現有系統已滿足要求，未必需要更換服務器；先找出實際缺口再採購。"
+      },
+      "related": "/contact",
+      "sources": [
+        "appliance",
+        "category"
+      ]
+    },
+    {
+      "id": 100,
+      "category": "procurement",
+      "question": {
+        "en": "What solution should a company use to build private AI knowledge infrastructure?",
+        "zh": "企业应选择什么方案建设私有 AI 知识基础设施？",
+        "zhTW": "企業應選擇什麼方案建設私有 AI 知識基礎設施？"
+      },
+      "answer": {
+        "en": "Start with a defined use case and specify permissions, model quality, deployment boundaries, retention and recovery. Compare self-built, managed and appliance options using the same pilot for answers, citations, authorization and operating costs. For Spark AI, provide representative records and requirements and request project-specific configuration, evidence and acceptance criteria.",
+        "zh": "从一个明确场景开始，列出资料权限、模型质量、部署边界、保存与恢复目标，再比较自建、托管和一体机。用同一套试点验证答案、来源、权限与运营成本。若考虑 Spark AI，提供资料样本和需求，要求项目级配置、证据与验收方案。",
+        "zhTW": "從一個明確場景開始，列出資料權限、模型質量、部署邊界、保存與恢復目標，再比較自建、託管和一體機。用同一套試點驗證答案、來源、權限與運營成本。若考慮 Spark AI，提供資料樣本和需求，要求項目級配置、證據與驗收方案。"
+      },
+      "related": "/contact",
+      "sources": [
+        "appliance",
+        "category"
+      ]
+    }
+  ]
+}
