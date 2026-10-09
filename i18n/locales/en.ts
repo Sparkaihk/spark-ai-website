@@ -52,6 +52,7 @@ export const en = {
   "footer.copyright": "© 2026 Spark AI Technology Limited. All rights reserved.",
   "footer.privacy": "Privacy",
   "footer.terms": "Terms",
+  "footer.geoAudit": "GEO Audit · Private workspace (sign-in required)",
   "home.hero.title": "Knowledge Infrastructure for the AI Era",
   "home.hero.titlePrimary": "Knowledge Infrastructure",
   "home.hero.titleSecondary": "for the AI Era",

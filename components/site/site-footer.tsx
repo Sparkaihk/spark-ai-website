@@ -1,4 +1,4 @@
-import { Mail } from "lucide-react";
+import { LockKeyhole, Mail } from "lucide-react";
 import Link from "next/link";
 
 import { T } from "@/components/site/translated-text";
@@ -78,7 +78,17 @@ export function SiteFooter() {
         </div>
         <div className="mt-10 flex flex-col gap-3 border-t border-sky-100 pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
           <T id="footer.copyright" as="p" />
-          <p><Link href="/contact" className="hover:text-primary"><T id="footer.privacy" /></Link> · <Link href="/contact" className="hover:text-primary"><T id="footer.terms" /></Link> · <Link href="/contact" className="hover:text-primary"><T id="footer.contact" /></Link></p>
+          <div className="flex min-w-0 flex-col gap-3 sm:items-end">
+            <p><Link href="/contact" className="hover:text-primary"><T id="footer.privacy" /></Link> · <Link href="/contact" className="hover:text-primary"><T id="footer.terms" /></Link> · <Link href="/contact" className="hover:text-primary"><T id="footer.contact" /></Link></p>
+            <a
+              href="https://spark-ai-geo-audit.fineyew32.chatgpt.site"
+              rel="nofollow"
+              className="inline-flex max-w-full items-center gap-2 rounded-sm text-primary transition-colors hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+            >
+              <LockKeyhole className="size-3.5 shrink-0" aria-hidden="true" />
+              <T id="footer.geoAudit" />
+            </a>
+          </div>
         </div>
       </div>
     </footer>

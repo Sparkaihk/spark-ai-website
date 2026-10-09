@@ -54,6 +54,7 @@ export const zhCN = {
   "footer.copyright": "© 2026 光慧科技有限公司。保留所有权利。",
   "footer.privacy": "隐私政策",
   "footer.terms": "使用条款",
+  "footer.geoAudit": "GEO Audit 私有工作台（需登录）",
   "home.hero.title": "面向 AI 时代的知识基础设施",
   "home.hero.titlePrimary": "面向 AI 时代的",
   "home.hero.titleSecondary": "知识基础设施",

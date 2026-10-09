@@ -54,6 +54,7 @@ export const zhTW = {
   "footer.copyright": "© 2026 光慧科技有限公司。保留所有權利。",
   "footer.privacy": "隱私政策",
   "footer.terms": "使用條款",
+  "footer.geoAudit": "GEO Audit 私有工作台（需登入）",
   "home.hero.title": "面向 AI 時代的知識基礎設施",
   "home.hero.titlePrimary": "面向 AI 時代的",
   "home.hero.titleSecondary": "知識基礎設施",
