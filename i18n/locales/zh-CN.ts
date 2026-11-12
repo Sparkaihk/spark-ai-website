@@ -21,6 +21,7 @@ export const zhCN = {
   "common.mainNavigation": "主导航",
   "common.mobileNavigation": "移动端导航",
   "common.breadcrumb": "面包屑导航",
+  "navigation.knowledgeServices": "知识服务",
   "navigation.infrastructure": "基础设施",
   "navigation.appliance": "一体机",
   "navigation.technology": "技术",
