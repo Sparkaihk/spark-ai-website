@@ -24,6 +24,7 @@ import { Container } from "@/components/design-system/container";
 import { KnowledgePositioning, KnowledgePhilosophy } from "@/components/sections/knowledge-design";
 import { HeroSection } from "@/components/home/hero-section";
 import { T } from "@/components/site/translated-text";
+import { LocalizedText } from "@/components/site/localized-text";
 import { Button } from "@/components/ui/button";
 import type { TranslationKey } from "@/i18n/dictionary";
 
@@ -139,6 +140,19 @@ export default function HomePage() {
               </Link>
             </Button>
           </AnimatedBlock>
+        </Container>
+      </section>
+
+      <section className="border-y border-sky-100 bg-[linear-gradient(120deg,#e9f4ff,#ffffff)] py-16 sm:py-20">
+        <Container>
+          <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
+            <div>
+              <p className="premium-eyebrow"><LocalizedText zh="AI 知识基础设施运营商" en="AI Knowledge Infrastructure Operator" /></p>
+              <h2 className="mt-4 text-3xl font-semibold leading-tight text-slate-950 sm:text-4xl"><LocalizedText zh="让冷数据从被动保存，走向可运营的知识服务" en="From dormant archives to operational knowledge services" /></h2>
+              <p className="mt-5 max-w-3xl leading-8 text-slate-600"><LocalizedText zh="以 DLSM 治理、知识加工、权限感知检索、安全 API 和计量对账形成服务闭环。当前以企业试点验证为主，能力与 SLA 以实际合同及验收为准。" en="Bring together DLSM governance, knowledge processing, permission-aware retrieval, secure APIs and auditable metering. Pilot capabilities and SLAs are subject to confirmed scopes and acceptance." /></p>
+            </div>
+            <Link href="/knowledge-services" className="inline-flex w-fit items-center gap-2 rounded-full bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700"><LocalizedText zh="查看运营服务体系" en="Explore managed knowledge services" /><ArrowRight className="size-4" aria-hidden="true" /></Link>
+          </div>
         </Container>
       </section>
 
