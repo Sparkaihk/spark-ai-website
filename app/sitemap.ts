@@ -22,7 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return routes.map((route) => ({
     url: new URL(route, baseUrl).toString(),
-    changeFrequency: (route === "/" || route === "/knowledge-services" ? "weekly" : "monthly") as const,
+    changeFrequency: (route === "/" || route === "/knowledge-services" ? "weekly" : "monthly") as "weekly" | "monthly",
     priority: route === "/" ? 1 : route === "/knowledge-services" ? 0.9 : 0.7,
   }));
 }
