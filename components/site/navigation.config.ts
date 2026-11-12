@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import { BookOpen, Boxes, Building2, Cpu, Landmark, Layers3, Network } from "lucide-react";
+import { BookOpen, Boxes, Building2, Cpu, Landmark, Layers3, Network, Database } from "lucide-react";
 
 import type { TranslationKey } from "@/i18n/dictionary";
 
@@ -10,6 +10,7 @@ export type SiteRoute = {
 };
 
 export const siteRoutes: SiteRoute[] = [
+  { labelKey: "navigation.knowledgeServices", href: "/knowledge-services", icon: Database },
   { labelKey: "navigation.infrastructure", href: "/platform/ai-cold-data", icon: Layers3 },
   { labelKey: "navigation.appliance", href: "/products/spark-ai-appliance", icon: Cpu },
   { labelKey: "navigation.technology", href: "/technology", icon: Network },
