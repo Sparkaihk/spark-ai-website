@@ -19,6 +19,7 @@ export const en = {
   "common.mainNavigation": "Main navigation",
   "common.mobileNavigation": "Mobile navigation",
   "common.breadcrumb": "Breadcrumb",
+  "navigation.knowledgeServices": "Knowledge Services",
   "navigation.infrastructure": "Infrastructure",
   "navigation.appliance": "Appliance",
   "navigation.technology": "Technology",
