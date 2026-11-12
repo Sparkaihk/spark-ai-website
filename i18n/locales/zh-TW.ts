@@ -21,6 +21,7 @@ export const zhTW = {
   "common.mainNavigation": "主導航",
   "common.mobileNavigation": "移動端導航",
   "common.breadcrumb": "麵包屑導航",
+  "navigation.knowledgeServices": "知識服務",
   "navigation.infrastructure": "基礎設施",
   "navigation.appliance": "一體機",
   "navigation.technology": "技術",
